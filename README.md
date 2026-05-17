@@ -28,6 +28,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 009: [Starter missions reference missing CLI commands](packets/009-starter-missions-reference-missing-cli-commands.md)
 - Packet 010: [Registration says ready for review with no handoff](packets/010-registration-ready-for-review-no-handoff.md)
 - Packet 011: [Telegram missions have no visible bot route](packets/011-telegram-missions-no-bot-route.md)
+- Packet 012: [Practice repo name is not linked](packets/012-practice-repo-name-is-not-linked.md)
 - Public page: [index.html](index.html)
 
 ## Routing

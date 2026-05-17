@@ -26,6 +26,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 009 | [Starter missions reference missing CLI commands](packets/009-starter-missions-reference-missing-cli-commands.md) | Proof ready | Missions mention `spark providers`, `smoke`, `live`, `security`, and `update` commands that the installed CLI rejects. |
 | 010 | [Registration says ready for review with no handoff](packets/010-registration-ready-for-review-no-handoff.md) | Proof ready | Success message claims review readiness but exposes no team id, proof route, or reviewer handoff. |
 | 011 | [Telegram missions have no visible bot route](packets/011-telegram-missions-no-bot-route.md) | Proof ready | Missions target Telegram agents, but the page does not show a bot link, handle, or fallback route. |
+| 012 | [Practice repo name is not linked](packets/012-practice-repo-name-is-not-linked.md) | Proof ready | Site names `spark-personality-chip-labs`, but does not link to the existing GitHub repo. |
 
 ## Active Queue
 
