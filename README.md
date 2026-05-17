@@ -15,6 +15,8 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 ## Current Packet
 
 - Proof packet: [HUNT_PROOF.md](HUNT_PROOF.md)
+- Farming board: [FARMING_BOARD.md](FARMING_BOARD.md)
+- Packet 002: [CLI status/health mojibake](packets/002-cli-status-health-mojibake.md)
 - Public page: [index.html](index.html)
 
 ## Routing
