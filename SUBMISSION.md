@@ -16,6 +16,7 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
 
 - Clean proof repo: https://github.com/jumperz11/jumperz-spark-hunt
 - Live proof hub: https://jumperz11.github.io/jumperz-spark-hunt/
+- Reviewer handoff: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/REVIEWER_HANDOFF.md
 - Farming board: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/FARMING_BOARD.md
 
 ## Proof Packets
@@ -38,6 +39,10 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/008-mission-library-toggle-accessible-name.md
 - Packet 009: Starter missions reference missing CLI commands
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/009-starter-missions-reference-missing-cli-commands.md
+- Packet 010: Registration says ready for review with no handoff
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/010-registration-ready-for-review-no-handoff.md
+- Packet 011: Telegram missions have no visible bot route
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/011-telegram-missions-no-bot-route.md
 
 ## Routing Note
 

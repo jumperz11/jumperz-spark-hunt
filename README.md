@@ -15,6 +15,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 ## Current Packet
 
 - Submission packet: [SUBMISSION.md](SUBMISSION.md)
+- Reviewer handoff: [REVIEWER_HANDOFF.md](REVIEWER_HANDOFF.md)
 - Proof packet: [HUNT_PROOF.md](HUNT_PROOF.md)
 - Farming board: [FARMING_BOARD.md](FARMING_BOARD.md)
 - Packet 002: [CLI status/health mojibake](packets/002-cli-status-health-mojibake.md)
@@ -25,6 +26,8 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 007: [Proof drawer confusing toggle name](packets/007-proof-drawer-toggle-accessible-name.md)
 - Packet 008: [Mission library confusing toggle name](packets/008-mission-library-toggle-accessible-name.md)
 - Packet 009: [Starter missions reference missing CLI commands](packets/009-starter-missions-reference-missing-cli-commands.md)
+- Packet 010: [Registration says ready for review with no handoff](packets/010-registration-ready-for-review-no-handoff.md)
+- Packet 011: [Telegram missions have no visible bot route](packets/011-telegram-missions-no-bot-route.md)
 - Public page: [index.html](index.html)
 
 ## Routing
