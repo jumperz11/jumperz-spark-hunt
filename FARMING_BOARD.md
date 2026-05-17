@@ -20,6 +20,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 003 | [Proof repo not routable from registration](packets/003-proof-repo-not-routable-from-registration.md) | Proof ready | Registration accepts a profile URL, but rejects clean proof repo URLs and has no submission field. |
 | 004 | [Proof kit has no submission handoff](packets/004-proof-kit-has-no-submission-handoff.md) | Proof ready | Proof kit explains PR evidence but gives no site-native proof/reviewer handoff. |
 | 005 | [Leaderboard stale example copy](packets/005-leaderboard-stale-example-copy.md) | Proof ready | Board renders real teams while still saying rows are examples. |
+| 006 | [Mission copy buttons indistinguishable](packets/006-mission-copy-buttons-indistinguishable.md) | Proof ready | 60 mission copy controls share the same `Copy` accessible text. |
 
 ## Active Queue
 
