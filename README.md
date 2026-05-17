@@ -18,6 +18,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Reviewer handoff: [REVIEWER_HANDOFF.md](REVIEWER_HANDOFF.md)
 - Rank one plan: [RANK_ONE_PLAN.md](RANK_ONE_PLAN.md)
 - Proof packet: [HUNT_PROOF.md](HUNT_PROOF.md)
+- Reviewer routing issue: [vibeship-spark-intelligence#184](https://github.com/vibeforge1111/vibeship-spark-intelligence/issues/184)
 - Farming board: [FARMING_BOARD.md](FARMING_BOARD.md)
 - Packet 002: [CLI status/health mojibake](packets/002-cli-status-health-mojibake.md)
 - Packet 003: [Proof repo not routable from registration](packets/003-proof-repo-not-routable-from-registration.md)

@@ -31,6 +31,10 @@ Send reviewers this link:
 
 https://github.com/jumperz11/jumperz-spark-hunt/blob/main/REVIEWER_HANDOFF.md
 
+Reviewer routing issue:
+
+https://github.com/vibeforge1111/vibeship-spark-intelligence/issues/184
+
 Ask for the correct public track or permission to open focused PRs for the top five packets.
 
 ## Rule

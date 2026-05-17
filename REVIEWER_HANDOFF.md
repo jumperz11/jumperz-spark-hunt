@@ -8,6 +8,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 - Submission packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/SUBMISSION.md
 - Farming board: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/FARMING_BOARD.md
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
+- Reviewer routing issue: https://github.com/vibeforge1111/vibeship-spark-intelligence/issues/184
 
 ## Team Identity
 
@@ -43,3 +44,7 @@ The strongest Spark CLI packets:
 ## Routing Request
 
 Please route these packets to the public track or reviewer-owned surface where JUMPERZ can submit focused fixes or PRs for scoring.
+
+Routing issue opened here:
+
+https://github.com/vibeforge1111/vibeship-spark-intelligence/issues/184
