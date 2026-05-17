@@ -16,6 +16,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 
 - Submission packet: [SUBMISSION.md](SUBMISSION.md)
 - Reviewer handoff: [REVIEWER_HANDOFF.md](REVIEWER_HANDOFF.md)
+- Rank one plan: [RANK_ONE_PLAN.md](RANK_ONE_PLAN.md)
 - Proof packet: [HUNT_PROOF.md](HUNT_PROOF.md)
 - Farming board: [FARMING_BOARD.md](FARMING_BOARD.md)
 - Packet 002: [CLI status/health mojibake](packets/002-cli-status-health-mojibake.md)
