@@ -23,6 +23,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 005: [Leaderboard stale example copy](packets/005-leaderboard-stale-example-copy.md)
 - Packet 006: [Mission copy buttons indistinguishable](packets/006-mission-copy-buttons-indistinguishable.md)
 - Packet 007: [Proof drawer confusing toggle name](packets/007-proof-drawer-toggle-accessible-name.md)
+- Packet 008: [Mission library confusing toggle name](packets/008-mission-library-toggle-accessible-name.md)
 - Public page: [index.html](index.html)
 
 ## Routing

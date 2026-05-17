@@ -22,6 +22,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 005 | [Leaderboard stale example copy](packets/005-leaderboard-stale-example-copy.md) | Proof ready | Board renders real teams while still saying rows are examples. |
 | 006 | [Mission copy buttons indistinguishable](packets/006-mission-copy-buttons-indistinguishable.md) | Proof ready | 60 mission copy controls share the same `Copy` accessible text. |
 | 007 | [Proof drawer confusing toggle name](packets/007-proof-drawer-toggle-accessible-name.md) | Proof ready | Open proof drawer exposes contradictory `CloseOpen` text to agents/assistive tech. |
+| 008 | [Mission library confusing toggle name](packets/008-mission-library-toggle-accessible-name.md) | Proof ready | Expanded mission drawer exposes `Close Open` text before the mission list. |
 
 ## Active Queue
 
