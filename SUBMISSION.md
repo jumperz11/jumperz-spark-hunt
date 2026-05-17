@@ -24,6 +24,20 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/HUNT_PROOF.md
 - Packet 002: CLI status/health mojibake
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/002-cli-status-health-mojibake.md
+- Packet 003: Proof repo is not routable from registration
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/003-proof-repo-not-routable-from-registration.md
+- Packet 004: Proof kit has no submission handoff
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/004-proof-kit-has-no-submission-handoff.md
+- Packet 005: Leaderboard stale example copy
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/005-leaderboard-stale-example-copy.md
+- Packet 006: Mission copy buttons indistinguishable
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/006-mission-copy-buttons-indistinguishable.md
+- Packet 007: Proof drawer confusing toggle name
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/007-proof-drawer-toggle-accessible-name.md
+- Packet 008: Mission library confusing toggle name
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/008-mission-library-toggle-accessible-name.md
+- Packet 009: Starter missions reference missing CLI commands
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/009-starter-missions-reference-missing-cli-commands.md
 
 ## Routing Note
 
