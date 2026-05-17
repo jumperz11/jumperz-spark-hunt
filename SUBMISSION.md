@@ -43,6 +43,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/010-registration-ready-for-review-no-handoff.md
 - Packet 011: Telegram missions have no visible bot route
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/011-telegram-missions-no-bot-route.md
+- Packet 012: Practice repo name is not linked
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/012-practice-repo-name-is-not-linked.md
 
 ## Routing Note
 

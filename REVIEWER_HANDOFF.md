@@ -17,7 +17,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 11
+Current proof packets: 12
 
 The strongest routing/system packets:
 
@@ -26,6 +26,7 @@ The strongest routing/system packets:
 - Packet 009: starter missions reference missing CLI commands
 - Packet 010: registration says ready for review with no handoff
 - Packet 011: Telegram missions have no visible bot route
+- Packet 012: practice repo name is not linked
 
 The strongest UI/accessibility packets:
 
