@@ -17,6 +17,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | --- | --- | --- | --- |
 | 001 | [Missing `spark os compile --json`](HUNT_PROOF.md) | Proof ready | First mission command from the hunt brief failed before discovery. |
 | 002 | [CLI status/health mojibake](packets/002-cli-status-health-mojibake.md) | Proof ready | `spark status` and `spark health` render corrupted icon/checkmark text. |
+| 003 | [Proof repo not routable from registration](packets/003-proof-repo-not-routable-from-registration.md) | Proof ready | Registration accepts a profile URL, but rejects clean proof repo URLs and has no submission field. |
 
 ## Active Queue
 
