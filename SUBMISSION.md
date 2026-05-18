@@ -46,6 +46,10 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/011-telegram-missions-no-bot-route.md
 - Packet 012: Practice repo name is not linked
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/012-practice-repo-name-is-not-linked.md
+- Packet 013: Leaderboard hides public score band
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/013-leaderboard-hides-public-score-band.md
+- Packet 014: Leaderboard ignores API rank
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/014-leaderboard-ignores-api-rank.md
 
 ## Routing Note
 
