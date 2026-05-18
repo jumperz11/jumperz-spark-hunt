@@ -18,7 +18,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 16
+Current proof packets: 19
 
 The strongest routing/system packets:
 
@@ -32,6 +32,8 @@ The strongest routing/system packets:
 - Packet 014: leaderboard ignores API rank
 - Packet 015: navigation current state is stuck on teams
 - Packet 016: carousel tabs are not linked to tabpanels
+- Packet 017: HEAD requests return 404 for live routes
+- Packet 019: empty leaderboard falls back to mock standings
 
 The strongest UI/accessibility packets:
 
@@ -41,6 +43,7 @@ The strongest UI/accessibility packets:
 - Packet 008: mission library confusing toggle name
 - Packet 015: navigation current state is stuck on teams
 - Packet 016: carousel tabs are not linked to tabpanels
+- Packet 018: carousel tabs are missing keyboard navigation
 
 The strongest Spark CLI packets:
 

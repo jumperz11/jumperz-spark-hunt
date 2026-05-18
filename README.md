@@ -34,6 +34,9 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 014: [Leaderboard ignores API rank](packets/014-leaderboard-ignores-api-rank.md)
 - Packet 015: [Navigation current state stuck on teams](packets/015-nav-current-stuck-on-teams.md)
 - Packet 016: [Carousel tabs missing tabpanel linkage](packets/016-carousel-tabs-missing-tabpanel-linkage.md)
+- Packet 017: [HEAD requests return 404 for live routes](packets/017-head-requests-return-404-for-live-routes.md)
+- Packet 018: [Carousel tabs missing keyboard navigation](packets/018-carousel-tabs-missing-keyboard-navigation.md)
+- Packet 019: [Empty leaderboard falls back to mock standings](packets/019-empty-leaderboard-falls-back-to-mock-standings.md)
 - Public page: [index.html](index.html)
 
 ## Routing

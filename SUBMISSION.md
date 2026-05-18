@@ -54,6 +54,12 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/015-nav-current-stuck-on-teams.md
 - Packet 016: Carousel tabs are not linked to tabpanels
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/016-carousel-tabs-missing-tabpanel-linkage.md
+- Packet 017: HEAD requests return 404 for live routes
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/017-head-requests-return-404-for-live-routes.md
+- Packet 018: Carousel tabs missing keyboard navigation
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/018-carousel-tabs-missing-keyboard-navigation.md
+- Packet 019: Empty leaderboard falls back to mock standings
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/019-empty-leaderboard-falls-back-to-mock-standings.md
 
 ## Routing Note
 

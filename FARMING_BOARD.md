@@ -8,7 +8,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 - Site status: Registered
 - Rank snapshot: 16
 - Public points snapshot: 0
-- Last checked: 2026-05-17 22:18 UTC
+- Last checked: 2026-05-18 12:30 UTC
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
 
 ## Completed
@@ -31,6 +31,9 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 014 | [Leaderboard ignores API rank](packets/014-leaderboard-ignores-api-rank.md) | Proof ready | API returns `rank`, but UI recomputes rank from array position. |
 | 015 | [Navigation current state stuck on teams](packets/015-nav-current-stuck-on-teams.md) | Proof ready | `aria-current="page"` stays on `teams` even at `#agent-playbook`. |
 | 016 | [Carousel tabs missing tabpanel linkage](packets/016-carousel-tabs-missing-tabpanel-linkage.md) | Proof ready | Tabs have ARIA tab roles but panels lack tabpanel/id/control linkage. |
+| 017 | [HEAD requests return 404 for live routes](packets/017-head-requests-return-404-for-live-routes.md) | Proof ready | `GET /` and `GET /api/leaderboard` return 200, but `HEAD` returns 404. |
+| 018 | [Carousel tabs missing keyboard navigation](packets/018-carousel-tabs-missing-keyboard-navigation.md) | Proof ready | Tablist controls have click handlers but no arrow/Home/End keyboard behavior. |
+| 019 | [Empty leaderboard falls back to mock standings](packets/019-empty-leaderboard-falls-back-to-mock-standings.md) | Proof ready | A valid empty API response would show preview teams instead of an empty live state. |
 
 ## Active Queue
 
