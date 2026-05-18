@@ -6,7 +6,7 @@ This is the clean path for JUMPERZ to climb.
 
 - Team is registered and visible on the Spark Compete board.
 - Public points are still 0 because reviewer-approved value has not been counted yet.
-- Clean proof hub has 14 proof packets.
+- Clean proof hub has 16 proof packets.
 
 ## Highest-Value Packets To Route First
 
@@ -14,7 +14,9 @@ This is the clean path for JUMPERZ to climb.
 2. Packet 010: registration says ready for review with no handoff.
 3. Packet 004: proof kit has no submission handoff.
 4. Packet 003: proof repo is not routable from registration.
-5. Packet 002: CLI status/health mojibake.
+5. Packet 015: navigation current state is stuck on teams.
+6. Packet 016: carousel tabs are not linked to tabpanels.
+7. Packet 002: CLI status/health mojibake.
 
 ## Why These First
 

@@ -50,6 +50,10 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/013-leaderboard-hides-public-score-band.md
 - Packet 014: Leaderboard ignores API rank
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/014-leaderboard-ignores-api-rank.md
+- Packet 015: Navigation current state is stuck on teams
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/015-nav-current-stuck-on-teams.md
+- Packet 016: Carousel tabs are not linked to tabpanels
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/016-carousel-tabs-missing-tabpanel-linkage.md
 
 ## Routing Note
 
