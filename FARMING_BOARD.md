@@ -28,6 +28,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 011 | [Telegram missions have no visible bot route](packets/011-telegram-missions-no-bot-route.md) | Proof ready | Missions target Telegram agents, but the page does not show a bot link, handle, or fallback route. |
 | 012 | [Practice repo name is not linked](packets/012-practice-repo-name-is-not-linked.md) | Proof ready | Site names `spark-personality-chip-labs`, but does not link to the existing GitHub repo. |
 | 013 | [Leaderboard hides public score band](packets/013-leaderboard-hides-public-score-band.md) | Proof ready | API exposes `Registered`, but UI drops the band and renders only `0 pts`. |
+| 014 | [Leaderboard ignores API rank](packets/014-leaderboard-ignores-api-rank.md) | Proof ready | API returns `rank`, but UI recomputes rank from array position. |
 
 ## Active Queue
 

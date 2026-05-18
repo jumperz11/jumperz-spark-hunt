@@ -32,6 +32,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 011: [Telegram missions have no visible bot route](packets/011-telegram-missions-no-bot-route.md)
 - Packet 012: [Practice repo name is not linked](packets/012-practice-repo-name-is-not-linked.md)
 - Packet 013: [Leaderboard hides public score band](packets/013-leaderboard-hides-public-score-band.md)
+- Packet 014: [Leaderboard ignores API rank](packets/014-leaderboard-ignores-api-rank.md)
 - Public page: [index.html](index.html)
 
 ## Routing
