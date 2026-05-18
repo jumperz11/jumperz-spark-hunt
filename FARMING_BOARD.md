@@ -29,6 +29,8 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 012 | [Practice repo name is not linked](packets/012-practice-repo-name-is-not-linked.md) | Proof ready | Site names `spark-personality-chip-labs`, but does not link to the existing GitHub repo. |
 | 013 | [Leaderboard hides public score band](packets/013-leaderboard-hides-public-score-band.md) | Proof ready | API exposes `Registered`, but UI drops the band and renders only `0 pts`. |
 | 014 | [Leaderboard ignores API rank](packets/014-leaderboard-ignores-api-rank.md) | Proof ready | API returns `rank`, but UI recomputes rank from array position. |
+| 015 | [Navigation current state stuck on teams](packets/015-nav-current-stuck-on-teams.md) | Proof ready | `aria-current="page"` stays on `teams` even at `#agent-playbook`. |
+| 016 | [Carousel tabs missing tabpanel linkage](packets/016-carousel-tabs-missing-tabpanel-linkage.md) | Proof ready | Tabs have ARIA tab roles but panels lack tabpanel/id/control linkage. |
 
 ## Active Queue
 

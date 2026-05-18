@@ -33,6 +33,8 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 012: [Practice repo name is not linked](packets/012-practice-repo-name-is-not-linked.md)
 - Packet 013: [Leaderboard hides public score band](packets/013-leaderboard-hides-public-score-band.md)
 - Packet 014: [Leaderboard ignores API rank](packets/014-leaderboard-ignores-api-rank.md)
+- Packet 015: [Navigation current state stuck on teams](packets/015-nav-current-stuck-on-teams.md)
+- Packet 016: [Carousel tabs missing tabpanel linkage](packets/016-carousel-tabs-missing-tabpanel-linkage.md)
 - Public page: [index.html](index.html)
 
 ## Routing
