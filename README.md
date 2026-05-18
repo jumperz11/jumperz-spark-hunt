@@ -16,7 +16,6 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 
 - Submission packet: [SUBMISSION.md](SUBMISSION.md)
 - Reviewer handoff: [REVIEWER_HANDOFF.md](REVIEWER_HANDOFF.md)
-- Rank one plan: [RANK_ONE_PLAN.md](RANK_ONE_PLAN.md)
 - Proof packet: [HUNT_PROOF.md](HUNT_PROOF.md)
 - Reviewer routing issue: [vibeship-spark-intelligence#184](https://github.com/vibeforge1111/vibeship-spark-intelligence/issues/184)
 - Farming board: [FARMING_BOARD.md](FARMING_BOARD.md)
