@@ -6,6 +6,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 - Live hub: https://jumperz11.github.io/jumperz-spark-hunt/
 - Mission coverage: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/MISSION_COVERAGE.md
+- Top review queue: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/TOP_REVIEW_QUEUE.md
 - Submission packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/SUBMISSION.md
 - PR-ready fixes: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/PR_READY.md
 - Farming board: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/FARMING_BOARD.md
@@ -23,6 +24,10 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 Current proof packets: 86
 
 Packet numbers are JUMPERZ finding IDs, not site mission IDs. The site's 60 starter missions are prompts; packets are the concrete reproduced findings and fixes from following the hunt loop.
+
+For first-pass scoring, start with the curated top queue:
+
+https://github.com/jumperz11/jumperz-spark-hunt/blob/main/TOP_REVIEW_QUEUE.md
 
 The strongest routing/system packets:
 

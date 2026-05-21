@@ -17,7 +17,7 @@ This file maps JUMPERZ work back to the Spark Compete site brief.
 | Use Spark until something breaks | Packets 001-086 document real site, CLI, workflow, proof-routing, and Spark behavior findings. |
 | Capture safe before/after proof | Each packet includes bounded repro evidence, expected behavior, impact, and submission status. |
 | Ship focused hotfix PRs | [PR_READY.md](PR_READY.md) lists fork branches, commits, tests, compare links, and PR bodies. |
-| Let reviewers verify value | [REVIEWER_HANDOFF.md](REVIEWER_HANDOFF.md) gives fast links, strongest packets, and routing request. |
+| Let reviewers verify value | [TOP_REVIEW_QUEUE.md](TOP_REVIEW_QUEUE.md) gives the first 10 fixes to score; [REVIEWER_HANDOFF.md](REVIEWER_HANDOFF.md) gives full routing context. |
 
 ## Mission-Aligned Buckets
 
@@ -31,10 +31,11 @@ This file maps JUMPERZ work back to the Spark Compete site brief.
 
 ## Recommended Reviewer Path
 
-1. Start with [REVIEWER_HANDOFF.md](REVIEWER_HANDOFF.md) for the strongest packets and routing request.
-2. Use [PR_READY.md](PR_READY.md) for branch URLs, commit IDs, suggested PR titles, and verification commands.
-3. Score packets as findings/fixes, not as numbered site missions.
-4. Treat the 60 site missions as coverage prompts; the submitted packets are the concrete reproduced issues and fixes.
+1. Start with [TOP_REVIEW_QUEUE.md](TOP_REVIEW_QUEUE.md) for the first 10 fixes to score.
+2. Use [REVIEWER_HANDOFF.md](REVIEWER_HANDOFF.md) for the full packet set and routing request.
+3. Use [PR_READY.md](PR_READY.md) for branch URLs, commit IDs, suggested PR titles, and verification commands.
+4. Score packets as findings/fixes, not as numbered site missions.
+5. Treat the 60 site missions as coverage prompts; the submitted packets are the concrete reproduced issues and fixes.
 
 ## Current Count
 

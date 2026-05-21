@@ -17,6 +17,7 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
 - Clean proof repo: https://github.com/jumperz11/jumperz-spark-hunt
 - Live proof hub: https://jumperz11.github.io/jumperz-spark-hunt/
 - Mission coverage: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/MISSION_COVERAGE.md
+- Top review queue: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/TOP_REVIEW_QUEUE.md
 - Reviewer handoff: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/REVIEWER_HANDOFF.md
 - PR-ready fixes: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/PR_READY.md
 - Reviewer routing issue: https://github.com/vibeforge1111/vibeship-spark-intelligence/issues/184
@@ -25,6 +26,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
 ## Mission Coverage Note
 
 The Spark Compete site has 60 starter missions. JUMPERZ packet numbers are finding IDs, not site mission IDs. Current proof includes 86 documented findings/fix packets across the site's hunt loop: use Spark, find friction, capture safe proof, and prepare focused hotfix PRs.
+
+For scoring review, start with the curated queue in `TOP_REVIEW_QUEUE.md` instead of reading all packets at once.
 
 ## Proof Packets
 
