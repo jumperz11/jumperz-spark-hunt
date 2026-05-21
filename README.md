@@ -61,6 +61,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 040: [Advice feedback failure exits zero](packets/040-advice-feedback-failure-exits-zero.md)
 - Packet 041: [Capture list and reject are ignored](packets/041-capture-list-reject-ignored.md)
 - Packet 042: [Missing opportunities exit zero](packets/042-opportunities-missing-exits-zero.md)
+- Packet 043: [Outcome link accepts invalid targets](packets/043-outcome-link-invalid-targets.md)
 - Public page: [index.html](index.html)
 
 ## Routing

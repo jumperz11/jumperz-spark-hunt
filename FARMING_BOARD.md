@@ -8,7 +8,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 - Site status: Registered
 - Rank snapshot: 16
 - Public points snapshot: 0
-- Last checked: 2026-05-21 15:45 UTC
+- Last checked: 2026-05-21 15:54 UTC
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
 
 ## Completed
@@ -57,12 +57,14 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 040 | [Advice feedback failure exits zero](packets/040-advice-feedback-failure-exits-zero.md) | Fork branch pushed | `codex/fix-advice-feedback-failure-exit` pushed to `jumperz11`; no upstream PR opened. |
 | 041 | [Capture list and reject are ignored](packets/041-capture-list-reject-ignored.md) | Fork branch pushed | `codex/fix-capture-list-reject` pushed to `jumperz11`; no upstream PR opened. |
 | 042 | [Missing opportunities exit zero](packets/042-opportunities-missing-exits-zero.md) | Fork branch pushed | `codex/fix-opportunities-missing-exit` pushed to `jumperz11`; no upstream PR opened. |
+| 043 | [Outcome link accepts invalid targets](packets/043-outcome-link-invalid-targets.md) | Fork branch pushed | `codex/fix-outcome-link-validation` pushed to `jumperz11`; no upstream PR opened. |
 
 ## Active Queue
 
 | Priority | Mission | Target |
 | --- | --- | --- |
-| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042 |
+| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043 |
+| P0 | Verify outcome links reject invalid targets | Packet 043 |
 | P0 | Verify missing opportunity actions return non-zero | Packet 042 |
 | P0 | Verify capture review actions are wired | Packet 041 |
 | P0 | Verify failed feedback recording returns non-zero | Packet 040 |

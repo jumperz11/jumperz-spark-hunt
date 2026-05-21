@@ -107,6 +107,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/041-capture-list-reject-ignored.md
 - Packet 042: Missing opportunities exit zero
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/042-opportunities-missing-exits-zero.md
+- Packet 043: Outcome link accepts invalid targets
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/043-outcome-link-invalid-targets.md
 
 ## Routing Note
 

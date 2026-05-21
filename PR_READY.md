@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, and 042 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, and 043 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -21,22 +21,23 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 8. Packet 040: `spark advice-feedback` failed recording exits zero; independent CLI automation fix.
 9. Packet 041: `spark capture --list/--reject` ignored; independent CLI review-loop fix.
 10. Packet 023: `spark outcome` non-interactive write; independent outcome-data safety fix.
-11. Packet 024: `spark memory` missing config crash; independent first-run setup fix.
-12. Packet 025: `spark project` missing path writes context; independent project-path validation fix.
-13. Packet 026: `spark status` writes project context; independent read-only status fix.
-14. Packet 037: `spark project status/questions` write context; stacked project-view follow-up after Packet 026.
-15. Packet 039: `spark bridge` preview writes project state; stacked context-preview follow-up after Packet 037.
-16. Packet 027: `spark memory-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
-17. Packet 028: `spark eidos-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
-18. Packet 029: `spark eidos --stats` writes a store; independent read-only stats fix.
-19. Packet 030: `spark eidos --validate-migration` writes a store; independent validation safety fix.
-20. Packet 031: EIDOS list views write a store; independent read-only list fix.
-21. Packet 032: `spark eidos --metrics` writes a store; independent read-only metrics fix.
-22. Packet 033: `spark eidos --evidence` writes two stores; independent read-only evidence fix.
-23. Packet 034: `spark eidos --deferred` writes a store; independent read-only deferred-status fix.
-24. Packet 035: `spark eidos --migrate --dry-run` writes a store; independent dry-run migration safety fix.
-25. Packet 036: `spark advisory` writes defaults non-interactively; independent setup safety fix.
-26. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
+11. Packet 043: `spark outcome-link` accepts invalid targets; independent outcome-validation safety fix.
+12. Packet 024: `spark memory` missing config crash; independent first-run setup fix.
+13. Packet 025: `spark project` missing path writes context; independent project-path validation fix.
+14. Packet 026: `spark status` writes project context; independent read-only status fix.
+15. Packet 037: `spark project status/questions` write context; stacked project-view follow-up after Packet 026.
+16. Packet 039: `spark bridge` preview writes project state; stacked context-preview follow-up after Packet 037.
+17. Packet 027: `spark memory-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
+18. Packet 028: `spark eidos-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
+19. Packet 029: `spark eidos --stats` writes a store; independent read-only stats fix.
+20. Packet 030: `spark eidos --validate-migration` writes a store; independent validation safety fix.
+21. Packet 031: EIDOS list views write a store; independent read-only list fix.
+22. Packet 032: `spark eidos --metrics` writes a store; independent read-only metrics fix.
+23. Packet 033: `spark eidos --evidence` writes two stores; independent read-only evidence fix.
+24. Packet 034: `spark eidos --deferred` writes a store; independent read-only deferred-status fix.
+25. Packet 035: `spark eidos --migrate --dry-run` writes a store; independent dry-run migration safety fix.
+26. Packet 036: `spark advisory` writes defaults non-interactively; independent setup safety fix.
+27. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -935,4 +936,38 @@ Suggested PR body:
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli opportunities accept missing`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli opportunities dismiss missing`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli opportunities list`
+```
+
+## Packet 043: Outcome Link Accepts Invalid Targets
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/043-outcome-link-invalid-targets.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-outcome-link-validation
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-outcome-link-validation?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `5efe22b`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_outcome_link_validation.py tests/test_outcome_log_full_stats.py -q`
+- Behavior check: missing outcome IDs and invalid confidence values now exit `1` without creating `outcome_links.jsonl`; existing outcomes still link, including `--confidence 0`.
+
+Suggested PR title:
+
+```text
+Validate outcome-link targets
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- rejects `spark outcome-link` requests for missing outcome IDs before writing a link row
+- rejects link confidence values outside the documented `0-1` range
+- preserves valid links for existing outcomes, including `--confidence 0`
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/043-outcome-link-invalid-targets.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_outcome_link_validation.py tests/test_outcome_log_full_stats.py -q`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli outcome-link missing insight:key`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli outcome-link missing insight:key --confidence 2`
 ```
