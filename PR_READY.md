@@ -1422,3 +1422,37 @@ Suggested PR body:
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli outcome --result success --text "Deploy succeeded after a separate check" --link-count -1`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli outcome --result success --text "Deploy succeeded after a separate check" --link-count 0`
 ```
+
+## Packet 057: Process Zero Max Iterations Still Runs Worker
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/057-process-zero-max-iterations-writes-state.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-process-max-iterations-zero
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-process-max-iterations-zero?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `5a5469a`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_process_max_iterations.py -q`
+- Behavior check: `process --drain --max-iterations 0` reports zero cycles and creates no worker state; negative max iterations exit `1`; positive drain runs still execute normally.
+
+Suggested PR title:
+
+```text
+Respect process zero max iterations
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- makes `spark process --drain --max-iterations 0` a true zero-cycle no-op
+- rejects negative process max-iteration values before running the bridge worker
+- preserves positive drain behavior and normal one-cycle processing
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/057-process-zero-max-iterations-writes-state.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_process_max_iterations.py -q`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli process --drain --max-iterations 0 --timeout 0.01 --interval 0`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli process --drain --max-iterations -1 --timeout 0.01 --interval 0`
+```

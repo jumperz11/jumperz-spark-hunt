@@ -8,7 +8,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 - Site status: Registered
 - Rank snapshot: 16
 - Public points snapshot: 0
-- Last checked: 2026-05-21 17:12 UTC
+- Last checked: 2026-05-21 17:17 UTC
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
 
 ## Completed
@@ -71,12 +71,14 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 054 | [Outcome validate limit zero validates links](packets/054-outcome-validate-zero-limit.md) | Fork branch pushed | `codex/fix-outcome-validate-zero-limit` pushed to `jumperz11`; no upstream PR opened. |
 | 055 | [Outcome auto-link zero window still links](packets/055-outcome-autolink-window-zero.md) | Fork branch pushed | `codex/fix-outcome-autolink-window` pushed to `jumperz11`; no upstream PR opened. |
 | 056 | [Outcome negative link count still records](packets/056-outcome-link-count-negative.md) | Fork branch pushed | `codex/fix-outcome-link-count-validation` pushed to `jumperz11`; no upstream PR opened. |
+| 057 | [Process zero max iterations still runs](packets/057-process-zero-max-iterations-writes-state.md) | Fork branch pushed | `codex/fix-process-max-iterations-zero` pushed to `jumperz11`; no upstream PR opened. |
 
 ## Active Queue
 
 | Priority | Mission | Target |
 | --- | --- | --- |
-| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 053, 054, 055, 056 |
+| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 053, 054, 055, 056, 057 |
+| P0 | Verify process drain respects zero and negative max iterations | Packet 057 |
 | P0 | Verify outcome rejects negative link counts before recording | Packet 056 |
 | P0 | Verify outcome auto-link respects zero and negative windows | Packet 055 |
 | P0 | Verify outcome validation respects zero and negative limits | Packet 054 |
