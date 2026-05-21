@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, 020, and 021 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, 020, 021, and 022 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -15,7 +15,8 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 2. Packet 021: missing-project handling for `spark os compile`; stacked follow-up after Packet 001.
 3. Packet 002: CLI status/health mojibake; independent, low-risk output quality fix.
 4. Packet 020: dead Pulse URL reporting; independent service-status correctness fix.
-5. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
+5. Packet 022: `spark opportunities` default crash; independent, low-risk CLI traceback fix.
+6. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -189,4 +190,37 @@ Suggested PR body:
 ## Verification
 - `PYTHONPATH=. python -m pytest tests/test_cli_os.py -q`
 - `PYTHONPATH=. python -m spark.cli os compile --json --project /tmp/spark-definitely-missing-project`
+```
+
+## Packet 022: Opportunities Default Subcommand Traceback
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/022-opportunities-default-subcommand-traceback.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-opportunities-default
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-opportunities-default?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `ced1136 Fix opportunities default command`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_opportunities.py -q`
+- Behavior check: `spark opportunities` exits `0` and prints the opportunity inbox instead of raising `AttributeError: 'Namespace' object has no attribute 'limit'`.
+
+Suggested PR title:
+
+```text
+Fix opportunities default command
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- makes `spark opportunities` default safely to the list view
+- uses default list filters when no `opportunities list` subparser args are present
+- adds regression coverage for the no-subcommand path
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/022-opportunities-default-subcommand-traceback.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_opportunities.py -q`
+- `PYTHONPATH=. python -m spark.cli opportunities`
 ```

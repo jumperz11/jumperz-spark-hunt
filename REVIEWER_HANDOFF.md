@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 21
+Current proof packets: 22
 
 The strongest routing/system packets:
 
@@ -37,6 +37,7 @@ The strongest routing/system packets:
 - Packet 019: empty leaderboard falls back to mock standings
 - Packet 020: services advertises a dead Pulse URL
 - Packet 021: OS compile missing project emits traceback
+- Packet 022: opportunities default subcommand emits traceback
 
 The strongest UI/accessibility packets:
 
@@ -54,6 +55,7 @@ The strongest Spark CLI packets:
 - Packet 002: CLI status/health mojibake
 - Packet 020: services advertises a dead Pulse URL
 - Packet 021: OS compile missing project emits traceback
+- Packet 022: opportunities default subcommand emits traceback
 
 ## Routing Request
 
@@ -71,6 +73,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-pulse-service-status
 - Packet 021: `codex/fix-os-compile-missing-project`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-os-compile-missing-project
+- Packet 022: `codex/fix-opportunities-default`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-opportunities-default
 
 Routing issue opened here:
 
