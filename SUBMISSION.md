@@ -191,6 +191,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/083-project-questions-limit-ignored.md
 - Packet 084: Curiosity questions limit ignored
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/084-curiosity-questions-limit-ignored.md
+- Packet 085: Hypotheses display limit ignored
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/085-hypotheses-display-limit-ignored.md
 
 ## Routing Note
 

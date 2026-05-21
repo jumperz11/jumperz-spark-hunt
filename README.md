@@ -103,6 +103,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 082: [Voice growth limit ignored](packets/082-voice-growth-limit-ignored.md)
 - Packet 083: [Project questions limit ignored](packets/083-project-questions-limit-ignored.md)
 - Packet 084: [Curiosity questions limit ignored](packets/084-curiosity-questions-limit-ignored.md)
+- Packet 085: [Hypotheses display limit ignored](packets/085-hypotheses-display-limit-ignored.md)
 - Public page: [index.html](index.html)
 
 ## Routing
