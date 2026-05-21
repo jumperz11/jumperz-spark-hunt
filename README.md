@@ -53,6 +53,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 032: [EIDOS metrics creates store](packets/032-eidos-metrics-creates-store.md)
 - Packet 033: [EIDOS evidence creates stores](packets/033-eidos-evidence-creates-stores.md)
 - Packet 034: [EIDOS deferred creates store](packets/034-eidos-deferred-creates-store.md)
+- Packet 035: [EIDOS migrate dry run creates store](packets/035-eidos-migrate-dry-run-creates-store.md)
 - Public page: [index.html](index.html)
 
 ## Routing

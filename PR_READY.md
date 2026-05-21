@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, and 034 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, and 035 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -28,7 +28,8 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 15. Packet 032: `spark eidos --metrics` writes a store; independent read-only metrics fix.
 16. Packet 033: `spark eidos --evidence` writes two stores; independent read-only evidence fix.
 17. Packet 034: `spark eidos --deferred` writes a store; independent read-only deferred-status fix.
-18. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
+18. Packet 035: `spark eidos --migrate --dry-run` writes a store; independent dry-run migration safety fix.
+19. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -640,4 +641,38 @@ Suggested PR body:
 ## Verification
 - `PYTHONPATH=. python -m pytest tests/test_eidos_deferred_readonly.py tests/test_eidos.py::TestEidosStore -q`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli eidos --deferred`
+```
+
+## Packet 035: EIDOS Migrate Dry Run Creates Store
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/035-eidos-migrate-dry-run-creates-store.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-eidos-migrate-dry-run
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-eidos-migrate-dry-run?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `d6d14f7 Keep EIDOS migration dry run read-only`
+- Test: `PYTHONPATH=. python -m pytest tests/test_eidos_migrate_dry_run_readonly.py -q`
+- Behavior check: `spark eidos --migrate --dry-run` in a fresh `HOME` exits `0` and creates no files; non-dry-run migration still creates/uses `~/.spark/eidos.db`.
+
+Suggested PR title:
+
+```text
+Keep EIDOS migration dry run read-only
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- prevents `spark eidos --migrate --dry-run` from creating the EIDOS store in fresh environments
+- keeps non-dry-run migration behavior unchanged
+- adds CLI regression coverage for dry-run and apply-mode migration behavior
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/035-eidos-migrate-dry-run-creates-store.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_eidos_migrate_dry_run_readonly.py -q`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli eidos --migrate --dry-run`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli eidos --migrate`
 ```
