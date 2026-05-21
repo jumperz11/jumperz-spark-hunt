@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 85
+Current proof packets: 86
 
 The strongest routing/system packets:
 
@@ -101,6 +101,7 @@ The strongest routing/system packets:
 - Packet 083: project questions limit ignored
 - Packet 084: curiosity questions limit ignored
 - Packet 085: hypotheses display limit ignored
+- Packet 086: contradictions display limit ignored
 
 The strongest UI/accessibility packets:
 
@@ -182,6 +183,7 @@ The strongest Spark CLI packets:
 - Packet 083: project questions limit ignored
 - Packet 084: curiosity questions limit ignored
 - Packet 085: hypotheses display limit ignored
+- Packet 086: contradictions display limit ignored
 
 ## Routing Request
 
@@ -327,6 +329,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-curiosity-questions-limit
 - Packet 085: `codex/fix-hypotheses-display-limit`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-hypotheses-display-limit
+- Packet 086: `codex/fix-contradictions-display-limit`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-contradictions-display-limit
 
 Routing issue opened here:
 
