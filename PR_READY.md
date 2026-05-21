@@ -1489,3 +1489,38 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_cognitive_decay_prune.py tests/test_cognitive_learner.py -q`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli decay --apply --max-age-days 0 --min-effective 0.2`
 ```
+
+## Packet 059: Sync Context Negative Gates Export Low-Quality Memory
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/059-sync-context-negative-gates-export-low-quality.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-sync-context-threshold-validation
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-sync-context-threshold-validation?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `8a009cd`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_sync_context_validation.py -q`
+- Behavior check: `sync-context` now rejects negative or above-one reliability gates and negative validation gates before writing context exports.
+
+Suggested PR title:
+
+```text
+Validate sync-context thresholds
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- rejects `sync-context --min-reliability` values outside `0..1`
+- rejects negative `sync-context --min-validations` values
+- prevents invalid quality gates from writing low-reliability memory into agent context exports
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/059-sync-context-negative-gates-export-low-quality.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_sync_context_validation.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli sync-context --min-reliability -1 --min-validations -1 --limit 1`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli sync-context --min-reliability 1.1 --limit 1`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli sync-context --min-validations -1 --limit 1`
+```

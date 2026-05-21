@@ -139,6 +139,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/057-process-zero-max-iterations-writes-state.md
 - Packet 058: Decay prune reports success but leaves insight on disk
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/058-decay-prune-not-persisted.md
+- Packet 059: Sync context negative gates export low-quality memory
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/059-sync-context-negative-gates-export-low-quality.md
 
 ## Routing Note
 
