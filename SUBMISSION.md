@@ -189,6 +189,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/082-voice-growth-limit-ignored.md
 - Packet 083: Project questions limit ignored
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/083-project-questions-limit-ignored.md
+- Packet 084: Curiosity questions limit ignored
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/084-curiosity-questions-limit-ignored.md
 
 ## Routing Note
 

@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, and 020-083 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, and 020-084 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -66,6 +66,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 53. Packet 081: `spark surprises` crashes on persisted surprise rows; independent learning-evidence display fix.
 54. Packet 082: `spark voice --growth` ignores zero and negative display limits; independent voice-growth evidence display fix.
 55. Packet 083: `spark project questions` ignores zero and negative display limits; independent project-question evidence display fix.
+56. Packet 084: `spark curiosity --questions` ignores zero and negative display limits; independent curiosity-question evidence display fix.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -2373,4 +2374,38 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_project_questions_limit.py -q`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli project questions --project "$tmp/proj" --limit 0`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli project questions --project "$tmp/proj" --limit -1`
+```
+
+## Packet 084: Curiosity Questions Limit Ignored
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/084-curiosity-questions-limit-ignored.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-curiosity-questions-limit
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-curiosity-questions-limit?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `1e9f6cd`
+- Test: `PYTHONPATH=. python -m pytest tests/test_curiosity_questions_limit.py -q`
+- Behavior check: isolated `HOME` curiosity questions respect `--limit 0` and reject `--limit -1` with exit `1`.
+
+Suggested PR title:
+
+```text
+Validate curiosity question limits
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- preserves explicit `spark curiosity --questions --limit 0` as a zero-row view
+- rejects negative curiosity question limits with a CLI-safe non-zero exit
+- makes `get_open_questions(..., limit=0)` return an empty window instead of all rows
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/084-curiosity-questions-limit-ignored.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_curiosity_questions_limit.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli curiosity --questions --limit 0`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli curiosity --questions --limit -1`
 ```

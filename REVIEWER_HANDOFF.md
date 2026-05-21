@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 83
+Current proof packets: 84
 
 The strongest routing/system packets:
 
@@ -99,6 +99,7 @@ The strongest routing/system packets:
 - Packet 081: surprises view crashes on persisted rows
 - Packet 082: voice growth limit ignored
 - Packet 083: project questions limit ignored
+- Packet 084: curiosity questions limit ignored
 
 The strongest UI/accessibility packets:
 
@@ -178,6 +179,7 @@ The strongest Spark CLI packets:
 - Packet 081: surprises view crashes on persisted rows
 - Packet 082: voice growth limit ignored
 - Packet 083: project questions limit ignored
+- Packet 084: curiosity questions limit ignored
 
 ## Routing Request
 
@@ -319,6 +321,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-voice-growth-limit
 - Packet 083: `codex/fix-project-questions-limit`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-project-questions-limit
+- Packet 084: `codex/fix-curiosity-questions-limit`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-curiosity-questions-limit
 
 Routing issue opened here:
 
