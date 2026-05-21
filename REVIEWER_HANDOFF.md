@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 26
+Current proof packets: 27
 
 The strongest routing/system packets:
 
@@ -42,6 +42,7 @@ The strongest routing/system packets:
 - Packet 024: memory config missing traceback
 - Packet 025: project missing path writes context
 - Packet 026: status writes project context
+- Packet 027: memory purge dry run creates store
 
 The strongest UI/accessibility packets:
 
@@ -64,6 +65,7 @@ The strongest Spark CLI packets:
 - Packet 024: memory config missing traceback
 - Packet 025: project missing path writes context
 - Packet 026: status writes project context
+- Packet 027: memory purge dry run creates store
 
 ## Routing Request
 
@@ -91,6 +93,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-project-missing-path
 - Packet 026: `codex/fix-status-readonly-context`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-status-readonly-context
+- Packet 027: `codex/fix-memory-purge-dry-run`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-memory-purge-dry-run
 
 Routing issue opened here:
 
