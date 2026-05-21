@@ -89,6 +89,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/032-eidos-metrics-creates-store.md
 - Packet 033: EIDOS evidence creates stores
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/033-eidos-evidence-creates-stores.md
+- Packet 034: EIDOS deferred creates store
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/034-eidos-deferred-creates-store.md
 
 ## Routing Note
 

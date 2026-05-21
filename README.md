@@ -52,6 +52,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 031: [EIDOS list views create store](packets/031-eidos-list-views-create-store.md)
 - Packet 032: [EIDOS metrics creates store](packets/032-eidos-metrics-creates-store.md)
 - Packet 033: [EIDOS evidence creates stores](packets/033-eidos-evidence-creates-stores.md)
+- Packet 034: [EIDOS deferred creates store](packets/034-eidos-deferred-creates-store.md)
 - Public page: [index.html](index.html)
 
 ## Routing
