@@ -8,7 +8,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 - Site status: Registered
 - Rank snapshot: 16
 - Public points snapshot: 0
-- Last checked: 2026-05-21 17:41 UTC
+- Last checked: 2026-05-21 17:49 UTC
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
 
 ## Completed
@@ -76,12 +76,14 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 059 | [Sync context negative gates export low-quality memory](packets/059-sync-context-negative-gates-export-low-quality.md) | Fork branch pushed | `codex/fix-sync-context-threshold-validation` pushed to `jumperz11`; no upstream PR opened. |
 | 060 | [Growth timeline writes state into source checkout](packets/060-growth-timeline-writes-checkout.md) | Fork branch pushed | `codex/fix-growth-tracker-home-path` pushed to `jumperz11`; no upstream PR opened. |
 | 061 | [Personality state writes into source checkout](packets/061-personality-state-writes-checkout.md) | Fork branch pushed | `codex/fix-voice-aha-home-path` pushed to `jumperz11`; no upstream PR opened. |
+| 062 | [Eval accepts invalid thresholds](packets/062-eval-invalid-thresholds.md) | Fork branch pushed | `codex/fix-eval-threshold-validation` pushed to `jumperz11`; no upstream PR opened. |
 
 ## Active Queue
 
 | Priority | Mission | Target |
 | --- | --- | --- |
-| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 053, 054, 055, 056, 057, 058, 059, 060, 061 |
+| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 053, 054, 055, 056, 057, 058, 059, 060, 061, 062 |
+| P0 | Verify eval rejects invalid thresholds before reporting metrics | Packet 062 |
 | P0 | Verify personality state stores under user home | Packet 061 |
 | P0 | Verify growth timeline stores state under user home | Packet 060 |
 | P0 | Verify sync-context rejects invalid quality gates | Packet 059 |

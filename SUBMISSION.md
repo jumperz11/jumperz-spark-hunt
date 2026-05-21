@@ -145,6 +145,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/060-growth-timeline-writes-checkout.md
 - Packet 061: Personality state writes into source checkout
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/061-personality-state-writes-checkout.md
+- Packet 062: Eval accepts invalid thresholds
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/062-eval-invalid-thresholds.md
 
 ## Routing Note
 

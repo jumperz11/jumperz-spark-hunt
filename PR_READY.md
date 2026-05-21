@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, and 049 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, and 020-062 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -44,6 +44,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 31. Packet 036: `spark advisory` writes defaults non-interactively; independent setup safety fix.
 32. Packet 045: deprecated `spark curiosity --fill` false success; independent CLI mutation fix.
 33. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
+34. Packet 062: `spark eval` invalid thresholds; independent evaluation-metric correctness fix.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -1589,4 +1590,38 @@ Suggested PR body:
 ## Verification
 - `PYTHONPATH=. python -m pytest tests/test_personality_state_storage.py tests/test_validation_loop.py tests/test_convo_iq.py tests/test_niche_net.py -q`
 - isolated `HOME` smoke for `SparkVoice().record_interaction()` and `AhaTracker().capture_surprise(...)`
+```
+
+## Packet 062: Eval Accepts Invalid Thresholds
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/062-eval-invalid-thresholds.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-eval-threshold-validation
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-eval-threshold-validation?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `55969b1`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_eval_validation.py -q`
+- Behavior check: `spark eval --sim -1` and `spark eval --days -1` now exit with status `1` before reporting misleading metrics.
+
+Suggested PR title:
+
+```text
+Validate evaluation thresholds
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- rejects negative `spark eval --days` values before evaluation
+- rejects `spark eval --sim` values outside `0..1`
+- prevents invalid thresholds from reporting false prediction/outcome matches
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/062-eval-invalid-thresholds.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_eval_validation.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli eval --days 7 --sim -1`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli eval --days -1 --sim 0.72`
 ```

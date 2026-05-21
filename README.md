@@ -80,6 +80,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 059: [Sync context negative gates export low-quality memory](packets/059-sync-context-negative-gates-export-low-quality.md)
 - Packet 060: [Growth timeline writes state into source checkout](packets/060-growth-timeline-writes-checkout.md)
 - Packet 061: [Personality state writes into source checkout](packets/061-personality-state-writes-checkout.md)
+- Packet 062: [Eval accepts invalid thresholds](packets/062-eval-invalid-thresholds.md)
 - Public page: [index.html](index.html)
 
 ## Routing

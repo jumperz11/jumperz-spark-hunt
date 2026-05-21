@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 61
+Current proof packets: 62
 
 The strongest routing/system packets:
 
@@ -77,6 +77,7 @@ The strongest routing/system packets:
 - Packet 059: sync context negative gates export low-quality memory
 - Packet 060: growth timeline writes state into source checkout
 - Packet 061: personality state writes into source checkout
+- Packet 062: eval accepts invalid thresholds
 
 The strongest UI/accessibility packets:
 
@@ -134,6 +135,7 @@ The strongest Spark CLI packets:
 - Packet 059: sync context negative gates export low-quality memory
 - Packet 060: growth timeline writes state into source checkout
 - Packet 061: personality state writes into source checkout
+- Packet 062: eval accepts invalid thresholds
 
 ## Routing Request
 
@@ -231,6 +233,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-growth-tracker-home-path
 - Packet 061: `codex/fix-voice-aha-home-path`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-voice-aha-home-path
+- Packet 062: `codex/fix-eval-threshold-validation`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-eval-threshold-validation
 
 Routing issue opened here:
 
