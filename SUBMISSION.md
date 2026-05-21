@@ -73,6 +73,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/024-memory-config-missing-traceback.md
 - Packet 025: Project missing path writes context
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/025-project-missing-path-writes-context.md
+- Packet 026: Status writes project context
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/026-status-writes-project-context.md
 
 ## Routing Note
 

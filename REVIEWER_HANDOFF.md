@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 25
+Current proof packets: 26
 
 The strongest routing/system packets:
 
@@ -41,6 +41,7 @@ The strongest routing/system packets:
 - Packet 023: outcome command records unknown in non-interactive mode
 - Packet 024: memory config missing traceback
 - Packet 025: project missing path writes context
+- Packet 026: status writes project context
 
 The strongest UI/accessibility packets:
 
@@ -62,6 +63,7 @@ The strongest Spark CLI packets:
 - Packet 023: outcome command records unknown in non-interactive mode
 - Packet 024: memory config missing traceback
 - Packet 025: project missing path writes context
+- Packet 026: status writes project context
 
 ## Routing Request
 
@@ -87,6 +89,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-memory-config-missing
 - Packet 025: `codex/fix-project-missing-path`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-project-missing-path
+- Packet 026: `codex/fix-status-readonly-context`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-status-readonly-context
 
 Routing issue opened here:
 
