@@ -46,6 +46,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 025: [Project missing path writes context](packets/025-project-missing-path-writes-context.md)
 - Packet 026: [Status writes project context](packets/026-status-writes-project-context.md)
 - Packet 027: [Memory purge dry run creates store](packets/027-memory-purge-dry-run-creates-store.md)
+- Packet 028: [EIDOS purge dry run creates store](packets/028-eidos-purge-dry-run-creates-store.md)
 - Public page: [index.html](index.html)
 
 ## Routing

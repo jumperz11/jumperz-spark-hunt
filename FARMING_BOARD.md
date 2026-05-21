@@ -8,7 +8,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 - Site status: Registered
 - Rank snapshot: 16
 - Public points snapshot: 0
-- Last checked: 2026-05-21 13:40 UTC
+- Last checked: 2026-05-21 13:45 UTC
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
 
 ## Completed
@@ -42,12 +42,14 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 025 | [Project missing path writes context](packets/025-project-missing-path-writes-context.md) | Fork branch pushed | `codex/fix-project-missing-path` pushed to `jumperz11`; no upstream PR opened. |
 | 026 | [Status writes project context](packets/026-status-writes-project-context.md) | Fork branch pushed | `codex/fix-status-readonly-context` pushed to `jumperz11`; no upstream PR opened. |
 | 027 | [Memory purge dry run creates store](packets/027-memory-purge-dry-run-creates-store.md) | Fork branch pushed | `codex/fix-memory-purge-dry-run` pushed to `jumperz11`; no upstream PR opened. |
+| 028 | [EIDOS purge dry run creates store](packets/028-eidos-purge-dry-run-creates-store.md) | Fork branch pushed | `codex/fix-eidos-purge-dry-run` pushed to `jumperz11`; no upstream PR opened. |
 
 ## Active Queue
 
 | Priority | Mission | Target |
 | --- | --- | --- |
-| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027 |
+| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028 |
+| P0 | Verify EIDOS dry-run purge does not initialize stores | Packet 028 |
 | P0 | Verify dry-run purge commands do not initialize stores | Packet 027 |
 | P0 | Verify status command stays read-only in fresh environments | Packet 026 |
 | P0 | Verify project commands reject explicit missing paths before writing state | Packet 025 |

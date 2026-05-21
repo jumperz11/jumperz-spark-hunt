@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, and 027 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, and 028 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -21,7 +21,8 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 8. Packet 025: `spark project` missing path writes context; independent project-path validation fix.
 9. Packet 026: `spark status` writes project context; independent read-only status fix.
 10. Packet 027: `spark memory-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
-11. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
+11. Packet 028: `spark eidos-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
+12. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -397,4 +398,38 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_memory_purge_telemetry.py -q`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli memory-purge-telemetry --dry-run`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli memory-purge-telemetry`
+```
+
+## Packet 028: EIDOS Purge Dry Run Creates Store
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/028-eidos-purge-dry-run-creates-store.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-eidos-purge-dry-run
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-eidos-purge-dry-run?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `3af6e4d Keep EIDOS purge dry run read-only`
+- Test: `PYTHONPATH=. python -m pytest tests/test_eidos_purge_telemetry.py -q`
+- Behavior check: `spark eidos-purge-telemetry --dry-run` in a fresh `HOME` exits `0` and creates no `~/.spark` files; non-dry-run mode still creates/uses the EIDOS store.
+
+Suggested PR title:
+
+```text
+Keep EIDOS purge dry run read-only
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- prevents `spark eidos-purge-telemetry --dry-run` from creating the EIDOS store in fresh environments
+- returns empty dry-run stats before constructing the default store when no database exists
+- adds regression coverage for missing-store and existing-store dry-run behavior
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/028-eidos-purge-dry-run-creates-store.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_eidos_purge_telemetry.py -q`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli eidos-purge-telemetry --dry-run`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli eidos-purge-telemetry`
 ```
