@@ -1249,3 +1249,37 @@ Suggested PR body:
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli sync-banks --categories bogus`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli sync-banks --min-reliability 0.7 --dry-run`
 ```
+
+## Packet 052: Auto-Link Accepts Invalid Similarity Thresholds
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/052-auto-link-threshold-validation.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-auto-link-threshold-validation
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-auto-link-threshold-validation?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `52897ef`
+- Test: `PYTHONPATH=. python -m pytest tests/test_auto_link_threshold_validation.py tests/test_outcome_log_full_stats.py -q`
+- Behavior check: invalid negative similarity thresholds now exit `1` before link writes; normal dry-run thresholds still work.
+
+Suggested PR title:
+
+```text
+Validate auto-link similarity threshold
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- rejects `auto-link --min-similarity` values outside the documented 0-1 range
+- prevents negative thresholds from creating low-similarity validation links
+- converts auto-link threshold validation into a CLI-safe non-zero exit
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/052-auto-link-threshold-validation.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_auto_link_threshold_validation.py tests/test_outcome_log_full_stats.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli auto-link --min-similarity -1`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli auto-link --min-similarity 0.25 --dry-run`
+```

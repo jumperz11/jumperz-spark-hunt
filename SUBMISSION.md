@@ -125,6 +125,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/050-learn-input-validation.md
 - Packet 051: Sync banks accepts invalid thresholds and categories
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/051-sync-banks-input-validation.md
+- Packet 052: Auto-link accepts invalid similarity thresholds
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/052-auto-link-threshold-validation.md
 
 ## Routing Note
 

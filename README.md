@@ -70,6 +70,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 049: [Contradictions resolve missing index reports success](packets/049-contradictions-resolve-missing-index.md)
 - Packet 050: [Learn command accepts invalid input](packets/050-learn-input-validation.md)
 - Packet 051: [Sync banks accepts invalid inputs](packets/051-sync-banks-input-validation.md)
+- Packet 052: [Auto-link accepts invalid thresholds](packets/052-auto-link-threshold-validation.md)
 - Public page: [index.html](index.html)
 
 ## Routing
