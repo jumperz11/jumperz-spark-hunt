@@ -115,6 +115,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/045-curiosity-fill-missing-gap.md
 - Packet 046: Chips missing targets exit zero
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/046-chips-missing-targets-exit-zero.md
+- Packet 047: Project phase accepts invalid values
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/047-project-phase-accepts-invalid-values.md
 
 ## Routing Note
 

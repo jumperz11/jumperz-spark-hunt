@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, and 046 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, and 047 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -24,23 +24,24 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 11. Packet 043: `spark outcome-link` accepts invalid targets; independent outcome-validation safety fix.
 12. Packet 044: `spark project answer` accepts missing IDs; independent project-evidence safety fix.
 13. Packet 046: `spark chips` missing targets exit zero; independent command-family automation fix.
-14. Packet 024: `spark memory` missing config crash; independent first-run setup fix.
-15. Packet 025: `spark project` missing path writes context; independent project-path validation fix.
-16. Packet 026: `spark status` writes project context; independent read-only status fix.
-17. Packet 037: `spark project status/questions` write context; stacked project-view follow-up after Packet 026.
-18. Packet 039: `spark bridge` preview writes project state; stacked context-preview follow-up after Packet 037.
-19. Packet 027: `spark memory-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
-20. Packet 028: `spark eidos-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
-21. Packet 029: `spark eidos --stats` writes a store; independent read-only stats fix.
-22. Packet 030: `spark eidos --validate-migration` writes a store; independent validation safety fix.
-23. Packet 031: EIDOS list views write a store; independent read-only list fix.
-24. Packet 032: `spark eidos --metrics` writes a store; independent read-only metrics fix.
-25. Packet 033: `spark eidos --evidence` writes two stores; independent read-only evidence fix.
-26. Packet 034: `spark eidos --deferred` writes a store; independent read-only deferred-status fix.
-27. Packet 035: `spark eidos --migrate --dry-run` writes a store; independent dry-run migration safety fix.
-28. Packet 036: `spark advisory` writes defaults non-interactively; independent setup safety fix.
-29. Packet 045: deprecated `spark curiosity --fill` false success; independent CLI mutation fix.
-30. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
+14. Packet 047: `spark project phase` accepts invalid values; independent project-state validation fix.
+15. Packet 024: `spark memory` missing config crash; independent first-run setup fix.
+16. Packet 025: `spark project` missing path writes context; independent project-path validation fix.
+17. Packet 026: `spark status` writes project context; independent read-only status fix.
+18. Packet 037: `spark project status/questions` write context; stacked project-view follow-up after Packet 026.
+19. Packet 039: `spark bridge` preview writes project state; stacked context-preview follow-up after Packet 037.
+20. Packet 027: `spark memory-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
+21. Packet 028: `spark eidos-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
+22. Packet 029: `spark eidos --stats` writes a store; independent read-only stats fix.
+23. Packet 030: `spark eidos --validate-migration` writes a store; independent validation safety fix.
+24. Packet 031: EIDOS list views write a store; independent read-only list fix.
+25. Packet 032: `spark eidos --metrics` writes a store; independent read-only metrics fix.
+26. Packet 033: `spark eidos --evidence` writes two stores; independent read-only evidence fix.
+27. Packet 034: `spark eidos --deferred` writes a store; independent read-only deferred-status fix.
+28. Packet 035: `spark eidos --migrate --dry-run` writes a store; independent dry-run migration safety fix.
+29. Packet 036: `spark advisory` writes defaults non-interactively; independent setup safety fix.
+30. Packet 045: deprecated `spark curiosity --fill` false success; independent CLI mutation fix.
+31. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -1074,4 +1075,38 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_cli_chips_missing_targets.py tests/test_chips_runtime_filters.py -q`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli chips activate missing`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli chips status missing`
+```
+
+## Packet 047: Project Phase Accepts Invalid Values
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/047-project-phase-accepts-invalid-values.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-project-phase-validation
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-project-phase-validation?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `57531b1`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_project_phase_validation.py tests/test_project_context.py -q`
+- Behavior check: invalid project phases now exit `1` before creating `.spark`; valid phases still persist normally.
+
+Suggested PR title:
+
+```text
+Validate project phase values
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- validates `spark project phase --set` against the supported phase list
+- rejects unsupported phases before loading or writing project state
+- keeps valid phase changes and phase-specific question generation intact
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/047-project-phase-accepts-invalid-values.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_project_phase_validation.py tests/test_project_context.py -q`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli project phase --set invalid`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli project phase --set prototype`
 ```

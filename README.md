@@ -65,6 +65,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 044: [Project answer accepts missing question ID](packets/044-project-answer-missing-question-id.md)
 - Packet 045: [Curiosity fill missing gap exits zero](packets/045-curiosity-fill-missing-gap.md)
 - Packet 046: [Chips missing targets exit zero](packets/046-chips-missing-targets-exit-zero.md)
+- Packet 047: [Project phase accepts invalid values](packets/047-project-phase-accepts-invalid-values.md)
 - Public page: [index.html](index.html)
 
 ## Routing
