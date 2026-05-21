@@ -1388,3 +1388,37 @@ Suggested PR body:
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli outcome --result success --text "Deploy succeeded after a separate check" --auto-link --link-window-mins 1`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli outcome --result success --text "Deploy succeeded after a separate check" --auto-link --link-window-mins -1`
 ```
+
+## Packet 056: Outcome Negative Link Count Still Records Outcome
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/056-outcome-link-count-negative.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-outcome-link-count-validation
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-outcome-link-count-validation?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `e1cc32e`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_outcome_link_count.py -q`
+- Behavior check: `outcome --link-count -1` exits `1` before creating an outcome file; `--link-count 0` still records an unlinked outcome; positive counts still link recent exposures.
+
+Suggested PR title:
+
+```text
+Validate outcome link count
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- rejects negative `outcome --link-count` values before recording an outcome
+- keeps explicit `--link-count 0` as a valid unlinked outcome write
+- preserves positive link-count behavior for recent exposure linking
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/056-outcome-link-count-negative.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_outcome_link_count.py -q`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli outcome --result success --text "Deploy succeeded after a separate check" --link-count -1`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli outcome --result success --text "Deploy succeeded after a separate check" --link-count 0`
+```

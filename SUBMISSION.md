@@ -133,6 +133,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/054-outcome-validate-zero-limit.md
 - Packet 055: Outcome auto-link zero window still links exposures
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/055-outcome-autolink-window-zero.md
+- Packet 056: Outcome negative link count still records outcome
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/056-outcome-link-count-negative.md
 
 ## Routing Note
 
