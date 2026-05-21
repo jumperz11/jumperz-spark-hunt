@@ -85,6 +85,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 064: [Decay accepts invalid bounds](packets/064-decay-invalid-bounds.md)
 - Packet 065: [Validate-ingest negative limit traceback](packets/065-validate-ingest-negative-limit.md)
 - Packet 066: [Personality evolution input tracebacks](packets/066-personality-evolution-input-tracebacks.md)
+- Packet 067: [Config malformed dot-path writes empty keys](packets/067-config-malformed-dot-path.md)
 - Public page: [index.html](index.html)
 
 ## Routing

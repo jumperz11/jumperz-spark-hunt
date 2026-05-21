@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, and 020-066 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, and 020-067 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -49,6 +49,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 36. Packet 064: `spark decay` invalid bounds; independent learning-state prune safety fix.
 37. Packet 065: `spark validate-ingest` negative limit traceback; independent ingest-diagnostic hardening fix.
 38. Packet 066: `spark personality-evolution apply` input tracebacks; independent bounded-personality control hardening fix.
+39. Packet 067: `spark config` malformed dot paths write empty keys; independent runtime-config safety fix.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -1766,4 +1767,39 @@ Suggested PR body:
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli personality-evolution apply --signals '{bad json'`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli personality-evolution apply --signals '[1]'`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli personality-evolution apply --signals-file "$tmp/missing.json"`
+```
+
+## Packet 067: Config Malformed Dot-Path Writes Empty Keys
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/067-config-malformed-dot-path.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-config-key-validation
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-config-key-validation?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `a7ac2e8`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_config_key_validation.py -q`
+- Behavior check: malformed config keys now exit `1` before creating `~/.spark/tuneables.json`; valid `advisor.max_items` still writes nested runtime config.
+
+Suggested PR title:
+
+```text
+Validate config dot-path keys
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- rejects empty and malformed `spark config` dot-path keys before reads or writes
+- prevents empty-key sections from being persisted to runtime tuneables
+- keeps valid dot-path config writes working
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/067-config-malformed-dot-path.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_config_key_validation.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli config set "" 1`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli config set advisor..max_items 5`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli config set advisor.max_items 5`
 ```

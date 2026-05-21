@@ -8,7 +8,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 - Site status: Registered
 - Rank snapshot: 16
 - Public points snapshot: 0
-- Last checked: 2026-05-21 18:16 UTC
+- Last checked: 2026-05-21 18:25 UTC
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
 
 ## Completed
@@ -81,12 +81,14 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 064 | [Decay accepts invalid bounds](packets/064-decay-invalid-bounds.md) | Fork branch pushed | `codex/fix-decay-input-validation` pushed to `jumperz11`; no upstream PR opened. |
 | 065 | [Validate-ingest negative limit traceback](packets/065-validate-ingest-negative-limit.md) | Fork branch pushed | `codex/fix-validate-ingest-limit` pushed to `jumperz11`; no upstream PR opened. |
 | 066 | [Personality evolution input tracebacks](packets/066-personality-evolution-input-tracebacks.md) | Fork branch pushed | `codex/fix-personality-evolution-input` pushed to `jumperz11`; no upstream PR opened. |
+| 067 | [Config malformed dot-path writes empty keys](packets/067-config-malformed-dot-path.md) | Fork branch pushed | `codex/fix-config-key-validation` pushed to `jumperz11`; no upstream PR opened. |
 
 ## Active Queue
 
 | Priority | Mission | Target |
 | --- | --- | --- |
-| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 053, 054, 055, 056, 057, 058, 059, 060, 061, 062, 063, 064, 065, 066 |
+| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 053, 054, 055, 056, 057, 058, 059, 060, 061, 062, 063, 064, 065, 066, 067 |
+| P0 | Verify config rejects malformed dot paths before writing runtime tuneables | Packet 067 |
 | P0 | Verify personality evolution rejects malformed signals cleanly | Packet 066 |
 | P0 | Verify validate-ingest rejects negative scan limits cleanly | Packet 065 |
 | P0 | Verify decay rejects invalid bounds before pruning | Packet 064 |
