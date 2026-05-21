@@ -17,6 +17,7 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
 - Clean proof repo: https://github.com/jumperz11/jumperz-spark-hunt
 - Live proof hub: https://jumperz11.github.io/jumperz-spark-hunt/
 - Reviewer handoff: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/REVIEWER_HANDOFF.md
+- PR-ready fixes: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/PR_READY.md
 - Reviewer routing issue: https://github.com/vibeforge1111/vibeship-spark-intelligence/issues/184
 - Farming board: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/FARMING_BOARD.md
 
