@@ -1214,3 +1214,38 @@ Suggested PR body:
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli learn wisdom "x" --reliability 1.2`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli learn wisdom ""`
 ```
+
+## Packet 051: Sync Banks Accepts Invalid Thresholds And Categories
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/051-sync-banks-input-validation.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-sync-banks-input-validation
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-sync-banks-input-validation?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `cfd8733`
+- Test: `PYTHONPATH=. python -m pytest tests/test_sync_banks_validation.py tests/test_memory_emotion_integration.py -q`
+- Behavior check: invalid reliability thresholds and unknown category filters now exit `1`; valid dry-run sync still works.
+
+Suggested PR title:
+
+```text
+Validate sync banks inputs
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- rejects `sync-banks --min-reliability` values outside the documented 0-1 range
+- rejects unknown sync-banks category filters instead of silently doing zero work
+- converts sync-banks validation errors into CLI-safe non-zero exits
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/051-sync-banks-input-validation.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_sync_banks_validation.py tests/test_memory_emotion_integration.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli sync-banks --min-reliability -1`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli sync-banks --categories bogus`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli sync-banks --min-reliability 0.7 --dry-run`
+```
