@@ -92,6 +92,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 071: [Logs invalid since filter ignored](packets/071-logs-since-invalid-filter.md)
 - Packet 072: [Validation scan negative limit reports success](packets/072-validation-scan-negative-limit.md)
 - Packet 073: [Learnings limit ignored](packets/073-learnings-limit-ignored.md)
+- Packet 074: [Events limit ignored](packets/074-events-limit-ignored.md)
 - Public page: [index.html](index.html)
 
 ## Routing

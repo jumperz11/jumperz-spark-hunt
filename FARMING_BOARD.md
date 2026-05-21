@@ -8,7 +8,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 - Site status: Registered
 - Rank snapshot: 16
 - Public points snapshot: 0
-- Last checked: 2026-05-21 19:04 UTC
+- Last checked: 2026-05-21 19:10 UTC
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
 
 ## Completed
@@ -88,12 +88,14 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 071 | [Logs invalid since filter ignored](packets/071-logs-since-invalid-filter.md) | Fork branch pushed | `codex/fix-logs-since-validation` pushed to `jumperz11`; no upstream PR opened. |
 | 072 | [Validation scan negative limit reports success](packets/072-validation-scan-negative-limit.md) | Fork branch pushed | `codex/fix-validation-scan-limit` pushed to `jumperz11`; no upstream PR opened. |
 | 073 | [Learnings limit ignored](packets/073-learnings-limit-ignored.md) | Fork branch pushed | `codex/fix-learnings-limit-validation` pushed to `jumperz11`; no upstream PR opened. |
+| 074 | [Events limit ignored](packets/074-events-limit-ignored.md) | Fork branch pushed | `codex/fix-events-limit-validation` pushed to `jumperz11`; no upstream PR opened. |
 
 ## Active Queue
 
 | Priority | Mission | Target |
 | --- | --- | --- |
-| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 053, 054, 055, 056, 057, 058, 059, 060, 061, 062, 063, 064, 065, 066, 067, 068, 069, 070, 071, 072, 073 |
+| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 053, 054, 055, 056, 057, 058, 059, 060, 061, 062, 063, 064, 065, 066, 067, 068, 069, 070, 071, 072, 073, 074 |
+| P0 | Verify events display respects zero and rejects negative limits | Packet 074 |
 | P0 | Verify learnings display respects zero and rejects negative limits | Packet 073 |
 | P0 | Verify validation scan rejects negative limits before loop execution | Packet 072 |
 | P0 | Verify logs rejects invalid since filters instead of returning all lines | Packet 071 |

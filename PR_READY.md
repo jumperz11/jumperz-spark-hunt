@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, and 020-073 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, and 020-074 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -56,6 +56,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 43. Packet 071: `spark logs` ignores invalid since filters; independent service-diagnostic fix.
 44. Packet 072: `spark validate` accepts negative scan limits; independent validation-loop diagnostic fix.
 45. Packet 073: `spark learnings` ignores zero and negative display limits; independent learning-evidence display fix.
+46. Packet 074: `spark events` ignores zero and negative display limits; independent event-evidence display fix.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -2016,4 +2017,39 @@ Suggested PR body:
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli learnings --limit -1`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli learnings --limit 0`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli learnings --limit 1`
+```
+
+## Packet 074: Events Limit Ignored
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/074-events-limit-ignored.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-events-limit-validation
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-events-limit-validation?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `edb35f0`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_events_limit.py -q`
+- Behavior check: negative event limits exit `1`, explicit zero displays zero rows, and positive limits still show recent queued events.
+
+Suggested PR title:
+
+```text
+Validate events display limit
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- rejects negative `spark events --limit` values before reading the event queue
+- preserves explicit `--limit 0` as a zero-row events view
+- keeps positive limits displaying recent queued events
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/074-events-limit-ignored.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_events_limit.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli events --limit -1`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli events --limit 0`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli events --limit 1`
 ```
