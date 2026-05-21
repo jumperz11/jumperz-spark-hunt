@@ -8,7 +8,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 - Site status: Registered
 - Rank snapshot: 16
 - Public points snapshot: 0
-- Last checked: 2026-05-21 16:06 UTC
+- Last checked: 2026-05-21 16:11 UTC
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
 
 ## Completed
@@ -60,12 +60,14 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 043 | [Outcome link accepts invalid targets](packets/043-outcome-link-invalid-targets.md) | Fork branch pushed | `codex/fix-outcome-link-validation` pushed to `jumperz11`; no upstream PR opened. |
 | 044 | [Project answer accepts missing question ID](packets/044-project-answer-missing-question-id.md) | Fork branch pushed | `codex/fix-project-answer-missing-id` pushed to `jumperz11`; no upstream PR opened. |
 | 045 | [Curiosity fill missing gap exits zero](packets/045-curiosity-fill-missing-gap.md) | Fork branch pushed | `codex/fix-curiosity-fill-missing-gap` pushed to `jumperz11`; no upstream PR opened. |
+| 046 | [Chips missing targets exit zero](packets/046-chips-missing-targets-exit-zero.md) | Fork branch pushed | `codex/fix-chips-missing-target-exits` pushed to `jumperz11`; no upstream PR opened. |
 
 ## Active Queue
 
 | Priority | Mission | Target |
 | --- | --- | --- |
-| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045 |
+| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046 |
+| P0 | Verify chip target commands return non-zero on missing IDs | Packet 046 |
 | P1 | Verify deprecated curiosity fill reports missing gaps | Packet 045 |
 | P0 | Verify project answers reject missing question IDs | Packet 044 |
 | P0 | Verify outcome links reject invalid targets | Packet 043 |

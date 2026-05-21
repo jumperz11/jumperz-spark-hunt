@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, and 045 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, and 046 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -23,23 +23,24 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 10. Packet 023: `spark outcome` non-interactive write; independent outcome-data safety fix.
 11. Packet 043: `spark outcome-link` accepts invalid targets; independent outcome-validation safety fix.
 12. Packet 044: `spark project answer` accepts missing IDs; independent project-evidence safety fix.
-13. Packet 024: `spark memory` missing config crash; independent first-run setup fix.
-14. Packet 025: `spark project` missing path writes context; independent project-path validation fix.
-15. Packet 026: `spark status` writes project context; independent read-only status fix.
-16. Packet 037: `spark project status/questions` write context; stacked project-view follow-up after Packet 026.
-17. Packet 039: `spark bridge` preview writes project state; stacked context-preview follow-up after Packet 037.
-18. Packet 027: `spark memory-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
-19. Packet 028: `spark eidos-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
-20. Packet 029: `spark eidos --stats` writes a store; independent read-only stats fix.
-21. Packet 030: `spark eidos --validate-migration` writes a store; independent validation safety fix.
-22. Packet 031: EIDOS list views write a store; independent read-only list fix.
-23. Packet 032: `spark eidos --metrics` writes a store; independent read-only metrics fix.
-24. Packet 033: `spark eidos --evidence` writes two stores; independent read-only evidence fix.
-25. Packet 034: `spark eidos --deferred` writes a store; independent read-only deferred-status fix.
-26. Packet 035: `spark eidos --migrate --dry-run` writes a store; independent dry-run migration safety fix.
-27. Packet 036: `spark advisory` writes defaults non-interactively; independent setup safety fix.
-28. Packet 045: deprecated `spark curiosity --fill` false success; independent CLI mutation fix.
-29. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
+13. Packet 046: `spark chips` missing targets exit zero; independent command-family automation fix.
+14. Packet 024: `spark memory` missing config crash; independent first-run setup fix.
+15. Packet 025: `spark project` missing path writes context; independent project-path validation fix.
+16. Packet 026: `spark status` writes project context; independent read-only status fix.
+17. Packet 037: `spark project status/questions` write context; stacked project-view follow-up after Packet 026.
+18. Packet 039: `spark bridge` preview writes project state; stacked context-preview follow-up after Packet 037.
+19. Packet 027: `spark memory-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
+20. Packet 028: `spark eidos-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
+21. Packet 029: `spark eidos --stats` writes a store; independent read-only stats fix.
+22. Packet 030: `spark eidos --validate-migration` writes a store; independent validation safety fix.
+23. Packet 031: EIDOS list views write a store; independent read-only list fix.
+24. Packet 032: `spark eidos --metrics` writes a store; independent read-only metrics fix.
+25. Packet 033: `spark eidos --evidence` writes two stores; independent read-only evidence fix.
+26. Packet 034: `spark eidos --deferred` writes a store; independent read-only deferred-status fix.
+27. Packet 035: `spark eidos --migrate --dry-run` writes a store; independent dry-run migration safety fix.
+28. Packet 036: `spark advisory` writes defaults non-interactively; independent setup safety fix.
+29. Packet 045: deprecated `spark curiosity --fill` false success; independent CLI mutation fix.
+30. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -1039,4 +1040,38 @@ Suggested PR body:
 ## Verification
 - `PYTHONPATH=. python -m pytest tests/test_cli_curiosity_fill.py tests/test_project_context.py -q`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -W ignore::DeprecationWarning -m spark.cli curiosity --fill missing --answer hello`
+```
+
+## Packet 046: Chips Missing Targets Exit Zero
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/046-chips-missing-targets-exit-zero.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-chips-missing-target-exits
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-chips-missing-target-exits?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `e0949b0`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_chips_missing_targets.py tests/test_chips_runtime_filters.py -q`
+- Behavior check: missing chip target commands now exit `1`; aggregate read-only chip views remain successful.
+
+Suggested PR title:
+
+```text
+Return failure for missing chip targets
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- returns non-zero exits for missing required chip IDs and not-found chip targets
+- validates `spark chips insights <id>` against installed chips before treating it as an empty-insights state
+- preserves successful aggregate chip list/status/question views
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/046-chips-missing-targets-exit-zero.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_chips_missing_targets.py tests/test_chips_runtime_filters.py -q`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli chips activate missing`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli chips status missing`
 ```

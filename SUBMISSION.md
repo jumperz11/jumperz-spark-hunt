@@ -113,6 +113,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/044-project-answer-missing-question-id.md
 - Packet 045: Curiosity fill missing gap exits zero
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/045-curiosity-fill-missing-gap.md
+- Packet 046: Chips missing targets exit zero
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/046-chips-missing-targets-exit-zero.md
 
 ## Routing Note
 
