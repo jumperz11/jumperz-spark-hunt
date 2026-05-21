@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 35
+Current proof packets: 36
 
 The strongest routing/system packets:
 
@@ -51,6 +51,7 @@ The strongest routing/system packets:
 - Packet 033: EIDOS evidence creates stores
 - Packet 034: EIDOS deferred creates store
 - Packet 035: EIDOS migrate dry run creates store
+- Packet 036: advisory setup writes defaults non-interactively
 
 The strongest UI/accessibility packets:
 
@@ -82,6 +83,7 @@ The strongest Spark CLI packets:
 - Packet 033: EIDOS evidence creates stores
 - Packet 034: EIDOS deferred creates store
 - Packet 035: EIDOS migrate dry run creates store
+- Packet 036: advisory setup writes defaults non-interactively
 
 ## Routing Request
 
@@ -127,6 +129,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-eidos-deferred-readonly
 - Packet 035: `codex/fix-eidos-migrate-dry-run`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-eidos-migrate-dry-run
+- Packet 036: `codex/fix-advisory-noninteractive`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-advisory-noninteractive
 
 Routing issue opened here:
 

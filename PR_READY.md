@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, and 035 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, and 036 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -29,7 +29,8 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 16. Packet 033: `spark eidos --evidence` writes two stores; independent read-only evidence fix.
 17. Packet 034: `spark eidos --deferred` writes a store; independent read-only deferred-status fix.
 18. Packet 035: `spark eidos --migrate --dry-run` writes a store; independent dry-run migration safety fix.
-19. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
+19. Packet 036: `spark advisory` writes defaults non-interactively; independent setup safety fix.
+20. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -675,4 +676,38 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_eidos_migrate_dry_run_readonly.py -q`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli eidos --migrate --dry-run`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli eidos --migrate`
+```
+
+## Packet 036: Advisory Setup Writes Defaults Non-Interactively
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/036-advisory-setup-noninteractive-writes-defaults.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-advisory-noninteractive
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-advisory-noninteractive?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `5a1c9e2 Keep advisory setup noninteractive read-only`
+- Test: `PYTHONPATH=. python -m pytest tests/test_advisory_noninteractive.py tests/test_advisory_preferences.py -q`
+- Behavior check: `spark advisory` in a fresh non-interactive `HOME` exits `0` and creates no files; explicit `spark advisory set` still writes preference files.
+
+Suggested PR title:
+
+```text
+Keep advisory setup non-interactive runs read-only
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- prevents guided `spark advisory` setup from silently accepting defaults in non-interactive runs
+- keeps explicit preference write commands such as `spark advisory set` unchanged
+- adds CLI regression coverage for fresh-home non-interactive advisory setup
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/036-advisory-setup-noninteractive-writes-defaults.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_advisory_noninteractive.py tests/test_advisory_preferences.py -q`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli advisory`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli advisory set`
 ```
