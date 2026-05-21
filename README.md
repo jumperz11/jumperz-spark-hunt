@@ -58,6 +58,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 037: [Project view commands write context](packets/037-project-view-commands-write-context.md)
 - Packet 038: [CLI view commands emit mojibake](packets/038-cli-view-commands-mojibake.md)
 - Packet 039: [Bridge preview writes project state](packets/039-bridge-preview-writes-project-state.md)
+- Packet 040: [Advice feedback failure exits zero](packets/040-advice-feedback-failure-exits-zero.md)
 - Public page: [index.html](index.html)
 
 ## Routing

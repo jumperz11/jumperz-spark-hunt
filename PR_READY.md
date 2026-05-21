@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, and 039 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, and 040 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -17,23 +17,24 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 4. Packet 038: remaining CLI view mojibake; stacked output-quality follow-up after Packet 002.
 5. Packet 020: dead Pulse URL reporting; independent service-status correctness fix.
 6. Packet 022: `spark opportunities` default crash; independent, low-risk CLI traceback fix.
-7. Packet 023: `spark outcome` non-interactive write; independent outcome-data safety fix.
-8. Packet 024: `spark memory` missing config crash; independent first-run setup fix.
-9. Packet 025: `spark project` missing path writes context; independent project-path validation fix.
-10. Packet 026: `spark status` writes project context; independent read-only status fix.
-11. Packet 037: `spark project status/questions` write context; stacked project-view follow-up after Packet 026.
-12. Packet 039: `spark bridge` preview writes project state; stacked context-preview follow-up after Packet 037.
-13. Packet 027: `spark memory-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
-14. Packet 028: `spark eidos-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
-15. Packet 029: `spark eidos --stats` writes a store; independent read-only stats fix.
-16. Packet 030: `spark eidos --validate-migration` writes a store; independent validation safety fix.
-17. Packet 031: EIDOS list views write a store; independent read-only list fix.
-18. Packet 032: `spark eidos --metrics` writes a store; independent read-only metrics fix.
-19. Packet 033: `spark eidos --evidence` writes two stores; independent read-only evidence fix.
-20. Packet 034: `spark eidos --deferred` writes a store; independent read-only deferred-status fix.
-21. Packet 035: `spark eidos --migrate --dry-run` writes a store; independent dry-run migration safety fix.
-22. Packet 036: `spark advisory` writes defaults non-interactively; independent setup safety fix.
-23. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
+7. Packet 040: `spark advice-feedback` failed recording exits zero; independent CLI automation fix.
+8. Packet 023: `spark outcome` non-interactive write; independent outcome-data safety fix.
+9. Packet 024: `spark memory` missing config crash; independent first-run setup fix.
+10. Packet 025: `spark project` missing path writes context; independent project-path validation fix.
+11. Packet 026: `spark status` writes project context; independent read-only status fix.
+12. Packet 037: `spark project status/questions` write context; stacked project-view follow-up after Packet 026.
+13. Packet 039: `spark bridge` preview writes project state; stacked context-preview follow-up after Packet 037.
+14. Packet 027: `spark memory-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
+15. Packet 028: `spark eidos-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
+16. Packet 029: `spark eidos --stats` writes a store; independent read-only stats fix.
+17. Packet 030: `spark eidos --validate-migration` writes a store; independent validation safety fix.
+18. Packet 031: EIDOS list views write a store; independent read-only list fix.
+19. Packet 032: `spark eidos --metrics` writes a store; independent read-only metrics fix.
+20. Packet 033: `spark eidos --evidence` writes two stores; independent read-only evidence fix.
+21. Packet 034: `spark eidos --deferred` writes a store; independent read-only deferred-status fix.
+22. Packet 035: `spark eidos --migrate --dry-run` writes a store; independent dry-run migration safety fix.
+23. Packet 036: `spark advisory` writes defaults non-interactively; independent setup safety fix.
+24. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -829,4 +830,38 @@ Suggested PR body:
 ## Verification
 - `PYTHONPATH=. python -m pytest tests/test_cli_bridge_readonly_context.py tests/test_cli_project_readonly_views.py tests/test_project_context.py -q`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli bridge`
+```
+
+## Packet 040: Advice Feedback Failure Exits Zero
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/040-advice-feedback-failure-exits-zero.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-advice-feedback-failure-exit
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-advice-feedback-failure-exit?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `2fd5e99 Return failure when advice feedback is not recorded`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_advice_feedback_exit.py -q`
+- Behavior check: `spark advice-feedback` without `--tool` or `--advice-id` exits `1` and prints the existing failure message; `spark advice-feedback --pending` still exits `0`.
+
+Suggested PR title:
+
+```text
+Return failure when advice feedback is not recorded
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- makes failed `spark advice-feedback` recording attempts exit non-zero
+- preserves the existing failure message for missing advice target input
+- keeps read-only `spark advice-feedback --pending` behavior successful
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/040-advice-feedback-failure-exits-zero.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_advice_feedback_exit.py -q`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli advice-feedback`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli advice-feedback --pending`
 ```
