@@ -82,6 +82,16 @@ if not project_root.exists():
 
 Also catch `FileNotFoundError` around repo-board collection and convert it into a structured warning or error.
 
+## Fix Branch
+
+Prepared locally, not pushed upstream:
+
+- Worktree: `/Users/jumperz/Documents/spark-fix-os-missing-project`
+- Branch: `codex/fix-os-compile-missing-project`
+- Commit: `0c2a743 Handle missing Spark OS project paths`
+- Verification: `pytest tests/test_cli_os.py -q` passed.
+- Behavior check: `spark os compile --json --project /tmp/spark-definitely-missing-project` now exits `1`, emits structured JSON on stdout, and emits no traceback on stderr.
+
 ## Submission Status
 
-Proof ready in the clean JUMPERZ hunt repo. No upstream PR opened.
+Proof and fix branch ready in the clean JUMPERZ hunt repo. No upstream PR opened.

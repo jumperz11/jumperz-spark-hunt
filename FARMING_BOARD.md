@@ -34,8 +34,8 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 017 | [HEAD requests return 404 for live routes](packets/017-head-requests-return-404-for-live-routes.md) | Proof ready | `GET /` and `GET /api/leaderboard` return 200, but `HEAD` returns 404. |
 | 018 | [Carousel tabs missing keyboard navigation](packets/018-carousel-tabs-missing-keyboard-navigation.md) | Proof ready | Tablist controls have click handlers but no arrow/Home/End keyboard behavior. |
 | 019 | [Empty leaderboard falls back to mock standings](packets/019-empty-leaderboard-falls-back-to-mock-standings.md) | Proof ready | A valid empty API response would show preview teams instead of an empty live state. |
-| 020 | [Services advertises dead Pulse URL](packets/020-services-advertises-dead-pulse-url.md) | Proof ready | `spark services` says Pulse is stopped and `app.py` is missing, then prints a dead local URL. |
-| 021 | [OS compile missing project emits traceback](packets/021-os-compile-missing-project-traceback.md) | Proof ready | `spark os compile --json --project <missing>` crashes with a Python traceback and no JSON. |
+| 020 | [Services advertises dead Pulse URL](packets/020-services-advertises-dead-pulse-url.md) | Fix branch ready | `codex/fix-pulse-service-status` prepared locally; no upstream PR opened. |
+| 021 | [OS compile missing project emits traceback](packets/021-os-compile-missing-project-traceback.md) | Fix branch ready | `codex/fix-os-compile-missing-project` prepared locally; no upstream PR opened. |
 
 ## Active Queue
 

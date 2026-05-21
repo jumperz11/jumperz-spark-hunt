@@ -58,6 +58,11 @@ The strongest Spark CLI packets:
 
 Please route these packets to the public track or reviewer-owned surface where JUMPERZ can submit focused fixes or PRs for scoring.
 
+Fix branches are already prepared locally for:
+
+- Packet 020: `codex/fix-pulse-service-status`
+- Packet 021: `codex/fix-os-compile-missing-project`
+
 Routing issue opened here:
 
 https://github.com/vibeforge1111/vibeship-spark-intelligence/issues/184

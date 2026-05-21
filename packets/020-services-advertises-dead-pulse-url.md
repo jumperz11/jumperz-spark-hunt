@@ -64,6 +64,16 @@ Gate URL display on actual service reachability or label it clearly:
 - If Pulse is stopped, show `Spark Pulse: stopped`.
 - If `app.py` is missing, show `Spark Pulse: unavailable (app.py missing)`.
 
+## Fix Branch
+
+Prepared locally, not pushed upstream:
+
+- Worktree: `/Users/jumperz/Documents/spark-fix-pulse-status`
+- Branch: `codex/fix-pulse-service-status`
+- Commit: `05b8eab Fix Pulse service status URL reporting`
+- Verification: `pytest tests/test_service_status_formatting.py -q` passed.
+- Behavior check: `spark services` now prints `Spark Pulse: unavailable (app.py missing)` when Pulse is stopped and the app file is missing.
+
 ## Submission Status
 
-Proof ready in the clean JUMPERZ hunt repo. No upstream PR opened.
+Proof and fix branch ready in the clean JUMPERZ hunt repo. No upstream PR opened.
