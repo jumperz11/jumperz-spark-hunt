@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 81
+Current proof packets: 82
 
 The strongest routing/system packets:
 
@@ -97,6 +97,7 @@ The strongest routing/system packets:
 - Packet 079: opportunities list limit ignored
 - Packet 080: EIDOS list limit ignored
 - Packet 081: surprises view crashes on persisted rows
+- Packet 082: voice growth limit ignored
 
 The strongest UI/accessibility packets:
 
@@ -174,6 +175,7 @@ The strongest Spark CLI packets:
 - Packet 079: opportunities list limit ignored
 - Packet 080: EIDOS list limit ignored
 - Packet 081: surprises view crashes on persisted rows
+- Packet 082: voice growth limit ignored
 
 ## Routing Request
 
@@ -311,6 +313,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-eidos-list-limit-validation
 - Packet 081: `codex/fix-surprises-row-format`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-surprises-row-format
+- Packet 082: `codex/fix-voice-growth-limit`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-voice-growth-limit
 
 Routing issue opened here:
 

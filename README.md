@@ -100,6 +100,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 079: [Opportunities list limit ignored](packets/079-opportunities-list-limit-ignored.md)
 - Packet 080: [EIDOS list limit ignored](packets/080-eidos-list-limit-ignored.md)
 - Packet 081: [Surprises view crashes on persisted rows](packets/081-surprises-persisted-row-crash.md)
+- Packet 082: [Voice growth limit ignored](packets/082-voice-growth-limit-ignored.md)
 - Public page: [index.html](index.html)
 
 ## Routing
