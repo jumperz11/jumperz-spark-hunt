@@ -89,6 +89,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 068: [Config malformed JSON traceback](packets/068-config-malformed-json-traceback.md)
 - Packet 069: [Config non-object runtime crash](packets/069-config-non-object-runtime-crash.md)
 - Packet 070: [Logs tail bounds ignored](packets/070-logs-tail-bounds.md)
+- Packet 071: [Logs invalid since filter ignored](packets/071-logs-since-invalid-filter.md)
 - Public page: [index.html](index.html)
 
 ## Routing
