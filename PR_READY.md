@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, and 020-063 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, and 020-064 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -46,6 +46,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 33. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
 34. Packet 062: `spark eval` invalid thresholds; independent evaluation-metric correctness fix.
 35. Packet 063: `spark process` invalid runtime limits; independent bridge-worker mutation safety fix.
+36. Packet 064: `spark decay` invalid bounds; independent learning-state prune safety fix.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -1659,4 +1660,39 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_cli_process_runtime_validation.py tests/test_bridge_cycle_safety.py -q`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli process --drain --timeout -1 --interval 0 --max-iterations 100`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli process --drain --timeout 0 --interval 0 --max-iterations 100`
+```
+
+## Packet 064: Decay Accepts Invalid Bounds
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/064-decay-invalid-bounds.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-decay-input-validation
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-decay-input-validation?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `7253936`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_decay_input_validation.py tests/test_cognitive_learner.py -q`
+- Behavior check: invalid decay bounds now exit `1` before loading the cognitive learner or changing the seeded `cognitive_insights.json`.
+
+Suggested PR title:
+
+```text
+Validate decay command inputs
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- rejects negative `spark decay --max-age-days` values before pruning
+- rejects `--min-effective` outside `0..1`
+- rejects negative dry-run limits before loading cognitive state
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/064-decay-invalid-bounds.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_decay_input_validation.py tests/test_cognitive_learner.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli decay --apply --max-age-days -1 --min-effective 0.2`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli decay --apply --max-age-days 0 --min-effective 2`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli decay --max-age-days 0 --min-effective 0.2 --limit -1`
 ```

@@ -8,7 +8,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 - Site status: Registered
 - Rank snapshot: 16
 - Public points snapshot: 0
-- Last checked: 2026-05-21 17:57 UTC
+- Last checked: 2026-05-21 18:03 UTC
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
 
 ## Completed
@@ -78,12 +78,14 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 061 | [Personality state writes into source checkout](packets/061-personality-state-writes-checkout.md) | Fork branch pushed | `codex/fix-voice-aha-home-path` pushed to `jumperz11`; no upstream PR opened. |
 | 062 | [Eval accepts invalid thresholds](packets/062-eval-invalid-thresholds.md) | Fork branch pushed | `codex/fix-eval-threshold-validation` pushed to `jumperz11`; no upstream PR opened. |
 | 063 | [Process runtime limits still run worker](packets/063-process-runtime-limits.md) | Fork branch pushed | `codex/fix-process-runtime-validation` pushed to `jumperz11`; no upstream PR opened. |
+| 064 | [Decay accepts invalid bounds](packets/064-decay-invalid-bounds.md) | Fork branch pushed | `codex/fix-decay-input-validation` pushed to `jumperz11`; no upstream PR opened. |
 
 ## Active Queue
 
 | Priority | Mission | Target |
 | --- | --- | --- |
-| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 053, 054, 055, 056, 057, 058, 059, 060, 061, 062, 063 |
+| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 053, 054, 055, 056, 057, 058, 059, 060, 061, 062, 063, 064 |
+| P0 | Verify decay rejects invalid bounds before pruning | Packet 064 |
 | P0 | Verify process rejects invalid runtime bounds before worker mutation | Packet 063 |
 | P0 | Verify eval rejects invalid thresholds before reporting metrics | Packet 062 |
 | P0 | Verify personality state stores under user home | Packet 061 |

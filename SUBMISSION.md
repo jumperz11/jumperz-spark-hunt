@@ -149,6 +149,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/062-eval-invalid-thresholds.md
 - Packet 063: Process runtime limits still run worker
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/063-process-runtime-limits.md
+- Packet 064: Decay accepts invalid bounds
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/064-decay-invalid-bounds.md
 
 ## Routing Note
 
