@@ -60,6 +60,10 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/018-carousel-tabs-missing-keyboard-navigation.md
 - Packet 019: Empty leaderboard falls back to mock standings
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/019-empty-leaderboard-falls-back-to-mock-standings.md
+- Packet 020: Services advertises dead Pulse URL
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/020-services-advertises-dead-pulse-url.md
+- Packet 021: OS compile missing project emits traceback
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/021-os-compile-missing-project-traceback.md
 
 ## Routing Note
 

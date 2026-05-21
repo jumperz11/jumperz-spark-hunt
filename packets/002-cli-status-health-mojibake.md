@@ -99,3 +99,17 @@ Both commands should show readable headings and OK markers with no mojibake frag
 ## Submission Status
 
 Proof ready in the clean JUMPERZ hunt repo. No upstream PR opened.
+
+## Recheck
+
+Rechecked on 2026-05-21: `spark status` still contains mojibake markers such as `ðŸ`, `âœ`, and `Ã¢` in section headings and checkmark output.
+
+Current bounded examples:
+
+```text
+ðŸ“š Cognitive Insights
+ðŸ§  Mind Bridge
+Mind Available: âœ“ Yes
+Ã¢Å¡â„¢ Workers
+âœ… Validation Loop
+```

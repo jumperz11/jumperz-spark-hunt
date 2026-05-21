@@ -37,6 +37,8 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 017: [HEAD requests return 404 for live routes](packets/017-head-requests-return-404-for-live-routes.md)
 - Packet 018: [Carousel tabs missing keyboard navigation](packets/018-carousel-tabs-missing-keyboard-navigation.md)
 - Packet 019: [Empty leaderboard falls back to mock standings](packets/019-empty-leaderboard-falls-back-to-mock-standings.md)
+- Packet 020: [Services advertises dead Pulse URL](packets/020-services-advertises-dead-pulse-url.md)
+- Packet 021: [OS compile missing project emits traceback](packets/021-os-compile-missing-project-traceback.md)
 - Public page: [index.html](index.html)
 
 ## Routing

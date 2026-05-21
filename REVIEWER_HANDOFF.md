@@ -18,7 +18,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 19
+Current proof packets: 21
 
 The strongest routing/system packets:
 
@@ -34,6 +34,8 @@ The strongest routing/system packets:
 - Packet 016: carousel tabs are not linked to tabpanels
 - Packet 017: HEAD requests return 404 for live routes
 - Packet 019: empty leaderboard falls back to mock standings
+- Packet 020: services advertises a dead Pulse URL
+- Packet 021: OS compile missing project emits traceback
 
 The strongest UI/accessibility packets:
 
@@ -49,6 +51,8 @@ The strongest Spark CLI packets:
 
 - Packet 001: missing `spark os compile --json`
 - Packet 002: CLI status/health mojibake
+- Packet 020: services advertises a dead Pulse URL
+- Packet 021: OS compile missing project emits traceback
 
 ## Routing Request
 
