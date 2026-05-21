@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, 020, 021, 022, 023, and 024 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, 020, 021, 022, 023, 024, and 025 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -18,7 +18,8 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 5. Packet 022: `spark opportunities` default crash; independent, low-risk CLI traceback fix.
 6. Packet 023: `spark outcome` non-interactive write; independent outcome-data safety fix.
 7. Packet 024: `spark memory` missing config crash; independent first-run setup fix.
-8. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
+8. Packet 025: `spark project` missing path writes context; independent project-path validation fix.
+9. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -293,4 +294,38 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_clawdbot_memory_setup.py -q`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli memory --show`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli memory --set off --no-restart`
+```
+
+## Packet 025: Project Missing Path Writes Context
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/025-project-missing-path-writes-context.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-project-missing-path
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-project-missing-path?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `4492c40 Reject missing project paths in CLI`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_project.py -q`
+- Behavior check: `spark project status --project <missing-path>` exits `1`, prints `Project path not found`, and writes no `~/.spark` files.
+
+Suggested PR title:
+
+```text
+Reject missing project paths in CLI
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- validates explicit `spark project --project` paths before loading project profile/context
+- rejects missing paths and non-directory paths with a clear CLI message
+- adds regression coverage for missing and existing explicit project paths
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/025-project-missing-path-writes-context.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_project.py -q`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli project status --project /tmp/spark-definitely-missing-project`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli project status --project "$(mktemp -d)"`
 ```
