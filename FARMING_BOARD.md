@@ -8,7 +8,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 - Site status: Registered
 - Rank snapshot: 16
 - Public points snapshot: 0
-- Last checked: 2026-05-21 13:11 UTC
+- Last checked: 2026-05-21 13:16 UTC
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
 
 ## Completed
@@ -37,12 +37,14 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 020 | [Services advertises dead Pulse URL](packets/020-services-advertises-dead-pulse-url.md) | Fork branch pushed | `codex/fix-pulse-service-status` pushed to `jumperz11`; no upstream PR opened. |
 | 021 | [OS compile missing project emits traceback](packets/021-os-compile-missing-project-traceback.md) | Fork branch pushed | `codex/fix-os-compile-missing-project` pushed to `jumperz11`; no upstream PR opened. |
 | 022 | [Opportunities default subcommand traceback](packets/022-opportunities-default-subcommand-traceback.md) | Fork branch pushed | `codex/fix-opportunities-default` pushed to `jumperz11`; no upstream PR opened. |
+| 023 | [Outcome command records unknown in non-interactive mode](packets/023-outcome-noninteractive-records-unknown.md) | Fork branch pushed | `codex/fix-outcome-noninteractive` pushed to `jumperz11`; no upstream PR opened. |
 
 ## Active Queue
 
 | Priority | Mission | Target |
 | --- | --- | --- |
-| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022 |
+| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023 |
+| P0 | Verify outcome capture does not write fake non-interactive rows | Packet 023 |
 | P0 | Verify opportunity inbox default command recovery | Packet 022 |
 | P0 | Verify CLI first-run/status readability | Spark CLI |
 | P0 | Check command-not-found and recovery copy | Spark CLI install flow |

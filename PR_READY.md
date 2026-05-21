@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, 020, 021, and 022 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, 020, 021, 022, and 023 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -16,7 +16,8 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 3. Packet 002: CLI status/health mojibake; independent, low-risk output quality fix.
 4. Packet 020: dead Pulse URL reporting; independent service-status correctness fix.
 5. Packet 022: `spark opportunities` default crash; independent, low-risk CLI traceback fix.
-6. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
+6. Packet 023: `spark outcome` non-interactive write; independent outcome-data safety fix.
+7. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -223,4 +224,38 @@ Suggested PR body:
 ## Verification
 - `PYTHONPATH=. python -m pytest tests/test_cli_opportunities.py -q`
 - `PYTHONPATH=. python -m spark.cli opportunities`
+```
+
+## Packet 023: Outcome Command Records Unknown In Non-Interactive Mode
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/023-outcome-noninteractive-records-unknown.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-outcome-noninteractive
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-outcome-noninteractive?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `a23d2c0 Avoid recording outcome when stdin closes`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_outcome.py -q`
+- Behavior check: `spark outcome </dev/null` exits `0`, prints `Outcome not recorded`, and does not create `~/.spark/outcomes.jsonl`; explicit `--result yes` still records one positive outcome.
+
+Suggested PR title:
+
+```text
+Avoid recording outcome when stdin closes
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- prevents `spark outcome` from recording an `unknown` negative row when stdin closes
+- tells non-interactive callers to pass an explicit `--result`
+- adds regression coverage for closed stdin and explicit result recording
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/023-outcome-noninteractive-records-unknown.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_outcome.py -q`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli outcome </dev/null`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli outcome --result yes --text worked --tool pytest`
 ```
