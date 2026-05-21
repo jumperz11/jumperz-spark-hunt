@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 32
+Current proof packets: 33
 
 The strongest routing/system packets:
 
@@ -48,6 +48,7 @@ The strongest routing/system packets:
 - Packet 030: EIDOS validate migration creates store
 - Packet 031: EIDOS list views create store
 - Packet 032: EIDOS metrics creates store
+- Packet 033: EIDOS evidence creates stores
 
 The strongest UI/accessibility packets:
 
@@ -76,6 +77,7 @@ The strongest Spark CLI packets:
 - Packet 030: EIDOS validate migration creates store
 - Packet 031: EIDOS list views create store
 - Packet 032: EIDOS metrics creates store
+- Packet 033: EIDOS evidence creates stores
 
 ## Routing Request
 
@@ -115,6 +117,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-eidos-list-readonly
 - Packet 032: `codex/fix-eidos-metrics-readonly`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-eidos-metrics-readonly
+- Packet 033: `codex/fix-eidos-evidence-readonly`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-eidos-evidence-readonly
 
 Routing issue opened here:
 

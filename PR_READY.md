@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, and 032 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, and 033 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -26,7 +26,8 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 13. Packet 030: `spark eidos --validate-migration` writes a store; independent validation safety fix.
 14. Packet 031: EIDOS list views write a store; independent read-only list fix.
 15. Packet 032: `spark eidos --metrics` writes a store; independent read-only metrics fix.
-16. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
+16. Packet 033: `spark eidos --evidence` writes two stores; independent read-only evidence fix.
+17. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -572,4 +573,37 @@ Suggested PR body:
 ## Verification
 - `PYTHONPATH=. python -m pytest tests/test_eidos_metrics_readonly.py tests/test_eidos.py::TestEidosStore -q`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli eidos --metrics`
+```
+
+## Packet 033: EIDOS Evidence Creates Stores
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/033-eidos-evidence-creates-stores.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-eidos-evidence-readonly
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-eidos-evidence-readonly?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `93fb1ef Keep EIDOS evidence stats read-only`
+- Test: `PYTHONPATH=. python -m pytest tests/test_eidos_evidence_readonly.py tests/test_eidos.py::TestEidosStore -q`
+- Behavior check: `spark eidos --evidence` in a fresh `HOME` exits `0`, prints the zero evidence report, and creates no files.
+
+Suggested PR title:
+
+```text
+Keep EIDOS evidence stats read-only
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- prevents `spark eidos --evidence` from creating EIDOS and evidence stores in fresh environments
+- returns zero evidence stats without opening SQLite when no evidence store exists
+- adds CLI regression coverage for fresh-home evidence behavior
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/033-eidos-evidence-creates-stores.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_eidos_evidence_readonly.py tests/test_eidos.py::TestEidosStore -q`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli eidos --evidence`
 ```
