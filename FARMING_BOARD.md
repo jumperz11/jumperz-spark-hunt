@@ -8,7 +8,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 - Site status: Registered
 - Rank snapshot: 16
 - Public points snapshot: 0
-- Last checked: 2026-05-21 14:05 UTC
+- Last checked: 2026-05-21 14:19 UTC
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
 
 ## Completed
@@ -45,12 +45,14 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 028 | [EIDOS purge dry run creates store](packets/028-eidos-purge-dry-run-creates-store.md) | Fork branch pushed | `codex/fix-eidos-purge-dry-run` pushed to `jumperz11`; no upstream PR opened. |
 | 029 | [EIDOS stats creates store](packets/029-eidos-stats-creates-store.md) | Fork branch pushed | `codex/fix-eidos-stats-readonly` pushed to `jumperz11`; no upstream PR opened. |
 | 030 | [EIDOS validate migration creates store](packets/030-eidos-validate-migration-creates-store.md) | Fork branch pushed | `codex/fix-eidos-validate-readonly` pushed to `jumperz11`; no upstream PR opened. |
+| 031 | [EIDOS list views create store](packets/031-eidos-list-views-create-store.md) | Fork branch pushed | `codex/fix-eidos-list-readonly` pushed to `jumperz11`; no upstream PR opened. |
 
 ## Active Queue
 
 | Priority | Mission | Target |
 | --- | --- | --- |
-| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030 |
+| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031 |
+| P0 | Verify EIDOS list views stay read-only | Packet 031 |
 | P0 | Verify EIDOS migration validation stays read-only | Packet 030 |
 | P0 | Verify EIDOS stats stays read-only in fresh environments | Packet 029 |
 | P0 | Verify EIDOS dry-run purge does not initialize stores | Packet 028 |

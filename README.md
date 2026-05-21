@@ -49,6 +49,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 028: [EIDOS purge dry run creates store](packets/028-eidos-purge-dry-run-creates-store.md)
 - Packet 029: [EIDOS stats creates store](packets/029-eidos-stats-creates-store.md)
 - Packet 030: [EIDOS validate migration creates store](packets/030-eidos-validate-migration-creates-store.md)
+- Packet 031: [EIDOS list views create store](packets/031-eidos-list-views-create-store.md)
 - Public page: [index.html](index.html)
 
 ## Routing

@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, and 030 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, and 031 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -24,7 +24,8 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 11. Packet 028: `spark eidos-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
 12. Packet 029: `spark eidos --stats` writes a store; independent read-only stats fix.
 13. Packet 030: `spark eidos --validate-migration` writes a store; independent validation safety fix.
-14. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
+14. Packet 031: EIDOS list views write a store; independent read-only list fix.
+15. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -501,4 +502,40 @@ Suggested PR body:
 ## Verification
 - `PYTHONPATH=. python -m pytest tests/test_eidos_validate_migration_readonly.py tests/test_eidos.py::TestEidosStore -q`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli eidos --validate-migration`
+```
+
+## Packet 031: EIDOS List Views Create Store
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/031-eidos-list-views-create-store.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-eidos-list-readonly
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-eidos-list-readonly?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `f157ea1 Keep EIDOS list views read-only`
+- Test: `PYTHONPATH=. python -m pytest tests/test_eidos_list_views_readonly.py tests/test_eidos.py::TestEidosStore -q`
+- Behavior check: `--episodes`, `--distillations`, `--distillations --type heuristic`, `--policies`, `--steps`, and `--episode missing-episode` each exit `0` in a fresh `HOME` and create no files.
+
+Suggested PR title:
+
+```text
+Keep EIDOS list views read-only
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- prevents EIDOS list views from creating the EIDOS store in fresh environments
+- returns empty list output without initializing schema when no store exists
+- adds CLI regression coverage for episodes, distillations, policies, and steps list views
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/031-eidos-list-views-create-store.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_eidos_list_views_readonly.py tests/test_eidos.py::TestEidosStore -q`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli eidos --episodes`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli eidos --distillations`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli eidos --policies`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli eidos --steps`
 ```
