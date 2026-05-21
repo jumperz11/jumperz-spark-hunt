@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 78
+Current proof packets: 79
 
 The strongest routing/system packets:
 
@@ -94,6 +94,7 @@ The strongest routing/system packets:
 - Packet 076: outcome links limit ignored
 - Packet 077: advice feedback pending limit ignored
 - Packet 078: sync context negative limit writes exports
+- Packet 079: opportunities list limit ignored
 
 The strongest UI/accessibility packets:
 
@@ -168,6 +169,7 @@ The strongest Spark CLI packets:
 - Packet 076: outcome links limit ignored
 - Packet 077: advice feedback pending limit ignored
 - Packet 078: sync context negative limit writes exports
+- Packet 079: opportunities list limit ignored
 
 ## Routing Request
 
@@ -299,6 +301,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-advice-pending-limit
 - Packet 078: `codex/fix-sync-context-limit-validation`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-sync-context-limit-validation
+- Packet 079: `codex/fix-opportunities-list-limit`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-opportunities-list-limit
 
 Routing issue opened here:
 

@@ -8,7 +8,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 - Site status: Registered
 - Rank snapshot: 16
 - Public points snapshot: 0
-- Last checked: 2026-05-21 19:37 UTC
+- Last checked: 2026-05-21 19:41 UTC
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
 
 ## Completed
@@ -93,12 +93,14 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 076 | [Outcome links limit ignored](packets/076-outcome-links-limit-ignored.md) | Fork branch pushed | `codex/fix-outcome-links-limit` pushed to `jumperz11`; no upstream PR opened. |
 | 077 | [Advice feedback pending limit ignored](packets/077-advice-feedback-pending-limit.md) | Fork branch pushed | `codex/fix-advice-pending-limit` pushed to `jumperz11`; no upstream PR opened. |
 | 078 | [Sync context negative limit writes exports](packets/078-sync-context-negative-limit.md) | Fork branch pushed | `codex/fix-sync-context-limit-validation` pushed to `jumperz11`; no upstream PR opened. |
+| 079 | [Opportunities list limit ignored](packets/079-opportunities-list-limit-ignored.md) | Fork branch pushed | `codex/fix-opportunities-list-limit` pushed to `jumperz11`; no upstream PR opened. |
 
 ## Active Queue
 
 | Priority | Mission | Target |
 | --- | --- | --- |
-| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 053, 054, 055, 056, 057, 058, 059, 060, 061, 062, 063, 064, 065, 066, 067, 068, 069, 070, 071, 072, 073, 074, 075, 076, 077, 078 |
+| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 053, 054, 055, 056, 057, 058, 059, 060, 061, 062, 063, 064, 065, 066, 067, 068, 069, 070, 071, 072, 073, 074, 075, 076, 077, 078, 079 |
+| P0 | Verify opportunities list respects zero and rejects negative limits | Packet 079 |
 | P0 | Verify sync-context rejects negative limits before writing exports | Packet 078 |
 | P0 | Verify advice-feedback pending respects zero and rejects negative limits | Packet 077 |
 | P0 | Verify outcome-links respects zero and rejects negative limits | Packet 076 |

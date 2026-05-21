@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, and 020-078 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, and 020-079 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -61,6 +61,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 48. Packet 076: `spark outcome-links` ignores zero and negative display limits; independent validation-link evidence display fix.
 49. Packet 077: `spark advice-feedback --pending` ignores zero and negative display limits; independent advice-feedback evidence display fix.
 50. Packet 078: `spark sync-context --limit -1` writes exports; independent bootstrap-context safety fix.
+51. Packet 079: `spark opportunities list` ignores zero and negative display limits; independent opportunity-inbox evidence display fix.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -2195,4 +2196,39 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_context_sync_limit_validation.py tests/test_context_sync_mind.py tests/test_production_hardening.py -q`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli sync-context --limit -1`
 - `HOME="$tmp2" PYTHONPATH=. python -m spark.cli sync-context --limit 0`
+```
+
+## Packet 079: Opportunities List Limit Ignored
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/079-opportunities-list-limit-ignored.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-opportunities-list-limit
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-opportunities-list-limit?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `4849a17`
+- Test: `PYTHONPATH=. python -m pytest tests/test_opportunity_inbox.py -q`
+- Behavior check: negative opportunity list limits exit `1`, explicit zero displays zero rows, and positive limits still show newest opportunities.
+
+Suggested PR title:
+
+```text
+Validate opportunities list limit
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- rejects negative `spark opportunities list --limit` values
+- preserves explicit `--limit 0` as a zero-row opportunity inbox view
+- keeps positive limits displaying newest matching opportunities
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/079-opportunities-list-limit-ignored.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_opportunity_inbox.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli opportunities list --limit -1`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli opportunities list --limit 0`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli opportunities list --limit 1`
 ```
