@@ -137,6 +137,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/056-outcome-link-count-negative.md
 - Packet 057: Process zero max iterations still runs worker
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/057-process-zero-max-iterations-writes-state.md
+- Packet 058: Decay prune reports success but leaves insight on disk
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/058-decay-prune-not-persisted.md
 
 ## Routing Note
 

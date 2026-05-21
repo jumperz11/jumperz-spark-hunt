@@ -1456,3 +1456,36 @@ Suggested PR body:
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli process --drain --max-iterations 0 --timeout 0.01 --interval 0`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli process --drain --max-iterations -1 --timeout 0.01 --interval 0`
 ```
+
+## Packet 058: Decay Prune Reports Success But Leaves Insight On Disk
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/058-decay-prune-not-persisted.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-decay-prune-persistence
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-decay-prune-persistence?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `7e7a30c`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cognitive_decay_prune.py tests/test_cognitive_learner.py -q`
+- Behavior check: `decay --apply --max-age-days 0 --min-effective 0.2` now removes the pruned insight from `cognitive_insights.json` instead of reporting success while leaving it on disk.
+
+Suggested PR title:
+
+```text
+Persist decay pruned insights
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- persists `spark decay --apply` deletions to `cognitive_insights.json`
+- uses the existing deletion-aware save path so disk entries do not get merged back
+- adds regression coverage for prune count matching on-disk state
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/058-decay-prune-not-persisted.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cognitive_decay_prune.py tests/test_cognitive_learner.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli decay --apply --max-age-days 0 --min-effective 0.2`
+```

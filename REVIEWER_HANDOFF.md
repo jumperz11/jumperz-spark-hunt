@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 57
+Current proof packets: 58
 
 The strongest routing/system packets:
 
@@ -73,6 +73,7 @@ The strongest routing/system packets:
 - Packet 055: outcome auto-link zero window still links exposures
 - Packet 056: outcome negative link count still records outcome
 - Packet 057: process zero max iterations still runs worker
+- Packet 058: decay prune reports success but leaves insight on disk
 
 The strongest UI/accessibility packets:
 
@@ -126,6 +127,7 @@ The strongest Spark CLI packets:
 - Packet 055: outcome auto-link zero window still links exposures
 - Packet 056: outcome negative link count still records outcome
 - Packet 057: process zero max iterations still runs worker
+- Packet 058: decay prune reports success but leaves insight on disk
 
 ## Routing Request
 
@@ -215,6 +217,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-outcome-link-count-validation
 - Packet 057: `codex/fix-process-max-iterations-zero`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-process-max-iterations-zero
+- Packet 058: `codex/fix-decay-prune-persistence`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-decay-prune-persistence
 
 Routing issue opened here:
 

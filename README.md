@@ -76,6 +76,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 055: [Outcome auto-link zero window still links](packets/055-outcome-autolink-window-zero.md)
 - Packet 056: [Outcome negative link count still records](packets/056-outcome-link-count-negative.md)
 - Packet 057: [Process zero max iterations still runs](packets/057-process-zero-max-iterations-writes-state.md)
+- Packet 058: [Decay prune reports success but leaves insight](packets/058-decay-prune-not-persisted.md)
 - Public page: [index.html](index.html)
 
 ## Routing
