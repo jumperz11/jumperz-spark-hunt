@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, and 020-075 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, and 020-076 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -58,6 +58,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 45. Packet 073: `spark learnings` ignores zero and negative display limits; independent learning-evidence display fix.
 46. Packet 074: `spark events` ignores zero and negative display limits; independent event-evidence display fix.
 47. Packet 075: `spark outcome-unlinked` ignores zero and negative display limits; independent outcome-evidence display fix.
+48. Packet 076: `spark outcome-links` ignores zero and negative display limits; independent validation-link evidence display fix.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -2088,4 +2089,39 @@ Suggested PR body:
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli outcome-unlinked --limit -1`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli outcome-unlinked --limit 0`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli outcome-unlinked --limit 1`
+```
+
+## Packet 076: Outcome Links Limit Ignored
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/076-outcome-links-limit-ignored.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-outcome-links-limit
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-outcome-links-limit?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `9ad2741`
+- Test: `PYTHONPATH=. python -m pytest tests/test_outcome_log_full_stats.py -q`
+- Behavior check: negative outcome-link limits exit `1`, explicit zero displays zero rows, and positive limits still show newest links.
+
+Suggested PR title:
+
+```text
+Validate outcome links limit
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- rejects negative `spark outcome-links --limit` values
+- preserves explicit `--limit 0` as a zero-row validation-link view
+- keeps `get_outcome_links(limit=None)` as the explicit full-scan API
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/076-outcome-links-limit-ignored.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_outcome_log_full_stats.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli outcome-links --limit -1`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli outcome-links --limit 0`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli outcome-links --limit 1`
 ```

@@ -173,6 +173,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/074-events-limit-ignored.md
 - Packet 075: Outcome unlinked limit ignored
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/075-outcome-unlinked-limit-ignored.md
+- Packet 076: Outcome links limit ignored
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/076-outcome-links-limit-ignored.md
 
 ## Routing Note
 

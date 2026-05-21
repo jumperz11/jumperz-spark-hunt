@@ -94,6 +94,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 073: [Learnings limit ignored](packets/073-learnings-limit-ignored.md)
 - Packet 074: [Events limit ignored](packets/074-events-limit-ignored.md)
 - Packet 075: [Outcome unlinked limit ignored](packets/075-outcome-unlinked-limit-ignored.md)
+- Packet 076: [Outcome links limit ignored](packets/076-outcome-links-limit-ignored.md)
 - Public page: [index.html](index.html)
 
 ## Routing
