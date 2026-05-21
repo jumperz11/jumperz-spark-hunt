@@ -181,6 +181,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/078-sync-context-negative-limit.md
 - Packet 079: Opportunities list limit ignored
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/079-opportunities-list-limit-ignored.md
+- Packet 080: EIDOS list limit ignored
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/080-eidos-list-limit-ignored.md
 
 ## Routing Note
 

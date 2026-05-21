@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 79
+Current proof packets: 80
 
 The strongest routing/system packets:
 
@@ -95,6 +95,7 @@ The strongest routing/system packets:
 - Packet 077: advice feedback pending limit ignored
 - Packet 078: sync context negative limit writes exports
 - Packet 079: opportunities list limit ignored
+- Packet 080: EIDOS list limit ignored
 
 The strongest UI/accessibility packets:
 
@@ -170,6 +171,7 @@ The strongest Spark CLI packets:
 - Packet 077: advice feedback pending limit ignored
 - Packet 078: sync context negative limit writes exports
 - Packet 079: opportunities list limit ignored
+- Packet 080: EIDOS list limit ignored
 
 ## Routing Request
 
@@ -303,6 +305,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-sync-context-limit-validation
 - Packet 079: `codex/fix-opportunities-list-limit`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-opportunities-list-limit
+- Packet 080: `codex/fix-eidos-list-limit-validation`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-eidos-list-limit-validation
 
 Routing issue opened here:
 

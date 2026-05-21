@@ -98,6 +98,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 077: [Advice feedback pending limit ignored](packets/077-advice-feedback-pending-limit.md)
 - Packet 078: [Sync context negative limit writes exports](packets/078-sync-context-negative-limit.md)
 - Packet 079: [Opportunities list limit ignored](packets/079-opportunities-list-limit-ignored.md)
+- Packet 080: [EIDOS list limit ignored](packets/080-eidos-list-limit-ignored.md)
 - Public page: [index.html](index.html)
 
 ## Routing

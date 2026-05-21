@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, and 020-079 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, and 020-080 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -62,6 +62,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 49. Packet 077: `spark advice-feedback --pending` ignores zero and negative display limits; independent advice-feedback evidence display fix.
 50. Packet 078: `spark sync-context --limit -1` writes exports; independent bootstrap-context safety fix.
 51. Packet 079: `spark opportunities list` ignores zero and negative display limits; independent opportunity-inbox evidence display fix.
+52. Packet 080: `spark eidos` list views ignore zero and negative display limits; independent decision-packet evidence display fix.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -2231,4 +2232,41 @@ Suggested PR body:
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli opportunities list --limit -1`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli opportunities list --limit 0`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli opportunities list --limit 1`
+```
+
+## Packet 080: EIDOS List Limit Ignored
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/080-eidos-list-limit-ignored.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-eidos-list-limit-validation
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-eidos-list-limit-validation?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `9bdf052`
+- Test: `PYTHONPATH=. python -m pytest tests/test_eidos_list_limits.py tests/test_eidos_store_distillation_dedupe.py -q`
+- Behavior check: negative EIDOS list limits exit `1`, explicit zero displays zero rows, and positive episode limits still show newest episodes.
+
+Suggested PR title:
+
+```text
+Validate EIDOS list limits
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- rejects negative EIDOS episode, distillation, and step list limits
+- preserves explicit `--limit 0` as a zero-row EIDOS list view
+- keeps positive limits displaying newest matching EIDOS rows
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/080-eidos-list-limit-ignored.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_eidos_list_limits.py tests/test_eidos_store_distillation_dedupe.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli eidos --episodes --limit -1`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli eidos --episodes --limit 0`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli eidos --episodes --limit 1`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli eidos --distillations --limit -1`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli eidos --steps --limit -1`
 ```
