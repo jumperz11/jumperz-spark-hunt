@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, and 020-074 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, and 020-075 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -57,6 +57,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 44. Packet 072: `spark validate` accepts negative scan limits; independent validation-loop diagnostic fix.
 45. Packet 073: `spark learnings` ignores zero and negative display limits; independent learning-evidence display fix.
 46. Packet 074: `spark events` ignores zero and negative display limits; independent event-evidence display fix.
+47. Packet 075: `spark outcome-unlinked` ignores zero and negative display limits; independent outcome-evidence display fix.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -2052,4 +2053,39 @@ Suggested PR body:
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli events --limit -1`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli events --limit 0`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli events --limit 1`
+```
+
+## Packet 075: Outcome Unlinked Limit Ignored
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/075-outcome-unlinked-limit-ignored.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-outcome-unlinked-limit
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-outcome-unlinked-limit?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `8153a5a`
+- Test: `PYTHONPATH=. python -m pytest tests/test_outcome_log_full_stats.py -q`
+- Behavior check: negative unlinked-outcome limits exit `1`, explicit zero displays zero rows, and positive limits still show newest unlinked outcomes.
+
+Suggested PR title:
+
+```text
+Validate unlinked outcome limit
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- rejects negative `spark outcome-unlinked --limit` values
+- preserves explicit `--limit 0` as a zero-row outcome coverage view
+- keeps positive limits displaying newest unlinked outcomes
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/075-outcome-unlinked-limit-ignored.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_outcome_log_full_stats.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli outcome-unlinked --limit -1`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli outcome-unlinked --limit 0`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli outcome-unlinked --limit 1`
 ```
