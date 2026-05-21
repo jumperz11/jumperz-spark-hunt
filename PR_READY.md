@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, and 020-062 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, and 020-063 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -45,6 +45,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 32. Packet 045: deprecated `spark curiosity --fill` false success; independent CLI mutation fix.
 33. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
 34. Packet 062: `spark eval` invalid thresholds; independent evaluation-metric correctness fix.
+35. Packet 063: `spark process` invalid runtime limits; independent bridge-worker mutation safety fix.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -1624,4 +1625,38 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_cli_eval_validation.py -q`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli eval --days 7 --sim -1`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli eval --days -1 --sim 0.72`
+```
+
+## Packet 063: Process Runtime Limits Still Run Worker
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/063-process-runtime-limits.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-process-runtime-validation
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-process-runtime-validation?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `c668028`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_process_runtime_validation.py tests/test_bridge_cycle_safety.py -q`
+- Behavior check: `spark process --drain --timeout -1` now exits `1` before running the worker, and `--timeout 0` drains zero cycles without creating `.spark` files.
+
+Suggested PR title:
+
+```text
+Validate process runtime limits
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- rejects negative process timeout, interval, memory-limit, and pattern-limit values before bridge worker execution
+- treats `spark process --drain --timeout 0` as a zero-cycle no-op
+- keeps one-shot non-drain process behavior unchanged
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/063-process-runtime-limits.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_process_runtime_validation.py tests/test_bridge_cycle_safety.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli process --drain --timeout -1 --interval 0 --max-iterations 100`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli process --drain --timeout 0 --interval 0 --max-iterations 100`
 ```

@@ -147,6 +147,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/061-personality-state-writes-checkout.md
 - Packet 062: Eval accepts invalid thresholds
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/062-eval-invalid-thresholds.md
+- Packet 063: Process runtime limits still run worker
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/063-process-runtime-limits.md
 
 ## Routing Note
 
