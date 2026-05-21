@@ -63,6 +63,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 042: [Missing opportunities exit zero](packets/042-opportunities-missing-exits-zero.md)
 - Packet 043: [Outcome link accepts invalid targets](packets/043-outcome-link-invalid-targets.md)
 - Packet 044: [Project answer accepts missing question ID](packets/044-project-answer-missing-question-id.md)
+- Packet 045: [Curiosity fill missing gap exits zero](packets/045-curiosity-fill-missing-gap.md)
 - Public page: [index.html](index.html)
 
 ## Routing

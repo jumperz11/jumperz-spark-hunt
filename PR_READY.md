@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, and 044 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, and 045 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -38,7 +38,8 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 25. Packet 034: `spark eidos --deferred` writes a store; independent read-only deferred-status fix.
 26. Packet 035: `spark eidos --migrate --dry-run` writes a store; independent dry-run migration safety fix.
 27. Packet 036: `spark advisory` writes defaults non-interactively; independent setup safety fix.
-28. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
+28. Packet 045: deprecated `spark curiosity --fill` false success; independent CLI mutation fix.
+29. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -1005,4 +1006,37 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_cli_project_answer_validation.py tests/test_project_context.py -q`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli project answer missing --text hello`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli project answer eng_arch --text hello`
+```
+
+## Packet 045: Curiosity Fill Missing Gap Exits Zero
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/045-curiosity-fill-missing-gap.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-curiosity-fill-missing-gap
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-curiosity-fill-missing-gap?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `b579d25`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_curiosity_fill.py tests/test_project_context.py -q`
+- Behavior check: missing curiosity gap IDs now exit `1`; existing fill behavior still succeeds.
+
+Suggested PR title:
+
+```text
+Return failure for missing curiosity gaps
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- returns a boolean from `CuriosityEngine.fill_gap` so callers can distinguish missing gaps
+- makes `spark curiosity --fill <missing>` exit non-zero with an explicit not-found message
+- keeps successful fill behavior unchanged for existing gap IDs
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/045-curiosity-fill-missing-gap.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_curiosity_fill.py tests/test_project_context.py -q`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -W ignore::DeprecationWarning -m spark.cli curiosity --fill missing --answer hello`
 ```

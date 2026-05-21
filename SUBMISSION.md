@@ -111,6 +111,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/043-outcome-link-invalid-targets.md
 - Packet 044: Project answer accepts missing question ID
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/044-project-answer-missing-question-id.md
+- Packet 045: Curiosity fill missing gap exits zero
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/045-curiosity-fill-missing-gap.md
 
 ## Routing Note
 

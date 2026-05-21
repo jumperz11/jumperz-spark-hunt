@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 44
+Current proof packets: 45
 
 The strongest routing/system packets:
 
@@ -60,6 +60,7 @@ The strongest routing/system packets:
 - Packet 042: missing opportunities exit zero
 - Packet 043: outcome link accepts invalid targets
 - Packet 044: project answer accepts missing question ID
+- Packet 045: curiosity fill missing gap exits zero
 
 The strongest UI/accessibility packets:
 
@@ -100,6 +101,7 @@ The strongest Spark CLI packets:
 - Packet 042: missing opportunities exit zero
 - Packet 043: outcome link accepts invalid targets
 - Packet 044: project answer accepts missing question ID
+- Packet 045: curiosity fill missing gap exits zero
 
 ## Routing Request
 
@@ -163,6 +165,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-outcome-link-validation
 - Packet 044: `codex/fix-project-answer-missing-id`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-project-answer-missing-id
+- Packet 045: `codex/fix-curiosity-fill-missing-gap`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-curiosity-fill-missing-gap
 
 Routing issue opened here:
 
