@@ -127,6 +127,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/051-sync-banks-input-validation.md
 - Packet 052: Auto-link accepts invalid similarity thresholds
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/052-auto-link-threshold-validation.md
+- Packet 053: Auto-link limit zero processes all outcomes
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/053-auto-link-zero-limit-writes-all.md
 
 ## Routing Note
 

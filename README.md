@@ -71,6 +71,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 050: [Learn command accepts invalid input](packets/050-learn-input-validation.md)
 - Packet 051: [Sync banks accepts invalid inputs](packets/051-sync-banks-input-validation.md)
 - Packet 052: [Auto-link accepts invalid thresholds](packets/052-auto-link-threshold-validation.md)
+- Packet 053: [Auto-link limit zero writes all](packets/053-auto-link-zero-limit-writes-all.md)
 - Public page: [index.html](index.html)
 
 ## Routing

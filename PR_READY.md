@@ -1283,3 +1283,38 @@ Suggested PR body:
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli auto-link --min-similarity -1`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli auto-link --min-similarity 0.25 --dry-run`
 ```
+
+## Packet 053: Auto-Link Limit Zero Processes All Outcomes
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/053-auto-link-zero-limit-writes-all.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-auto-link-limit-zero
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-auto-link-limit-zero?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `9ba22d3`
+- Test: `PYTHONPATH=. python -m pytest tests/test_auto_link_limit_validation.py tests/test_outcome_log_full_stats.py -q`
+- Behavior check: `auto-link --limit 0` now processes zero outcomes and writes no link file; `--limit 1` still writes one link; negative limits exit `1`.
+
+Suggested PR title:
+
+```text
+Respect auto-link zero limit
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- preserves explicit `auto-link --limit 0` instead of converting it to the default limit
+- makes limit zero process no outcomes and write no links
+- rejects negative auto-link limits with a CLI-safe non-zero exit
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/053-auto-link-zero-limit-writes-all.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_auto_link_limit_validation.py tests/test_outcome_log_full_stats.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli auto-link --min-similarity 0.1 --limit 0`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli auto-link --min-similarity 0.1 --limit 1`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli auto-link --limit -1`
+```

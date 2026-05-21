@@ -8,7 +8,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 - Site status: Registered
 - Rank snapshot: 16
 - Public points snapshot: 0
-- Last checked: 2026-05-21 16:49 UTC
+- Last checked: 2026-05-21 16:53 UTC
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
 
 ## Completed
@@ -67,12 +67,14 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 050 | [Learn command accepts invalid input](packets/050-learn-input-validation.md) | Fork branch pushed | `codex/fix-learn-input-validation` pushed to `jumperz11`; no upstream PR opened. |
 | 051 | [Sync banks accepts invalid inputs](packets/051-sync-banks-input-validation.md) | Fork branch pushed | `codex/fix-sync-banks-input-validation` pushed to `jumperz11`; no upstream PR opened. |
 | 052 | [Auto-link accepts invalid thresholds](packets/052-auto-link-threshold-validation.md) | Fork branch pushed | `codex/fix-auto-link-threshold-validation` pushed to `jumperz11`; no upstream PR opened. |
+| 053 | [Auto-link limit zero writes all](packets/053-auto-link-zero-limit-writes-all.md) | Fork branch pushed | `codex/fix-auto-link-limit-zero` pushed to `jumperz11`; no upstream PR opened. |
 
 ## Active Queue
 
 | Priority | Mission | Target |
 | --- | --- | --- |
-| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052 |
+| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 053 |
+| P0 | Verify auto-link respects zero and negative limits | Packet 053 |
 | P0 | Verify auto-link rejects invalid similarity thresholds | Packet 052 |
 | P0 | Verify sync-banks rejects invalid thresholds and categories | Packet 051 |
 | P0 | Verify learn command rejects invalid inputs and filtered insights cleanly | Packet 050 |

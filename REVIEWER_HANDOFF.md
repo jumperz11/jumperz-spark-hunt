@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 52
+Current proof packets: 53
 
 The strongest routing/system packets:
 
@@ -68,6 +68,7 @@ The strongest routing/system packets:
 - Packet 050: learn command accepts invalid input and crashes on filtered insights
 - Packet 051: sync banks accepts invalid thresholds and categories
 - Packet 052: auto-link accepts invalid similarity thresholds
+- Packet 053: auto-link limit zero processes all outcomes
 
 The strongest UI/accessibility packets:
 
@@ -116,6 +117,7 @@ The strongest Spark CLI packets:
 - Packet 050: learn command accepts invalid input and crashes on filtered insights
 - Packet 051: sync banks accepts invalid thresholds and categories
 - Packet 052: auto-link accepts invalid similarity thresholds
+- Packet 053: auto-link limit zero processes all outcomes
 
 ## Routing Request
 
@@ -195,6 +197,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-sync-banks-input-validation
 - Packet 052: `codex/fix-auto-link-threshold-validation`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-auto-link-threshold-validation
+- Packet 053: `codex/fix-auto-link-limit-zero`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-auto-link-limit-zero
 
 Routing issue opened here:
 
