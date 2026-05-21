@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 69
+Current proof packets: 70
 
 The strongest routing/system packets:
 
@@ -85,6 +85,7 @@ The strongest routing/system packets:
 - Packet 067: config malformed dot-path writes empty keys
 - Packet 068: config malformed JSON traceback
 - Packet 069: config non-object runtime crash
+- Packet 070: logs tail bounds ignored
 
 The strongest UI/accessibility packets:
 
@@ -150,6 +151,7 @@ The strongest Spark CLI packets:
 - Packet 067: config malformed dot-path writes empty keys
 - Packet 068: config malformed JSON traceback
 - Packet 069: config non-object runtime crash
+- Packet 070: logs tail bounds ignored
 
 ## Routing Request
 
@@ -263,6 +265,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-config-json-errors
 - Packet 069: `codex/fix-config-object-shape`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-config-object-shape
+- Packet 070: `codex/fix-logs-tail-validation`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-logs-tail-validation
 
 Routing issue opened here:
 

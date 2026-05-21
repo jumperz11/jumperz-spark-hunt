@@ -88,6 +88,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 067: [Config malformed dot-path writes empty keys](packets/067-config-malformed-dot-path.md)
 - Packet 068: [Config malformed JSON traceback](packets/068-config-malformed-json-traceback.md)
 - Packet 069: [Config non-object runtime crash](packets/069-config-non-object-runtime-crash.md)
+- Packet 070: [Logs tail bounds ignored](packets/070-logs-tail-bounds.md)
 - Public page: [index.html](index.html)
 
 ## Routing

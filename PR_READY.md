@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, and 020-069 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, and 020-070 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -52,6 +52,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 39. Packet 067: `spark config` malformed dot paths write empty keys; independent runtime-config safety fix.
 40. Packet 068: `spark config` malformed runtime JSON traceback; independent config-diagnostic hardening fix.
 41. Packet 069: non-object runtime tuneables crash CLI startup; independent shared config-shape hardening fix.
+42. Packet 070: `spark logs` ignores zero and negative tail bounds; independent service-diagnostic fix.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -1873,4 +1874,39 @@ Suggested PR body:
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli --help`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli config show`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli config get advisor.max_items`
+```
+
+## Packet 070: Logs Tail Bounds Ignored
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/070-logs-tail-bounds.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-logs-tail-validation
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-logs-tail-validation?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `5c0ffb3`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_logs_tail_validation.py -q`
+- Behavior check: negative tails exit `1`, `--tail 0` returns zero lines, and positive tails still return the last N lines.
+
+Suggested PR title:
+
+```text
+Validate logs tail bounds
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- rejects negative `spark logs --tail` values
+- preserves explicit `--tail 0` as a zero-line log probe
+- keeps positive tail limits returning the last N lines
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/070-logs-tail-bounds.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_logs_tail_validation.py -q`
+- `SPARK_LOG_DIR="$tmp/logs" PYTHONPATH=. python -m spark.cli logs --service sparkd --tail -1 --json`
+- `SPARK_LOG_DIR="$tmp/logs" PYTHONPATH=. python -m spark.cli logs --service sparkd --tail 0 --json`
+- `SPARK_LOG_DIR="$tmp/logs" PYTHONPATH=. python -m spark.cli logs --service sparkd --tail 2 --json`
 ```
