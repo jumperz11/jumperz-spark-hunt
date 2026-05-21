@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, and 020-076 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, and 020-077 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -59,6 +59,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 46. Packet 074: `spark events` ignores zero and negative display limits; independent event-evidence display fix.
 47. Packet 075: `spark outcome-unlinked` ignores zero and negative display limits; independent outcome-evidence display fix.
 48. Packet 076: `spark outcome-links` ignores zero and negative display limits; independent validation-link evidence display fix.
+49. Packet 077: `spark advice-feedback --pending` ignores zero and negative display limits; independent advice-feedback evidence display fix.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -2124,4 +2125,39 @@ Suggested PR body:
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli outcome-links --limit -1`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli outcome-links --limit 0`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli outcome-links --limit 1`
+```
+
+## Packet 077: Advice Feedback Pending Limit Ignored
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/077-advice-feedback-pending-limit.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-advice-pending-limit
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-advice-pending-limit?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `3510d4c`
+- Test: `PYTHONPATH=. python -m pytest tests/test_advice_feedback_correlation.py -q`
+- Behavior check: negative pending advice-feedback limits exit `1`, explicit zero displays zero rows, and positive limits still show newest requests.
+
+Suggested PR title:
+
+```text
+Validate advice feedback pending limit
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- rejects negative `spark advice-feedback --pending --limit` values
+- preserves explicit `--limit 0` as a zero-row pending request view
+- keeps positive limits displaying newest advice feedback requests
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/077-advice-feedback-pending-limit.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_advice_feedback_correlation.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli advice-feedback --pending --limit -1`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli advice-feedback --pending --limit 0`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli advice-feedback --pending --limit 2`
 ```

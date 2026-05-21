@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 76
+Current proof packets: 77
 
 The strongest routing/system packets:
 
@@ -92,6 +92,7 @@ The strongest routing/system packets:
 - Packet 074: events limit ignored
 - Packet 075: outcome unlinked limit ignored
 - Packet 076: outcome links limit ignored
+- Packet 077: advice feedback pending limit ignored
 
 The strongest UI/accessibility packets:
 
@@ -164,6 +165,7 @@ The strongest Spark CLI packets:
 - Packet 074: events limit ignored
 - Packet 075: outcome unlinked limit ignored
 - Packet 076: outcome links limit ignored
+- Packet 077: advice feedback pending limit ignored
 
 ## Routing Request
 
@@ -291,6 +293,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-outcome-unlinked-limit
 - Packet 076: `codex/fix-outcome-links-limit`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-outcome-links-limit
+- Packet 077: `codex/fix-advice-pending-limit`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-advice-pending-limit
 
 Routing issue opened here:
 
