@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 71
+Current proof packets: 72
 
 The strongest routing/system packets:
 
@@ -87,6 +87,7 @@ The strongest routing/system packets:
 - Packet 069: config non-object runtime crash
 - Packet 070: logs tail bounds ignored
 - Packet 071: logs invalid since filter ignored
+- Packet 072: validation scan negative limit reports success
 
 The strongest UI/accessibility packets:
 
@@ -154,6 +155,7 @@ The strongest Spark CLI packets:
 - Packet 069: config non-object runtime crash
 - Packet 070: logs tail bounds ignored
 - Packet 071: logs invalid since filter ignored
+- Packet 072: validation scan negative limit reports success
 
 ## Routing Request
 
@@ -271,6 +273,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-logs-tail-validation
 - Packet 071: `codex/fix-logs-since-validation`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-logs-since-validation
+- Packet 072: `codex/fix-validation-scan-limit`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-validation-scan-limit
 
 Routing issue opened here:
 

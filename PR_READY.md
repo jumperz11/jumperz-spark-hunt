@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, and 020-071 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, and 020-072 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -54,6 +54,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 41. Packet 069: non-object runtime tuneables crash CLI startup; independent shared config-shape hardening fix.
 42. Packet 070: `spark logs` ignores zero and negative tail bounds; independent service-diagnostic fix.
 43. Packet 071: `spark logs` ignores invalid since filters; independent service-diagnostic fix.
+44. Packet 072: `spark validate` accepts negative scan limits; independent validation-loop diagnostic fix.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -1944,4 +1945,39 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_cli_logs_since_validation.py -q`
 - `SPARK_LOG_DIR="$tmp/logs" PYTHONPATH=. python -m spark.cli logs --service sparkd --since nope --json`
 - `SPARK_LOG_DIR="$tmp/logs" PYTHONPATH=. python -m spark.cli logs --service sparkd --since 1h --json`
+```
+
+## Packet 072: Validation Scan Negative Limit Reports Success
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/072-validation-scan-negative-limit.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-validation-scan-limit
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-validation-scan-limit?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `2064984`
+- Test: `PYTHONPATH=. python -m pytest tests/test_validation_loop.py -q`
+- Behavior check: negative validation limits exit `1`, explicit zero remains a no-op, and positive limits still process queued events.
+
+Suggested PR title:
+
+```text
+Validate validation scan limit
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- rejects negative `spark validate --limit` values before validation loop execution
+- preserves explicit `--limit 0` as a zero-row validation scan
+- keeps positive validation scan limits processing queued events
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/072-validation-scan-negative-limit.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_validation_loop.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli validate --limit -1`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli validate --limit 0`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli validate --limit 1`
 ```
