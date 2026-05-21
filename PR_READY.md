@@ -2,7 +2,20 @@
 
 These are focused JUMPERZ fix branches prepared from confirmed Spark Compete packets.
 
-No upstream PRs are open yet. Open them only after reviewer routing confirms the preferred owner surface.
+## Upstream PR Audit
+
+- No active upstream PRs are currently open for these JUMPERZ fix branches.
+- Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
+- Packets 002, 009, 020, and 021 have fork branches ready but no upstream PRs yet.
+- Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
+
+## Recommended Submission Order
+
+1. Packet 001: missing `spark os compile --json`; foundational agent-readiness fix.
+2. Packet 021: missing-project handling for `spark os compile`; stacked follow-up after Packet 001.
+3. Packet 002: CLI status/health mojibake; independent, low-risk output quality fix.
+4. Packet 020: dead Pulse URL reporting; independent service-status correctness fix.
+5. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
 
 ## Packet 001: Missing Spark OS Compile Command
 

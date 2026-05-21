@@ -15,7 +15,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 
 | ID | Packet | Status | Notes |
 | --- | --- | --- | --- |
-| 001 | [Missing `spark os compile --json`](HUNT_PROOF.md) | Fork branch pushed | `codex/spark-os-compile-command` pushed to `jumperz11`; no upstream PR opened. |
+| 001 | [Missing `spark os compile --json`](HUNT_PROOF.md) | Fork branch pushed; prior upstream PR closed | `codex/spark-os-compile-command` pushed to `jumperz11`; upstream PR #183 is closed, no active upstream PR open. |
 | 002 | [CLI status/health mojibake](packets/002-cli-status-health-mojibake.md) | Fork branch pushed | `codex/fix-cli-status-mojibake` pushed to `jumperz11`; no upstream PR opened. |
 | 003 | [Proof repo not routable from registration](packets/003-proof-repo-not-routable-from-registration.md) | Proof ready | Registration accepts a profile URL, but rejects clean proof repo URLs and has no submission field. |
 | 004 | [Proof kit has no submission handoff](packets/004-proof-kit-has-no-submission-handoff.md) | Proof ready | Proof kit explains PR evidence but gives no site-native proof/reviewer handoff. |
@@ -41,6 +41,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 
 | Priority | Mission | Target |
 | --- | --- | --- |
+| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021 |
 | P0 | Verify CLI first-run/status readability | Spark CLI |
 | P0 | Check command-not-found and recovery copy | Spark CLI install flow |
 | P1 | Check support bundle redaction wording | Proof kit / support flow |
