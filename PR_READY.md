@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, and 020-065 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, and 020-066 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -48,6 +48,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 35. Packet 063: `spark process` invalid runtime limits; independent bridge-worker mutation safety fix.
 36. Packet 064: `spark decay` invalid bounds; independent learning-state prune safety fix.
 37. Packet 065: `spark validate-ingest` negative limit traceback; independent ingest-diagnostic hardening fix.
+38. Packet 066: `spark personality-evolution apply` input tracebacks; independent bounded-personality control hardening fix.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -1730,4 +1731,39 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_validate_ingest_limit.py tests/test_queue_concurrency.py -q`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli validate-ingest --limit -1`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli validate-ingest --limit 0`
+```
+
+## Packet 066: Personality Evolution Input Tracebacks
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/066-personality-evolution-input-tracebacks.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-personality-evolution-input
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-personality-evolution-input?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `c1e84b1`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_personality_evolution_input.py tests/test_personality_evolver.py -q`
+- Behavior check: malformed JSON, non-object JSON, and missing signal files now exit `1` with Spark-safe messages and no state-file writes.
+
+Suggested PR title:
+
+```text
+Validate personality evolution signals input
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- handles malformed personality evolution JSON without tracebacks
+- rejects non-object signal payloads before calling the evolver
+- reports missing signals files with a Spark-safe error
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/066-personality-evolution-input-tracebacks.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_personality_evolution_input.py tests/test_personality_evolver.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli personality-evolution apply --signals '{bad json'`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli personality-evolution apply --signals '[1]'`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli personality-evolution apply --signals-file "$tmp/missing.json"`
 ```

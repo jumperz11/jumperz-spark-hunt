@@ -153,6 +153,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/064-decay-invalid-bounds.md
 - Packet 065: Validate-ingest negative limit traceback
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/065-validate-ingest-negative-limit.md
+- Packet 066: Personality evolution input tracebacks
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/066-personality-evolution-input-tracebacks.md
 
 ## Routing Note
 

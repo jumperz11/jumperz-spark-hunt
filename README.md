@@ -84,6 +84,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 063: [Process runtime limits still run worker](packets/063-process-runtime-limits.md)
 - Packet 064: [Decay accepts invalid bounds](packets/064-decay-invalid-bounds.md)
 - Packet 065: [Validate-ingest negative limit traceback](packets/065-validate-ingest-negative-limit.md)
+- Packet 066: [Personality evolution input tracebacks](packets/066-personality-evolution-input-tracebacks.md)
 - Public page: [index.html](index.html)
 
 ## Routing
