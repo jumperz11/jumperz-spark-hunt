@@ -120,6 +120,8 @@ Prepared locally, not pushed upstream:
 
 - Worktree: `/Users/jumperz/Documents/spark-fix-cli-mojibake`
 - Branch: `codex/fix-cli-status-mojibake`
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-cli-status-mojibake
+- PR link: https://github.com/jumperz11/vibeship-spark-intelligence/pull/new/codex/fix-cli-status-mojibake
 - Commit: `86fcfb8 Fix CLI status and health mojibake`
 - Verification: `pytest tests/test_cli_status_health_output.py -q` passed.
 - Behavior check: `spark status` and `spark health` no longer contain `ðŸ`, `âœ`, or `Ã¢` markers in the reported status/health surfaces.

@@ -61,8 +61,11 @@ Please route these packets to the public track or reviewer-owned surface where J
 Fix branches are already prepared locally for:
 
 - Packet 002: `codex/fix-cli-status-mojibake`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-cli-status-mojibake
 - Packet 020: `codex/fix-pulse-service-status`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-pulse-service-status
 - Packet 021: `codex/fix-os-compile-missing-project`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-os-compile-missing-project
 
 Routing issue opened here:
 

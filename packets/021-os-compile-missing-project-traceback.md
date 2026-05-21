@@ -88,6 +88,8 @@ Prepared locally, not pushed upstream:
 
 - Worktree: `/Users/jumperz/Documents/spark-fix-os-missing-project`
 - Branch: `codex/fix-os-compile-missing-project`
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-os-compile-missing-project
+- PR link: https://github.com/jumperz11/vibeship-spark-intelligence/pull/new/codex/fix-os-compile-missing-project
 - Commit: `0c2a743 Handle missing Spark OS project paths`
 - Verification: `pytest tests/test_cli_os.py -q` passed.
 - Behavior check: `spark os compile --json --project /tmp/spark-definitely-missing-project` now exits `1`, emits structured JSON on stdout, and emits no traceback on stderr.

@@ -16,7 +16,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | ID | Packet | Status | Notes |
 | --- | --- | --- | --- |
 | 001 | [Missing `spark os compile --json`](HUNT_PROOF.md) | Proof ready | First mission command from the hunt brief failed before discovery. |
-| 002 | [CLI status/health mojibake](packets/002-cli-status-health-mojibake.md) | Fix branch ready | `codex/fix-cli-status-mojibake` prepared locally; no upstream PR opened. |
+| 002 | [CLI status/health mojibake](packets/002-cli-status-health-mojibake.md) | Fork branch pushed | `codex/fix-cli-status-mojibake` pushed to `jumperz11`; no upstream PR opened. |
 | 003 | [Proof repo not routable from registration](packets/003-proof-repo-not-routable-from-registration.md) | Proof ready | Registration accepts a profile URL, but rejects clean proof repo URLs and has no submission field. |
 | 004 | [Proof kit has no submission handoff](packets/004-proof-kit-has-no-submission-handoff.md) | Proof ready | Proof kit explains PR evidence but gives no site-native proof/reviewer handoff. |
 | 005 | [Leaderboard stale example copy](packets/005-leaderboard-stale-example-copy.md) | Proof ready | Board renders real teams while still saying rows are examples. |
@@ -34,8 +34,8 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 017 | [HEAD requests return 404 for live routes](packets/017-head-requests-return-404-for-live-routes.md) | Proof ready | `GET /` and `GET /api/leaderboard` return 200, but `HEAD` returns 404. |
 | 018 | [Carousel tabs missing keyboard navigation](packets/018-carousel-tabs-missing-keyboard-navigation.md) | Proof ready | Tablist controls have click handlers but no arrow/Home/End keyboard behavior. |
 | 019 | [Empty leaderboard falls back to mock standings](packets/019-empty-leaderboard-falls-back-to-mock-standings.md) | Proof ready | A valid empty API response would show preview teams instead of an empty live state. |
-| 020 | [Services advertises dead Pulse URL](packets/020-services-advertises-dead-pulse-url.md) | Fix branch ready | `codex/fix-pulse-service-status` prepared locally; no upstream PR opened. |
-| 021 | [OS compile missing project emits traceback](packets/021-os-compile-missing-project-traceback.md) | Fix branch ready | `codex/fix-os-compile-missing-project` prepared locally; no upstream PR opened. |
+| 020 | [Services advertises dead Pulse URL](packets/020-services-advertises-dead-pulse-url.md) | Fork branch pushed | `codex/fix-pulse-service-status` pushed to `jumperz11`; no upstream PR opened. |
+| 021 | [OS compile missing project emits traceback](packets/021-os-compile-missing-project-traceback.md) | Fork branch pushed | `codex/fix-os-compile-missing-project` pushed to `jumperz11`; no upstream PR opened. |
 
 ## Active Queue
 

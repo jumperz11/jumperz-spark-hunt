@@ -70,6 +70,8 @@ Prepared locally, not pushed upstream:
 
 - Worktree: `/Users/jumperz/Documents/spark-fix-pulse-status`
 - Branch: `codex/fix-pulse-service-status`
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-pulse-service-status
+- PR link: https://github.com/jumperz11/vibeship-spark-intelligence/pull/new/codex/fix-pulse-service-status
 - Commit: `05b8eab Fix Pulse service status URL reporting`
 - Verification: `pytest tests/test_service_status_formatting.py -q` passed.
 - Behavior check: `spark services` now prints `Spark Pulse: unavailable (app.py missing)` when Pulse is stopped and the app file is missing.
