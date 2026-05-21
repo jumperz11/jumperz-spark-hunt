@@ -113,3 +113,13 @@ Mind Available: âœ“ Yes
 Ã¢Å¡â„¢ Workers
 âœ… Validation Loop
 ```
+
+## Fix Branch
+
+Prepared locally, not pushed upstream:
+
+- Worktree: `/Users/jumperz/Documents/spark-fix-cli-mojibake`
+- Branch: `codex/fix-cli-status-mojibake`
+- Commit: `86fcfb8 Fix CLI status and health mojibake`
+- Verification: `pytest tests/test_cli_status_health_output.py -q` passed.
+- Behavior check: `spark status` and `spark health` no longer contain `ðŸ`, `âœ`, or `Ã¢` markers in the reported status/health surfaces.
