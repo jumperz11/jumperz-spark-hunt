@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, and 020-068 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, and 020-069 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -51,6 +51,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 38. Packet 066: `spark personality-evolution apply` input tracebacks; independent bounded-personality control hardening fix.
 39. Packet 067: `spark config` malformed dot paths write empty keys; independent runtime-config safety fix.
 40. Packet 068: `spark config` malformed runtime JSON traceback; independent config-diagnostic hardening fix.
+41. Packet 069: non-object runtime tuneables crash CLI startup; independent shared config-shape hardening fix.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -1837,4 +1838,39 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_cli_config_json_errors.py -q`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli config show`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli config set advisor.max_items 5`
+```
+
+## Packet 069: Config Non-Object Runtime Crash
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/069-config-non-object-runtime-crash.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-config-object-shape
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-config-object-shape?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `695da92`
+- Test: `PYTHONPATH=. python -m pytest tests/test_config_object_shape.py -q`
+- Behavior check: non-object runtime tuneables no longer crash CLI startup, `config show` exits safely, and valid object config still resolves.
+
+Suggested PR title:
+
+```text
+Validate config object shape
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- prevents non-object runtime tuneables JSON from crashing shared config resolution
+- reports non-object runtime config cleanly from `spark config`
+- preserves normal object-shaped runtime tuneables behavior
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/069-config-non-object-runtime-crash.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_config_object_shape.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli --help`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli config show`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli config get advisor.max_items`
 ```
