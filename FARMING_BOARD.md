@@ -8,7 +8,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 - Site status: Registered
 - Rank snapshot: 16
 - Public points snapshot: 0
-- Last checked: 2026-05-21 15:35 UTC
+- Last checked: 2026-05-21 15:41 UTC
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
 
 ## Completed
@@ -55,12 +55,14 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 038 | [CLI view commands emit mojibake](packets/038-cli-view-commands-mojibake.md) | Fork branch pushed | `codex/fix-cli-view-mojibake` pushed to `jumperz11`; no upstream PR opened. |
 | 039 | [Bridge preview writes project state](packets/039-bridge-preview-writes-project-state.md) | Fork branch pushed | `codex/fix-bridge-readonly-context` pushed to `jumperz11`; no upstream PR opened. |
 | 040 | [Advice feedback failure exits zero](packets/040-advice-feedback-failure-exits-zero.md) | Fork branch pushed | `codex/fix-advice-feedback-failure-exit` pushed to `jumperz11`; no upstream PR opened. |
+| 041 | [Capture list and reject are ignored](packets/041-capture-list-reject-ignored.md) | Fork branch pushed | `codex/fix-capture-list-reject` pushed to `jumperz11`; no upstream PR opened. |
 
 ## Active Queue
 
 | Priority | Mission | Target |
 | --- | --- | --- |
-| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040 |
+| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041 |
+| P0 | Verify capture review actions are wired | Packet 041 |
 | P0 | Verify failed feedback recording returns non-zero | Packet 040 |
 | P0 | Verify bridge context preview stays read-only | Packet 039 |
 | P0 | Verify remaining CLI view outputs are readable | Packet 038 |
