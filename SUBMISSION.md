@@ -183,6 +183,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/079-opportunities-list-limit-ignored.md
 - Packet 080: EIDOS list limit ignored
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/080-eidos-list-limit-ignored.md
+- Packet 081: Surprises view crashes on persisted rows
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/081-surprises-persisted-row-crash.md
 
 ## Routing Note
 

@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, and 020-080 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, and 020-081 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -63,6 +63,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 50. Packet 078: `spark sync-context --limit -1` writes exports; independent bootstrap-context safety fix.
 51. Packet 079: `spark opportunities list` ignores zero and negative display limits; independent opportunity-inbox evidence display fix.
 52. Packet 080: `spark eidos` list views ignore zero and negative display limits; independent decision-packet evidence display fix.
+53. Packet 081: `spark surprises` crashes on persisted surprise rows; independent learning-evidence display fix.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -2269,4 +2270,37 @@ Suggested PR body:
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli eidos --episodes --limit 1`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli eidos --distillations --limit -1`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli eidos --steps --limit -1`
+```
+
+## Packet 081: Surprises View Crashes On Persisted Rows
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/081-surprises-persisted-row-crash.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-surprises-row-format
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-surprises-row-format?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `62a4db8`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_surprises.py -q`
+- Behavior check: seeded persisted surprise rows render and exit `0` instead of raising `AttributeError`.
+
+Suggested PR title:
+
+```text
+Format persisted surprise rows
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- formats persisted surprise dictionaries as `AhaMoment` rows before display
+- keeps existing object-style surprise rows supported
+- adds CLI regression coverage for stored surprise evidence
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/081-surprises-persisted-row-crash.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_surprises.py -q`
+- seeded `.spark/aha_moments.json`, then `PYTHONPATH=. python -m spark.cli surprises --limit 1`
 ```
