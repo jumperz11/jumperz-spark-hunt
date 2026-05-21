@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, and 020-064 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, and 020-065 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -47,6 +47,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 34. Packet 062: `spark eval` invalid thresholds; independent evaluation-metric correctness fix.
 35. Packet 063: `spark process` invalid runtime limits; independent bridge-worker mutation safety fix.
 36. Packet 064: `spark decay` invalid bounds; independent learning-state prune safety fix.
+37. Packet 065: `spark validate-ingest` negative limit traceback; independent ingest-diagnostic hardening fix.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -1695,4 +1696,38 @@ Suggested PR body:
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli decay --apply --max-age-days -1 --min-effective 0.2`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli decay --apply --max-age-days 0 --min-effective 2`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli decay --max-age-days 0 --min-effective 0.2 --limit -1`
+```
+
+## Packet 065: Validate-Ingest Negative Limit Traceback
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/065-validate-ingest-negative-limit.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-validate-ingest-limit
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-validate-ingest-limit?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `8d865cf`
+- Test: `PYTHONPATH=. python -m pytest tests/test_validate_ingest_limit.py tests/test_queue_concurrency.py -q`
+- Behavior check: `spark validate-ingest --limit -1` now exits `1` with a Spark-safe message and no report write; `--limit 0` processes zero rows and writes a zero-window report.
+
+Suggested PR title:
+
+```text
+Validate ingest scan limit
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- rejects negative `spark validate-ingest --limit` values before queue scanning
+- prevents `deque(maxlen=-1)` tracebacks from malformed ingest diagnostics
+- preserves `--limit 0` as a valid zero-row scan and report window
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/065-validate-ingest-negative-limit.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_validate_ingest_limit.py tests/test_queue_concurrency.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli validate-ingest --limit -1`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli validate-ingest --limit 0`
 ```

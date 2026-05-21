@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 64
+Current proof packets: 65
 
 The strongest routing/system packets:
 
@@ -80,6 +80,7 @@ The strongest routing/system packets:
 - Packet 062: eval accepts invalid thresholds
 - Packet 063: process runtime limits still run worker
 - Packet 064: decay accepts invalid bounds
+- Packet 065: validate-ingest negative limit traceback
 
 The strongest UI/accessibility packets:
 
@@ -140,6 +141,7 @@ The strongest Spark CLI packets:
 - Packet 062: eval accepts invalid thresholds
 - Packet 063: process runtime limits still run worker
 - Packet 064: decay accepts invalid bounds
+- Packet 065: validate-ingest negative limit traceback
 
 ## Routing Request
 
@@ -243,6 +245,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-process-runtime-validation
 - Packet 064: `codex/fix-decay-input-validation`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-decay-input-validation
+- Packet 065: `codex/fix-validate-ingest-limit`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-validate-ingest-limit
 
 Routing issue opened here:
 

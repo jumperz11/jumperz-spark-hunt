@@ -83,6 +83,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 062: [Eval accepts invalid thresholds](packets/062-eval-invalid-thresholds.md)
 - Packet 063: [Process runtime limits still run worker](packets/063-process-runtime-limits.md)
 - Packet 064: [Decay accepts invalid bounds](packets/064-decay-invalid-bounds.md)
+- Packet 065: [Validate-ingest negative limit traceback](packets/065-validate-ingest-negative-limit.md)
 - Public page: [index.html](index.html)
 
 ## Routing

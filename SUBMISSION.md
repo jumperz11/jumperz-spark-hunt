@@ -151,6 +151,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/063-process-runtime-limits.md
 - Packet 064: Decay accepts invalid bounds
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/064-decay-invalid-bounds.md
+- Packet 065: Validate-ingest negative limit traceback
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/065-validate-ingest-negative-limit.md
 
 ## Routing Note
 
