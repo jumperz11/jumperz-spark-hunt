@@ -55,6 +55,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 034: [EIDOS deferred creates store](packets/034-eidos-deferred-creates-store.md)
 - Packet 035: [EIDOS migrate dry run creates store](packets/035-eidos-migrate-dry-run-creates-store.md)
 - Packet 036: [Advisory setup writes defaults non-interactively](packets/036-advisory-setup-noninteractive-writes-defaults.md)
+- Packet 037: [Project view commands write context](packets/037-project-view-commands-write-context.md)
 - Public page: [index.html](index.html)
 
 ## Routing

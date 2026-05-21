@@ -95,6 +95,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/035-eidos-migrate-dry-run-creates-store.md
 - Packet 036: Advisory setup writes defaults non-interactively
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/036-advisory-setup-noninteractive-writes-defaults.md
+- Packet 037: Project view commands write context
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/037-project-view-commands-write-context.md
 
 ## Routing Note
 
