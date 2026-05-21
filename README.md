@@ -78,6 +78,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 057: [Process zero max iterations still runs](packets/057-process-zero-max-iterations-writes-state.md)
 - Packet 058: [Decay prune reports success but leaves insight](packets/058-decay-prune-not-persisted.md)
 - Packet 059: [Sync context negative gates export low-quality memory](packets/059-sync-context-negative-gates-export-low-quality.md)
+- Packet 060: [Growth timeline writes state into source checkout](packets/060-growth-timeline-writes-checkout.md)
 - Public page: [index.html](index.html)
 
 ## Routing

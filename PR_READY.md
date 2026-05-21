@@ -1524,3 +1524,36 @@ Suggested PR body:
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli sync-context --min-reliability 1.1 --limit 1`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli sync-context --min-validations -1 --limit 1`
 ```
+
+## Packet 060: Growth Timeline Writes State Into Source Checkout
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/060-growth-timeline-writes-checkout.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-growth-tracker-home-path
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-growth-tracker-home-path?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `683bf28`
+- Test: `PYTHONPATH=. python -m pytest tests/test_growth_tracker_storage.py -q`
+- Behavior check: `timeline --limit 0` now writes growth state under isolated `HOME`, and the worktree does not receive `.spark/growth.json`.
+
+Suggested PR title:
+
+```text
+Store growth timeline under home
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- stores growth timeline state under `Path.home() / ".spark" / "growth.json"`
+- prevents `spark timeline` from creating or updating `.spark/growth.json` in the source checkout
+- adds regression coverage for the growth tracker storage path
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/060-growth-timeline-writes-checkout.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_growth_tracker_storage.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli timeline --limit 0`
+```

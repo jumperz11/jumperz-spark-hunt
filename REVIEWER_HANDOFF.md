@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 59
+Current proof packets: 60
 
 The strongest routing/system packets:
 
@@ -75,6 +75,7 @@ The strongest routing/system packets:
 - Packet 057: process zero max iterations still runs worker
 - Packet 058: decay prune reports success but leaves insight on disk
 - Packet 059: sync context negative gates export low-quality memory
+- Packet 060: growth timeline writes state into source checkout
 
 The strongest UI/accessibility packets:
 
@@ -130,6 +131,7 @@ The strongest Spark CLI packets:
 - Packet 057: process zero max iterations still runs worker
 - Packet 058: decay prune reports success but leaves insight on disk
 - Packet 059: sync context negative gates export low-quality memory
+- Packet 060: growth timeline writes state into source checkout
 
 ## Routing Request
 
@@ -223,6 +225,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-decay-prune-persistence
 - Packet 059: `codex/fix-sync-context-threshold-validation`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-sync-context-threshold-validation
+- Packet 060: `codex/fix-growth-tracker-home-path`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-growth-tracker-home-path
 
 Routing issue opened here:
 
