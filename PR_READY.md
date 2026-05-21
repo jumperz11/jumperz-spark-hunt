@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, and 037 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, and 038 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -14,24 +14,25 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 1. Packet 001: missing `spark os compile --json`; foundational agent-readiness fix.
 2. Packet 021: missing-project handling for `spark os compile`; stacked follow-up after Packet 001.
 3. Packet 002: CLI status/health mojibake; independent, low-risk output quality fix.
-4. Packet 020: dead Pulse URL reporting; independent service-status correctness fix.
-5. Packet 022: `spark opportunities` default crash; independent, low-risk CLI traceback fix.
-6. Packet 023: `spark outcome` non-interactive write; independent outcome-data safety fix.
-7. Packet 024: `spark memory` missing config crash; independent first-run setup fix.
-8. Packet 025: `spark project` missing path writes context; independent project-path validation fix.
-9. Packet 026: `spark status` writes project context; independent read-only status fix.
-10. Packet 037: `spark project status/questions` write context; stacked project-view follow-up after Packet 026.
-11. Packet 027: `spark memory-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
-12. Packet 028: `spark eidos-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
-13. Packet 029: `spark eidos --stats` writes a store; independent read-only stats fix.
-14. Packet 030: `spark eidos --validate-migration` writes a store; independent validation safety fix.
-15. Packet 031: EIDOS list views write a store; independent read-only list fix.
-16. Packet 032: `spark eidos --metrics` writes a store; independent read-only metrics fix.
-17. Packet 033: `spark eidos --evidence` writes two stores; independent read-only evidence fix.
-18. Packet 034: `spark eidos --deferred` writes a store; independent read-only deferred-status fix.
-19. Packet 035: `spark eidos --migrate --dry-run` writes a store; independent dry-run migration safety fix.
-20. Packet 036: `spark advisory` writes defaults non-interactively; independent setup safety fix.
-21. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
+4. Packet 038: remaining CLI view mojibake; stacked output-quality follow-up after Packet 002.
+5. Packet 020: dead Pulse URL reporting; independent service-status correctness fix.
+6. Packet 022: `spark opportunities` default crash; independent, low-risk CLI traceback fix.
+7. Packet 023: `spark outcome` non-interactive write; independent outcome-data safety fix.
+8. Packet 024: `spark memory` missing config crash; independent first-run setup fix.
+9. Packet 025: `spark project` missing path writes context; independent project-path validation fix.
+10. Packet 026: `spark status` writes project context; independent read-only status fix.
+11. Packet 037: `spark project status/questions` write context; stacked project-view follow-up after Packet 026.
+12. Packet 027: `spark memory-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
+13. Packet 028: `spark eidos-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
+14. Packet 029: `spark eidos --stats` writes a store; independent read-only stats fix.
+15. Packet 030: `spark eidos --validate-migration` writes a store; independent validation safety fix.
+16. Packet 031: EIDOS list views write a store; independent read-only list fix.
+17. Packet 032: `spark eidos --metrics` writes a store; independent read-only metrics fix.
+18. Packet 033: `spark eidos --evidence` writes two stores; independent read-only evidence fix.
+19. Packet 034: `spark eidos --deferred` writes a store; independent read-only deferred-status fix.
+20. Packet 035: `spark eidos --migrate --dry-run` writes a store; independent dry-run migration safety fix.
+21. Packet 036: `spark advisory` writes defaults non-interactively; independent setup safety fix.
+22. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -749,4 +750,45 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_cli_project_readonly_views.py tests/test_project_context.py -q`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli project status`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli project questions`
+```
+
+## Packet 038: CLI View Commands Emit Mojibake
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/038-cli-view-commands-mojibake.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-cli-view-mojibake
+- Stacked compare: https://github.com/jumperz11/vibeship-spark-intelligence/compare/codex/fix-cli-status-mojibake...codex/fix-cli-view-mojibake?expand=1
+- Base: `jumperz11/vibeship-spark-intelligence:codex/fix-cli-status-mojibake`
+- Commit: `1e8207e Fix mojibake in CLI view commands`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_status_health_output.py tests/test_cli_view_output_mojibake.py -q`
+- Behavior check: `events`, `learnings`, `surprises`, `voice`, `voice --growth`, `timeline`, and `bridge --status` emit no common mojibake markers.
+
+Important routing note:
+
+Packet 038 is stacked on Packet 002 because it uses the same ASCII marker style and fixes adjacent CLI view outputs. Open it after Packet 002 is routed/accepted, or combine only if reviewers ask for a bundled CLI output PR.
+
+Suggested PR title:
+
+```text
+Fix mojibake in CLI view commands
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- replaces corrupted headings in read-only CLI view commands with ASCII-safe markers
+- fixes bridge status markers and separators to avoid mojibake
+- adds regression coverage for common CLI view surfaces
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/038-cli-view-commands-mojibake.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_status_health_output.py tests/test_cli_view_output_mojibake.py -q`
+- `PYTHONPATH=. python -m spark.cli events`
+- `PYTHONPATH=. python -m spark.cli learnings`
+- `PYTHONPATH=. python -m spark.cli surprises`
+- `PYTHONPATH=. python -m spark.cli voice`
+- `PYTHONPATH=. python -m spark.cli bridge --status`
 ```

@@ -8,7 +8,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 - Site status: Registered
 - Rank snapshot: 16
 - Public points snapshot: 0
-- Last checked: 2026-05-21 15:20 UTC
+- Last checked: 2026-05-21 15:25 UTC
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
 
 ## Completed
@@ -52,12 +52,14 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 035 | [EIDOS migrate dry run creates store](packets/035-eidos-migrate-dry-run-creates-store.md) | Fork branch pushed | `codex/fix-eidos-migrate-dry-run` pushed to `jumperz11`; no upstream PR opened. |
 | 036 | [Advisory setup writes defaults non-interactively](packets/036-advisory-setup-noninteractive-writes-defaults.md) | Fork branch pushed | `codex/fix-advisory-noninteractive` pushed to `jumperz11`; no upstream PR opened. |
 | 037 | [Project view commands write context](packets/037-project-view-commands-write-context.md) | Fork branch pushed | `codex/fix-project-readonly-views` pushed to `jumperz11`; no upstream PR opened. |
+| 038 | [CLI view commands emit mojibake](packets/038-cli-view-commands-mojibake.md) | Fork branch pushed | `codex/fix-cli-view-mojibake` pushed to `jumperz11`; no upstream PR opened. |
 
 ## Active Queue
 
 | Priority | Mission | Target |
 | --- | --- | --- |
-| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037 |
+| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038 |
+| P0 | Verify remaining CLI view outputs are readable | Packet 038 |
 | P0 | Verify project view commands stay read-only | Packet 037 |
 | P0 | Verify guided setup commands do not write defaults non-interactively | Packet 036 |
 | P0 | Verify EIDOS migration dry-run stays read-only | Packet 035 |

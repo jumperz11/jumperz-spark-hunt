@@ -56,6 +56,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 035: [EIDOS migrate dry run creates store](packets/035-eidos-migrate-dry-run-creates-store.md)
 - Packet 036: [Advisory setup writes defaults non-interactively](packets/036-advisory-setup-noninteractive-writes-defaults.md)
 - Packet 037: [Project view commands write context](packets/037-project-view-commands-write-context.md)
+- Packet 038: [CLI view commands emit mojibake](packets/038-cli-view-commands-mojibake.md)
 - Public page: [index.html](index.html)
 
 ## Routing
