@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 38
+Current proof packets: 39
 
 The strongest routing/system packets:
 
@@ -54,6 +54,7 @@ The strongest routing/system packets:
 - Packet 036: advisory setup writes defaults non-interactively
 - Packet 037: project view commands write context
 - Packet 038: CLI view commands emit mojibake
+- Packet 039: bridge preview writes project state
 
 The strongest UI/accessibility packets:
 
@@ -88,6 +89,7 @@ The strongest Spark CLI packets:
 - Packet 036: advisory setup writes defaults non-interactively
 - Packet 037: project view commands write context
 - Packet 038: CLI view commands emit mojibake
+- Packet 039: bridge preview writes project state
 
 ## Routing Request
 
@@ -139,6 +141,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-project-readonly-views
 - Packet 038: `codex/fix-cli-view-mojibake`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-cli-view-mojibake
+- Packet 039: `codex/fix-bridge-readonly-context`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-bridge-readonly-context
 
 Routing issue opened here:
 

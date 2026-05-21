@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, and 038 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, and 039 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -22,17 +22,18 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 9. Packet 025: `spark project` missing path writes context; independent project-path validation fix.
 10. Packet 026: `spark status` writes project context; independent read-only status fix.
 11. Packet 037: `spark project status/questions` write context; stacked project-view follow-up after Packet 026.
-12. Packet 027: `spark memory-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
-13. Packet 028: `spark eidos-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
-14. Packet 029: `spark eidos --stats` writes a store; independent read-only stats fix.
-15. Packet 030: `spark eidos --validate-migration` writes a store; independent validation safety fix.
-16. Packet 031: EIDOS list views write a store; independent read-only list fix.
-17. Packet 032: `spark eidos --metrics` writes a store; independent read-only metrics fix.
-18. Packet 033: `spark eidos --evidence` writes two stores; independent read-only evidence fix.
-19. Packet 034: `spark eidos --deferred` writes a store; independent read-only deferred-status fix.
-20. Packet 035: `spark eidos --migrate --dry-run` writes a store; independent dry-run migration safety fix.
-21. Packet 036: `spark advisory` writes defaults non-interactively; independent setup safety fix.
-22. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
+12. Packet 039: `spark bridge` preview writes project state; stacked context-preview follow-up after Packet 037.
+13. Packet 027: `spark memory-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
+14. Packet 028: `spark eidos-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
+15. Packet 029: `spark eidos --stats` writes a store; independent read-only stats fix.
+16. Packet 030: `spark eidos --validate-migration` writes a store; independent validation safety fix.
+17. Packet 031: EIDOS list views write a store; independent read-only list fix.
+18. Packet 032: `spark eidos --metrics` writes a store; independent read-only metrics fix.
+19. Packet 033: `spark eidos --evidence` writes two stores; independent read-only evidence fix.
+20. Packet 034: `spark eidos --deferred` writes a store; independent read-only deferred-status fix.
+21. Packet 035: `spark eidos --migrate --dry-run` writes a store; independent dry-run migration safety fix.
+22. Packet 036: `spark advisory` writes defaults non-interactively; independent setup safety fix.
+23. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -791,4 +792,41 @@ Suggested PR body:
 - `PYTHONPATH=. python -m spark.cli surprises`
 - `PYTHONPATH=. python -m spark.cli voice`
 - `PYTHONPATH=. python -m spark.cli bridge --status`
+```
+
+## Packet 039: Bridge Preview Writes Project State
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/039-bridge-preview-writes-project-state.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-bridge-readonly-context
+- Stacked compare: https://github.com/jumperz11/vibeship-spark-intelligence/compare/codex/fix-project-readonly-views...codex/fix-bridge-readonly-context?expand=1
+- Base: `jumperz11/vibeship-spark-intelligence:codex/fix-project-readonly-views`
+- Commit: `00f7568 Keep bridge context preview read-only`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_bridge_readonly_context.py tests/test_cli_project_readonly_views.py tests/test_project_context.py -q`
+- Behavior check: `spark bridge` in a fresh `HOME` exits `0`, prints active context, and creates no files or directories under `HOME`.
+
+Important routing note:
+
+Packet 039 is stacked on Packet 037 because it reuses the read-only project profile/question helpers. Open it after Packet 037 is routed/accepted, or combine only if reviewers ask for a bundled project-context PR.
+
+Suggested PR title:
+
+```text
+Keep bridge context preview read-only
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- keeps bare `spark bridge` context preview from creating project-context cache files
+- prevents preview-only generated project questions from being persisted as project profiles
+- keeps explicit `spark bridge --update` as the write path
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/039-bridge-preview-writes-project-state.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_bridge_readonly_context.py tests/test_cli_project_readonly_views.py tests/test_project_context.py -q`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli bridge`
 ```

@@ -99,6 +99,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/037-project-view-commands-write-context.md
 - Packet 038: CLI view commands emit mojibake
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/038-cli-view-commands-mojibake.md
+- Packet 039: Bridge preview writes project state
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/039-bridge-preview-writes-project-state.md
 
 ## Routing Note
 
