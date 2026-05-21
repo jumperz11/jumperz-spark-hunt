@@ -121,6 +121,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/048-hypotheses-outcome-missing-target.md
 - Packet 049: Contradictions resolve missing index reports success
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/049-contradictions-resolve-missing-index.md
+- Packet 050: Learn command accepts invalid input and crashes on filtered insights
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/050-learn-input-validation.md
 
 ## Routing Note
 

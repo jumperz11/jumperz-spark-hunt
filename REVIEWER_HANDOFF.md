@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 49
+Current proof packets: 50
 
 The strongest routing/system packets:
 
@@ -65,6 +65,7 @@ The strongest routing/system packets:
 - Packet 047: project phase accepts invalid values
 - Packet 048: hypotheses outcome missing target reports success
 - Packet 049: contradictions resolve missing index reports success
+- Packet 050: learn command accepts invalid input and crashes on filtered insights
 
 The strongest UI/accessibility packets:
 
@@ -110,6 +111,7 @@ The strongest Spark CLI packets:
 - Packet 047: project phase accepts invalid values
 - Packet 048: hypotheses outcome missing target reports success
 - Packet 049: contradictions resolve missing index reports success
+- Packet 050: learn command accepts invalid input and crashes on filtered insights
 
 ## Routing Request
 
@@ -183,6 +185,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-hypotheses-outcome-validation
 - Packet 049: `codex/fix-contradictions-resolve-validation`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-contradictions-resolve-validation
+- Packet 050: `codex/fix-learn-input-validation`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-learn-input-validation
 
 Routing issue opened here:
 

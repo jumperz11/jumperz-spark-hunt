@@ -1179,3 +1179,38 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_cli_contradictions_resolve.py tests/test_project_context.py -q`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli contradictions --resolve 0 --resolution-type update --resolution test`
 ```
+
+## Packet 050: Learn Command Accepts Invalid Input And Crashes On Filtered Insights
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/050-learn-input-validation.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-learn-input-validation
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-learn-input-validation?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `83d8aac`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_learn_validation.py tests/test_cognitive_noise_filter.py -q`
+- Behavior check: invalid categories, out-of-range reliability, empty insight text, and filtered insights now exit `1` with CLI-safe diagnostics; valid actionable input still stores.
+
+Suggested PR title:
+
+```text
+Validate learn command inputs
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- returns non-zero exits for invalid learn categories and reliability outside 0-1
+- rejects empty insight text before initializing learner state
+- handles filtered insights without a None dereference traceback
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/050-learn-input-validation.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_learn_validation.py tests/test_cognitive_noise_filter.py -q`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli learn invalid "x"`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli learn wisdom "x" --reliability 1.2`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli learn wisdom ""`
+```
