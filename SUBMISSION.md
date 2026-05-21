@@ -109,6 +109,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/042-opportunities-missing-exits-zero.md
 - Packet 043: Outcome link accepts invalid targets
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/043-outcome-link-invalid-targets.md
+- Packet 044: Project answer accepts missing question ID
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/044-project-answer-missing-question-id.md
 
 ## Routing Note
 

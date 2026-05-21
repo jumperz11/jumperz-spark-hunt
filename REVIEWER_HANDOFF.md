@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 43
+Current proof packets: 44
 
 The strongest routing/system packets:
 
@@ -59,6 +59,7 @@ The strongest routing/system packets:
 - Packet 041: capture list and reject are ignored
 - Packet 042: missing opportunities exit zero
 - Packet 043: outcome link accepts invalid targets
+- Packet 044: project answer accepts missing question ID
 
 The strongest UI/accessibility packets:
 
@@ -98,6 +99,7 @@ The strongest Spark CLI packets:
 - Packet 041: capture list and reject are ignored
 - Packet 042: missing opportunities exit zero
 - Packet 043: outcome link accepts invalid targets
+- Packet 044: project answer accepts missing question ID
 
 ## Routing Request
 
@@ -159,6 +161,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-opportunities-missing-exit
 - Packet 043: `codex/fix-outcome-link-validation`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-outcome-link-validation
+- Packet 044: `codex/fix-project-answer-missing-id`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-project-answer-missing-id
 
 Routing issue opened here:
 
