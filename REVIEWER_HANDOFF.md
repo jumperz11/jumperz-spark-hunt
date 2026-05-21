@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 67
+Current proof packets: 68
 
 The strongest routing/system packets:
 
@@ -83,6 +83,7 @@ The strongest routing/system packets:
 - Packet 065: validate-ingest negative limit traceback
 - Packet 066: personality evolution input tracebacks
 - Packet 067: config malformed dot-path writes empty keys
+- Packet 068: config malformed JSON traceback
 
 The strongest UI/accessibility packets:
 
@@ -146,6 +147,7 @@ The strongest Spark CLI packets:
 - Packet 065: validate-ingest negative limit traceback
 - Packet 066: personality evolution input tracebacks
 - Packet 067: config malformed dot-path writes empty keys
+- Packet 068: config malformed JSON traceback
 
 ## Routing Request
 
@@ -255,6 +257,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-personality-evolution-input
 - Packet 067: `codex/fix-config-key-validation`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-config-key-validation
+- Packet 068: `codex/fix-config-json-errors`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-config-json-errors
 
 Routing issue opened here:
 

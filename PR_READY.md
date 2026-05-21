@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, and 020-067 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, and 020-068 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -50,6 +50,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 37. Packet 065: `spark validate-ingest` negative limit traceback; independent ingest-diagnostic hardening fix.
 38. Packet 066: `spark personality-evolution apply` input tracebacks; independent bounded-personality control hardening fix.
 39. Packet 067: `spark config` malformed dot paths write empty keys; independent runtime-config safety fix.
+40. Packet 068: `spark config` malformed runtime JSON traceback; independent config-diagnostic hardening fix.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -1801,5 +1802,39 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_cli_config_key_validation.py -q`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli config set "" 1`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli config set advisor..max_items 5`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli config set advisor.max_items 5`
+```
+
+## Packet 068: Config Malformed JSON Traceback
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/068-config-malformed-json-traceback.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-config-json-errors
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-config-json-errors?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `d1f44aa`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_config_json_errors.py -q`
+- Behavior check: malformed runtime config now exits `1` with a Spark-safe JSON diagnostic, and `config set` leaves the malformed file unchanged.
+
+Suggested PR title:
+
+```text
+Handle malformed config JSON
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- handles malformed runtime tuneables JSON without a traceback
+- reports the invalid config file and JSON location
+- prevents `spark config set` from overwriting malformed runtime config
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/068-config-malformed-json-traceback.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_config_json_errors.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli config show`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli config set advisor.max_items 5`
 ```

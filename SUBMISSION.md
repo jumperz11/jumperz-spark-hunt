@@ -157,6 +157,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/066-personality-evolution-input-tracebacks.md
 - Packet 067: Config malformed dot-path writes empty keys
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/067-config-malformed-dot-path.md
+- Packet 068: Config malformed JSON traceback
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/068-config-malformed-json-traceback.md
 
 ## Routing Note
 
