@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, and 020-077 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, and 020-078 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -60,6 +60,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 47. Packet 075: `spark outcome-unlinked` ignores zero and negative display limits; independent outcome-evidence display fix.
 48. Packet 076: `spark outcome-links` ignores zero and negative display limits; independent validation-link evidence display fix.
 49. Packet 077: `spark advice-feedback --pending` ignores zero and negative display limits; independent advice-feedback evidence display fix.
+50. Packet 078: `spark sync-context --limit -1` writes exports; independent bootstrap-context safety fix.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -2160,4 +2161,38 @@ Suggested PR body:
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli advice-feedback --pending --limit -1`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli advice-feedback --pending --limit 0`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli advice-feedback --pending --limit 2`
+```
+
+## Packet 078: Sync Context Negative Limit Writes Exports
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/078-sync-context-negative-limit.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-sync-context-limit-validation
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-sync-context-limit-validation?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `5490e05`
+- Test: `PYTHONPATH=. python -m pytest tests/test_context_sync_limit_validation.py tests/test_context_sync_mind.py tests/test_production_hardening.py -q`
+- Behavior check: negative sync-context limits exit `1` before writing exports, explicit zero remains a zero-selection sync, and positive limits still write bounded context.
+
+Suggested PR title:
+
+```text
+Validate sync context limit
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- rejects negative `spark sync-context --limit` values before loading or writing context
+- preserves explicit `--limit 0` as a zero-insight sync
+- prevents `_select_insights(limit=0)` from returning one item after the cap check
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/078-sync-context-negative-limit.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_context_sync_limit_validation.py tests/test_context_sync_mind.py tests/test_production_hardening.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli sync-context --limit -1`
+- `HOME="$tmp2" PYTHONPATH=. python -m spark.cli sync-context --limit 0`
 ```

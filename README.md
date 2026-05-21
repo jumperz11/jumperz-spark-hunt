@@ -96,6 +96,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 075: [Outcome unlinked limit ignored](packets/075-outcome-unlinked-limit-ignored.md)
 - Packet 076: [Outcome links limit ignored](packets/076-outcome-links-limit-ignored.md)
 - Packet 077: [Advice feedback pending limit ignored](packets/077-advice-feedback-pending-limit.md)
+- Packet 078: [Sync context negative limit writes exports](packets/078-sync-context-negative-limit.md)
 - Public page: [index.html](index.html)
 
 ## Routing
