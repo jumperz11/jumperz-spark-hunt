@@ -131,6 +131,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/053-auto-link-zero-limit-writes-all.md
 - Packet 054: Outcome validate limit zero validates links
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/054-outcome-validate-zero-limit.md
+- Packet 055: Outcome auto-link zero window still links exposures
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/055-outcome-autolink-window-zero.md
 
 ## Routing Note
 

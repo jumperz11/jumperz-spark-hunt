@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 54
+Current proof packets: 55
 
 The strongest routing/system packets:
 
@@ -70,6 +70,7 @@ The strongest routing/system packets:
 - Packet 052: auto-link accepts invalid similarity thresholds
 - Packet 053: auto-link limit zero processes all outcomes
 - Packet 054: outcome validate limit zero validates links
+- Packet 055: outcome auto-link zero window still links exposures
 
 The strongest UI/accessibility packets:
 
@@ -120,6 +121,7 @@ The strongest Spark CLI packets:
 - Packet 052: auto-link accepts invalid similarity thresholds
 - Packet 053: auto-link limit zero processes all outcomes
 - Packet 054: outcome validate limit zero validates links
+- Packet 055: outcome auto-link zero window still links exposures
 
 ## Routing Request
 
@@ -203,6 +205,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-auto-link-limit-zero
 - Packet 054: `codex/fix-outcome-validate-zero-limit`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-outcome-validate-zero-limit
+- Packet 055: `codex/fix-outcome-autolink-window`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-outcome-autolink-window
 
 Routing issue opened here:
 

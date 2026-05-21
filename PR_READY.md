@@ -1353,3 +1353,38 @@ Suggested PR body:
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli outcome-validate --limit 1`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli outcome-validate --limit -1`
 ```
+
+## Packet 055: Outcome Auto-Link Zero Window Still Links Exposures
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/055-outcome-autolink-window-zero.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-outcome-autolink-window
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-outcome-autolink-window?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `27ae56e`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_outcome_autolink_window.py -q`
+- Behavior check: `outcome --auto-link --link-window-mins 0` records without linked insights; positive windows still link; negative windows exit `1` before recording.
+
+Suggested PR title:
+
+```text
+Respect outcome auto-link window
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- preserves explicit `outcome --auto-link --link-window-mins 0` instead of converting it to the default window
+- avoids last-exposure fallback when the requested auto-link window is zero
+- rejects negative auto-link windows before recording an outcome
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/055-outcome-autolink-window-zero.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_outcome_autolink_window.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli outcome --result success --text "Deploy succeeded after a separate check" --auto-link --link-window-mins 0`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli outcome --result success --text "Deploy succeeded after a separate check" --auto-link --link-window-mins 1`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli outcome --result success --text "Deploy succeeded after a separate check" --auto-link --link-window-mins -1`
+```

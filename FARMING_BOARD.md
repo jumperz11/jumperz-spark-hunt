@@ -8,7 +8,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 - Site status: Registered
 - Rank snapshot: 16
 - Public points snapshot: 0
-- Last checked: 2026-05-21 16:59 UTC
+- Last checked: 2026-05-21 17:05 UTC
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
 
 ## Completed
@@ -69,12 +69,14 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 052 | [Auto-link accepts invalid thresholds](packets/052-auto-link-threshold-validation.md) | Fork branch pushed | `codex/fix-auto-link-threshold-validation` pushed to `jumperz11`; no upstream PR opened. |
 | 053 | [Auto-link limit zero writes all](packets/053-auto-link-zero-limit-writes-all.md) | Fork branch pushed | `codex/fix-auto-link-limit-zero` pushed to `jumperz11`; no upstream PR opened. |
 | 054 | [Outcome validate limit zero validates links](packets/054-outcome-validate-zero-limit.md) | Fork branch pushed | `codex/fix-outcome-validate-zero-limit` pushed to `jumperz11`; no upstream PR opened. |
+| 055 | [Outcome auto-link zero window still links](packets/055-outcome-autolink-window-zero.md) | Fork branch pushed | `codex/fix-outcome-autolink-window` pushed to `jumperz11`; no upstream PR opened. |
 
 ## Active Queue
 
 | Priority | Mission | Target |
 | --- | --- | --- |
-| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 053, 054 |
+| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048, 049, 050, 051, 052, 053, 054, 055 |
+| P0 | Verify outcome auto-link respects zero and negative windows | Packet 055 |
 | P0 | Verify outcome validation respects zero and negative limits | Packet 054 |
 | P0 | Verify auto-link respects zero and negative limits | Packet 053 |
 | P0 | Verify auto-link rejects invalid similarity thresholds | Packet 052 |
