@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, and 020-072 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, and 020-073 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -55,6 +55,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 42. Packet 070: `spark logs` ignores zero and negative tail bounds; independent service-diagnostic fix.
 43. Packet 071: `spark logs` ignores invalid since filters; independent service-diagnostic fix.
 44. Packet 072: `spark validate` accepts negative scan limits; independent validation-loop diagnostic fix.
+45. Packet 073: `spark learnings` ignores zero and negative display limits; independent learning-evidence display fix.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -1980,4 +1981,39 @@ Suggested PR body:
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli validate --limit -1`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli validate --limit 0`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli validate --limit 1`
+```
+
+## Packet 073: Learnings Limit Ignored
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/073-learnings-limit-ignored.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-learnings-limit-validation
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-learnings-limit-validation?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `ec2e8c0`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_learnings_limit.py -q`
+- Behavior check: negative learnings limits exit `1`, explicit zero displays zero rows, and positive limits still show seeded learnings.
+
+Suggested PR title:
+
+```text
+Validate learnings display limit
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- rejects negative `spark learnings --limit` values before loading learning state
+- preserves explicit `--limit 0` as a zero-row learnings view
+- keeps positive limits displaying recent captured learnings
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/073-learnings-limit-ignored.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_learnings_limit.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli learnings --limit -1`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli learnings --limit 0`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli learnings --limit 1`
 ```

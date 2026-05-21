@@ -91,6 +91,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 070: [Logs tail bounds ignored](packets/070-logs-tail-bounds.md)
 - Packet 071: [Logs invalid since filter ignored](packets/071-logs-since-invalid-filter.md)
 - Packet 072: [Validation scan negative limit reports success](packets/072-validation-scan-negative-limit.md)
+- Packet 073: [Learnings limit ignored](packets/073-learnings-limit-ignored.md)
 - Public page: [index.html](index.html)
 
 ## Routing

@@ -167,6 +167,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/071-logs-since-invalid-filter.md
 - Packet 072: Validation scan negative limit reports success
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/072-validation-scan-negative-limit.md
+- Packet 073: Learnings limit ignored
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/073-learnings-limit-ignored.md
 
 ## Routing Note
 
