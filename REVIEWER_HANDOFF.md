@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 41
+Current proof packets: 42
 
 The strongest routing/system packets:
 
@@ -57,6 +57,7 @@ The strongest routing/system packets:
 - Packet 039: bridge preview writes project state
 - Packet 040: advice feedback failure exits zero
 - Packet 041: capture list and reject are ignored
+- Packet 042: missing opportunities exit zero
 
 The strongest UI/accessibility packets:
 
@@ -94,6 +95,7 @@ The strongest Spark CLI packets:
 - Packet 039: bridge preview writes project state
 - Packet 040: advice feedback failure exits zero
 - Packet 041: capture list and reject are ignored
+- Packet 042: missing opportunities exit zero
 
 ## Routing Request
 
@@ -151,6 +153,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-advice-feedback-failure-exit
 - Packet 041: `codex/fix-capture-list-reject`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-capture-list-reject
+- Packet 042: `codex/fix-opportunities-missing-exit`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-opportunities-missing-exit
 
 Routing issue opened here:
 
