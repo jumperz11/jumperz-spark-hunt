@@ -79,6 +79,16 @@ For example:
 - `spark security audit` -> add command or change mission wording
 - `spark update` -> add command or change mission wording
 
+## Fix Branch
+
+Prepared on the `jumperz11` fork, not opened upstream yet:
+
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-mission-command-compat
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-mission-command-compat?expand=1
+- Commit: `760d522 Add Spark Compete mission command compatibility`
+- Verification: `PYTHONPATH=. python -m pytest tests/test_cli_mission_compat.py -q` passed.
+- Behavior check: `spark smoke first-run`, `spark providers status`, `spark live status`, `spark security audit`, and `spark update` now return read-only mission compatibility guidance instead of argparse invalid-choice errors.
+
 ## Submission Status
 
-Proof ready in the clean JUMPERZ hunt repo. No upstream PR opened.
+Proof and fix branch ready in the clean JUMPERZ hunt repo. No upstream PR opened.

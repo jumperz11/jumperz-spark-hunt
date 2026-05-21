@@ -104,6 +104,43 @@ Suggested PR body:
 - `PYTHONPATH=. python -m spark.cli services`
 ```
 
+## Packet 009: Starter Missions Reference Missing CLI Commands
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/009-starter-missions-reference-missing-cli-commands.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-mission-command-compat
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-mission-command-compat?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `760d522 Add Spark Compete mission command compatibility`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_mission_compat.py -q`
+- Behavior check: `spark smoke first-run`, `spark providers status`, `spark live status`, `spark security audit`, and `spark update` now return read-only compatibility guidance.
+
+Suggested PR title:
+
+```text
+Add Spark Compete mission command compatibility
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- adds read-only compatibility guidance for Spark Compete starter mission commands
+- covers `spark smoke first-run`, `spark providers status`, `spark live status`, `spark security audit`, and `spark update`
+- keeps behavior safe: no destructive update/security actions, only current CLI surface guidance
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/009-starter-missions-reference-missing-cli-commands.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_mission_compat.py -q`
+- `PYTHONPATH=. python -m spark.cli smoke first-run`
+- `PYTHONPATH=. python -m spark.cli providers status`
+- `PYTHONPATH=. python -m spark.cli live status`
+- `PYTHONPATH=. python -m spark.cli security audit`
+- `PYTHONPATH=. python -m spark.cli update`
+```
+
 ## Packet 021: OS Compile Missing Project Traceback
 
 - Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/021-os-compile-missing-project-traceback.md

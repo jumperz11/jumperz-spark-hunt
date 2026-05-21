@@ -65,6 +65,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/spark-os-compile-command
 - Packet 002: `codex/fix-cli-status-mojibake`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-cli-status-mojibake
+- Packet 009: `codex/fix-mission-command-compat`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-mission-command-compat
 - Packet 020: `codex/fix-pulse-service-status`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-pulse-service-status
 - Packet 021: `codex/fix-os-compile-missing-project`
