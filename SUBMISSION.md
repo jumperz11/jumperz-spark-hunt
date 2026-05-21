@@ -79,6 +79,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/027-memory-purge-dry-run-creates-store.md
 - Packet 028: EIDOS purge dry run creates store
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/028-eidos-purge-dry-run-creates-store.md
+- Packet 029: EIDOS stats creates store
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/029-eidos-stats-creates-store.md
 
 ## Routing Note
 

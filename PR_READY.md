@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, and 028 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, and 029 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -22,7 +22,8 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 9. Packet 026: `spark status` writes project context; independent read-only status fix.
 10. Packet 027: `spark memory-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
 11. Packet 028: `spark eidos-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
-12. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
+12. Packet 029: `spark eidos --stats` writes a store; independent read-only stats fix.
+13. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -432,4 +433,38 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_eidos_purge_telemetry.py -q`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli eidos-purge-telemetry --dry-run`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli eidos-purge-telemetry`
+```
+
+## Packet 029: EIDOS Stats Creates Store
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/029-eidos-stats-creates-store.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-eidos-stats-readonly
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-eidos-stats-readonly?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `d68c846 Keep EIDOS stats read-only`
+- Test: `PYTHONPATH=. python -m pytest tests/test_eidos_stats_readonly.py tests/test_eidos.py::TestEidosStore -q`
+- Behavior check: `spark eidos --stats` in a fresh `HOME` exits `0` and creates no `~/.spark/eidos.db`; plain `spark eidos` overview also stays read-only.
+
+Suggested PR title:
+
+```text
+Keep EIDOS stats read-only
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- prevents `spark eidos --stats` from creating the EIDOS store in fresh environments
+- reads existing EIDOS stats through a read-only SQLite connection
+- adds CLI regression coverage for fresh-home stats behavior
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/029-eidos-stats-creates-store.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_eidos_stats_readonly.py tests/test_eidos.py::TestEidosStore -q`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli eidos --stats`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli eidos`
 ```

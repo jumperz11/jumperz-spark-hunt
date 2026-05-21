@@ -19,7 +19,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Packet Count
 
-Current proof packets: 28
+Current proof packets: 29
 
 The strongest routing/system packets:
 
@@ -44,6 +44,7 @@ The strongest routing/system packets:
 - Packet 026: status writes project context
 - Packet 027: memory purge dry run creates store
 - Packet 028: EIDOS purge dry run creates store
+- Packet 029: EIDOS stats creates store
 
 The strongest UI/accessibility packets:
 
@@ -68,6 +69,7 @@ The strongest Spark CLI packets:
 - Packet 026: status writes project context
 - Packet 027: memory purge dry run creates store
 - Packet 028: EIDOS purge dry run creates store
+- Packet 029: EIDOS stats creates store
 
 ## Routing Request
 
@@ -99,6 +101,8 @@ Fix branches are already prepared locally for:
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-memory-purge-dry-run
 - Packet 028: `codex/fix-eidos-purge-dry-run`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-eidos-purge-dry-run
+- Packet 029: `codex/fix-eidos-stats-readonly`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-eidos-stats-readonly
 
 Routing issue opened here:
 
