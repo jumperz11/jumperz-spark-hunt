@@ -8,7 +8,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 - Site status: Registered
 - Rank snapshot: 16
 - Public points snapshot: 0
-- Last checked: 2026-05-21 16:18 UTC
+- Last checked: 2026-05-21 16:23 UTC
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
 
 ## Completed
@@ -62,12 +62,14 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 045 | [Curiosity fill missing gap exits zero](packets/045-curiosity-fill-missing-gap.md) | Fork branch pushed | `codex/fix-curiosity-fill-missing-gap` pushed to `jumperz11`; no upstream PR opened. |
 | 046 | [Chips missing targets exit zero](packets/046-chips-missing-targets-exit-zero.md) | Fork branch pushed | `codex/fix-chips-missing-target-exits` pushed to `jumperz11`; no upstream PR opened. |
 | 047 | [Project phase accepts invalid values](packets/047-project-phase-accepts-invalid-values.md) | Fork branch pushed | `codex/fix-project-phase-validation` pushed to `jumperz11`; no upstream PR opened. |
+| 048 | [Hypotheses outcome missing target reports success](packets/048-hypotheses-outcome-missing-target.md) | Fork branch pushed | `codex/fix-hypotheses-outcome-validation` pushed to `jumperz11`; no upstream PR opened. |
 
 ## Active Queue
 
 | Priority | Mission | Target |
 | --- | --- | --- |
-| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047 |
+| P0 | Convert the PR-ready fix queue into the reviewer-preferred submission surface | Packets 001, 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, 048 |
+| P0 | Verify hypothesis outcomes reject missing targets | Packet 048 |
 | P0 | Verify project phase rejects unsupported values | Packet 047 |
 | P0 | Verify chip target commands return non-zero on missing IDs | Packet 046 |
 | P1 | Verify deprecated curiosity fill reports missing gaps | Packet 045 |

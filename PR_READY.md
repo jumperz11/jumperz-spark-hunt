@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, and 047 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, 020, 021, 022, 023, 024, 025, 026, 027, 028, 029, 030, 031, 032, 033, 034, 035, 036, 037, 038, 039, 040, 041, 042, 043, 044, 045, 046, 047, and 048 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -25,23 +25,24 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 12. Packet 044: `spark project answer` accepts missing IDs; independent project-evidence safety fix.
 13. Packet 046: `spark chips` missing targets exit zero; independent command-family automation fix.
 14. Packet 047: `spark project phase` accepts invalid values; independent project-state validation fix.
-15. Packet 024: `spark memory` missing config crash; independent first-run setup fix.
-16. Packet 025: `spark project` missing path writes context; independent project-path validation fix.
-17. Packet 026: `spark status` writes project context; independent read-only status fix.
-18. Packet 037: `spark project status/questions` write context; stacked project-view follow-up after Packet 026.
-19. Packet 039: `spark bridge` preview writes project state; stacked context-preview follow-up after Packet 037.
-20. Packet 027: `spark memory-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
-21. Packet 028: `spark eidos-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
-22. Packet 029: `spark eidos --stats` writes a store; independent read-only stats fix.
-23. Packet 030: `spark eidos --validate-migration` writes a store; independent validation safety fix.
-24. Packet 031: EIDOS list views write a store; independent read-only list fix.
-25. Packet 032: `spark eidos --metrics` writes a store; independent read-only metrics fix.
-26. Packet 033: `spark eidos --evidence` writes two stores; independent read-only evidence fix.
-27. Packet 034: `spark eidos --deferred` writes a store; independent read-only deferred-status fix.
-28. Packet 035: `spark eidos --migrate --dry-run` writes a store; independent dry-run migration safety fix.
-29. Packet 036: `spark advisory` writes defaults non-interactively; independent setup safety fix.
-30. Packet 045: deprecated `spark curiosity --fill` false success; independent CLI mutation fix.
-31. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
+15. Packet 048: `spark hypotheses --outcome` reports false success; independent validation-loop fix.
+16. Packet 024: `spark memory` missing config crash; independent first-run setup fix.
+17. Packet 025: `spark project` missing path writes context; independent project-path validation fix.
+18. Packet 026: `spark status` writes project context; independent read-only status fix.
+19. Packet 037: `spark project status/questions` write context; stacked project-view follow-up after Packet 026.
+20. Packet 039: `spark bridge` preview writes project state; stacked context-preview follow-up after Packet 037.
+21. Packet 027: `spark memory-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
+22. Packet 028: `spark eidos-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
+23. Packet 029: `spark eidos --stats` writes a store; independent read-only stats fix.
+24. Packet 030: `spark eidos --validate-migration` writes a store; independent validation safety fix.
+25. Packet 031: EIDOS list views write a store; independent read-only list fix.
+26. Packet 032: `spark eidos --metrics` writes a store; independent read-only metrics fix.
+27. Packet 033: `spark eidos --evidence` writes two stores; independent read-only evidence fix.
+28. Packet 034: `spark eidos --deferred` writes a store; independent read-only deferred-status fix.
+29. Packet 035: `spark eidos --migrate --dry-run` writes a store; independent dry-run migration safety fix.
+30. Packet 036: `spark advisory` writes defaults non-interactively; independent setup safety fix.
+31. Packet 045: deprecated `spark curiosity --fill` false success; independent CLI mutation fix.
+32. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -1109,4 +1110,38 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_cli_project_phase_validation.py tests/test_project_context.py -q`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli project phase --set invalid`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli project phase --set prototype`
+```
+
+## Packet 048: Hypotheses Outcome Missing Target Reports Success
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/048-hypotheses-outcome-missing-target.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-hypotheses-outcome-validation
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-hypotheses-outcome-validation?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `4be997d`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_hypotheses_outcome_validation.py tests/test_project_context.py -q`
+- Behavior check: missing, malformed, and non-integer hypothesis outcome targets now exit `1` without false success or traceback.
+
+Suggested PR title:
+
+```text
+Validate hypothesis outcome targets
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- makes hypothesis outcome recording return a success/failure signal
+- returns non-zero exits for missing hypothesis prediction targets and malformed outcome specs
+- replaces non-integer index tracebacks with a CLI-safe diagnostic
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/048-hypotheses-outcome-missing-target.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_hypotheses_outcome_validation.py tests/test_project_context.py -q`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli hypotheses --outcome missing:0 --correct`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli hypotheses --outcome missing:notint --correct`
 ```
