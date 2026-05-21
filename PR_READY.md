@@ -4,6 +4,39 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 No upstream PRs are open yet. Open them only after reviewer routing confirms the preferred owner surface.
 
+## Packet 001: Missing Spark OS Compile Command
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/HUNT_PROOF.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/spark-os-compile-command
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/spark-os-compile-command?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `00397b9 Add Spark OS compile command`
+- Test: `PYTHONPATH=. python -m pytest tests/test_cli_os.py -q`
+- Behavior check: `spark os compile --json` emits `spark.os.compile.v1` with `authority`, `capability`, `gaps`, `memory`, `project`, `repo_board`, and `trace` sections.
+
+Suggested PR title:
+
+```text
+Add Spark OS compile command
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- adds `spark os compile --json` as a safe discovery command for agents
+- emits aggregate/redacted capability, authority, trace, memory, project, repo-board, and gap surfaces
+- adds CLI coverage for the command and parser path
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/HUNT_PROOF.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_cli_os.py -q`
+- `PYTHONPATH=. python -m spark.cli os compile --json`
+```
+
 ## Packet 002: CLI Status/Health Mojibake
 
 - Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/002-cli-status-health-mojibake.md
@@ -83,7 +116,7 @@ Suggested PR body:
 
 Important routing note:
 
-Packet 021 is stacked on the OS compile command branch. Open it after the OS compile branch is routed/accepted, or combine it only if reviewers ask for a bundled PR.
+Packet 021 is stacked on the Packet 001 OS compile command branch. Open it after Packet 001 is routed/accepted, or combine it only if reviewers ask for a bundled PR.
 
 Suggested PR title:
 

@@ -61,6 +61,8 @@ Please route these packets to the public track or reviewer-owned surface where J
 
 Fix branches are already prepared locally for:
 
+- Packet 001: `codex/spark-os-compile-command`
+  https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/spark-os-compile-command
 - Packet 002: `codex/fix-cli-status-mojibake`
   https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-cli-status-mojibake
 - Packet 020: `codex/fix-pulse-service-status`

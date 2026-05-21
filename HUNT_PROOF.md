@@ -72,6 +72,16 @@ spark os compile --json
 emits schema spark.os.compile.v1
 ```
 
+## Fix Branch
+
+Prepared on the `jumperz11` fork, not opened upstream yet:
+
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/spark-os-compile-command
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/spark-os-compile-command?expand=1
+- Commit: `00397b9 Add Spark OS compile command`
+- Verification: `PYTHONPATH=. python -m pytest tests/test_cli_os.py -q` passed.
+- Behavior check: `spark os compile --json` emits `spark.os.compile.v1` with the expected safe discovery sections.
+
 ## Submission Status
 
 This clean repository is a proof hub only. It is not an upstream PR and does not push changes to any old repository.
