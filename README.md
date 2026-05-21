@@ -42,6 +42,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 021: [OS compile missing project emits traceback](packets/021-os-compile-missing-project-traceback.md)
 - Packet 022: [Opportunities default subcommand traceback](packets/022-opportunities-default-subcommand-traceback.md)
 - Packet 023: [Outcome command records unknown in non-interactive mode](packets/023-outcome-noninteractive-records-unknown.md)
+- Packet 024: [Memory config missing traceback](packets/024-memory-config-missing-traceback.md)
 - Public page: [index.html](index.html)
 
 ## Routing

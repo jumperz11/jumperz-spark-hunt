@@ -69,6 +69,8 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/022-opportunities-default-subcommand-traceback.md
 - Packet 023: Outcome command records unknown in non-interactive mode
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/023-outcome-noninteractive-records-unknown.md
+- Packet 024: Memory config missing traceback
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/024-memory-config-missing-traceback.md
 
 ## Routing Note
 

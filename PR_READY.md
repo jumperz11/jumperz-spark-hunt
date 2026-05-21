@@ -6,7 +6,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 - No active upstream PRs are currently open for these JUMPERZ fix branches.
 - Packet 001 previously had upstream PR https://github.com/vibeforge1111/vibeship-spark-intelligence/pull/183, now closed.
-- Packets 002, 009, 020, 021, 022, and 023 have fork branches ready but no upstream PRs yet.
+- Packets 002, 009, 020, 021, 022, 023, and 024 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
 ## Recommended Submission Order
@@ -17,7 +17,8 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 4. Packet 020: dead Pulse URL reporting; independent service-status correctness fix.
 5. Packet 022: `spark opportunities` default crash; independent, low-risk CLI traceback fix.
 6. Packet 023: `spark outcome` non-interactive write; independent outcome-data safety fix.
-7. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
+7. Packet 024: `spark memory` missing config crash; independent first-run setup fix.
+8. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -258,4 +259,38 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_cli_outcome.py -q`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli outcome </dev/null`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli outcome --result yes --text worked --tool pytest`
+```
+
+## Packet 024: Memory Config Missing Traceback
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/024-memory-config-missing-traceback.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-memory-config-missing
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-memory-config-missing?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `8173558 Handle missing Clawdbot memory config`
+- Test: `PYTHONPATH=. python -m pytest tests/test_clawdbot_memory_setup.py -q`
+- Behavior check: `spark memory --show` in a fresh `HOME` prints `(not set)`; `spark memory --set off --no-restart` creates `~/.clawdbot/clawdbot.json` instead of raising `FileNotFoundError`.
+
+Suggested PR title:
+
+```text
+Handle missing Clawdbot memory config
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- treats missing Clawdbot config as an empty memorySearch configuration
+- creates the config parent directory before saving memorySearch settings
+- adds regression coverage for fresh-environment show and set paths
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/024-memory-config-missing-traceback.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_clawdbot_memory_setup.py -q`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli memory --show`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli memory --set off --no-restart`
 ```
