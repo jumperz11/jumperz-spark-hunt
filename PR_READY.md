@@ -1318,3 +1318,38 @@ Suggested PR body:
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli auto-link --min-similarity 0.1 --limit 1`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli auto-link --limit -1`
 ```
+
+## Packet 054: Outcome Validate Limit Zero Validates Links
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/054-outcome-validate-zero-limit.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-outcome-validate-zero-limit
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-outcome-validate-zero-limit?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `15766a0`
+- Test: `PYTHONPATH=. python -m pytest tests/test_outcome_validate_limit.py tests/test_validation_loop.py -q`
+- Behavior check: `outcome-validate --limit 0` now processes zero links and leaves validation state untouched; `--limit 1` still validates one link; negative limits exit `1`.
+
+Suggested PR title:
+
+```text
+Respect outcome validation zero limit
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- preserves explicit `outcome-validate --limit 0` instead of converting it to the default limit
+- makes limit zero process no links and avoid learner/link mutations
+- rejects negative outcome-validation limits with a CLI-safe non-zero exit
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/054-outcome-validate-zero-limit.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_outcome_validate_limit.py tests/test_validation_loop.py -q`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli outcome-validate --limit 0`
+- `HOME="$tmp" PYTHONPATH=. python -m spark.cli outcome-validate --limit 1`
+- `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli outcome-validate --limit -1`
+```

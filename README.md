@@ -72,6 +72,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 051: [Sync banks accepts invalid inputs](packets/051-sync-banks-input-validation.md)
 - Packet 052: [Auto-link accepts invalid thresholds](packets/052-auto-link-threshold-validation.md)
 - Packet 053: [Auto-link limit zero writes all](packets/053-auto-link-zero-limit-writes-all.md)
+- Packet 054: [Outcome validate limit zero validates links](packets/054-outcome-validate-zero-limit.md)
 - Public page: [index.html](index.html)
 
 ## Routing
