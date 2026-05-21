@@ -1557,3 +1557,36 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_growth_tracker_storage.py -q`
 - `HOME="$tmp" PYTHONPATH=. python -m spark.cli timeline --limit 0`
 ```
+
+## Packet 061: Personality State Writes Into Source Checkout
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/061-personality-state-writes-checkout.md
+- Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-voice-aha-home-path
+- Upstream compare: https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-voice-aha-home-path?expand=1
+- Base: `vibeforge1111/vibeship-spark-intelligence:main`
+- Commit: `ab47fb4`
+- Test: `PYTHONPATH=. python -m pytest tests/test_personality_state_storage.py tests/test_validation_loop.py tests/test_convo_iq.py tests/test_niche_net.py -q`
+- Behavior check: voice and surprise state now write under isolated `HOME`, and neither path is under the worktree.
+
+Suggested PR title:
+
+```text
+Store personality state under home
+```
+
+Suggested PR body:
+
+```markdown
+## Summary
+- stores Spark voice state under `Path.home() / ".spark"`
+- stores aha/surprise state under `Path.home() / ".spark"`
+- prevents personality runtime state from writing into the source checkout
+
+## Spark Compete
+- Team: JUMPERZ
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/061-personality-state-writes-checkout.md
+
+## Verification
+- `PYTHONPATH=. python -m pytest tests/test_personality_state_storage.py tests/test_validation_loop.py tests/test_convo_iq.py tests/test_niche_net.py -q`
+- isolated `HOME` smoke for `SparkVoice().record_interaction()` and `AhaTracker().capture_surprise(...)`
+```
