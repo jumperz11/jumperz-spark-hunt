@@ -9,66 +9,43 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 - Packets 002, 009, and 020-086 have fork branches ready but no upstream PRs yet.
 - Open upstream PRs only after reviewer routing confirms the preferred owner surface, or if the Spark Compete organizers explicitly ask for direct PR submission.
 
+## Spark Compete Packet Routing Note
+
+The Spark Compete site currently requires complete `spark-compete-hotfix-v1` JSON in every new PR body. Because `vibeforge1111/vibeship-spark-intelligence` is not listed in `/allowed-repos.json`, the top review queue is prepared as `reviewer_routed_packet` material until reviewers confirm a direct PR lane.
+
+The reviewer-routed schema accepts only a `vibeforge1111/Spark-Agent-Site` issue or PR URL as the public intake surface. The packets below use `https://github.com/vibeforge1111/Spark-Agent-Site/issues/184` as the schema-shaped reviewer intake URL to replace if reviewers assign a different Spark-Agent-Site routing issue. Do not open upstream PRs until that routing path is confirmed.
+
 ## Recommended Submission Order
+
+Use this order for reviewer scoring. It matches `TOP_REVIEW_QUEUE.md` and prioritizes the first 10 schema-ready reviewer-routed packets.
 
 1. Packet 001: missing `spark os compile --json`; foundational agent-readiness fix.
 2. Packet 021: missing-project handling for `spark os compile`; stacked follow-up after Packet 001.
-3. Packet 002: CLI status/health mojibake; independent, low-risk output quality fix.
-4. Packet 038: remaining CLI view mojibake; stacked output-quality follow-up after Packet 002.
-5. Packet 020: dead Pulse URL reporting; independent service-status correctness fix.
-6. Packet 022: `spark opportunities` default crash; independent, low-risk CLI traceback fix.
+3. Packet 009: mission command compatibility; directly tied to Spark Compete starter mission command friction.
+4. Packet 022: `spark opportunities` default crash; independent, low-risk CLI traceback fix.
+5. Packet 040: `spark advice-feedback` failed recording exits zero; independent CLI automation fix.
+6. Packet 041: `spark capture --list/--reject` ignored; independent CLI review-loop fix.
 7. Packet 042: missing `spark opportunities accept/dismiss` exits zero; independent CLI automation fix.
-8. Packet 040: `spark advice-feedback` failed recording exits zero; independent CLI automation fix.
-9. Packet 041: `spark capture --list/--reject` ignored; independent CLI review-loop fix.
-10. Packet 023: `spark outcome` non-interactive write; independent outcome-data safety fix.
-11. Packet 043: `spark outcome-link` accepts invalid targets; independent outcome-validation safety fix.
-12. Packet 044: `spark project answer` accepts missing IDs; independent project-evidence safety fix.
-13. Packet 046: `spark chips` missing targets exit zero; independent command-family automation fix.
-14. Packet 047: `spark project phase` accepts invalid values; independent project-state validation fix.
-15. Packet 048: `spark hypotheses --outcome` reports false success; independent validation-loop fix.
-16. Packet 049: `spark contradictions --resolve` reports false success; independent validation-loop fix.
-17. Packet 024: `spark memory` missing config crash; independent first-run setup fix.
-18. Packet 025: `spark project` missing path writes context; independent project-path validation fix.
-19. Packet 026: `spark status` writes project context; independent read-only status fix.
-20. Packet 037: `spark project status/questions` write context; stacked project-view follow-up after Packet 026.
-21. Packet 039: `spark bridge` preview writes project state; stacked context-preview follow-up after Packet 037.
-22. Packet 027: `spark memory-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
-23. Packet 028: `spark eidos-purge-telemetry --dry-run` writes a store; independent dry-run safety fix.
-24. Packet 029: `spark eidos --stats` writes a store; independent read-only stats fix.
-25. Packet 030: `spark eidos --validate-migration` writes a store; independent validation safety fix.
-26. Packet 031: EIDOS list views write a store; independent read-only list fix.
-27. Packet 032: `spark eidos --metrics` writes a store; independent read-only metrics fix.
-28. Packet 033: `spark eidos --evidence` writes two stores; independent read-only evidence fix.
-29. Packet 034: `spark eidos --deferred` writes a store; independent read-only deferred-status fix.
-30. Packet 035: `spark eidos --migrate --dry-run` writes a store; independent dry-run migration safety fix.
-31. Packet 036: `spark advisory` writes defaults non-interactively; independent setup safety fix.
-32. Packet 045: deprecated `spark curiosity --fill` false success; independent CLI mutation fix.
-33. Packet 009: mission command compatibility; high relevance to Spark Compete missions, broader command-surface change.
-34. Packet 062: `spark eval` invalid thresholds; independent evaluation-metric correctness fix.
-35. Packet 063: `spark process` invalid runtime limits; independent bridge-worker mutation safety fix.
-36. Packet 064: `spark decay` invalid bounds; independent learning-state prune safety fix.
-37. Packet 065: `spark validate-ingest` negative limit traceback; independent ingest-diagnostic hardening fix.
-38. Packet 066: `spark personality-evolution apply` input tracebacks; independent bounded-personality control hardening fix.
-39. Packet 067: `spark config` malformed dot paths write empty keys; independent runtime-config safety fix.
-40. Packet 068: `spark config` malformed runtime JSON traceback; independent config-diagnostic hardening fix.
-41. Packet 069: non-object runtime tuneables crash CLI startup; independent shared config-shape hardening fix.
-42. Packet 070: `spark logs` ignores zero and negative tail bounds; independent service-diagnostic fix.
-43. Packet 071: `spark logs` ignores invalid since filters; independent service-diagnostic fix.
-44. Packet 072: `spark validate` accepts negative scan limits; independent validation-loop diagnostic fix.
-45. Packet 073: `spark learnings` ignores zero and negative display limits; independent learning-evidence display fix.
-46. Packet 074: `spark events` ignores zero and negative display limits; independent event-evidence display fix.
-47. Packet 075: `spark outcome-unlinked` ignores zero and negative display limits; independent outcome-evidence display fix.
-48. Packet 076: `spark outcome-links` ignores zero and negative display limits; independent validation-link evidence display fix.
-49. Packet 077: `spark advice-feedback --pending` ignores zero and negative display limits; independent advice-feedback evidence display fix.
-50. Packet 078: `spark sync-context --limit -1` writes exports; independent bootstrap-context safety fix.
-51. Packet 079: `spark opportunities list` ignores zero and negative display limits; independent opportunity-inbox evidence display fix.
-52. Packet 080: `spark eidos` list views ignore zero and negative display limits; independent decision-packet evidence display fix.
-53. Packet 081: `spark surprises` crashes on persisted surprise rows; independent learning-evidence display fix.
-54. Packet 082: `spark voice --growth` ignores zero and negative display limits; independent voice-growth evidence display fix.
-55. Packet 083: `spark project questions` ignores zero and negative display limits; independent project-question evidence display fix.
-56. Packet 084: `spark curiosity --questions` ignores zero and negative display limits; independent curiosity-question evidence display fix.
-57. Packet 085: `spark hypotheses` ignores zero and negative display limits; independent prediction-loop evidence display fix.
-58. Packet 086: `spark contradictions --unresolved` ignores zero and negative display limits; independent contradiction-evidence display fix.
+8. Packet 043: `spark outcome-link` accepts invalid targets; independent outcome-validation safety fix.
+9. Packet 048: `spark hypotheses --outcome` reports false success; independent validation-loop fix.
+10. Packet 049: `spark contradictions --resolve` reports false success; independent validation-loop fix.
+
+Next clean batch after reviewer routing clears the first 10:
+
+11. Packet 063: `spark process` invalid runtime limits; independent bridge-worker mutation safety fix.
+12. Packet 065: `spark validate-ingest` negative limit traceback; independent ingest-diagnostic hardening fix.
+13. Packet 081: `spark surprises` crashes on persisted surprise rows; independent learning-evidence display fix.
+14. Packet 078: `spark sync-context --limit -1` writes exports; independent bootstrap-context safety fix.
+15. Packet 080: `spark eidos` list views ignore zero and negative display limits; independent decision-packet evidence display fix.
+
+Remaining PR-ready branches stay documented below for later routing, but the goal now is reviewer clarity and acceptance for the first batch rather than more packet volume.
+
+## Packet Validation Status
+
+Validated against `https://compete.sparkswarm.ai/api/packet/validate` on 2026-05-25 after adding the required `spark-compete-hotfix-v1` JSON blocks.
+
+- Packets 001, 021, 009, 040, 041, 042, 043, 048, and 049 returned `pass`.
+- Packet 022 returned `pass_with_warnings` with `packet_valid: true` and `security_owner_review_expected`; keep it in the queue, but expect reviewer/lab confirmation before points unlock.
 
 ## Packet 001: Missing Spark OS Compile Command
 
@@ -83,12 +60,12 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 Suggested PR title:
 
 ```text
-Add Spark OS compile command
+[spark-compete] Add Spark OS compile command
 ```
 
 Suggested PR body:
 
-```markdown
+````markdown
 ## Summary
 - adds `spark os compile --json` as a safe discovery command for agents
 - emits aggregate/redacted capability, authority, trace, memory, project, repo-board, and gap surfaces
@@ -101,7 +78,115 @@ Suggested PR body:
 ## Verification
 - `PYTHONPATH=. python -m pytest tests/test_cli_os.py -q`
 - `PYTHONPATH=. python -m spark.cli os compile --json`
+
+## Spark Compete Hotfix Packet
+
+```json
+{
+  "schema": "spark-compete-hotfix-v1",
+  "event": "spark-compete-first-event",
+  "submission_mode": "reviewer_routed_packet",
+  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184",
+  "team": {
+    "name": "JUMPERZ",
+    "members": [
+      "JUMPERZ",
+      "Basjee01",
+      "acexqt"
+    ],
+    "llm_device_holder": "JUMPERZ",
+    "device_holder_github": "https://github.com/jumperz11",
+    "github_accounts": [
+      "jumperz11"
+    ]
+  },
+  "target_repo": {
+    "id": "reviewer-routed/private-or-ambiguous-owner",
+    "source": "https://compete.sparkswarm.ai/allowed-repos.json",
+    "owner_surface": "private-or-ambiguous-owner"
+  },
+  "issue": {
+    "type": "bug",
+    "severity": "medium",
+    "title": "Missing safe Spark OS compile command for agent discovery",
+    "actual_behavior": "Spark agents have no safe aggregate command that exposes public-safe capability, authority, trace, memory, project, repo-board, and gap surfaces for owner routing.",
+    "expected_behavior": "Spark should provide a safe read-only compile command so agents can inspect the system without exposing private repo maps or raw memory.",
+    "repro_steps": [
+      "Install or open the Spark CLI checkout.",
+      "Try to run spark os compile --json.",
+      "Observe that the public-safe aggregate discovery command is missing before this branch."
+    ],
+    "affected_workflow": "Spark agent system discovery and owner routing"
+  },
+  "evidence": {
+    "safe_links_only": true,
+    "before_after_proof": "Before: spark os compile --json was missing. After: the branch emits spark.os.compile.v1 with authority, capability, gaps, memory, project, repo_board, and trace sections plus CLI test coverage.",
+    "links": [
+      "https://github.com/jumperz11/jumperz-spark-hunt/blob/main/HUNT_PROOF.md",
+      "https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/spark-os-compile-command?expand=1",
+      "https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/spark-os-compile-command"
+    ],
+    "forbidden": [
+      "pdf",
+      "zip",
+      "exe",
+      "unknown downloads",
+      "shortened links",
+      "archives",
+      "binaries",
+      "tokens",
+      "browser cookies",
+      "wallet material",
+      "raw logs",
+      "raw conversations",
+      "raw memory",
+      "raw patches",
+      "private repo maps",
+      "private scoring details"
+    ]
+  },
+  "proposed_fix": {
+    "approach": "Add a read-only Spark OS compile command that returns redacted aggregate discovery surfaces for agents.",
+    "files_expected": [
+      "spark/cli.py",
+      "tests/test_cli_os.py"
+    ],
+    "tests_or_smoke": "PYTHONPATH=. python -m pytest tests/test_cli_os.py -q; PYTHONPATH=. python -m spark.cli os compile --json"
+  },
+  "pr": {
+    "branch": "codex/spark-os-compile-command",
+    "title_prefix": "[spark-compete]",
+    "author_github": "jumperz11",
+    "body_must_include": [
+      "packet",
+      "team",
+      "pr_author",
+      "repo",
+      "actual_behavior",
+      "expected_behavior",
+      "repro_steps",
+      "before_after_proof",
+      "tests_or_smoke",
+      "duplicate_notes",
+      "risk_notes",
+      "review_claim"
+    ],
+    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184"
+  },
+  "review_claim": {
+    "impact_claim": "medium",
+    "evidence_types": [
+      "redacted_terminal_excerpt",
+      "failing_test",
+      "passing_test"
+    ],
+    "duplicate_notes": "Checked the curated JUMPERZ top review queue and no active upstream PR is open for this branch. This packet requests reviewer routing instead of guessing a private or ambiguous owner surface.",
+    "risk_notes": "Reviewer routing requested because the target repository is not listed in the public allowed target list. Packet evidence is limited to public GitHub links and redacted behavior summaries.",
+    "review_state_requested": "pr_review"
+  }
+}
 ```
+````
 
 ## Packet 002: CLI Status/Health Mojibake
 
@@ -183,12 +268,12 @@ Suggested PR body:
 Suggested PR title:
 
 ```text
-Add Spark Compete mission command compatibility
+[spark-compete] Add Spark Compete mission command compatibility
 ```
 
 Suggested PR body:
 
-```markdown
+````markdown
 ## Summary
 - adds read-only compatibility guidance for Spark Compete starter mission commands
 - covers `spark smoke first-run`, `spark providers status`, `spark live status`, `spark security audit`, and `spark update`
@@ -205,7 +290,115 @@ Suggested PR body:
 - `PYTHONPATH=. python -m spark.cli live status`
 - `PYTHONPATH=. python -m spark.cli security audit`
 - `PYTHONPATH=. python -m spark.cli update`
+
+## Spark Compete Hotfix Packet
+
+```json
+{
+  "schema": "spark-compete-hotfix-v1",
+  "event": "spark-compete-first-event",
+  "submission_mode": "reviewer_routed_packet",
+  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184",
+  "team": {
+    "name": "JUMPERZ",
+    "members": [
+      "JUMPERZ",
+      "Basjee01",
+      "acexqt"
+    ],
+    "llm_device_holder": "JUMPERZ",
+    "device_holder_github": "https://github.com/jumperz11",
+    "github_accounts": [
+      "jumperz11"
+    ]
+  },
+  "target_repo": {
+    "id": "reviewer-routed/private-or-ambiguous-owner",
+    "source": "https://compete.sparkswarm.ai/allowed-repos.json",
+    "owner_surface": "private-or-ambiguous-owner"
+  },
+  "issue": {
+    "type": "usage_friction",
+    "severity": "medium",
+    "title": "Starter missions reference missing Spark CLI commands",
+    "actual_behavior": "Several Spark Compete starter mission commands fail as invalid choices even though the public site tells teams to try them.",
+    "expected_behavior": "Referenced starter mission commands should return safe read-only compatibility guidance or a clear equivalent command path.",
+    "repro_steps": [
+      "Read the Spark Compete starter missions.",
+      "Run spark smoke first-run, spark providers status, spark live status, spark security audit, or spark update.",
+      "Observe invalid-choice failures before this branch."
+    ],
+    "affected_workflow": "Spark Compete starter mission onboarding"
+  },
+  "evidence": {
+    "safe_links_only": true,
+    "before_after_proof": "Before: site-referenced starter commands returned argparse invalid-choice failures. After: the branch returns read-only compatibility guidance for the referenced command paths.",
+    "links": [
+      "https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/009-starter-missions-reference-missing-cli-commands.md",
+      "https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-mission-command-compat?expand=1",
+      "https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-mission-command-compat"
+    ],
+    "forbidden": [
+      "pdf",
+      "zip",
+      "exe",
+      "unknown downloads",
+      "shortened links",
+      "archives",
+      "binaries",
+      "tokens",
+      "browser cookies",
+      "wallet material",
+      "raw logs",
+      "raw conversations",
+      "raw memory",
+      "raw patches",
+      "private repo maps",
+      "private scoring details"
+    ]
+  },
+  "proposed_fix": {
+    "approach": "Add safe compatibility shims for the site-referenced starter mission commands without performing destructive update or security actions.",
+    "files_expected": [
+      "spark/cli.py",
+      "tests/test_cli_mission_compat.py"
+    ],
+    "tests_or_smoke": "PYTHONPATH=. python -m pytest tests/test_cli_mission_compat.py -q"
+  },
+  "pr": {
+    "branch": "codex/fix-mission-command-compat",
+    "title_prefix": "[spark-compete]",
+    "author_github": "jumperz11",
+    "body_must_include": [
+      "packet",
+      "team",
+      "pr_author",
+      "repo",
+      "actual_behavior",
+      "expected_behavior",
+      "repro_steps",
+      "before_after_proof",
+      "tests_or_smoke",
+      "duplicate_notes",
+      "risk_notes",
+      "review_claim"
+    ],
+    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184"
+  },
+  "review_claim": {
+    "impact_claim": "medium",
+    "evidence_types": [
+      "redacted_terminal_excerpt",
+      "failing_test",
+      "passing_test"
+    ],
+    "duplicate_notes": "Checked the curated JUMPERZ top review queue and no active upstream PR is open for this branch. This packet requests reviewer routing instead of guessing a private or ambiguous owner surface.",
+    "risk_notes": "Reviewer routing requested because the target repository is not listed in the public allowed target list. Packet evidence is limited to public GitHub links and redacted behavior summaries.",
+    "review_state_requested": "pr_review"
+  }
+}
 ```
+````
 
 ## Packet 021: OS Compile Missing Project Traceback
 
@@ -224,12 +417,12 @@ Packet 021 is stacked on the Packet 001 OS compile command branch. Open it after
 Suggested PR title:
 
 ```text
-Handle missing Spark OS project paths
+[spark-compete] Handle missing Spark OS project paths
 ```
 
 Suggested PR body:
 
-```markdown
+````markdown
 ## Summary
 - validates `spark os compile --project` paths before repo-board collection
 - returns structured JSON errors for missing project paths in `--json` mode
@@ -242,7 +435,116 @@ Suggested PR body:
 ## Verification
 - `PYTHONPATH=. python -m pytest tests/test_cli_os.py -q`
 - `PYTHONPATH=. python -m spark.cli os compile --json --project /tmp/spark-definitely-missing-project`
+
+## Spark Compete Hotfix Packet
+
+```json
+{
+  "schema": "spark-compete-hotfix-v1",
+  "event": "spark-compete-first-event",
+  "submission_mode": "reviewer_routed_packet",
+  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184",
+  "team": {
+    "name": "JUMPERZ",
+    "members": [
+      "JUMPERZ",
+      "Basjee01",
+      "acexqt"
+    ],
+    "llm_device_holder": "JUMPERZ",
+    "device_holder_github": "https://github.com/jumperz11",
+    "github_accounts": [
+      "jumperz11"
+    ]
+  },
+  "target_repo": {
+    "id": "reviewer-routed/private-or-ambiguous-owner",
+    "source": "https://compete.sparkswarm.ai/allowed-repos.json",
+    "owner_surface": "private-or-ambiguous-owner"
+  },
+  "issue": {
+    "type": "bug",
+    "severity": "medium",
+    "title": "Spark OS compile traceback on missing project path",
+    "actual_behavior": "spark os compile --project with a missing path can emit a Python traceback or empty stdout instead of structured failure output.",
+    "expected_behavior": "Missing project paths should exit non-zero with structured JSON and no traceback so agents can recover safely.",
+    "repro_steps": [
+      "Start from the Packet 001 OS compile command branch.",
+      "Run spark os compile --json --project against a missing path.",
+      "Observe traceback or unsafe empty output before this hardening branch."
+    ],
+    "affected_workflow": "Spark OS compile project inspection"
+  },
+  "evidence": {
+    "safe_links_only": true,
+    "before_after_proof": "Before: missing --project path produced traceback/empty output. After: the branch exits 1 with structured JSON on stdout and no Python traceback on stderr.",
+    "links": [
+      "https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/021-os-compile-missing-project-traceback.md",
+      "https://github.com/jumperz11/vibeship-spark-intelligence/compare/codex/spark-os-compile-command...codex/fix-os-compile-missing-project?expand=1",
+      "https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-os-compile-missing-project",
+      "https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/spark-os-compile-command?expand=1"
+    ],
+    "forbidden": [
+      "pdf",
+      "zip",
+      "exe",
+      "unknown downloads",
+      "shortened links",
+      "archives",
+      "binaries",
+      "tokens",
+      "browser cookies",
+      "wallet material",
+      "raw logs",
+      "raw conversations",
+      "raw memory",
+      "raw patches",
+      "private repo maps",
+      "private scoring details"
+    ]
+  },
+  "proposed_fix": {
+    "approach": "Validate project paths before repo-board collection and return a structured error when the path is missing.",
+    "files_expected": [
+      "spark/cli.py",
+      "tests/test_cli_os.py"
+    ],
+    "tests_or_smoke": "PYTHONPATH=. python -m pytest tests/test_cli_os.py -q"
+  },
+  "pr": {
+    "branch": "codex/fix-os-compile-missing-project",
+    "title_prefix": "[spark-compete]",
+    "author_github": "jumperz11",
+    "body_must_include": [
+      "packet",
+      "team",
+      "pr_author",
+      "repo",
+      "actual_behavior",
+      "expected_behavior",
+      "repro_steps",
+      "before_after_proof",
+      "tests_or_smoke",
+      "duplicate_notes",
+      "risk_notes",
+      "review_claim"
+    ],
+    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184"
+  },
+  "review_claim": {
+    "impact_claim": "medium",
+    "evidence_types": [
+      "redacted_terminal_excerpt",
+      "failing_test",
+      "passing_test"
+    ],
+    "duplicate_notes": "Checked the curated JUMPERZ top review queue and no active upstream PR is open for this branch. This packet requests reviewer routing instead of guessing a private or ambiguous owner surface.",
+    "risk_notes": "Reviewer routing requested because the target repository is not listed in the public allowed target list. Packet evidence is limited to public GitHub links and redacted behavior summaries.",
+    "review_state_requested": "pr_review"
+  }
+}
 ```
+````
 
 ## Packet 022: Opportunities Default Subcommand Traceback
 
@@ -257,12 +559,12 @@ Suggested PR body:
 Suggested PR title:
 
 ```text
-Fix opportunities default command
+[spark-compete] Make spark opportunities show a safe default view
 ```
 
 Suggested PR body:
 
-```markdown
+````markdown
 ## Summary
 - makes `spark opportunities` default safely to the list view
 - uses default list filters when no `opportunities list` subparser args are present
@@ -275,7 +577,115 @@ Suggested PR body:
 ## Verification
 - `PYTHONPATH=. python -m pytest tests/test_cli_opportunities.py -q`
 - `PYTHONPATH=. python -m spark.cli opportunities`
+
+## Spark Compete Hotfix Packet
+
+```json
+{
+  "schema": "spark-compete-hotfix-v1",
+  "event": "spark-compete-first-event",
+  "submission_mode": "reviewer_routed_packet",
+  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184",
+  "team": {
+    "name": "JUMPERZ",
+    "members": [
+      "JUMPERZ",
+      "Basjee01",
+      "acexqt"
+    ],
+    "llm_device_holder": "JUMPERZ",
+    "device_holder_github": "https://github.com/jumperz11",
+    "github_accounts": [
+      "jumperz11"
+    ]
+  },
+  "target_repo": {
+    "id": "reviewer-routed/private-or-ambiguous-owner",
+    "source": "https://compete.sparkswarm.ai/allowed-repos.json",
+    "owner_surface": "private-or-ambiguous-owner"
+  },
+  "issue": {
+    "type": "bug",
+    "severity": "medium",
+    "title": "spark opportunities default subcommand traceback",
+    "actual_behavior": "Running spark opportunities without a subcommand can traceback instead of showing a safe opportunities inbox view.",
+    "expected_behavior": "spark opportunities should default to a safe read-only list/inbox view or a clear usage response.",
+    "repro_steps": [
+      "Run spark opportunities with no subcommand.",
+      "Observe the traceback before this branch.",
+      "Run the branch and confirm it shows a safe default opportunities view."
+    ],
+    "affected_workflow": "Spark opportunities CLI workflow"
+  },
+  "evidence": {
+    "safe_links_only": true,
+    "before_after_proof": "Before: spark opportunities could traceback without a subcommand. After: the branch routes the command to a safe default inbox view with focused test coverage.",
+    "links": [
+      "https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/022-opportunities-default-subcommand-traceback.md",
+      "https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-opportunities-default?expand=1",
+      "https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-opportunities-default"
+    ],
+    "forbidden": [
+      "pdf",
+      "zip",
+      "exe",
+      "unknown downloads",
+      "shortened links",
+      "archives",
+      "binaries",
+      "tokens",
+      "browser cookies",
+      "wallet material",
+      "raw logs",
+      "raw conversations",
+      "raw memory",
+      "raw patches",
+      "private repo maps",
+      "private scoring details"
+    ]
+  },
+  "proposed_fix": {
+    "approach": "Wire the parent opportunities command to a safe default display path instead of falling through to a traceback.",
+    "files_expected": [
+      "spark/cli.py",
+      "tests/test_cli_opportunities.py"
+    ],
+    "tests_or_smoke": "PYTHONPATH=. python -m pytest tests/test_cli_opportunities.py -q"
+  },
+  "pr": {
+    "branch": "codex/fix-opportunities-default",
+    "title_prefix": "[spark-compete]",
+    "author_github": "jumperz11",
+    "body_must_include": [
+      "packet",
+      "team",
+      "pr_author",
+      "repo",
+      "actual_behavior",
+      "expected_behavior",
+      "repro_steps",
+      "before_after_proof",
+      "tests_or_smoke",
+      "duplicate_notes",
+      "risk_notes",
+      "review_claim"
+    ],
+    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184"
+  },
+  "review_claim": {
+    "impact_claim": "medium",
+    "evidence_types": [
+      "redacted_terminal_excerpt",
+      "failing_test",
+      "passing_test"
+    ],
+    "duplicate_notes": "Checked the curated JUMPERZ top review queue and no active upstream PR is open for this branch. This packet requests reviewer routing instead of guessing a private or ambiguous owner surface.",
+    "risk_notes": "Reviewer routing requested because the target repository is not listed in the public allowed target list. Packet evidence is limited to public GitHub links and redacted behavior summaries.",
+    "review_state_requested": "pr_review"
+  }
+}
 ```
+````
 
 ## Packet 023: Outcome Command Records Unknown In Non-Interactive Mode
 
@@ -879,12 +1289,12 @@ Suggested PR body:
 Suggested PR title:
 
 ```text
-Return failure when advice feedback is not recorded
+[spark-compete] Return failure when advice feedback recording fails
 ```
 
 Suggested PR body:
 
-```markdown
+````markdown
 ## Summary
 - makes failed `spark advice-feedback` recording attempts exit non-zero
 - preserves the existing failure message for missing advice target input
@@ -898,7 +1308,115 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_cli_advice_feedback_exit.py -q`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli advice-feedback`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli advice-feedback --pending`
+
+## Spark Compete Hotfix Packet
+
+```json
+{
+  "schema": "spark-compete-hotfix-v1",
+  "event": "spark-compete-first-event",
+  "submission_mode": "reviewer_routed_packet",
+  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184",
+  "team": {
+    "name": "JUMPERZ",
+    "members": [
+      "JUMPERZ",
+      "Basjee01",
+      "acexqt"
+    ],
+    "llm_device_holder": "JUMPERZ",
+    "device_holder_github": "https://github.com/jumperz11",
+    "github_accounts": [
+      "jumperz11"
+    ]
+  },
+  "target_repo": {
+    "id": "reviewer-routed/private-or-ambiguous-owner",
+    "source": "https://compete.sparkswarm.ai/allowed-repos.json",
+    "owner_surface": "private-or-ambiguous-owner"
+  },
+  "issue": {
+    "type": "bug",
+    "severity": "medium",
+    "title": "spark advice-feedback failure exits zero",
+    "actual_behavior": "Failed advice feedback recording can report a successful zero exit code, causing automation and reviewers to trust a failed write.",
+    "expected_behavior": "Failed advice feedback recording should exit non-zero and surface the failure clearly.",
+    "repro_steps": [
+      "Trigger an advice-feedback recording failure.",
+      "Check the process exit code before this branch.",
+      "Observe the command incorrectly exits zero before the fix."
+    ],
+    "affected_workflow": "Spark advice feedback recording and automation"
+  },
+  "evidence": {
+    "safe_links_only": true,
+    "before_after_proof": "Before: failed advice feedback recording exited zero. After: the branch returns a non-zero failure exit and adds focused regression coverage.",
+    "links": [
+      "https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/040-advice-feedback-failure-exits-zero.md",
+      "https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-advice-feedback-failure-exit?expand=1",
+      "https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-advice-feedback-failure-exit"
+    ],
+    "forbidden": [
+      "pdf",
+      "zip",
+      "exe",
+      "unknown downloads",
+      "shortened links",
+      "archives",
+      "binaries",
+      "tokens",
+      "browser cookies",
+      "wallet material",
+      "raw logs",
+      "raw conversations",
+      "raw memory",
+      "raw patches",
+      "private repo maps",
+      "private scoring details"
+    ]
+  },
+  "proposed_fix": {
+    "approach": "Propagate advice-feedback write failures to the CLI exit status so automation cannot treat failed feedback as successful.",
+    "files_expected": [
+      "spark/cli.py",
+      "tests/test_cli_advice_feedback_exit.py"
+    ],
+    "tests_or_smoke": "PYTHONPATH=. python -m pytest tests/test_cli_advice_feedback_exit.py -q"
+  },
+  "pr": {
+    "branch": "codex/fix-advice-feedback-failure-exit",
+    "title_prefix": "[spark-compete]",
+    "author_github": "jumperz11",
+    "body_must_include": [
+      "packet",
+      "team",
+      "pr_author",
+      "repo",
+      "actual_behavior",
+      "expected_behavior",
+      "repro_steps",
+      "before_after_proof",
+      "tests_or_smoke",
+      "duplicate_notes",
+      "risk_notes",
+      "review_claim"
+    ],
+    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184"
+  },
+  "review_claim": {
+    "impact_claim": "medium",
+    "evidence_types": [
+      "redacted_terminal_excerpt",
+      "failing_test",
+      "passing_test"
+    ],
+    "duplicate_notes": "Checked the curated JUMPERZ top review queue and no active upstream PR is open for this branch. This packet requests reviewer routing instead of guessing a private or ambiguous owner surface.",
+    "risk_notes": "Reviewer routing requested because the target repository is not listed in the public allowed target list. Packet evidence is limited to public GitHub links and redacted behavior summaries.",
+    "review_state_requested": "pr_review"
+  }
+}
 ```
+````
 
 ## Packet 041: Capture List and Reject Are Ignored
 
@@ -913,12 +1431,12 @@ Suggested PR body:
 Suggested PR title:
 
 ```text
-Wire capture list and reject actions
+[spark-compete] Wire capture list and reject actions
 ```
 
 Suggested PR body:
 
-```markdown
+````markdown
 ## Summary
 - wires `spark capture --list` to the existing pending suggestion formatter
 - wires `spark capture --reject` to the existing reject helper
@@ -932,7 +1450,115 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_cli_capture_actions.py -q`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli capture --list`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli capture --reject missing`
+
+## Spark Compete Hotfix Packet
+
+```json
+{
+  "schema": "spark-compete-hotfix-v1",
+  "event": "spark-compete-first-event",
+  "submission_mode": "reviewer_routed_packet",
+  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184",
+  "team": {
+    "name": "JUMPERZ",
+    "members": [
+      "JUMPERZ",
+      "Basjee01",
+      "acexqt"
+    ],
+    "llm_device_holder": "JUMPERZ",
+    "device_holder_github": "https://github.com/jumperz11",
+    "github_accounts": [
+      "jumperz11"
+    ]
+  },
+  "target_repo": {
+    "id": "reviewer-routed/private-or-ambiguous-owner",
+    "source": "https://compete.sparkswarm.ai/allowed-repos.json",
+    "owner_surface": "private-or-ambiguous-owner"
+  },
+  "issue": {
+    "type": "bug",
+    "severity": "medium",
+    "title": "spark capture list and reject controls are ignored",
+    "actual_behavior": "Advertised capture review controls such as list and reject can be ignored, leaving users unable to manage captured evidence reliably.",
+    "expected_behavior": "Capture list and reject controls should execute the advertised review-loop actions with clear output.",
+    "repro_steps": [
+      "Create or inspect captured review items.",
+      "Run the advertised capture list/reject actions.",
+      "Observe ignored behavior before this branch."
+    ],
+    "affected_workflow": "Spark capture review loop"
+  },
+  "evidence": {
+    "safe_links_only": true,
+    "before_after_proof": "Before: capture list/reject controls were ignored. After: the branch wires the actions and adds focused capture-action tests.",
+    "links": [
+      "https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/041-capture-list-reject-ignored.md",
+      "https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-capture-list-reject?expand=1",
+      "https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-capture-list-reject"
+    ],
+    "forbidden": [
+      "pdf",
+      "zip",
+      "exe",
+      "unknown downloads",
+      "shortened links",
+      "archives",
+      "binaries",
+      "tokens",
+      "browser cookies",
+      "wallet material",
+      "raw logs",
+      "raw conversations",
+      "raw memory",
+      "raw patches",
+      "private repo maps",
+      "private scoring details"
+    ]
+  },
+  "proposed_fix": {
+    "approach": "Connect capture list and reject CLI options to the underlying review-loop behavior with clear success/failure handling.",
+    "files_expected": [
+      "spark/cli.py",
+      "tests/test_cli_capture_actions.py"
+    ],
+    "tests_or_smoke": "PYTHONPATH=. python -m pytest tests/test_cli_capture_actions.py -q"
+  },
+  "pr": {
+    "branch": "codex/fix-capture-list-reject",
+    "title_prefix": "[spark-compete]",
+    "author_github": "jumperz11",
+    "body_must_include": [
+      "packet",
+      "team",
+      "pr_author",
+      "repo",
+      "actual_behavior",
+      "expected_behavior",
+      "repro_steps",
+      "before_after_proof",
+      "tests_or_smoke",
+      "duplicate_notes",
+      "risk_notes",
+      "review_claim"
+    ],
+    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184"
+  },
+  "review_claim": {
+    "impact_claim": "medium",
+    "evidence_types": [
+      "redacted_terminal_excerpt",
+      "failing_test",
+      "passing_test"
+    ],
+    "duplicate_notes": "Checked the curated JUMPERZ top review queue and no active upstream PR is open for this branch. This packet requests reviewer routing instead of guessing a private or ambiguous owner surface.",
+    "risk_notes": "Reviewer routing requested because the target repository is not listed in the public allowed target list. Packet evidence is limited to public GitHub links and redacted behavior summaries.",
+    "review_state_requested": "pr_review"
+  }
+}
 ```
+````
 
 ## Packet 042: Missing Opportunities Exit Zero
 
@@ -947,12 +1573,12 @@ Suggested PR body:
 Suggested PR title:
 
 ```text
-Return failure for missing opportunities
+[spark-compete] Fail missing opportunities accept and dismiss targets
 ```
 
 Suggested PR body:
 
-```markdown
+````markdown
 ## Summary
 - makes missing `spark opportunities accept` targets exit non-zero
 - makes missing `spark opportunities dismiss` targets exit non-zero
@@ -967,7 +1593,115 @@ Suggested PR body:
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli opportunities accept missing`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli opportunities dismiss missing`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli opportunities list`
+
+## Spark Compete Hotfix Packet
+
+```json
+{
+  "schema": "spark-compete-hotfix-v1",
+  "event": "spark-compete-first-event",
+  "submission_mode": "reviewer_routed_packet",
+  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184",
+  "team": {
+    "name": "JUMPERZ",
+    "members": [
+      "JUMPERZ",
+      "Basjee01",
+      "acexqt"
+    ],
+    "llm_device_holder": "JUMPERZ",
+    "device_holder_github": "https://github.com/jumperz11",
+    "github_accounts": [
+      "jumperz11"
+    ]
+  },
+  "target_repo": {
+    "id": "reviewer-routed/private-or-ambiguous-owner",
+    "source": "https://compete.sparkswarm.ai/allowed-repos.json",
+    "owner_surface": "private-or-ambiguous-owner"
+  },
+  "issue": {
+    "type": "bug",
+    "severity": "medium",
+    "title": "spark opportunities accept/dismiss missing targets exit zero",
+    "actual_behavior": "Missing opportunities accept or dismiss targets can return a successful zero exit code even though no opportunity was changed.",
+    "expected_behavior": "Missing opportunity targets should return failure and explain that no matching opportunity was accepted or dismissed.",
+    "repro_steps": [
+      "Run opportunities accept or dismiss against a missing target.",
+      "Check the exit code before this branch.",
+      "Observe false-success zero exit before the fix."
+    ],
+    "affected_workflow": "Spark opportunities accept/dismiss automation"
+  },
+  "evidence": {
+    "safe_links_only": true,
+    "before_after_proof": "Before: missing accept/dismiss targets could exit zero. After: the branch returns a failure exit for missing targets with regression coverage.",
+    "links": [
+      "https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/042-opportunities-missing-exits-zero.md",
+      "https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-opportunities-missing-exit?expand=1",
+      "https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-opportunities-missing-exit"
+    ],
+    "forbidden": [
+      "pdf",
+      "zip",
+      "exe",
+      "unknown downloads",
+      "shortened links",
+      "archives",
+      "binaries",
+      "tokens",
+      "browser cookies",
+      "wallet material",
+      "raw logs",
+      "raw conversations",
+      "raw memory",
+      "raw patches",
+      "private repo maps",
+      "private scoring details"
+    ]
+  },
+  "proposed_fix": {
+    "approach": "Validate opportunity IDs before reporting success and return non-zero when the target cannot be found.",
+    "files_expected": [
+      "spark/cli.py",
+      "tests/test_cli_opportunities_missing_exit.py"
+    ],
+    "tests_or_smoke": "PYTHONPATH=. python -m pytest tests/test_cli_opportunities_missing_exit.py -q"
+  },
+  "pr": {
+    "branch": "codex/fix-opportunities-missing-exit",
+    "title_prefix": "[spark-compete]",
+    "author_github": "jumperz11",
+    "body_must_include": [
+      "packet",
+      "team",
+      "pr_author",
+      "repo",
+      "actual_behavior",
+      "expected_behavior",
+      "repro_steps",
+      "before_after_proof",
+      "tests_or_smoke",
+      "duplicate_notes",
+      "risk_notes",
+      "review_claim"
+    ],
+    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184"
+  },
+  "review_claim": {
+    "impact_claim": "medium",
+    "evidence_types": [
+      "redacted_terminal_excerpt",
+      "failing_test",
+      "passing_test"
+    ],
+    "duplicate_notes": "Checked the curated JUMPERZ top review queue and no active upstream PR is open for this branch. This packet requests reviewer routing instead of guessing a private or ambiguous owner surface.",
+    "risk_notes": "Reviewer routing requested because the target repository is not listed in the public allowed target list. Packet evidence is limited to public GitHub links and redacted behavior summaries.",
+    "review_state_requested": "pr_review"
+  }
+}
 ```
+````
 
 ## Packet 043: Outcome Link Accepts Invalid Targets
 
@@ -982,12 +1716,12 @@ Suggested PR body:
 Suggested PR title:
 
 ```text
-Validate outcome-link targets
+[spark-compete] Validate outcome link targets
 ```
 
 Suggested PR body:
 
-```markdown
+````markdown
 ## Summary
 - rejects `spark outcome-link` requests for missing outcome IDs before writing a link row
 - rejects link confidence values outside the documented `0-1` range
@@ -1001,7 +1735,116 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_cli_outcome_link_validation.py tests/test_outcome_log_full_stats.py -q`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli outcome-link missing insight:key`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli outcome-link missing insight:key --confidence 2`
+
+## Spark Compete Hotfix Packet
+
+```json
+{
+  "schema": "spark-compete-hotfix-v1",
+  "event": "spark-compete-first-event",
+  "submission_mode": "reviewer_routed_packet",
+  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184",
+  "team": {
+    "name": "JUMPERZ",
+    "members": [
+      "JUMPERZ",
+      "Basjee01",
+      "acexqt"
+    ],
+    "llm_device_holder": "JUMPERZ",
+    "device_holder_github": "https://github.com/jumperz11",
+    "github_accounts": [
+      "jumperz11"
+    ]
+  },
+  "target_repo": {
+    "id": "reviewer-routed/private-or-ambiguous-owner",
+    "source": "https://compete.sparkswarm.ai/allowed-repos.json",
+    "owner_surface": "private-or-ambiguous-owner"
+  },
+  "issue": {
+    "type": "bug",
+    "severity": "medium",
+    "title": "spark outcome-link accepts invalid targets",
+    "actual_behavior": "Outcome link validation can accept invalid outcome IDs or confidence values, polluting proof-loop evidence.",
+    "expected_behavior": "Outcome linking should reject missing or malformed targets and invalid confidence values before recording links.",
+    "repro_steps": [
+      "Run spark outcome-link with invalid target IDs or malformed confidence.",
+      "Observe acceptance before this branch.",
+      "Run the branch and confirm validation rejects the bad input."
+    ],
+    "affected_workflow": "Spark outcome proof-link validation"
+  },
+  "evidence": {
+    "safe_links_only": true,
+    "before_after_proof": "Before: invalid outcome-link targets could be accepted. After: the branch validates IDs/confidence and adds outcome-link regression tests.",
+    "links": [
+      "https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/043-outcome-link-invalid-targets.md",
+      "https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-outcome-link-validation?expand=1",
+      "https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-outcome-link-validation"
+    ],
+    "forbidden": [
+      "pdf",
+      "zip",
+      "exe",
+      "unknown downloads",
+      "shortened links",
+      "archives",
+      "binaries",
+      "tokens",
+      "browser cookies",
+      "wallet material",
+      "raw logs",
+      "raw conversations",
+      "raw memory",
+      "raw patches",
+      "private repo maps",
+      "private scoring details"
+    ]
+  },
+  "proposed_fix": {
+    "approach": "Add explicit outcome target and confidence validation before recording outcome links.",
+    "files_expected": [
+      "spark/cli.py",
+      "tests/test_cli_outcome_link_validation.py",
+      "tests/test_outcome_log_full_stats.py"
+    ],
+    "tests_or_smoke": "PYTHONPATH=. python -m pytest tests/test_cli_outcome_link_validation.py tests/test_outcome_log_full_stats.py -q"
+  },
+  "pr": {
+    "branch": "codex/fix-outcome-link-validation",
+    "title_prefix": "[spark-compete]",
+    "author_github": "jumperz11",
+    "body_must_include": [
+      "packet",
+      "team",
+      "pr_author",
+      "repo",
+      "actual_behavior",
+      "expected_behavior",
+      "repro_steps",
+      "before_after_proof",
+      "tests_or_smoke",
+      "duplicate_notes",
+      "risk_notes",
+      "review_claim"
+    ],
+    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184"
+  },
+  "review_claim": {
+    "impact_claim": "medium",
+    "evidence_types": [
+      "redacted_terminal_excerpt",
+      "failing_test",
+      "passing_test"
+    ],
+    "duplicate_notes": "Checked the curated JUMPERZ top review queue and no active upstream PR is open for this branch. This packet requests reviewer routing instead of guessing a private or ambiguous owner surface.",
+    "risk_notes": "Reviewer routing requested because the target repository is not listed in the public allowed target list. Packet evidence is limited to public GitHub links and redacted behavior summaries.",
+    "review_state_requested": "pr_review"
+  }
+}
 ```
+````
 
 ## Packet 044: Project Answer Accepts Missing Question ID
 
@@ -1151,12 +1994,12 @@ Suggested PR body:
 Suggested PR title:
 
 ```text
-Validate hypothesis outcome targets
+[spark-compete] Validate hypotheses outcome targets
 ```
 
 Suggested PR body:
 
-```markdown
+````markdown
 ## Summary
 - makes hypothesis outcome recording return a success/failure signal
 - returns non-zero exits for missing hypothesis prediction targets and malformed outcome specs
@@ -1170,7 +2013,116 @@ Suggested PR body:
 - `PYTHONPATH=. python -m pytest tests/test_cli_hypotheses_outcome_validation.py tests/test_project_context.py -q`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli hypotheses --outcome missing:0 --correct`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli hypotheses --outcome missing:notint --correct`
+
+## Spark Compete Hotfix Packet
+
+```json
+{
+  "schema": "spark-compete-hotfix-v1",
+  "event": "spark-compete-first-event",
+  "submission_mode": "reviewer_routed_packet",
+  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184",
+  "team": {
+    "name": "JUMPERZ",
+    "members": [
+      "JUMPERZ",
+      "Basjee01",
+      "acexqt"
+    ],
+    "llm_device_holder": "JUMPERZ",
+    "device_holder_github": "https://github.com/jumperz11",
+    "github_accounts": [
+      "jumperz11"
+    ]
+  },
+  "target_repo": {
+    "id": "reviewer-routed/private-or-ambiguous-owner",
+    "source": "https://compete.sparkswarm.ai/allowed-repos.json",
+    "owner_surface": "private-or-ambiguous-owner"
+  },
+  "issue": {
+    "type": "bug",
+    "severity": "medium",
+    "title": "spark hypotheses outcome reports success for missing targets",
+    "actual_behavior": "Prediction-loop outcome linking can report success for missing or malformed targets.",
+    "expected_behavior": "Hypothesis outcome commands should fail clearly when the target is missing or malformed.",
+    "repro_steps": [
+      "Run spark hypotheses with an outcome target that does not exist or is malformed.",
+      "Observe false success before this branch.",
+      "Run the branch and confirm the bad target is rejected."
+    ],
+    "affected_workflow": "Spark hypothesis outcome validation"
+  },
+  "evidence": {
+    "safe_links_only": true,
+    "before_after_proof": "Before: missing or malformed hypothesis outcome targets could report success. After: the branch rejects invalid targets with focused tests.",
+    "links": [
+      "https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/048-hypotheses-outcome-missing-target.md",
+      "https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-hypotheses-outcome-validation?expand=1",
+      "https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-hypotheses-outcome-validation"
+    ],
+    "forbidden": [
+      "pdf",
+      "zip",
+      "exe",
+      "unknown downloads",
+      "shortened links",
+      "archives",
+      "binaries",
+      "tokens",
+      "browser cookies",
+      "wallet material",
+      "raw logs",
+      "raw conversations",
+      "raw memory",
+      "raw patches",
+      "private repo maps",
+      "private scoring details"
+    ]
+  },
+  "proposed_fix": {
+    "approach": "Validate hypothesis outcome targets before reporting success or updating project context.",
+    "files_expected": [
+      "spark/cli.py",
+      "tests/test_cli_hypotheses_outcome_validation.py",
+      "tests/test_project_context.py"
+    ],
+    "tests_or_smoke": "PYTHONPATH=. python -m pytest tests/test_cli_hypotheses_outcome_validation.py tests/test_project_context.py -q"
+  },
+  "pr": {
+    "branch": "codex/fix-hypotheses-outcome-validation",
+    "title_prefix": "[spark-compete]",
+    "author_github": "jumperz11",
+    "body_must_include": [
+      "packet",
+      "team",
+      "pr_author",
+      "repo",
+      "actual_behavior",
+      "expected_behavior",
+      "repro_steps",
+      "before_after_proof",
+      "tests_or_smoke",
+      "duplicate_notes",
+      "risk_notes",
+      "review_claim"
+    ],
+    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184"
+  },
+  "review_claim": {
+    "impact_claim": "medium",
+    "evidence_types": [
+      "redacted_terminal_excerpt",
+      "failing_test",
+      "passing_test"
+    ],
+    "duplicate_notes": "Checked the curated JUMPERZ top review queue and no active upstream PR is open for this branch. This packet requests reviewer routing instead of guessing a private or ambiguous owner surface.",
+    "risk_notes": "Reviewer routing requested because the target repository is not listed in the public allowed target list. Packet evidence is limited to public GitHub links and redacted behavior summaries.",
+    "review_state_requested": "pr_review"
+  }
+}
 ```
+````
 
 ## Packet 049: Contradictions Resolve Missing Index Reports Success
 
@@ -1185,12 +2137,12 @@ Suggested PR body:
 Suggested PR title:
 
 ```text
-Return failure for missing contradictions
+[spark-compete] Validate contradiction resolve indexes
 ```
 
 Suggested PR body:
 
-```markdown
+````markdown
 ## Summary
 - makes contradiction resolution report whether a target index existed
 - returns a non-zero exit for missing contradiction indexes
@@ -1203,7 +2155,116 @@ Suggested PR body:
 ## Verification
 - `PYTHONPATH=. python -m pytest tests/test_cli_contradictions_resolve.py tests/test_project_context.py -q`
 - `HOME="$(mktemp -d)" PYTHONPATH=. python -m spark.cli contradictions --resolve 0 --resolution-type update --resolution test`
+
+## Spark Compete Hotfix Packet
+
+```json
+{
+  "schema": "spark-compete-hotfix-v1",
+  "event": "spark-compete-first-event",
+  "submission_mode": "reviewer_routed_packet",
+  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184",
+  "team": {
+    "name": "JUMPERZ",
+    "members": [
+      "JUMPERZ",
+      "Basjee01",
+      "acexqt"
+    ],
+    "llm_device_holder": "JUMPERZ",
+    "device_holder_github": "https://github.com/jumperz11",
+    "github_accounts": [
+      "jumperz11"
+    ]
+  },
+  "target_repo": {
+    "id": "reviewer-routed/private-or-ambiguous-owner",
+    "source": "https://compete.sparkswarm.ai/allowed-repos.json",
+    "owner_surface": "private-or-ambiguous-owner"
+  },
+  "issue": {
+    "type": "bug",
+    "severity": "medium",
+    "title": "spark contradictions resolve reports success for missing indexes",
+    "actual_behavior": "Contradiction resolution can report success even when the requested contradiction index does not exist.",
+    "expected_behavior": "Contradiction resolution should fail clearly unless a real contradiction was found and resolved.",
+    "repro_steps": [
+      "Run spark contradictions --resolve with a missing index.",
+      "Observe success before this branch.",
+      "Run the branch and confirm missing indexes fail."
+    ],
+    "affected_workflow": "Spark contradiction resolution validation"
+  },
+  "evidence": {
+    "safe_links_only": true,
+    "before_after_proof": "Before: missing contradiction indexes could report success. After: the branch rejects missing indexes and adds contradiction-resolution regression coverage.",
+    "links": [
+      "https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/049-contradictions-resolve-missing-index.md",
+      "https://github.com/vibeforge1111/vibeship-spark-intelligence/compare/main...jumperz11:vibeship-spark-intelligence:codex/fix-contradictions-resolve-validation?expand=1",
+      "https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-contradictions-resolve-validation"
+    ],
+    "forbidden": [
+      "pdf",
+      "zip",
+      "exe",
+      "unknown downloads",
+      "shortened links",
+      "archives",
+      "binaries",
+      "tokens",
+      "browser cookies",
+      "wallet material",
+      "raw logs",
+      "raw conversations",
+      "raw memory",
+      "raw patches",
+      "private repo maps",
+      "private scoring details"
+    ]
+  },
+  "proposed_fix": {
+    "approach": "Validate contradiction indexes before reporting successful resolution or changing state.",
+    "files_expected": [
+      "spark/cli.py",
+      "tests/test_cli_contradictions_resolve.py",
+      "tests/test_project_context.py"
+    ],
+    "tests_or_smoke": "PYTHONPATH=. python -m pytest tests/test_cli_contradictions_resolve.py tests/test_project_context.py -q"
+  },
+  "pr": {
+    "branch": "codex/fix-contradictions-resolve-validation",
+    "title_prefix": "[spark-compete]",
+    "author_github": "jumperz11",
+    "body_must_include": [
+      "packet",
+      "team",
+      "pr_author",
+      "repo",
+      "actual_behavior",
+      "expected_behavior",
+      "repro_steps",
+      "before_after_proof",
+      "tests_or_smoke",
+      "duplicate_notes",
+      "risk_notes",
+      "review_claim"
+    ],
+    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184"
+  },
+  "review_claim": {
+    "impact_claim": "medium",
+    "evidence_types": [
+      "redacted_terminal_excerpt",
+      "failing_test",
+      "passing_test"
+    ],
+    "duplicate_notes": "Checked the curated JUMPERZ top review queue and no active upstream PR is open for this branch. This packet requests reviewer routing instead of guessing a private or ambiguous owner surface.",
+    "risk_notes": "Reviewer routing requested because the target repository is not listed in the public allowed target list. Packet evidence is limited to public GitHub links and redacted behavior summaries.",
+    "review_state_requested": "pr_review"
+  }
+}
 ```
+````
 
 ## Packet 050: Learn Command Accepts Invalid Input And Crashes On Filtered Insights
 
