@@ -13,7 +13,7 @@ These are focused JUMPERZ fix branches prepared from confirmed Spark Compete pac
 
 The Spark Compete site currently requires complete `spark-compete-hotfix-v1` JSON in every new PR body. Because `vibeforge1111/vibeship-spark-intelligence` is not listed in `/allowed-repos.json`, the top review queue is prepared as `reviewer_routed_packet` material until reviewers confirm a direct PR lane.
 
-The reviewer-routed schema accepts only a `vibeforge1111/Spark-Agent-Site` issue or PR URL as the public intake surface. The packets below use `https://github.com/vibeforge1111/Spark-Agent-Site/issues/184` as the schema-shaped reviewer intake URL to replace if reviewers assign a different Spark-Agent-Site routing issue. Do not open upstream PRs until that routing path is confirmed.
+The reviewer-routed schema accepts only a `vibeforge1111/Spark-Agent-Site` issue or PR URL as the public intake surface. The packets below use the live reviewer-routing issue `https://github.com/vibeforge1111/Spark-Agent-Site/issues/46` as the schema-shaped public intake URL. Do not open upstream PRs until reviewers confirm that route.
 
 ## Recommended Submission Order
 
@@ -86,7 +86,7 @@ Suggested PR body:
   "schema": "spark-compete-hotfix-v1",
   "event": "spark-compete-first-event",
   "submission_mode": "reviewer_routed_packet",
-  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184",
+  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/46",
   "team": {
     "name": "JUMPERZ",
     "members": [
@@ -171,7 +171,7 @@ Suggested PR body:
       "risk_notes",
       "review_claim"
     ],
-    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184"
+    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/46"
   },
   "review_claim": {
     "impact_claim": "medium",
@@ -298,7 +298,7 @@ Suggested PR body:
   "schema": "spark-compete-hotfix-v1",
   "event": "spark-compete-first-event",
   "submission_mode": "reviewer_routed_packet",
-  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184",
+  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/46",
   "team": {
     "name": "JUMPERZ",
     "members": [
@@ -383,7 +383,7 @@ Suggested PR body:
       "risk_notes",
       "review_claim"
     ],
-    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184"
+    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/46"
   },
   "review_claim": {
     "impact_claim": "medium",
@@ -443,7 +443,7 @@ Suggested PR body:
   "schema": "spark-compete-hotfix-v1",
   "event": "spark-compete-first-event",
   "submission_mode": "reviewer_routed_packet",
-  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184",
+  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/46",
   "team": {
     "name": "JUMPERZ",
     "members": [
@@ -529,7 +529,7 @@ Suggested PR body:
       "risk_notes",
       "review_claim"
     ],
-    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184"
+    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/46"
   },
   "review_claim": {
     "impact_claim": "medium",
@@ -585,7 +585,7 @@ Suggested PR body:
   "schema": "spark-compete-hotfix-v1",
   "event": "spark-compete-first-event",
   "submission_mode": "reviewer_routed_packet",
-  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184",
+  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/46",
   "team": {
     "name": "JUMPERZ",
     "members": [
@@ -670,7 +670,7 @@ Suggested PR body:
       "risk_notes",
       "review_claim"
     ],
-    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184"
+    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/46"
   },
   "review_claim": {
     "impact_claim": "medium",
@@ -1316,7 +1316,7 @@ Suggested PR body:
   "schema": "spark-compete-hotfix-v1",
   "event": "spark-compete-first-event",
   "submission_mode": "reviewer_routed_packet",
-  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184",
+  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/46",
   "team": {
     "name": "JUMPERZ",
     "members": [
@@ -1401,7 +1401,7 @@ Suggested PR body:
       "risk_notes",
       "review_claim"
     ],
-    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184"
+    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/46"
   },
   "review_claim": {
     "impact_claim": "medium",
@@ -1458,7 +1458,7 @@ Suggested PR body:
   "schema": "spark-compete-hotfix-v1",
   "event": "spark-compete-first-event",
   "submission_mode": "reviewer_routed_packet",
-  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184",
+  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/46",
   "team": {
     "name": "JUMPERZ",
     "members": [
@@ -1543,7 +1543,7 @@ Suggested PR body:
       "risk_notes",
       "review_claim"
     ],
-    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184"
+    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/46"
   },
   "review_claim": {
     "impact_claim": "medium",
@@ -1601,7 +1601,7 @@ Suggested PR body:
   "schema": "spark-compete-hotfix-v1",
   "event": "spark-compete-first-event",
   "submission_mode": "reviewer_routed_packet",
-  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184",
+  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/46",
   "team": {
     "name": "JUMPERZ",
     "members": [
@@ -1686,7 +1686,7 @@ Suggested PR body:
       "risk_notes",
       "review_claim"
     ],
-    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184"
+    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/46"
   },
   "review_claim": {
     "impact_claim": "medium",
@@ -1743,7 +1743,7 @@ Suggested PR body:
   "schema": "spark-compete-hotfix-v1",
   "event": "spark-compete-first-event",
   "submission_mode": "reviewer_routed_packet",
-  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184",
+  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/46",
   "team": {
     "name": "JUMPERZ",
     "members": [
@@ -1829,7 +1829,7 @@ Suggested PR body:
       "risk_notes",
       "review_claim"
     ],
-    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184"
+    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/46"
   },
   "review_claim": {
     "impact_claim": "medium",
@@ -2021,7 +2021,7 @@ Suggested PR body:
   "schema": "spark-compete-hotfix-v1",
   "event": "spark-compete-first-event",
   "submission_mode": "reviewer_routed_packet",
-  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184",
+  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/46",
   "team": {
     "name": "JUMPERZ",
     "members": [
@@ -2107,7 +2107,7 @@ Suggested PR body:
       "risk_notes",
       "review_claim"
     ],
-    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184"
+    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/46"
   },
   "review_claim": {
     "impact_claim": "medium",
@@ -2163,7 +2163,7 @@ Suggested PR body:
   "schema": "spark-compete-hotfix-v1",
   "event": "spark-compete-first-event",
   "submission_mode": "reviewer_routed_packet",
-  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184",
+  "submission_target_url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/46",
   "team": {
     "name": "JUMPERZ",
     "members": [
@@ -2249,7 +2249,7 @@ Suggested PR body:
       "risk_notes",
       "review_claim"
     ],
-    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/184"
+    "url": "https://github.com/vibeforge1111/Spark-Agent-Site/issues/46"
   },
   "review_claim": {
     "impact_claim": "medium",
