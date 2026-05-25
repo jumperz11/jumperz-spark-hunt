@@ -43,7 +43,8 @@ JUMPERZ also opened one direct Telegram copy/knowledge PR in an allowed public r
 - PR: https://github.com/vibeforge1111/spark-telegram-bot/pull/224
 - Branch: `codex/remove-stale-skill-graphs-copy`
 - Fix: remove retired `spark-skill-graphs` naming from Telegram pro-tier copy and self-awareness knowledge.
-- Validation: the Spark Compete packet in the PR body is `packet_valid: true` and `pass`.
+- Validation: the Spark Compete packet in the PR body is `packet_valid: true` and `pass_with_warnings` with `telegram_proof_unavailable`.
+- Telegram proof note: no safe disposable Telegram test chat is available; maintainers/lab must run the listed smoke path before points.
 - Tests: `npm run build`; `BOT_TOKEN=123:test node node_modules/ts-node/dist/bin.js tests/spawnerLoopBugHunt.test.ts`; `BOT_TOKEN=123:test node node_modules/ts-node/dist/bin.js tests/buildE2E.test.ts`; `BOT_TOKEN=123:test npm test`.
 
 ## Team Identity

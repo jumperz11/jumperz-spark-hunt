@@ -41,7 +41,7 @@ JUMPERZ also opened one focused public Telegram copy/knowledge PR in an allowed 
 
 https://github.com/vibeforge1111/spark-telegram-bot/pull/224
 
-This PR removes retired `spark-skill-graphs` naming from Telegram pro-tier copy and self-awareness knowledge. The packet in the PR body validates as `packet_valid: true` and `pass`.
+This PR removes retired `spark-skill-graphs` naming from Telegram pro-tier copy and self-awareness knowledge. The packet in the PR body validates as `packet_valid: true` and `pass_with_warnings` with `telegram_proof_unavailable` because no safe disposable Telegram test chat is available.
 
 ## Start Here
 
