@@ -12,7 +12,9 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 - Farming board: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/FARMING_BOARD.md
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
 - Reviewer routing issue: https://github.com/vibeforge1111/Spark-Agent-Site/issues/46
-- Direct allowed-repo fallback PR: https://github.com/vibeforge1111/spark-cli/pull/392
+- Direct allowed-repo fallback PRs:
+  - https://github.com/vibeforge1111/spark-cli/pull/392
+  - https://github.com/vibeforge1111/Spark-Agent-Site/pull/47
 
 ## Current Public PR
 
@@ -24,6 +26,15 @@ While the original top queue waits on reviewer routing, JUMPERZ opened one direc
 - Fix: skip the Bash installer dry-run test when `bash` exists on PATH but cannot execute commands, such as a broken Windows WSL shim.
 - Validation: the Spark Compete packet in the PR body is `packet_valid: true` and `pass_with_warnings` with `security_owner_review_expected`.
 - Tests: `PYTHONPATH=src python -m pytest -q` -> `623 passed, 7 skipped, 99 subtests passed`.
+
+JUMPERZ also opened one direct docs-routing PR in an allowed public repo:
+
+- Repo: `vibeforge1111/Spark-Agent-Site`
+- PR: https://github.com/vibeforge1111/Spark-Agent-Site/pull/47
+- Branch: `codex/fix-domain-chip-feedback-route`
+- Fix: route domain-chip feedback to `spark-domain-chip-labs` instead of retired `spark-skill-graphs`.
+- Validation: the Spark Compete packet in the PR body is `packet_valid: true` and `pass`.
+- Tests: `node scripts/check-docs-readiness.mjs`; `node scripts/check-security-release-surface.mjs`; `node scripts/check-command-docs.mjs`; `SPARK_CLI_PATH=C:\Users\Mega-PC\Documents\spark-cli-allowed-inspect node scripts/smoke-command-docs-cli.mjs`.
 
 ## Team Identity
 
