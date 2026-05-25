@@ -11,7 +11,19 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 - PR-ready fixes: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/PR_READY.md
 - Farming board: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/FARMING_BOARD.md
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
-- Reviewer routing issue: https://github.com/vibeforge1111/vibeship-spark-intelligence/issues/184
+- Reviewer routing issue: https://github.com/vibeforge1111/Spark-Agent-Site/issues/46
+- Direct allowed-repo fallback PR: https://github.com/vibeforge1111/spark-cli/pull/392
+
+## Current Public PR
+
+While the original top queue waits on reviewer routing, JUMPERZ opened one direct PR in an allowed public repo:
+
+- Repo: `vibeforge1111/spark-cli`
+- PR: https://github.com/vibeforge1111/spark-cli/pull/392
+- Branch: `codex/skip-unusable-bash-installer-test`
+- Fix: skip the Bash installer dry-run test when `bash` exists on PATH but cannot execute commands, such as a broken Windows WSL shim.
+- Validation: the Spark Compete packet in the PR body is `packet_valid: true` and `pass_with_warnings` with `security_owner_review_expected`.
+- Tests: `PYTHONPATH=src python -m pytest -q` -> `623 passed, 7 skipped, 99 subtests passed`.
 
 ## Team Identity
 

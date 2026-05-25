@@ -23,6 +23,14 @@ Per the Spark Compete submission spec, unclear or private owner surfaces should 
 Canonical reviewer-routed intake issue:
 https://github.com/vibeforge1111/Spark-Agent-Site/issues/46
 
+## Direct Allowed-Repo Fallback
+
+Because reviewer routing has not replied yet, JUMPERZ also opened one focused public PR in an allowed repo:
+
+https://github.com/vibeforge1111/spark-cli/pull/392
+
+This PR fixes a current `spark-cli` Windows test reliability issue where a `bash.exe` shim can exist on PATH but fail to execute. The packet in the PR body validates as `packet_valid: true` with `pass_with_warnings` because installer-related changes require security-owner/lab review.
+
 ## Start Here
 
 1. Mission coverage:
