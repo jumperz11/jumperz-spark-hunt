@@ -14,7 +14,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 
 ## Current Packet
 
-- AI reviewer brief: [AI_REVIEWER_BRIEF.md](AI_REVIEWER_BRIEF.md)
+- Reviewer brief: [REVIEWER_BRIEF.md](REVIEWER_BRIEF.md)
 - Submission packet: [SUBMISSION.md](SUBMISSION.md)
 - Mission coverage: [MISSION_COVERAGE.md](MISSION_COVERAGE.md)
 - Top review queue: [TOP_REVIEW_QUEUE.md](TOP_REVIEW_QUEUE.md)

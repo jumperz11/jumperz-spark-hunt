@@ -1,4 +1,4 @@
-# AI Reviewer Brief
+# Reviewer Brief
 
 ## Task
 
