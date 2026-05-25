@@ -37,6 +37,12 @@ https://github.com/vibeforge1111/Spark-Agent-Site/pull/47
 
 This PR fixes a stale Domain chips feedback route from `spark-skill-graphs` to `spark-domain-chip-labs`. The packet in the PR body validates as `packet_valid: true` and `pass`.
 
+JUMPERZ also opened one focused public Telegram copy/knowledge PR in an allowed repo:
+
+https://github.com/vibeforge1111/spark-telegram-bot/pull/224
+
+This PR removes retired `spark-skill-graphs` naming from Telegram pro-tier copy and self-awareness knowledge. The packet in the PR body validates as `packet_valid: true` and `pass`.
+
 ## Start Here
 
 1. Mission coverage:

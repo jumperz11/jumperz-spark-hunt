@@ -15,6 +15,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 - Direct allowed-repo fallback PRs:
   - https://github.com/vibeforge1111/spark-cli/pull/392
   - https://github.com/vibeforge1111/Spark-Agent-Site/pull/47
+  - https://github.com/vibeforge1111/spark-telegram-bot/pull/224
 
 ## Current Public PR
 
@@ -35,6 +36,15 @@ JUMPERZ also opened one direct docs-routing PR in an allowed public repo:
 - Fix: route domain-chip feedback to `spark-domain-chip-labs` instead of retired `spark-skill-graphs`.
 - Validation: the Spark Compete packet in the PR body is `packet_valid: true` and `pass`.
 - Tests: `node scripts/check-docs-readiness.mjs`; `node scripts/check-security-release-surface.mjs`; `node scripts/check-command-docs.mjs`; `SPARK_CLI_PATH=C:\Users\Mega-PC\Documents\spark-cli-allowed-inspect node scripts/smoke-command-docs-cli.mjs`.
+
+JUMPERZ also opened one direct Telegram copy/knowledge PR in an allowed public repo:
+
+- Repo: `vibeforge1111/spark-telegram-bot`
+- PR: https://github.com/vibeforge1111/spark-telegram-bot/pull/224
+- Branch: `codex/remove-stale-skill-graphs-copy`
+- Fix: remove retired `spark-skill-graphs` naming from Telegram pro-tier copy and self-awareness knowledge.
+- Validation: the Spark Compete packet in the PR body is `packet_valid: true` and `pass`.
+- Tests: `npm run build`; `BOT_TOKEN=123:test node node_modules/ts-node/dist/bin.js tests/spawnerLoopBugHunt.test.ts`; `BOT_TOKEN=123:test node node_modules/ts-node/dist/bin.js tests/buildE2E.test.ts`; `BOT_TOKEN=123:test npm test`.
 
 ## Team Identity
 
