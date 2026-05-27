@@ -55,6 +55,7 @@ Current blocker for public points:
 - Reviewer comments identify account/team mapping as the active lock (`team_account_unverified` / account gates).
 - The PR author account `jumperz11` must be listed on the registered JUMPERZ team before public points can appear.
 - The public team form rejected a JUMPERZ resubmission with `team_exists`, so this likely needs reviewer-side verification or an edit to the existing JUMPERZ team record.
+- Gate re-check requested on PR #47: https://github.com/vibeforge1111/Spark-Agent-Site/pull/47#issuecomment-4553973648
 - Do not claim points are awarded until account, duplicate/scoring/status, and merge/adoption gates clear.
 
 ## Team Identity
