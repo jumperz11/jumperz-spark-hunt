@@ -16,6 +16,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
   - https://github.com/vibeforge1111/spark-cli/pull/392
   - https://github.com/vibeforge1111/Spark-Agent-Site/pull/47
   - https://github.com/vibeforge1111/spark-telegram-bot/pull/224
+  - https://github.com/vibeforge1111/Spark-Agent-Site/pull/56
 
 ## Current Public PR
 
@@ -49,6 +50,16 @@ JUMPERZ also opened one direct Telegram copy/knowledge PR in an allowed public r
 - Validation: the Spark Compete packet in the PR body is `packet_valid: true` and `pass_with_warnings` with `telegram_proof_unavailable`.
 - Telegram proof note: no safe disposable Telegram test chat is available; maintainers/lab must run the listed smoke path before points.
 - Tests: `npm run build`; `BOT_TOKEN=123:test node node_modules/ts-node/dist/bin.js tests/spawnerLoopBugHunt.test.ts`; `BOT_TOKEN=123:test node node_modules/ts-node/dist/bin.js tests/buildE2E.test.ts`; `BOT_TOKEN=123:test npm test`.
+
+JUMPERZ also opened one focused follow-up docs-routing PR in an allowed public repo:
+
+- Repo: `vibeforge1111/Spark-Agent-Site`
+- PR: https://github.com/vibeforge1111/Spark-Agent-Site/pull/56
+- Branch: `codex/fix-memory-chip-feedback-route`
+- Fix: route Memory chip feedback to `spark-domain-chip-labs` instead of `domain-chip-memory`, which is outside the Spark Compete allowed public repo list.
+- Review status: opened for review.
+- Validation: the Spark Compete packet in the PR body is `packet_valid: true` and `pass` with zero warnings.
+- Tests: `node scripts/check-docs-readiness.mjs`; `node scripts/check-security-release-surface.mjs`; `node scripts/check-command-docs.mjs`.
 
 Current blocker for public points:
 
