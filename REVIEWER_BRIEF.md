@@ -55,11 +55,13 @@ Current public-points blocker: reviewer comments identify `team_account_unverifi
 
 1. Mission coverage:
    https://github.com/jumperz11/jumperz-spark-hunt/blob/main/MISSION_COVERAGE.md
-2. Top 10 queue:
+2. Reviewer scorecard:
+   https://github.com/jumperz11/jumperz-spark-hunt/blob/main/JUMPERZ_SCORECARD.md
+3. Top 10 queue:
    https://github.com/jumperz11/jumperz-spark-hunt/blob/main/TOP_REVIEW_QUEUE.md
-3. PR-ready packet bodies:
+4. PR-ready packet bodies:
    https://github.com/jumperz11/jumperz-spark-hunt/blob/main/PR_READY.md
-4. Reviewer handoff:
+5. Reviewer handoff:
    https://github.com/jumperz11/jumperz-spark-hunt/blob/main/REVIEWER_HANDOFF.md
 
 ## Top 10 Packet Status
