@@ -1,6 +1,6 @@
 # JUMPERZ Spark Compete Scorecard
 
-Updated: 2026-05-27T12:20:30Z
+Updated: 2026-05-27T18:30:00Z
 
 Purpose: give Spark Compete reviewers one fast, machine-readable view of JUMPERZ work that already has reviewer-visible signal.
 
@@ -36,7 +36,7 @@ https://github.com/vibeforge1111/Spark-Agent-Site/pull/47#issuecomment-455397364
 | https://github.com/vibeforge1111/spark-cli/pull/392 | spark-cli | Mac Lab passed; adopted into master through maintainer PR #407; credit tied to original PR | `packet_valid: true`, `pass_with_warnings`, `security_owner_review_expected` | `PYTHONPATH=src python -m pytest -q` -> 623 passed, 7 skipped, 99 subtests passed | security owner review, account/team mapping, public release gates |
 | https://github.com/vibeforge1111/spark-telegram-bot/pull/224 | spark-telegram-bot | Mac Lab passed; PR open and mergeable | `packet_valid: true`, `pass_with_warnings`, `telegram_proof_unavailable` | build plus targeted and full bot tests | maintainer/lab Telegram proof, account/team mapping, public release gates |
 | https://github.com/vibeforge1111/Spark-Agent-Site/pull/56 | Spark-Agent-Site | Open and mergeable; waiting for review | `packet_valid: true`, `pass`, 0 warnings | docs readiness, security release surface, command docs | review/lab/adoption and account/team mapping |
-| https://github.com/vibeforge1111/spark-cli/pull/419 | spark-cli | Open and mergeable; waiting for review | `packet_valid: true`, `pass_with_warnings`, `security_owner_review_expected` | registry pins `ok: true`, provenance `ok: true`, full pytest -> 627 passed, 7 skipped, 104 subtests passed | security owner review, review/lab/adoption, account/team mapping |
+| https://github.com/vibeforge1111/spark-cli/pull/419 | spark-cli | Valid packet, but reviewer marked not merge-ready after maintainer registry adoption PR #421 | `packet_valid: true`, `pass_with_warnings`, `security_owner_review_expected` | original branch proved registry pins `ok: true`, provenance `ok: true`, full pytest -> 627 passed, 7 skipped, 104 subtests passed; current upstream `master` now verifies registry pins `ok: true` after #421 | no safe rebase claim remains unless fresh registry drift appears; account/team mapping |
 
 ## Reviewer Quotes / Outcomes
 
@@ -58,12 +58,18 @@ spark-telegram-bot PR #224:
 - "Spark Compete status: **Mac Lab passed**."
 - Current public points lock: `team_account_unverified`.
 
+spark-cli PR #419:
+
+- "Spark Compete status: **valid packet with security-owner/lab warning, but not merge-ready**."
+- Reviewer noted the branch conflicts with the already-merged registry adoption path in PR #421.
+- Current upstream `master` now passes `spark verify --registry-pins --json`, so JUMPERZ should not force-push a stale registry branch unless a fresh, current registry-pin claim appears.
+
 ## Best Reviewer Path
 
 1. Clear account/team mapping for `jumperz11` -> `JUMPERZ`.
 2. Keep PR #47 and PR #392 credit tied to the original reviewed submissions, as reviewer comments already state.
 3. Review PR #56 as a narrow additional allowed-repo fallback PR with a clean passing packet.
-4. Review PR #419 as the higher-impact follow-up: it restores the `spark-cli` blessed registry pin gate to passing on current upstream `master`.
+4. Treat PR #419 as a valid-but-overtaken registry-readiness submission unless a fresh registry drift appears after PR #421.
 5. For PR #224, use maintainer/lab Telegram proof because JUMPERZ does not have a safe disposable Telegram test chat.
 6. Route the original top queue only after reviewer confirmation; do not treat the 86 packet count as a claim of 86 missions.
 

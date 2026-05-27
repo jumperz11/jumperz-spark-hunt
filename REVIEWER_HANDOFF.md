@@ -69,9 +69,9 @@ JUMPERZ also opened one higher-impact registry-readiness PR in an allowed public
 - PR: https://github.com/vibeforge1111/spark-cli/pull/419
 - Branch: `codex/update-registry-pins`
 - Fix: update lagging blessed registry pins and matching attestations so `spark verify --registry-pins --json` passes on current upstream `master`.
-- Review status: opened for review.
+- Review status: reviewer marked the packet valid with the expected security-owner/lab warning, but not merge-ready because maintainer registry adoption PR https://github.com/vibeforge1111/spark-cli/pull/421 already changed the registry trust surface.
 - Validation: the Spark Compete packet in the PR body is `packet_valid: true` and `pass_with_warnings` with `security_owner_review_expected`.
-- Tests: `PYTHONPATH=src python -m spark_cli.cli verify --registry-pins --json`; `PYTHONPATH=src python -m spark_cli.cli verify --provenance --json`; `PYTHONPATH=src python -m pytest -q` -> `627 passed, 7 skipped, 104 subtests passed`.
+- Tests: original branch had `PYTHONPATH=src python -m spark_cli.cli verify --registry-pins --json`; `PYTHONPATH=src python -m spark_cli.cli verify --provenance --json`; `PYTHONPATH=src python -m pytest -q` -> `627 passed, 7 skipped, 104 subtests passed`. After PR #421, current upstream `master` now passes `spark verify --registry-pins --json`, so there is no safe remaining registry-pin rebase claim unless fresh drift appears.
 
 Current blocker for public points:
 
