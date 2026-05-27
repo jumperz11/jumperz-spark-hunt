@@ -6,6 +6,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 - Live hub: https://jumperz11.github.io/jumperz-spark-hunt/
 - Reviewer scorecard: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/JUMPERZ_SCORECARD.md
+- Fresh reviewer-routed public-site account mapping packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/PUBLIC_SITE_ACCOUNT_MAPPING_PACKET.md
 - Mission coverage: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/MISSION_COVERAGE.md
 - Top review queue: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/TOP_REVIEW_QUEUE.md
 - Submission packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/SUBMISSION.md
@@ -80,6 +81,14 @@ Current blocker for public points:
 - The public team form rejected a JUMPERZ resubmission with `team_exists`, so this likely needs reviewer-side verification or an edit to the existing JUMPERZ team record.
 - Gate re-check requested on PR #47: https://github.com/vibeforge1111/Spark-Agent-Site/pull/47#issuecomment-4553973648
 - Do not claim points are awarded until account, duplicate/scoring/status, and merge/adoption gates clear.
+
+Fresh reviewer-routed public-site candidate:
+
+- Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/PUBLIC_SITE_ACCOUNT_MAPPING_PACKET.md
+- Target: https://github.com/vibeforge1111/Spark-Agent-Site/issues/46
+- Finding: public team registration requires a device-holder GitHub identity but does not require or auto-map that identity into `github_accounts`, even though public point gates later require PR author account mapping.
+- Validator: `packet_valid: true`, `status: pass`, 0 errors, 0 warnings.
+- Framing: this is not a claim that JUMPERZ has more than 86 documented Spark Compete findings/fix packets. It is a fresh reviewer-routed candidate to address the root public-site UX/data-shape issue behind account-gate confusion.
 
 ## Team Identity
 
