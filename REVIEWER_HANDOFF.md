@@ -25,6 +25,7 @@ While the original top queue waits on reviewer routing, JUMPERZ opened one direc
 - PR: https://github.com/vibeforge1111/spark-cli/pull/392
 - Branch: `codex/skip-unusable-bash-installer-test`
 - Fix: skip the Bash installer dry-run test when `bash` exists on PATH but cannot execute commands, such as a broken Windows WSL shim.
+- Review status: Mac Lab passed; adopted into master via maintainer PR https://github.com/vibeforge1111/spark-cli/pull/407. Credit remains tied to original PR #392 as the reviewed submission.
 - Validation: the Spark Compete packet in the PR body is `packet_valid: true` and `pass_with_warnings` with `security_owner_review_expected`.
 - Tests: `PYTHONPATH=src python -m pytest -q` -> `623 passed, 7 skipped, 99 subtests passed`.
 
@@ -34,6 +35,7 @@ JUMPERZ also opened one direct docs-routing PR in an allowed public repo:
 - PR: https://github.com/vibeforge1111/Spark-Agent-Site/pull/47
 - Branch: `codex/fix-domain-chip-feedback-route`
 - Fix: route domain-chip feedback to `spark-domain-chip-labs` instead of retired `spark-skill-graphs`.
+- Review status: Mac Lab passed; adopted through trusted maintainer PR https://github.com/vibeforge1111/Spark-Agent-Site/pull/55 and merged as `8727caac12a0dca9fc68d5615b228cb95fcffd89`. Private account-pending credit was recorded.
 - Validation: the Spark Compete packet in the PR body is `packet_valid: true` and `pass`.
 - Tests: `node scripts/check-docs-readiness.mjs`; `node scripts/check-security-release-surface.mjs`; `node scripts/check-command-docs.mjs`; `SPARK_CLI_PATH=C:\Users\Mega-PC\Documents\spark-cli-allowed-inspect node scripts/smoke-command-docs-cli.mjs`.
 
@@ -43,9 +45,16 @@ JUMPERZ also opened one direct Telegram copy/knowledge PR in an allowed public r
 - PR: https://github.com/vibeforge1111/spark-telegram-bot/pull/224
 - Branch: `codex/remove-stale-skill-graphs-copy`
 - Fix: remove retired `spark-skill-graphs` naming from Telegram pro-tier copy and self-awareness knowledge.
+- Review status: Mac Lab passed. Public points remain locked by `team_account_unverified` until team/account mapping clears.
 - Validation: the Spark Compete packet in the PR body is `packet_valid: true` and `pass_with_warnings` with `telegram_proof_unavailable`.
 - Telegram proof note: no safe disposable Telegram test chat is available; maintainers/lab must run the listed smoke path before points.
 - Tests: `npm run build`; `BOT_TOKEN=123:test node node_modules/ts-node/dist/bin.js tests/spawnerLoopBugHunt.test.ts`; `BOT_TOKEN=123:test node node_modules/ts-node/dist/bin.js tests/buildE2E.test.ts`; `BOT_TOKEN=123:test npm test`.
+
+Current blocker for public points:
+
+- Reviewer comments identify account/team mapping as the active lock (`team_account_unverified` / account gates).
+- The PR author account `jumperz11` must be listed on the registered JUMPERZ team before public points can appear.
+- Do not claim points are awarded until account, duplicate/scoring/status, and merge/adoption gates clear.
 
 ## Team Identity
 

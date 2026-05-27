@@ -29,19 +29,21 @@ Because reviewer routing has not replied yet, JUMPERZ also opened one focused pu
 
 https://github.com/vibeforge1111/spark-cli/pull/392
 
-This PR fixes a current `spark-cli` Windows test reliability issue where a `bash.exe` shim can exist on PATH but fail to execute. The packet in the PR body validates as `packet_valid: true` with `pass_with_warnings` because installer-related changes require security-owner/lab review.
+This PR fixes a current `spark-cli` Windows test reliability issue where a `bash.exe` shim can exist on PATH but fail to execute. Mac Lab passed, and maintainers adopted the fix into master through https://github.com/vibeforge1111/spark-cli/pull/407. Credit remains tied to original PR #392 as the reviewed submission.
 
 JUMPERZ also opened one focused public docs-routing PR in an allowed repo:
 
 https://github.com/vibeforge1111/Spark-Agent-Site/pull/47
 
-This PR fixes a stale Domain chips feedback route from `spark-skill-graphs` to `spark-domain-chip-labs`. The packet in the PR body validates as `packet_valid: true` and `pass`.
+This PR fixes a stale Domain chips feedback route from `spark-skill-graphs` to `spark-domain-chip-labs`. Mac Lab passed, and maintainers adopted the fix through https://github.com/vibeforge1111/Spark-Agent-Site/pull/55. Private account-pending credit was recorded.
 
 JUMPERZ also opened one focused public Telegram copy/knowledge PR in an allowed repo:
 
 https://github.com/vibeforge1111/spark-telegram-bot/pull/224
 
 This PR removes retired `spark-skill-graphs` naming from Telegram pro-tier copy and self-awareness knowledge. The packet in the PR body validates as `packet_valid: true` and `pass_with_warnings` with `telegram_proof_unavailable` because no safe disposable Telegram test chat is available.
+
+Current public-points blocker: reviewer comments identify `team_account_unverified` / account gates. The PR author account `jumperz11` must be listed on the registered JUMPERZ team before public points can appear.
 
 ## Start Here
 
