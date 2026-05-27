@@ -11,6 +11,7 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
 - LLM device holder: JUMPERZ
 - LLM provider: Other LLM
 - Device-holder GitHub: https://github.com/jumperz11
+- Team PR GitHub accounts: jumperz11
 
 ## Proof Repository
 

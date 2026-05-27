@@ -43,7 +43,7 @@ https://github.com/vibeforge1111/spark-telegram-bot/pull/224
 
 This PR removes retired `spark-skill-graphs` naming from Telegram pro-tier copy and self-awareness knowledge. The packet in the PR body validates as `packet_valid: true` and `pass_with_warnings` with `telegram_proof_unavailable` because no safe disposable Telegram test chat is available.
 
-Current public-points blocker: reviewer comments identify `team_account_unverified` / account gates. The PR author account `jumperz11` must be listed on the registered JUMPERZ team before public points can appear.
+Current public-points blocker: reviewer comments identify `team_account_unverified` / account gates. The PR author account `jumperz11` must be listed on the registered JUMPERZ team before public points can appear. The public team form rejects a JUMPERZ resubmission with `team_exists`, so reviewer-side verification or an edit to the existing JUMPERZ team record is needed.
 
 ## Start Here
 

@@ -54,6 +54,7 @@ Current blocker for public points:
 
 - Reviewer comments identify account/team mapping as the active lock (`team_account_unverified` / account gates).
 - The PR author account `jumperz11` must be listed on the registered JUMPERZ team before public points can appear.
+- The public team form rejected a JUMPERZ resubmission with `team_exists`, so this likely needs reviewer-side verification or an edit to the existing JUMPERZ team record.
 - Do not claim points are awarded until account, duplicate/scoring/status, and merge/adoption gates clear.
 
 ## Team Identity
@@ -61,6 +62,7 @@ Current blocker for public points:
 - Team: JUMPERZ
 - Members: JUMPERZ, Basjee01, acexqt
 - Device-holder GitHub: https://github.com/jumperz11
+- Team PR GitHub accounts: jumperz11
 
 ## Packet Count
 
