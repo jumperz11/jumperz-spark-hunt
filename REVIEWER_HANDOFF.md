@@ -18,6 +18,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
   - https://github.com/vibeforge1111/Spark-Agent-Site/pull/47
   - https://github.com/vibeforge1111/spark-telegram-bot/pull/224
   - https://github.com/vibeforge1111/Spark-Agent-Site/pull/56
+  - https://github.com/vibeforge1111/spark-cli/pull/419
 
 ## Current Public PR
 
@@ -61,6 +62,16 @@ JUMPERZ also opened one focused follow-up docs-routing PR in an allowed public r
 - Review status: opened for review.
 - Validation: the Spark Compete packet in the PR body is `packet_valid: true` and `pass` with zero warnings.
 - Tests: `node scripts/check-docs-readiness.mjs`; `node scripts/check-security-release-surface.mjs`; `node scripts/check-command-docs.mjs`.
+
+JUMPERZ also opened one higher-impact registry-readiness PR in an allowed public repo:
+
+- Repo: `vibeforge1111/spark-cli`
+- PR: https://github.com/vibeforge1111/spark-cli/pull/419
+- Branch: `codex/update-registry-pins`
+- Fix: update lagging blessed registry pins and matching attestations so `spark verify --registry-pins --json` passes on current upstream `master`.
+- Review status: opened for review.
+- Validation: the Spark Compete packet in the PR body is `packet_valid: true` and `pass_with_warnings` with `security_owner_review_expected`.
+- Tests: `PYTHONPATH=src python -m spark_cli.cli verify --registry-pins --json`; `PYTHONPATH=src python -m spark_cli.cli verify --provenance --json`; `PYTHONPATH=src python -m pytest -q` -> `627 passed, 7 skipped, 104 subtests passed`.
 
 Current blocker for public points:
 

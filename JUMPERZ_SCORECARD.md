@@ -36,6 +36,7 @@ https://github.com/vibeforge1111/Spark-Agent-Site/pull/47#issuecomment-455397364
 | https://github.com/vibeforge1111/spark-cli/pull/392 | spark-cli | Mac Lab passed; adopted into master through maintainer PR #407; credit tied to original PR | `packet_valid: true`, `pass_with_warnings`, `security_owner_review_expected` | `PYTHONPATH=src python -m pytest -q` -> 623 passed, 7 skipped, 99 subtests passed | security owner review, account/team mapping, public release gates |
 | https://github.com/vibeforge1111/spark-telegram-bot/pull/224 | spark-telegram-bot | Mac Lab passed; PR open and mergeable | `packet_valid: true`, `pass_with_warnings`, `telegram_proof_unavailable` | build plus targeted and full bot tests | maintainer/lab Telegram proof, account/team mapping, public release gates |
 | https://github.com/vibeforge1111/Spark-Agent-Site/pull/56 | Spark-Agent-Site | Open and mergeable; waiting for review | `packet_valid: true`, `pass`, 0 warnings | docs readiness, security release surface, command docs | review/lab/adoption and account/team mapping |
+| https://github.com/vibeforge1111/spark-cli/pull/419 | spark-cli | Open and mergeable; waiting for review | `packet_valid: true`, `pass_with_warnings`, `security_owner_review_expected` | registry pins `ok: true`, provenance `ok: true`, full pytest -> 627 passed, 7 skipped, 104 subtests passed | security owner review, review/lab/adoption, account/team mapping |
 
 ## Reviewer Quotes / Outcomes
 
@@ -62,8 +63,9 @@ spark-telegram-bot PR #224:
 1. Clear account/team mapping for `jumperz11` -> `JUMPERZ`.
 2. Keep PR #47 and PR #392 credit tied to the original reviewed submissions, as reviewer comments already state.
 3. Review PR #56 as a narrow additional allowed-repo fallback PR with a clean passing packet.
-4. For PR #224, use maintainer/lab Telegram proof because JUMPERZ does not have a safe disposable Telegram test chat.
-5. Route the original top queue only after reviewer confirmation; do not treat the 86 packet count as a claim of 86 missions.
+4. Review PR #419 as the higher-impact follow-up: it restores the `spark-cli` blessed registry pin gate to passing on current upstream `master`.
+5. For PR #224, use maintainer/lab Telegram proof because JUMPERZ does not have a safe disposable Telegram test chat.
+6. Route the original top queue only after reviewer confirmation; do not treat the 86 packet count as a claim of 86 missions.
 
 ## Proof Hub Links
 

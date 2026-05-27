@@ -49,6 +49,12 @@ https://github.com/vibeforge1111/Spark-Agent-Site/pull/56
 
 This PR routes Memory chip feedback to `spark-domain-chip-labs` instead of `domain-chip-memory`, which is outside the Spark Compete allowed public repo list. The packet in the PR body validates as `packet_valid: true` and `pass` with zero warnings.
 
+JUMPERZ also opened one higher-impact registry-readiness PR in an allowed repo:
+
+https://github.com/vibeforge1111/spark-cli/pull/419
+
+This PR updates lagging blessed registry pins and matching attestations so `spark verify --registry-pins --json` passes on current upstream `master`. The packet in the PR body validates as `packet_valid: true` and `pass_with_warnings` with `security_owner_review_expected`; full pytest passes with `627 passed, 7 skipped, 104 subtests passed`.
+
 Current public-points blocker: reviewer comments identify `team_account_unverified` / account gates. The PR author account `jumperz11` must be listed on the registered JUMPERZ team before public points can appear. The public team form rejects a JUMPERZ resubmission with `team_exists`, so reviewer-side verification or an edit to the existing JUMPERZ team record is needed. Gate re-check requested on PR #47: https://github.com/vibeforge1111/Spark-Agent-Site/pull/47#issuecomment-4553973648
 
 ## Start Here
