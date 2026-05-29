@@ -1,6 +1,6 @@
 # Active Review Control Room
 
-Last checked: 2026-05-29 19:14 UTC
+Last checked: 2026-05-29 19:20 UTC
 
 This page tracks public Spark Compete PRs that need fast, calm reviewer follow-up. It is intentionally about review readiness, not volume.
 
@@ -59,6 +59,12 @@ This page tracks public Spark Compete PRs that need fast, calm reviewer follow-u
 ## Ready Replies
 
 ## Pending Review Replies
+
+Posting status: prepared but not posted yet. GitHub connector returned `403 Resource not accessible by integration`, and local `gh` is installed but not authenticated. Next unblock command on this machine:
+
+```powershell
+& "C:\Program Files\GitHub CLI\gh.exe" auth login
+```
 
 ### Spark-Agent-Site #63
 
