@@ -5,6 +5,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 ## Fast Links
 
 - Live hub: https://jumperz11.github.io/jumperz-spark-hunt/
+- Active review control room: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/ACTIVE_REVIEW.md
 - Reviewer scorecard: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/JUMPERZ_SCORECARD.md
 - Fresh reviewer-routed public-site account mapping packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/PUBLIC_SITE_ACCOUNT_MAPPING_PACKET.md
 - Mission coverage: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/MISSION_COVERAGE.md

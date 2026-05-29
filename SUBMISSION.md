@@ -17,6 +17,7 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
 
 - Clean proof repo: https://github.com/jumperz11/jumperz-spark-hunt
 - Live proof hub: https://jumperz11.github.io/jumperz-spark-hunt/
+- Active review control room: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/ACTIVE_REVIEW.md
 - Mission coverage: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/MISSION_COVERAGE.md
 - Top review queue: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/TOP_REVIEW_QUEUE.md
 - Reviewer handoff: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/REVIEWER_HANDOFF.md
