@@ -101,6 +101,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 084 | [Curiosity questions limit ignored](packets/084-curiosity-questions-limit-ignored.md) | Fork branch pushed | `codex/fix-curiosity-questions-limit` pushed to `jumperz11`; no upstream PR opened. |
 | 085 | [Hypotheses display limit ignored](packets/085-hypotheses-display-limit-ignored.md) | Fork branch pushed | `codex/fix-hypotheses-display-limit` pushed to `jumperz11`; no upstream PR opened. |
 | 086 | [Contradictions display limit ignored](packets/086-contradictions-display-limit-ignored.md) | Fork branch pushed | `codex/fix-contradictions-display-limit` pushed to `jumperz11`; no upstream PR opened. |
+| 087 | [Spark CLI live tests inherit operator config](packets/087-spark-cli-live-tests-operator-config.md) | Public PR opened | `vibeforge1111/spark-cli` PR #438 opened from `codex/isolate-live-command-config-tests`; full `tests/test_cli.py` passes. |
 
 ## Active Queue
 
