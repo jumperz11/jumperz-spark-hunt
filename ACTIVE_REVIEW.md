@@ -1,6 +1,6 @@
 # Active Review Control Room
 
-Last checked: 2026-05-29 20:58 UTC
+Last checked: 2026-05-29 21:02 UTC
 
 This page tracks public Spark Compete PRs that need fast, calm reviewer follow-up. It is intentionally about review readiness, not volume.
 
