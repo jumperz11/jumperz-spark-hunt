@@ -1,6 +1,6 @@
 # Active Review Control Room
 
-Last checked: 2026-05-29 15:11 UTC
+Last checked: 2026-05-29 15:18 UTC
 
 This page tracks public Spark Compete PRs that need fast, calm reviewer follow-up. It is intentionally about review readiness, not volume.
 
@@ -68,6 +68,7 @@ Open another PR only when all are true:
 
 | Candidate | Repo | Why it may be worth checking | Gate before work |
 | --- | --- | --- | --- |
+| Researcher missing-config CLI guidance | `spark-researcher` | Branch [`codex/researcher-missing-config-guidance`](https://github.com/jumperz11/spark-researcher/tree/codex/researcher-missing-config-guidance) is pushed at `b21168c`; before-state `run --config missing.json` / `memory status --config missing.json` crashed with `FileNotFoundError`, after-state returns structured JSON next steps while config-free commands still work. | Open PR once authenticated GitHub PR creation is available, then validate the packet with the final PR URL before review. Draft packet exists at `/tmp/spark_researcher_missing_config_packet_draft.json`; validator correctly rejects the branch URL because it requires a `vibeforge1111` PR/issue URL. Local proof: missing-config tests -> 7 passed; full suite -> 84 passed; `py_compile` + `git diff --check` passed. |
 | Research URL/evidence handling | `spark-researcher` | PR #50 covers unsafe/non-public DuckDuckGo result URLs being preserved as research prompt sources. | Avoid duplicating citation URL hygiene; inspect a separate researcher surface only if it has a distinct root cause. |
 | Agent-site legal footer route | `Spark-Agent-Site` | PR #63 covers stale legal-page GitHub links to retired `spark-skill-graphs`. | Avoid duplicating legal/footer route work; inspect another site surface only if it has a separate root cause. |
 | Spawner UI dependency/runtime baseline | `vibeship-spawner-ui` | PR #133 covers the fresh-install high/moderate npm audit baseline with a lockfile-only compatible refresh. | Avoid dependency-audit duplicates; inspect Spawner UI only for separate Mission Control, preview, provider-result, or UI behavior failures. |
