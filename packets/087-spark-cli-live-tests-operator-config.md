@@ -62,6 +62,7 @@ Result:
 - Public PR: https://github.com/vibeforge1111/spark-cli/pull/438
 - Fork branch: https://github.com/jumperz11/spark-cli/tree/codex/isolate-live-command-config-tests
 - Scope: `tests/test_cli.py`
+- Packet validation: `packet_valid=true`, `can_continue_to_review=true`, no errors, no warnings.
 - Risk: test-only; no runtime Spark Live behavior changes.
 
 ## Duplicate Notes

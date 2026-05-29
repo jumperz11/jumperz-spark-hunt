@@ -110,6 +110,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - Packet 085: [Hypotheses display limit ignored](packets/085-hypotheses-display-limit-ignored.md)
 - Packet 086: [Contradictions display limit ignored](packets/086-contradictions-display-limit-ignored.md)
 - Packet 087: [Spark CLI live tests inherit operator config](packets/087-spark-cli-live-tests-operator-config.md)
+- Packet 088: [Voice install Kokoro structured runtime error](packets/088-voice-install-kokoro-structured-runtime-error.md)
 - Public page: [index.html](index.html)
 
 ## Routing

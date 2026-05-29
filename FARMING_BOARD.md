@@ -102,6 +102,7 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | 085 | [Hypotheses display limit ignored](packets/085-hypotheses-display-limit-ignored.md) | Fork branch pushed | `codex/fix-hypotheses-display-limit` pushed to `jumperz11`; no upstream PR opened. |
 | 086 | [Contradictions display limit ignored](packets/086-contradictions-display-limit-ignored.md) | Fork branch pushed | `codex/fix-contradictions-display-limit` pushed to `jumperz11`; no upstream PR opened. |
 | 087 | [Spark CLI live tests inherit operator config](packets/087-spark-cli-live-tests-operator-config.md) | Public PR opened | `vibeforge1111/spark-cli` PR #438 opened from `codex/isolate-live-command-config-tests`; full `tests/test_cli.py` passes. |
+| 088 | [Voice install Kokoro structured runtime error](packets/088-voice-install-kokoro-structured-runtime-error.md) | Public PR opened; packet valid | `vibeforge1111/spark-voice-comms` PR #19 opened from `codex/voice-install-kokoro-python314-structured-error`; `python -m pytest -q` passes with 42 tests. |
 
 ## Active Queue
 

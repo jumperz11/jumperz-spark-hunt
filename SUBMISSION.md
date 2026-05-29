@@ -206,6 +206,8 @@ For scoring review, start with the curated queue in `TOP_REVIEW_QUEUE.md` instea
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/086-contradictions-display-limit-ignored.md
 - Packet 087: Spark CLI live tests inherit operator config
   - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/087-spark-cli-live-tests-operator-config.md
+- Packet 088: Voice install Kokoro structured runtime error
+  - https://github.com/jumperz11/jumperz-spark-hunt/blob/main/packets/088-voice-install-kokoro-structured-runtime-error.md
 
 ## Routing Note
 
