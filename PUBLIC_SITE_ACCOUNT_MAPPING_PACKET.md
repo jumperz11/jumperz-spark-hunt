@@ -1,6 +1,10 @@
 # Reviewer-Routed Public Site Account Mapping Packet
 
-Status: prepared candidate, not counted in the 86 documented Spark Compete findings/fix packets unless reviewers accept it for routing.
+Status: posted as reviewer-routed candidate, not counted in the 86 documented Spark Compete findings/fix packets unless reviewers accept it for routing.
+
+Posted intake comment:
+
+https://github.com/vibeforge1111/Spark-Agent-Site/issues/46#issuecomment-4573182952
 
 Validator result:
 

@@ -87,6 +87,7 @@ Fresh reviewer-routed public-site candidate:
 
 - Packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/PUBLIC_SITE_ACCOUNT_MAPPING_PACKET.md
 - Target: https://github.com/vibeforge1111/Spark-Agent-Site/issues/46
+- Posted intake comment: https://github.com/vibeforge1111/Spark-Agent-Site/issues/46#issuecomment-4573182952
 - Finding: public team registration requires a device-holder GitHub identity but does not require or auto-map that identity into `github_accounts`, even though public point gates later require PR author account mapping.
 - Validator: `packet_valid: true`, `status: pass`, 0 errors, 0 warnings.
 - Framing: this is not a claim that JUMPERZ has more than 86 documented Spark Compete findings/fix packets. It is a fresh reviewer-routed candidate to address the root public-site UX/data-shape issue behind account-gate confusion.
