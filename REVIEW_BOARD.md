@@ -1,14 +1,13 @@
-# JUMPERZ Farming Board
+# JUMPERZ Review Board
 
-This board tracks legitimate Spark Compete farming work: real findings, safe proof, and reviewer-routable packets. No duplicate spam, fake teams, or upstream pushes.
+This board tracks reviewer-ready Spark Compete evidence: real findings, safe proof, public PRs, and reviewer-routable packets. No duplicate submissions, fake teams, unsafe evidence, or unrelated upstream pushes.
 
 ## Live Status
 
 - Team: JUMPERZ
 - Site status: Registered
-- Rank snapshot: 16
-- Public points snapshot: 0
-- Last checked: 2026-05-21 20:16 UTC
+- Public board status is informational only; packet validity and maintainer review are tracked on each PR.
+- Last checked: 2026-05-29 10:07 UTC
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
 
 ## Completed
@@ -180,10 +179,10 @@ This board tracks legitimate Spark Compete farming work: real findings, safe pro
 | P1 | Check public-track routing when upstream is unavailable | Reviewer routing |
 | P2 | Check leaderboard duplicate/team update UX | Competition site |
 
-## Farming Rules
+## Review Rules
 
 - One packet per unique issue.
 - Every packet needs before evidence, impact, expected behavior, and validation/proposed fix.
 - Keep proof redacted and bounded.
 - Do not submit duplicate teams or fake activity.
-- Do not open upstream PRs unless explicitly approved.
+- Open upstream PRs only for allowed public repos with a focused, reproducible fix and a valid packet.

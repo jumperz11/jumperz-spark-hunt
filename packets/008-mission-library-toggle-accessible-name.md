@@ -46,7 +46,7 @@ It should not expose both labels together.
 
 - Agent-based QA sees contradictory drawer state.
 - Screen-reader users get noisy state/action text before a dense list of 60 missions.
-- The mission library is a core farming workflow, so navigation clarity affects every team using it.
+- The mission library is a core mission review workflow, so navigation clarity affects every team using it.
 
 ## Proposed Fix
 

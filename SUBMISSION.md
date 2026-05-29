@@ -22,13 +22,13 @@ Use this packet when sharing JUMPERZ with Spark Compete reviewers.
 - Reviewer handoff: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/REVIEWER_HANDOFF.md
 - PR-ready fixes: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/PR_READY.md
 - Reviewer routing issue: https://github.com/vibeforge1111/vibeship-spark-intelligence/issues/184
-- Farming board: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/FARMING_BOARD.md
+- Review board: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/REVIEW_BOARD.md
 
 ## Mission Coverage Note
 
-The Spark Compete site has 60 starter missions. JUMPERZ packet numbers are finding IDs, not site mission IDs. Current proof includes 86 documented findings/fix packets across the site's hunt loop: use Spark, find friction, capture safe proof, and prepare focused hotfix PRs.
+The Spark Compete site has 60 starter missions. JUMPERZ packet numbers are finding IDs, not site mission IDs. Current proof includes a documented packet archive across the site's hunt loop: use Spark, find friction, capture safe proof, and prepare focused hotfix PRs.
 
-For scoring review, start with the curated queue in `TOP_REVIEW_QUEUE.md` instead of reading all packets at once.
+For reviewer triage, start with the curated queue in `TOP_REVIEW_QUEUE.md` instead of reading all packets at once.
 
 ## Proof Packets
 

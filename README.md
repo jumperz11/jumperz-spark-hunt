@@ -23,7 +23,7 @@ This repository is not a fork, not an upstream patch branch, and not connected t
 - PR-ready fixes: [PR_READY.md](PR_READY.md)
 - Proof packet: [HUNT_PROOF.md](HUNT_PROOF.md)
 - Reviewer routing issue: [Spark-Agent-Site#46](https://github.com/vibeforge1111/Spark-Agent-Site/issues/46)
-- Farming board: [FARMING_BOARD.md](FARMING_BOARD.md)
+- Review board: [REVIEW_BOARD.md](REVIEW_BOARD.md)
 - Packet 002: [CLI status/health mojibake](packets/002-cli-status-health-mojibake.md)
 - Packet 003: [Proof repo not routable from registration](packets/003-proof-repo-not-routable-from-registration.md)
 - Packet 004: [Proof kit has no submission handoff](packets/004-proof-kit-has-no-submission-handoff.md)

@@ -71,7 +71,7 @@ Minimal version:
 {
   "team_name": "JUMPERZ",
   "proof_url": "https://github.com/jumperz11/jumperz-spark-hunt",
-  "packet_url": "https://github.com/jumperz11/jumperz-spark-hunt/blob/main/FARMING_BOARD.md"
+  "packet_url": "https://github.com/jumperz11/jumperz-spark-hunt/blob/main/REVIEW_BOARD.md"
 }
 ```
 

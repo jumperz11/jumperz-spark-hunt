@@ -11,7 +11,7 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 - Top review queue: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/TOP_REVIEW_QUEUE.md
 - Submission packet: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/SUBMISSION.md
 - PR-ready fixes: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/PR_READY.md
-- Farming board: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/FARMING_BOARD.md
+- Review board: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/REVIEW_BOARD.md
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
 - Reviewer routing issue: https://github.com/vibeforge1111/Spark-Agent-Site/issues/46
 - Direct allowed-repo fallback PRs:
