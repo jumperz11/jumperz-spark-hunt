@@ -1,121 +1,49 @@
-# JUMPERZ Spark Hunt
+# JUMPERZ Spark Compete Review Hub
 
-Clean hunt workspace for team **JUMPERZ**.
+Public review hub for the JUMPERZ Spark Compete work.
 
-This repository is not a fork, not an upstream patch branch, and not connected to any old project repository. It is a fresh public proof hub for Spark Compete reviewer routing.
+This repository is not an upstream patch branch. It is a clean control room for reviewer routing, packet drafts, proof notes, and PR status while fixes live in the owning `vibeforge1111/*` repositories.
 
-## Team
+## Current Status
 
-- Team: JUMPERZ
-- Members: JUMPERZ, Basjee01, acexqt
-- Device-holder GitHub: jumperz11
-- LLM provider: Other LLM
-- Hunt status: registered
+- Team: `JUMPERZ`
+- Members: `JUMPERZ`, `Basjee01`, `acexqt`
+- Device-holder GitHub: [`jumperz11`](https://github.com/jumperz11)
+- Current mode: focused upstream PR repair and reviewer follow-up
+- Main tracker: [ACTIVE_REVIEW.md](ACTIVE_REVIEW.md)
 
-## Current Packet
+## How To Review
 
-- Reviewer brief: [REVIEWER_BRIEF.md](REVIEWER_BRIEF.md)
-- Reviewer scorecard: [JUMPERZ_SCORECARD.md](JUMPERZ_SCORECARD.md)
-- Active review control room: [ACTIVE_REVIEW.md](ACTIVE_REVIEW.md)
-- Submission packet: [SUBMISSION.md](SUBMISSION.md)
-- Mission coverage: [MISSION_COVERAGE.md](MISSION_COVERAGE.md)
-- Top review queue: [TOP_REVIEW_QUEUE.md](TOP_REVIEW_QUEUE.md)
-- Reviewer handoff: [REVIEWER_HANDOFF.md](REVIEWER_HANDOFF.md)
-- PR-ready fixes: [PR_READY.md](PR_READY.md)
-- Proof packet: [HUNT_PROOF.md](HUNT_PROOF.md)
-- Reviewer routing issue: [Spark-Agent-Site#46](https://github.com/vibeforge1111/Spark-Agent-Site/issues/46)
-- Review board: [REVIEW_BOARD.md](REVIEW_BOARD.md)
-- Packet 002: [CLI status/health mojibake](packets/002-cli-status-health-mojibake.md)
-- Packet 003: [Proof repo not routable from registration](packets/003-proof-repo-not-routable-from-registration.md)
-- Packet 004: [Proof kit has no submission handoff](packets/004-proof-kit-has-no-submission-handoff.md)
-- Packet 005: [Leaderboard stale example copy](packets/005-leaderboard-stale-example-copy.md)
-- Packet 006: [Mission copy buttons indistinguishable](packets/006-mission-copy-buttons-indistinguishable.md)
-- Packet 007: [Proof drawer confusing toggle name](packets/007-proof-drawer-toggle-accessible-name.md)
-- Packet 008: [Mission library confusing toggle name](packets/008-mission-library-toggle-accessible-name.md)
-- Packet 009: [Starter missions reference missing CLI commands](packets/009-starter-missions-reference-missing-cli-commands.md)
-- Packet 010: [Registration says ready for review with no handoff](packets/010-registration-ready-for-review-no-handoff.md)
-- Packet 011: [Telegram missions have no visible bot route](packets/011-telegram-missions-no-bot-route.md)
-- Packet 012: [Practice repo name is not linked](packets/012-practice-repo-name-is-not-linked.md)
-- Packet 013: [Leaderboard hides public score band](packets/013-leaderboard-hides-public-score-band.md)
-- Packet 014: [Leaderboard ignores API rank](packets/014-leaderboard-ignores-api-rank.md)
-- Packet 015: [Navigation current state stuck on teams](packets/015-nav-current-stuck-on-teams.md)
-- Packet 016: [Carousel tabs missing tabpanel linkage](packets/016-carousel-tabs-missing-tabpanel-linkage.md)
-- Packet 017: [HEAD requests return 404 for live routes](packets/017-head-requests-return-404-for-live-routes.md)
-- Packet 018: [Carousel tabs missing keyboard navigation](packets/018-carousel-tabs-missing-keyboard-navigation.md)
-- Packet 019: [Empty leaderboard falls back to mock standings](packets/019-empty-leaderboard-falls-back-to-mock-standings.md)
-- Packet 020: [Services advertises dead Pulse URL](packets/020-services-advertises-dead-pulse-url.md)
-- Packet 021: [OS compile missing project emits traceback](packets/021-os-compile-missing-project-traceback.md)
-- Packet 022: [Opportunities default subcommand traceback](packets/022-opportunities-default-subcommand-traceback.md)
-- Packet 023: [Outcome command records unknown in non-interactive mode](packets/023-outcome-noninteractive-records-unknown.md)
-- Packet 024: [Memory config missing traceback](packets/024-memory-config-missing-traceback.md)
-- Packet 025: [Project missing path writes context](packets/025-project-missing-path-writes-context.md)
-- Packet 026: [Status writes project context](packets/026-status-writes-project-context.md)
-- Packet 027: [Memory purge dry run creates store](packets/027-memory-purge-dry-run-creates-store.md)
-- Packet 028: [EIDOS purge dry run creates store](packets/028-eidos-purge-dry-run-creates-store.md)
-- Packet 029: [EIDOS stats creates store](packets/029-eidos-stats-creates-store.md)
-- Packet 030: [EIDOS validate migration creates store](packets/030-eidos-validate-migration-creates-store.md)
-- Packet 031: [EIDOS list views create store](packets/031-eidos-list-views-create-store.md)
-- Packet 032: [EIDOS metrics creates store](packets/032-eidos-metrics-creates-store.md)
-- Packet 033: [EIDOS evidence creates stores](packets/033-eidos-evidence-creates-stores.md)
-- Packet 034: [EIDOS deferred creates store](packets/034-eidos-deferred-creates-store.md)
-- Packet 035: [EIDOS migrate dry run creates store](packets/035-eidos-migrate-dry-run-creates-store.md)
-- Packet 036: [Advisory setup writes defaults non-interactively](packets/036-advisory-setup-noninteractive-writes-defaults.md)
-- Packet 037: [Project view commands write context](packets/037-project-view-commands-write-context.md)
-- Packet 038: [CLI view commands emit mojibake](packets/038-cli-view-commands-mojibake.md)
-- Packet 039: [Bridge preview writes project state](packets/039-bridge-preview-writes-project-state.md)
-- Packet 040: [Advice feedback failure exits zero](packets/040-advice-feedback-failure-exits-zero.md)
-- Packet 041: [Capture list and reject are ignored](packets/041-capture-list-reject-ignored.md)
-- Packet 042: [Missing opportunities exit zero](packets/042-opportunities-missing-exits-zero.md)
-- Packet 043: [Outcome link accepts invalid targets](packets/043-outcome-link-invalid-targets.md)
-- Packet 044: [Project answer accepts missing question ID](packets/044-project-answer-missing-question-id.md)
-- Packet 045: [Curiosity fill missing gap exits zero](packets/045-curiosity-fill-missing-gap.md)
-- Packet 046: [Chips missing targets exit zero](packets/046-chips-missing-targets-exit-zero.md)
-- Packet 047: [Project phase accepts invalid values](packets/047-project-phase-accepts-invalid-values.md)
-- Packet 048: [Hypotheses outcome missing target reports success](packets/048-hypotheses-outcome-missing-target.md)
-- Packet 049: [Contradictions resolve missing index reports success](packets/049-contradictions-resolve-missing-index.md)
-- Packet 050: [Learn command accepts invalid input](packets/050-learn-input-validation.md)
-- Packet 051: [Sync banks accepts invalid inputs](packets/051-sync-banks-input-validation.md)
-- Packet 052: [Auto-link accepts invalid thresholds](packets/052-auto-link-threshold-validation.md)
-- Packet 053: [Auto-link limit zero writes all](packets/053-auto-link-zero-limit-writes-all.md)
-- Packet 054: [Outcome validate limit zero validates links](packets/054-outcome-validate-zero-limit.md)
-- Packet 055: [Outcome auto-link zero window still links](packets/055-outcome-autolink-window-zero.md)
-- Packet 056: [Outcome negative link count still records](packets/056-outcome-link-count-negative.md)
-- Packet 057: [Process zero max iterations still runs](packets/057-process-zero-max-iterations-writes-state.md)
-- Packet 058: [Decay prune reports success but leaves insight](packets/058-decay-prune-not-persisted.md)
-- Packet 059: [Sync context negative gates export low-quality memory](packets/059-sync-context-negative-gates-export-low-quality.md)
-- Packet 060: [Growth timeline writes state into source checkout](packets/060-growth-timeline-writes-checkout.md)
-- Packet 061: [Personality state writes into source checkout](packets/061-personality-state-writes-checkout.md)
-- Packet 062: [Eval accepts invalid thresholds](packets/062-eval-invalid-thresholds.md)
-- Packet 063: [Process runtime limits still run worker](packets/063-process-runtime-limits.md)
-- Packet 064: [Decay accepts invalid bounds](packets/064-decay-invalid-bounds.md)
-- Packet 065: [Validate-ingest negative limit traceback](packets/065-validate-ingest-negative-limit.md)
-- Packet 066: [Personality evolution input tracebacks](packets/066-personality-evolution-input-tracebacks.md)
-- Packet 067: [Config malformed dot-path writes empty keys](packets/067-config-malformed-dot-path.md)
-- Packet 068: [Config malformed JSON traceback](packets/068-config-malformed-json-traceback.md)
-- Packet 069: [Config non-object runtime crash](packets/069-config-non-object-runtime-crash.md)
-- Packet 070: [Logs tail bounds ignored](packets/070-logs-tail-bounds.md)
-- Packet 071: [Logs invalid since filter ignored](packets/071-logs-since-invalid-filter.md)
-- Packet 072: [Validation scan negative limit reports success](packets/072-validation-scan-negative-limit.md)
-- Packet 073: [Learnings limit ignored](packets/073-learnings-limit-ignored.md)
-- Packet 074: [Events limit ignored](packets/074-events-limit-ignored.md)
-- Packet 075: [Outcome unlinked limit ignored](packets/075-outcome-unlinked-limit-ignored.md)
-- Packet 076: [Outcome links limit ignored](packets/076-outcome-links-limit-ignored.md)
-- Packet 077: [Advice feedback pending limit ignored](packets/077-advice-feedback-pending-limit.md)
-- Packet 078: [Sync context negative limit writes exports](packets/078-sync-context-negative-limit.md)
-- Packet 079: [Opportunities list limit ignored](packets/079-opportunities-list-limit-ignored.md)
-- Packet 080: [EIDOS list limit ignored](packets/080-eidos-list-limit-ignored.md)
-- Packet 081: [Surprises view crashes on persisted rows](packets/081-surprises-persisted-row-crash.md)
-- Packet 082: [Voice growth limit ignored](packets/082-voice-growth-limit-ignored.md)
-- Packet 083: [Project questions limit ignored](packets/083-project-questions-limit-ignored.md)
-- Packet 084: [Curiosity questions limit ignored](packets/084-curiosity-questions-limit-ignored.md)
-- Packet 085: [Hypotheses display limit ignored](packets/085-hypotheses-display-limit-ignored.md)
-- Packet 086: [Contradictions display limit ignored](packets/086-contradictions-display-limit-ignored.md)
-- Packet 087: [Spark CLI live tests inherit operator config](packets/087-spark-cli-live-tests-operator-config.md)
-- Packet 088: [Voice install Kokoro structured runtime error](packets/088-voice-install-kokoro-structured-runtime-error.md)
-- Public page: [index.html](index.html)
+Start with [ACTIVE_REVIEW.md](ACTIVE_REVIEW.md). It lists each active PR, the latest reviewer state, packet status, verification commands, and the next required action.
 
-## Routing
+The current priority is quality over volume:
 
-This repo is a clean holding area for hunt evidence. Nothing here pushes into or proposes changes against upstream repositories.
+- keep every PR scoped to one root cause and one owner surface
+- respond to maintainer comments before opening new work
+- include safe before/after proof only
+- avoid raw logs, private maps, secrets, screenshots with sensitive data, archives, binaries, and unrelated scoring discussion
+- update packet wording when the validator or reviewer flags a trust-boundary issue
 
-When reviewers provide the correct public track or owner surface, the proof can be routed from here.
+## Active Work Areas
+
+- Spark CLI repair and onboarding behavior
+- Spark Agent Site release and docs surfaces
+- Spark Voice Comms hook boundaries
+- Spark Personality hook boundaries
+- Spark Researcher citation and advisory-boundary handling
+- Spawner UI dependency baseline
+- Spark Intelligence Builder attachment-hook handling
+- Spark Character live-search prompt boundaries
+
+## Useful Files
+
+- [ACTIVE_REVIEW.md](ACTIVE_REVIEW.md) - live PR control room
+- [REVIEWER_BRIEF.md](REVIEWER_BRIEF.md) - older reviewer context and routing history
+- [REVIEWER_HANDOFF.md](REVIEWER_HANDOFF.md) - handoff notes
+- [JUMPERZ_SCORECARD.md](JUMPERZ_SCORECARD.md) - scorecard-style summary
+- [MISSION_COVERAGE.md](MISSION_COVERAGE.md) - historical mission coverage notes
+- [packets/](packets/) - older packet drafts and finding notes
+
+## Operating Rule
+
+Before opening or changing any PR, check the latest GitHub comments first. If a reviewer has asked for repair, proof, split, owner review, or packet changes, handle that before starting a new lane.
