@@ -49,10 +49,11 @@ JUMPERZ also opened one direct Telegram copy/knowledge PR in an allowed public r
 - PR: https://github.com/vibeforge1111/spark-telegram-bot/pull/224
 - Branch: `codex/remove-stale-skill-graphs-copy`
 - Fix: remove retired `spark-skill-graphs` naming from Telegram pro-tier copy and self-awareness knowledge.
-- Review status: Mac Lab passed. Public points remain locked by `team_account_unverified` until team/account mapping clears.
+- Review status: Mac Lab passed. Upstream `main` now contains patch-equivalent maintainer commit `014f17f` (`Remove stale skill catalog copy`). On May 29, reviewers added a reshape-first note on the still-open PR branch because the old branch mixes agent-knowledge cleanup, tier logic, and tests. Public points remain locked by `team_account_unverified` until team/account mapping clears.
 - Validation: the Spark Compete packet in the PR body is `packet_valid: true` and `pass_with_warnings` with `telegram_proof_unavailable`.
 - Telegram proof note: no safe disposable Telegram test chat is available; maintainers/lab must run the listed smoke path before points.
 - Tests: `npm run build`; `BOT_TOKEN=123:test node node_modules/ts-node/dist/bin.js tests/spawnerLoopBugHunt.test.ts`; `BOT_TOKEN=123:test node node_modules/ts-node/dist/bin.js tests/buildE2E.test.ts`; `BOT_TOKEN=123:test npm test`.
+- Clean next action: ask whether PR #224 should be closed as adopted/overtaken by `014f17f`. Do not force-push a branch rewrite unless reviewers explicitly want a replacement branch; if they do, split to one scope only.
 
 JUMPERZ also opened one focused follow-up docs-routing PR in an allowed public repo:
 

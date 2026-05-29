@@ -43,6 +43,8 @@ https://github.com/vibeforge1111/spark-telegram-bot/pull/224
 
 This PR removes retired `spark-skill-graphs` naming from Telegram pro-tier copy and self-awareness knowledge. The packet in the PR body validates as `packet_valid: true` and `pass_with_warnings` with `telegram_proof_unavailable` because no safe disposable Telegram test chat is available.
 
+Current PR #224 routing note: upstream `main` now contains patch-equivalent maintainer commit `014f17f` (`Remove stale skill catalog copy`). A May 29 reshape-first comment says the old PR branch mixes agent-knowledge cleanup, tier logic, and tests. JUMPERZ should not force-push it unless reviewers ask; the clean handling is to confirm whether PR #224 should be closed as adopted/overtaken by `014f17f` with credit tied to the original reviewed submission.
+
 JUMPERZ also opened one focused follow-up docs-routing PR in an allowed repo:
 
 https://github.com/vibeforge1111/Spark-Agent-Site/pull/56
