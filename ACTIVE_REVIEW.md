@@ -1,6 +1,6 @@
 # Active Review Control Room
 
-Last checked: 2026-05-30 21:49 UTC
+Last checked: 2026-05-30 21:54 UTC
 
 This page tracks public Spark Compete PRs that need fast, calm reviewer follow-up. It is intentionally about review readiness, not volume.
 
@@ -31,6 +31,7 @@ This page tracks public Spark Compete PRs that need fast, calm reviewer follow-u
 - 2026-05-30 21:39 UTC: repeated current-state sweep with no action needed. Full comment review still shows no actionable unanswered reviewer request; aggregate GitHub counts and gate labels are unchanged from 21:34; live leaderboard remains JUMPERZ rank 11 / 36 public points / `Reviewable`; hosted installer dry-run still targets r22; Spark status is healthy; onboarding still fails only `telegram_long_polling_security`. No new PRs, comments, rebases, or force-pushes were made.
 - 2026-05-30 21:45 UTC: repeated the reviewer-first sweep. No JUMPERZ PRs were updated after the 21:39 snapshot, the full comment review still shows no actionable unanswered reviewer request, aggregate GitHub counts and gate labels remain unchanged, and the live leaderboard remains rank 11 / 36 public points / `Reviewable`. Hosted installer dry-run still targets r22 and Spark status is healthy. Onboarding remains blocked only by `telegram_long_polling_security`, so no new PR/comment/rebase work was started.
 - 2026-05-30 21:49 UTC: repeated the current-state sweep. No JUMPERZ PRs were updated after the 21:45 snapshot, the full comment review still shows no actionable unanswered reviewer request, aggregate GitHub counts and gate labels remain unchanged, and the live leaderboard remains rank 11 / 36 public points / `Reviewable`. Hosted installer dry-run still targets r22; Spark status is healthy on `gpt-5.5`; onboarding remains blocked only by `telegram_long_polling_security`. No new PRs, comments, rebases, or force-pushes were made.
+- 2026-05-30 21:54 UTC: repeated the reviewer-first sweep. No JUMPERZ PRs were updated after the 21:49 snapshot, aggregate GitHub counts and gate labels are unchanged, and the full comment review still shows no actionable unanswered reviewer request. Live leaderboard remains rank 11 / 36 public points / `Reviewable`. Hosted installer dry-run still targets r22; Spark status is healthy on `gpt-5.5`; onboarding remains blocked only by `telegram_long_polling_security`. No new PRs, comments, rebases, or force-pushes were made.
 
 ## Review SLA
 
