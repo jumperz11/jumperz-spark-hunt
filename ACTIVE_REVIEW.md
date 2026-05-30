@@ -1,6 +1,6 @@
 # Active Review Control Room
 
-Last checked: 2026-05-30 08:01 UTC
+Last checked: 2026-05-30 08:04 UTC
 
 This page tracks public Spark Compete PRs that need fast, calm reviewer follow-up. It is intentionally about review readiness, not volume.
 
@@ -148,7 +148,7 @@ Open another PR only when all are true:
 
 | Candidate | Repo | Why it may be worth checking | Gate before work |
 | --- | --- | --- | --- |
-| Research URL/evidence handling | `spark-researcher` | PR #50 covers unsafe/non-public DuckDuckGo result URLs being preserved as research prompt sources. | Avoid duplicating citation URL hygiene; inspect a separate researcher surface only if it has a distinct root cause. |
+| Research URL/evidence handling | `spark-researcher` | PR #50 covers unsafe/non-public DuckDuckGo result URLs being preserved as research prompt sources. Researcher is also crowded around adjacent surfaces: #52 covers missing-config guidance, #53/#54 cover chip-hook public error redaction/adoption, and open upstream PRs cover safe URL, subprocess timeout, and CLI validation lanes. | Avoid duplicating citation URL hygiene, missing-config guidance, chip-hook redaction, safe-URL guardrails, subprocess timeouts, or generic CLI validation unless a reviewer asks or a clearly separate root cause appears. |
 | Agent-site legal footer route | `Spark-Agent-Site` | PR #63 covers stale legal-page GitHub links to retired `spark-skill-graphs`. | Avoid duplicating legal/footer route work; inspect another site surface only if it has a separate root cause. |
 | Spawner UI dependency/runtime baseline | `vibeship-spawner-ui` | PR #133 covers the fresh-install high/moderate npm audit baseline with a lockfile-only compatible refresh. Spawner UI Mission Control/provider-result areas are crowded: provider result artifacts already have #92, state isolation has #86/#87, orphan start handling has #77, and JUMPERZ already has #137/#138/#139 open. | Avoid dependency-audit duplicates and avoid provider-result/Mission-Control duplicate lanes unless a reviewer asks or a clearly separate, reproducible root cause appears. |
 | Spark CLI onboarding verify guidance | `spark-cli` | PR #451 covers configured-bundle repair commands for `spark verify --onboarding`; #438-#441 cover separate CLI repair/readiness lanes. | Avoid more CLI guidance PRs unless the failure is clearly separate from bundle-aware verify output, repair summaries, provider readiness, live ingress, or update repair. |
