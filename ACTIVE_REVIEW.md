@@ -1,6 +1,6 @@
 # Active Review Control Room
 
-Last checked: 2026-05-29 23:03 UTC
+Last checked: 2026-05-30 07:27 UTC
 
 This page tracks public Spark Compete PRs that need fast, calm reviewer follow-up. It is intentionally about review readiness, not volume.
 
@@ -161,3 +161,9 @@ Open another PR only when all are true:
 | Personality hook host-output contract | `spark-personality-chip-labs` | PR #17 covers missing/non-object input in `spark_hook.py`; adjacent hook boundaries may still be worth checking. | Avoid overlapping PR #13 unsupported hook and PR #16 `hooks.py` stdin handling. |
 | Personality validator CLI | `spark-personality-chip-labs` | PR #18 covers empty directories, template skipping, and current bridge summary keys. | Avoid overlapping directory validation behavior; look elsewhere unless reviewers ask. |
 | Domain-chip local test collection and product-surface adapter | `spark-domain-chip-labs` | PR #24 covers optional `jsonschema` collection failures; PR #25 covers the Startup YC saved fixture hash mismatch; PR #28 covers creator-mission-status malformed packet load errors. | Avoid duplicating importorskip, saved-hash, or creator-mission packet-load work; move to another domain-chip lane only if it has a separate root cause. |
+
+## Do Not Pursue
+
+| Candidate | Repo | Reason |
+| --- | --- | --- |
+| Packet 089: Spark CLI config null round-trip | `spark-cli` | Do not open from this workspace. Upstream PR [#467](https://github.com/vibeforge1111/spark-cli/pull/467) already covers the same `spark config get` explicit JSON `null` issue. |
