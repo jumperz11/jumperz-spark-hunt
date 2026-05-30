@@ -1,6 +1,6 @@
 # Active Review Control Room
 
-Last checked: 2026-05-30 07:51 UTC
+Last checked: 2026-05-30 07:55 UTC
 
 This page tracks public Spark Compete PRs that need fast, calm reviewer follow-up. It is intentionally about review readiness, not volume.
 
@@ -166,4 +166,4 @@ Open another PR only when all are true:
 
 | Candidate | Repo | Reason |
 | --- | --- | --- |
-| Packet 089: Spark CLI config null round-trip | `spark-cli` | Do not open from this workspace. Upstream PR [#467](https://github.com/vibeforge1111/spark-cli/pull/467) already covers the same `spark config get` explicit JSON `null` issue. |
+| Packet 089 / local `spark-cli-hunt` config null round-trip | `spark-cli` | Do not open from this workspace or mix into PR [#438](https://github.com/vibeforge1111/spark-cli/pull/438). Upstream PR [#467](https://github.com/vibeforge1111/spark-cli/pull/467) already covers the same `spark config get` explicit JSON `null` issue. |
