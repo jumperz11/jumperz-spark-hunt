@@ -1,6 +1,6 @@
 # Active Review Control Room
 
-Last checked: 2026-05-30 07:42 UTC
+Last checked: 2026-05-30 07:44 UTC
 
 This page tracks public Spark Compete PRs that need fast, calm reviewer follow-up. It is intentionally about review readiness, not volume.
 
@@ -150,7 +150,7 @@ Open another PR only when all are true:
 | --- | --- | --- | --- |
 | Research URL/evidence handling | `spark-researcher` | PR #50 covers unsafe/non-public DuckDuckGo result URLs being preserved as research prompt sources. | Avoid duplicating citation URL hygiene; inspect a separate researcher surface only if it has a distinct root cause. |
 | Agent-site legal footer route | `Spark-Agent-Site` | PR #63 covers stale legal-page GitHub links to retired `spark-skill-graphs`. | Avoid duplicating legal/footer route work; inspect another site surface only if it has a separate root cause. |
-| Spawner UI dependency/runtime baseline | `vibeship-spawner-ui` | PR #133 covers the fresh-install high/moderate npm audit baseline with a lockfile-only compatible refresh. | Avoid dependency-audit duplicates; inspect Spawner UI only for separate Mission Control, preview, provider-result, or UI behavior failures. |
+| Spawner UI dependency/runtime baseline | `vibeship-spawner-ui` | PR #133 covers the fresh-install high/moderate npm audit baseline with a lockfile-only compatible refresh. Spawner UI Mission Control/provider-result areas are crowded: provider result artifacts already have #92, state isolation has #86/#87, orphan start handling has #77, and JUMPERZ already has #137/#138/#139 open. | Avoid dependency-audit duplicates and avoid provider-result/Mission-Control duplicate lanes unless a reviewer asks or a clearly separate, reproducible root cause appears. |
 | Spark CLI onboarding verify guidance | `spark-cli` | PR #451 covers configured-bundle repair commands for `spark verify --onboarding`; #438-#441 cover separate CLI repair/readiness lanes. | Avoid more CLI guidance PRs unless the failure is clearly separate from bundle-aware verify output, repair summaries, provider readiness, live ingress, or update repair. |
 | Voice install/onboard edge cases | `spark-voice-comms` | PR #19 covers Kokoro Python support, PR #20 covers invalid hook JSON shape, and PR #21 covers malformed `voice.transcribe` audio base64. | Avoid those three lanes; inspect a separate runtime/provider or docs path only if it has a distinct root cause. |
 | Telegram rate-limit user notice | `spark-telegram-bot` | Generic notice behavior already has open PR #137; #279 now covers the separate `/start` and `/myid` onboarding reachability gap. | Do not open more rate-limit lanes unless reviewer asks or a distinct non-overlapping root cause appears. |
