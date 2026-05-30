@@ -1,8 +1,15 @@
 # Active Review Control Room
 
-Last checked: 2026-05-30 14:01 UTC
+Last checked: 2026-05-30 18:01 UTC
 
 This page tracks public Spark Compete PRs that need fast, calm reviewer follow-up. It is intentionally about review readiness, not volume.
+
+## Latest Sweep
+
+- 2026-05-30 18:01 UTC: answered all fresh owner/security comments; live audit now reports 36 answered, 1 no-owner-comment, 0 missed.
+- Refreshed and pushed current-base branches for `spark-cli` [#461](https://github.com/vibeforge1111/spark-cli/pull/461#issuecomment-4583577409), `spark-cli` [#462](https://github.com/vibeforge1111/spark-cli/pull/462#issuecomment-4583585778), `spark-domain-chip-labs` [#28](https://github.com/vibeforge1111/spark-domain-chip-labs/pull/28#issuecomment-4583592206), and `spark-intelligence-builder` [#112](https://github.com/vibeforge1111/spark-intelligence-builder/pull/112#issuecomment-4583597859).
+- Verified owner-check proof and replied for `spark-character` [#27](https://github.com/vibeforge1111/spark-character/pull/27#issuecomment-4583608233), `spark-personality-chip-labs` [#23](https://github.com/vibeforge1111/spark-personality-chip-labs/pull/23#issuecomment-4583612160), [#24](https://github.com/vibeforge1111/spark-personality-chip-labs/pull/24#issuecomment-4583615342), [#25](https://github.com/vibeforge1111/spark-personality-chip-labs/pull/25#issuecomment-4583617848), [#26](https://github.com/vibeforge1111/spark-personality-chip-labs/pull/26#issuecomment-4583619624), and `vibeship-spawner-ui` [#139](https://github.com/vibeforge1111/vibeship-spawner-ui/pull/139#issuecomment-4583624865).
+- Checked `Spark-Agent-Site` [#65](https://github.com/vibeforge1111/Spark-Agent-Site/pull/65#issuecomment-4583603033) against current r22 upstream and did not push the rebased r21 branch because it would regress current release labels.
 
 ## Review SLA
 
