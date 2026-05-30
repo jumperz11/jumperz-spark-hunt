@@ -56,6 +56,10 @@ def main() -> int:
             print(f"error: GitHub API returned HTTP {exc.code}; rerun after gh auth login if rate-limited")
             print()
             continue
+        except urllib.error.URLError as exc:
+            print(f"error: GitHub API unreachable ({exc.reason}); cannot refresh live review state")
+            print()
+            continue
         head = pull.get("head") or {}
         print(
             "state:",
@@ -70,6 +74,10 @@ def main() -> int:
             reviews = fetch_json(f"https://api.github.com/repos/{repo}/pulls/{number}/reviews?per_page=20")
         except urllib.error.HTTPError as exc:
             print(f"error: GitHub API returned HTTP {exc.code} while reading comments/reviews")
+            print()
+            continue
+        except urllib.error.URLError as exc:
+            print(f"error: GitHub API unreachable while reading comments/reviews ({exc.reason})")
             print()
             continue
         if comments:
