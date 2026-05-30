@@ -1,6 +1,6 @@
 # Active Review Control Room
 
-Last checked: 2026-05-30 18:50 UTC
+Last checked: 2026-05-30 18:56 UTC
 
 This page tracks public Spark Compete PRs that need fast, calm reviewer follow-up. It is intentionally about review readiness, not volume.
 
@@ -15,6 +15,7 @@ This page tracks public Spark Compete PRs that need fast, calm reviewer follow-u
 - 2026-05-30 18:37 UTC: re-audited comments again after the repair pass; still clean with 36 answered, 1 no-owner-comment, 0 missed. Verified installer dry-run still targets r22, local Spark CLI is `1898af4`, module health is green, and onboarding remains blocked only on private Telegram token/admin setup.
 - 2026-05-30 18:45 UTC: live review audit still reports 36 answered, 1 no-owner-comment, 0 missed. Re-ran `spark verify --onboarding --json`; all required checks pass except `telegram_long_polling_security`, which still needs private Telegram bot token/admin setup by the account holder.
 - 2026-05-30 18:50 UTC: rechecked live reviewer comments; still 36 answered, 1 no-owner-comment, 0 missed. Verified the hosted installer from `https://agent.sparkswarm.ai/install.sh` still dry-runs to `spark-cli-public-installer-2026-05-30-r22`; `spark status --json` is healthy and onboarding remains blocked only on private Telegram token/admin setup.
+- 2026-05-30 18:56 UTC: live reviewer audit remains clean with 36 answered, 1 no-owner-comment, 0 missed. Rechecked hosted installer dry-run, `spark status --json`, and `spark verify --onboarding --json`; latest installer remains r22, runtime status is healthy, and the only failed required onboarding check is still private Telegram token/admin setup.
 
 ## Review SLA
 
