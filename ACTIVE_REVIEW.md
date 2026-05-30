@@ -1,6 +1,6 @@
 # Active Review Control Room
 
-Last checked: 2026-05-30 18:37 UTC
+Last checked: 2026-05-30 18:45 UTC
 
 This page tracks public Spark Compete PRs that need fast, calm reviewer follow-up. It is intentionally about review readiness, not volume.
 
@@ -13,6 +13,7 @@ This page tracks public Spark Compete PRs that need fast, calm reviewer follow-u
 - 2026-05-30 18:16 UTC: follow-up audit still clean with 36 answered, 1 no-owner-comment, 0 missed. Local Spark upgraded to r22 (`spark-cli-public-installer-2026-05-30-r22`, commit `1898af4`); installed modules refreshed to pinned commits where clean; Spawner UI started and onboarding now only blocks on private Telegram token/admin setup.
 - 2026-05-30 18:31 UTC: repaired fresh rebase comments for `spark-cli` [#439](https://github.com/vibeforge1111/spark-cli/pull/439#issuecomment-4583691886), confirmed `spark-cli` [#462](https://github.com/vibeforge1111/spark-cli/pull/462#issuecomment-4583713779) is current on r22 but GitHub-blocked, refreshed `spark-telegram-bot` [#282](https://github.com/vibeforge1111/spark-telegram-bot/pull/282#issuecomment-4583713796), acknowledged six owner-gate-hold notes, and re-audited clean with 36 answered, 1 no-owner-comment, 0 missed.
 - 2026-05-30 18:37 UTC: re-audited comments again after the repair pass; still clean with 36 answered, 1 no-owner-comment, 0 missed. Verified installer dry-run still targets r22, local Spark CLI is `1898af4`, module health is green, and onboarding remains blocked only on private Telegram token/admin setup.
+- 2026-05-30 18:45 UTC: live review audit still reports 36 answered, 1 no-owner-comment, 0 missed. Re-ran `spark verify --onboarding --json`; all required checks pass except `telegram_long_polling_security`, which still needs private Telegram bot token/admin setup by the account holder.
 
 ## Review SLA
 
