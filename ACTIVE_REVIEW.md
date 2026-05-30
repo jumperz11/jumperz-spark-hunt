@@ -1,6 +1,6 @@
 # Active Review Control Room
 
-Last checked: 2026-05-30 21:02 UTC
+Last checked: 2026-05-30 21:08 UTC
 
 This page tracks public Spark Compete PRs that need fast, calm reviewer follow-up. It is intentionally about review readiness, not volume.
 
@@ -25,6 +25,7 @@ This page tracks public Spark Compete PRs that need fast, calm reviewer follow-u
 - 2026-05-30 20:45 UTC: checked why public Bounty Board still shows JUMPERZ at 36 points. Live leaderboard API shows JUMPERZ rank 11, 36 public points, `Reviewable`, updated `2026-05-30T19:05:17.424Z`. Current GitHub audit shows 47 total JUMPERZ PRs in the org search, 37 open, 5 merged, and 5 closed unmerged. The public scoring blocker is gate release, not missed comments: open PR labels include `gate-review-pending` (18), `needs-security-redesign` (14), `needs-focused-rebase` (11), `needs-review-info` (5), `mac-lab-queued` (4), `mac-lab-passed` (5), and `needs-team-account` (4). The 5 merged PRs all still carry `needs-team-account`, so even merged work may be waiting on team/account mapping before more public points publish.
 - 2026-05-30 20:51 UTC: follow-up sweep found no new owner comments after the 20:28 repair sweep. Aggregate PR state remains 47 total JUMPERZ PRs, 37 open, 5 merged, 5 closed unmerged; gate labels are still `gate-review-pending` (18), `needs-security-redesign` (14), `needs-focused-rebase` (11), `needs-review-info` (5), `mac-lab-passed` (5), `mac-lab-queued` (4), and `needs-team-account` (4). Live leaderboard remains JUMPERZ rank 11 / 36 public points / `Reviewable`. Hosted installer dry-run still targets `spark-cli-public-installer-2026-05-30-r22`; local `spark status --json` is healthy; onboarding verification still fails only `telegram_long_polling_security` because private Telegram bot token/admin setup is not complete.
 - 2026-05-30 21:02 UTC: user asked whether the current direction is right. Re-ran the loop: no new owner comments after 20:51, aggregate PR state still 47 total / 37 open / 5 merged / 5 closed unmerged, and gate labels unchanged (`gate-review-pending` 18, `needs-security-redesign` 14, `needs-focused-rebase` 11, `needs-review-info` 5, `mac-lab-passed` 5, `mac-lab-queued` 4, `needs-team-account` 4). Live leaderboard still shows JUMPERZ rank 11 / 36 public points / `Reviewable`. Hosted installer dry-run still targets r22. `spark verify --onboarding --json` still fails only `telegram_long_polling_security`; next real user-side unlock is `spark setup telegram-starter` with private bot token/admin IDs.
+- 2026-05-30 21:08 UTC: continued the reviewer-first loop. Full review comment script and aggregate GraphQL sweep show no new owner comments after 21:02 and no actionable missed reviewer request. Aggregate PR state remains unchanged: 47 total, 37 open, 5 merged, 5 closed unmerged; gate labels unchanged. Live leaderboard still shows JUMPERZ rank 11 / 36 / `Reviewable`. Hosted installer dry-run still targets r22; onboarding still fails only `telegram_long_polling_security`, so no new PR work was started.
 
 ## Review SLA
 
