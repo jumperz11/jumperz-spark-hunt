@@ -1,6 +1,6 @@
 # Active Review Control Room
 
-Last checked: 2026-05-30 18:16 UTC
+Last checked: 2026-05-30 18:31 UTC
 
 This page tracks public Spark Compete PRs that need fast, calm reviewer follow-up. It is intentionally about review readiness, not volume.
 
@@ -11,6 +11,7 @@ This page tracks public Spark Compete PRs that need fast, calm reviewer follow-u
 - Verified owner-check proof and replied for `spark-character` [#27](https://github.com/vibeforge1111/spark-character/pull/27#issuecomment-4583608233), `spark-personality-chip-labs` [#23](https://github.com/vibeforge1111/spark-personality-chip-labs/pull/23#issuecomment-4583612160), [#24](https://github.com/vibeforge1111/spark-personality-chip-labs/pull/24#issuecomment-4583615342), [#25](https://github.com/vibeforge1111/spark-personality-chip-labs/pull/25#issuecomment-4583617848), [#26](https://github.com/vibeforge1111/spark-personality-chip-labs/pull/26#issuecomment-4583619624), and `vibeship-spawner-ui` [#139](https://github.com/vibeforge1111/vibeship-spawner-ui/pull/139#issuecomment-4583624865).
 - Checked `Spark-Agent-Site` [#65](https://github.com/vibeforge1111/Spark-Agent-Site/pull/65#issuecomment-4583603033) against current r22 upstream and did not push the rebased r21 branch because it would regress current release labels.
 - 2026-05-30 18:16 UTC: follow-up audit still clean with 36 answered, 1 no-owner-comment, 0 missed. Local Spark upgraded to r22 (`spark-cli-public-installer-2026-05-30-r22`, commit `1898af4`); installed modules refreshed to pinned commits where clean; Spawner UI started and onboarding now only blocks on private Telegram token/admin setup.
+- 2026-05-30 18:31 UTC: repaired fresh rebase comments for `spark-cli` [#439](https://github.com/vibeforge1111/spark-cli/pull/439#issuecomment-4583691886), confirmed `spark-cli` [#462](https://github.com/vibeforge1111/spark-cli/pull/462#issuecomment-4583713779) is current on r22 but GitHub-blocked, refreshed `spark-telegram-bot` [#282](https://github.com/vibeforge1111/spark-telegram-bot/pull/282#issuecomment-4583713796), acknowledged six owner-gate-hold notes, and re-audited clean with 36 answered, 1 no-owner-comment, 0 missed.
 
 ## Review SLA
 
