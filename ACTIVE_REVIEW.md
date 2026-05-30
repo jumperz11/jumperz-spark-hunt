@@ -1,6 +1,6 @@
 # Active Review Control Room
 
-Last checked: 2026-05-30 19:06 UTC
+Last checked: 2026-05-30 19:12 UTC
 
 This page tracks public Spark Compete PRs that need fast, calm reviewer follow-up. It is intentionally about review readiness, not volume.
 
@@ -17,6 +17,7 @@ This page tracks public Spark Compete PRs that need fast, calm reviewer follow-u
 - 2026-05-30 18:50 UTC: rechecked live reviewer comments; still 36 answered, 1 no-owner-comment, 0 missed. Verified the hosted installer from `https://agent.sparkswarm.ai/install.sh` still dry-runs to `spark-cli-public-installer-2026-05-30-r22`; `spark status --json` is healthy and onboarding remains blocked only on private Telegram token/admin setup.
 - 2026-05-30 18:56 UTC: live reviewer audit remains clean with 36 answered, 1 no-owner-comment, 0 missed. Rechecked hosted installer dry-run, `spark status --json`, and `spark verify --onboarding --json`; latest installer remains r22, runtime status is healthy, and the only failed required onboarding check is still private Telegram token/admin setup.
 - 2026-05-30 19:06 UTC: repaired fresh merge-state refresh comments on `spark-cli` [#438](https://github.com/vibeforge1111/spark-cli/pull/438#issuecomment-4583983025), [#439](https://github.com/vibeforge1111/spark-cli/pull/439#issuecomment-4583983240), [#441](https://github.com/vibeforge1111/spark-cli/pull/441#issuecomment-4583983099), and [#451](https://github.com/vibeforge1111/spark-cli/pull/451#issuecomment-4583983168). Rebases/pushes completed for #438, #441, and #451; #439 was already current on r22 and was not no-op force-pushed. Re-audit is clean again with 36 answered, 1 no-owner-comment, 0 missed. Hosted installer remains r22 and onboarding still blocks only on private Telegram token/admin setup.
+- 2026-05-30 19:12 UTC: live reviewer audit still clean with 36 answered, 1 no-owner-comment, 0 missed. Hosted installer dry-run still targets `spark-cli-public-installer-2026-05-30-r22`; `spark status --json` is healthy; `spark verify --onboarding --json` still fails only `telegram_long_polling_security` because private Telegram bot token/admin setup is missing.
 
 ## Review SLA
 
