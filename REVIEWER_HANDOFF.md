@@ -2,6 +2,25 @@
 
 Team **JUMPERZ** is registered on Spark Compete and visible on the public leaderboard.
 
+## Current Review Focus
+
+Last organized: 2026-06-07 12:34 UTC
+
+The current goal is review conversion, not more PR volume. JUMPERZ has 128 open `vibeforge1111/spark-cli` PRs by `jumperz11`; 127 include `spark-compete-hotfix-v1` packet JSON in the PR body, and the only missing packet is non-competition PR [#756](https://github.com/vibeforge1111/spark-cli/pull/756). No fresh owner/reviewer comments requiring JUMPERZ repair were found since 2026-06-07 00:00 UTC.
+
+Start with the live allowed-repo top queue:
+
+1. [spark-cli #503](https://github.com/vibeforge1111/spark-cli/pull/503) - Telegram relay status, `pass`
+2. [spark-cli #752](https://github.com/vibeforge1111/spark-cli/pull/752) - Telegram configured bundle guidance, `pass`
+3. [spark-cli #758](https://github.com/vibeforge1111/spark-cli/pull/758) - Telegram repair path/status, `pass`
+4. [spark-cli #1051](https://github.com/vibeforge1111/spark-cli/pull/1051) - SSH host port validation, `pass`
+5. [spark-cli #1058](https://github.com/vibeforge1111/spark-cli/pull/1058) - hosted allowed-host guard, `pass`
+6. [spark-cli #1059](https://github.com/vibeforge1111/spark-cli/pull/1059) - SSH doctor path redaction, `pass`
+7. [spark-cli #1081](https://github.com/vibeforge1111/spark-cli/pull/1081) - Spark OS compile local-root redaction, `pass`
+8. [spark-cli #440](https://github.com/vibeforge1111/spark-cli/pull/440) - healthcheck repair details, `pass`
+9. [spark-cli #1052](https://github.com/vibeforge1111/spark-cli/pull/1052) - sandbox authorization-header redaction, `pass_with_warnings`
+10. [spark-cli #1086](https://github.com/vibeforge1111/spark-cli/pull/1086) - ssh-add approval boundary, `pass_with_warnings`
+
 ## Fast Links
 
 - Live hub: https://jumperz11.github.io/jumperz-spark-hunt/

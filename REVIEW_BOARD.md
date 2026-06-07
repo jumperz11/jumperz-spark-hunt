@@ -7,8 +7,22 @@ This board tracks reviewer-ready Spark Compete evidence: real findings, safe pro
 - Team: JUMPERZ
 - Site status: Registered
 - Public board status is informational only; packet validity and maintainer review are tracked on each PR.
-- Last checked: 2026-05-29 10:07 UTC
+- Last checked: 2026-06-07 12:34 UTC
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
+
+## Current Allowed-Repo Review Focus
+
+JUMPERZ should not open new PRs while this queue is waiting. The current conversion focus is existing `vibeforge1111/spark-cli` PRs that already have packet JSON in the PR body.
+
+| Metric | Current value |
+| --- | --- |
+| Open `spark-cli` PRs by `jumperz11` | 128 |
+| Drafts | 0 |
+| PRs with `spark-compete-hotfix-v1` packet JSON | 127 |
+| Missing packet | [#756](https://github.com/vibeforge1111/spark-cli/pull/756), non-competition `[codex]` PR |
+| Fresh owner/reviewer comments needing JUMPERZ action since 2026-06-07 00:00 UTC | 0 |
+
+Start reviewers with [TOP_REVIEW_QUEUE.md](TOP_REVIEW_QUEUE.md). The first-pass live queue is [#503](https://github.com/vibeforge1111/spark-cli/pull/503), [#752](https://github.com/vibeforge1111/spark-cli/pull/752), [#758](https://github.com/vibeforge1111/spark-cli/pull/758), [#1051](https://github.com/vibeforge1111/spark-cli/pull/1051), [#1058](https://github.com/vibeforge1111/spark-cli/pull/1058), [#1059](https://github.com/vibeforge1111/spark-cli/pull/1059), [#1081](https://github.com/vibeforge1111/spark-cli/pull/1081), [#440](https://github.com/vibeforge1111/spark-cli/pull/440), [#1052](https://github.com/vibeforge1111/spark-cli/pull/1052), and [#1086](https://github.com/vibeforge1111/spark-cli/pull/1086).
 
 ## Completed
 

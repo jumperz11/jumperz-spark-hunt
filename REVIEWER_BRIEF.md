@@ -2,7 +2,19 @@
 
 ## Task
 
-Route or score JUMPERZ's first 10 Spark Compete fixes.
+Review JUMPERZ's current allowed-repo Spark Compete queue without adding more submission volume.
+
+## Current Snapshot
+
+Last organized: 2026-06-07 12:34 UTC
+
+- Current allowed repo focus: `vibeforge1111/spark-cli`
+- Open `spark-cli` PRs authored by `jumperz11`: 128
+- Draft PRs: 0
+- PRs with `spark-compete-hotfix-v1` packet JSON in the body: 127
+- Sole missing packet: [#756](https://github.com/vibeforge1111/spark-cli/pull/756), which is not a `[spark-compete]` PR
+- Fresh owner/reviewer comments requiring JUMPERZ action since 2026-06-07 00:00 UTC: none found
+- Current reviewer path: start with the live allowed-repo top queue in [TOP_REVIEW_QUEUE.md](TOP_REVIEW_QUEUE.md), not the older fork-only queue.
 
 ## Important Framing
 
@@ -12,7 +24,20 @@ JUMPERZ has **86 documented Spark Compete findings/fix packets** produced while 
 
 ## Current Ask
 
-Should JUMPERZ open upstream PRs for the first 10 fixes, or should reviewers score from fork compare links first?
+Please review the current top allowed-repo queue first:
+
+1. [#503](https://github.com/vibeforge1111/spark-cli/pull/503) - Telegram relay status, `pass`
+2. [#752](https://github.com/vibeforge1111/spark-cli/pull/752) - Telegram configured bundle guidance, `pass`
+3. [#758](https://github.com/vibeforge1111/spark-cli/pull/758) - Telegram repair path/status, `pass`
+4. [#1051](https://github.com/vibeforge1111/spark-cli/pull/1051) - SSH host port validation, `pass`
+5. [#1058](https://github.com/vibeforge1111/spark-cli/pull/1058) - hosted allowed-host guard, `pass`
+6. [#1059](https://github.com/vibeforge1111/spark-cli/pull/1059) - SSH doctor path redaction, `pass`
+7. [#1081](https://github.com/vibeforge1111/spark-cli/pull/1081) - Spark OS compile local-root redaction, `pass`
+8. [#440](https://github.com/vibeforge1111/spark-cli/pull/440) - healthcheck repair details, `pass`
+9. [#1052](https://github.com/vibeforge1111/spark-cli/pull/1052) - sandbox authorization-header redaction, `pass_with_warnings`
+10. [#1086](https://github.com/vibeforge1111/spark-cli/pull/1086) - ssh-add approval boundary, `pass_with_warnings`
+
+The old question about whether to open upstream PRs for fork-only packets remains historical context. It should not block review of the current allowed-repo PR queue.
 
 ## Why Reviewer-Routed
 

@@ -4,7 +4,46 @@ This is the JUMPERZ conversion queue: the first fixes to route for reviewer scor
 
 The goal is not more volume. The goal is to make the strongest existing work easy to review, accept, and credit.
 
-## Routing Rule
+## Current Allowed-Repo Queue
+
+Last organized: 2026-06-07 12:34 UTC
+
+Use this queue before opening or routing anything new. These are already-open `vibeforge1111/spark-cli` PRs in an allowed public repo. They have validated `spark-compete-hotfix-v1` packet JSON in the PR body, no draft state, and no fresh maintainer request asking JUMPERZ for repair.
+
+| Order | PR | Branch | Why this first | Validator state | Reviewer action |
+| --- | --- | --- | --- | --- | --- |
+| 1 | [#503](https://github.com/vibeforge1111/spark-cli/pull/503) | `codex/telegram-runtime-relay-status` | Clean Telegram status/reporting fix; packet passes without warnings; no comments or reviews. | `pass` | Review as a low-noise Telegram reliability lane. |
+| 2 | [#752](https://github.com/vibeforge1111/spark-cli/pull/752) | `codex/telegram-voice-starter-repair-guidance` | Clean Telegram guidance fix; packet passes without warnings; no comments or reviews. | `pass` | Review as a low-risk onboarding/repair guidance lane. |
+| 3 | [#758](https://github.com/vibeforge1111/spark-cli/pull/758) | `codex/telegram-repair-route-fit` | Clean Telegram repair status fix; packet now passes after wording was made path/status-specific. | `pass` | Review as a small Telegram repair-status lane. |
+| 4 | [#1051](https://github.com/vibeforge1111/spark-cli/pull/1051) | `codex/ssh-host-port-validation` | Clean SSH validation fix; packet passes without warnings; no comments or reviews. | `pass` | Review as an input-validation lane. |
+| 5 | [#1058](https://github.com/vibeforge1111/spark-cli/pull/1058) | `codex/hosted-allowed-host-guard` | Clean hosted allowed-host validation fix; packet passes without warnings; no comments or reviews. | `pass` | Review as a public-host validation lane. |
+| 6 | [#1059](https://github.com/vibeforge1111/spark-cli/pull/1059) | `codex/ssh-doctor-path-redaction` | Clean diagnostic redaction fix; packet passes without warnings; no comments or reviews. | `pass` | Review as a safe-output diagnostic lane. |
+| 7 | [#1081](https://github.com/vibeforge1111/spark-cli/pull/1081) | `codex/system-map-path-redaction` | Clean Spark OS compile local-root redaction fix; packet passes without warnings; no comments or reviews. | `pass` | Review as a safe-output/redaction lane. |
+| 8 | [#440](https://github.com/vibeforge1111/spark-cli/pull/440) | `codex/healthcheck-summary-no-brace` | Healthcheck repair details fix; packet passes without warnings; already has owner/security comments, so do not bump. | `pass` | Review only if owner/security queue is ready; no contributor comment needed. |
+| 9 | [#1052](https://github.com/vibeforge1111/spark-cli/pull/1052) | `codex/sandbox-authorization-token-redaction` | Higher-impact sandbox redaction fix; packet validates with expected security-owner warning. | `pass_with_warnings` | Security-owner/lab review expected before merge or points. |
+| 10 | [#1086](https://github.com/vibeforge1111/spark-cli/pull/1086) | `codex/ssh-add-approval` | High-impact approval classifier lane for SSH agent mutation; packet validates with expected security-owner warning. | `pass_with_warnings` | Security-owner/lab review expected before merge or points. |
+
+## Next Security-Control Batch
+
+These are strong, but they should trail the clean-pass queue because they naturally require security-owner review:
+
+| PR | Branch | Reason |
+| --- | --- | --- |
+| [#1215](https://github.com/vibeforge1111/spark-cli/pull/1215) | `codex/ssh-keygen-approval` | Private-key generation approval boundary. |
+| [#1255](https://github.com/vibeforge1111/spark-cli/pull/1255) | `codex/ssh-tunnel-approval` | SSH tunnel approval boundary. |
+| [#1053](https://github.com/vibeforge1111/spark-cli/pull/1053) | `codex/git-approval-safety-hunt` | `git clean` destructive working-tree approval boundary. |
+| [#1054](https://github.com/vibeforge1111/spark-cli/pull/1054) | `codex/git-discard-approval` | Worktree discard approval boundary. |
+| [#1055](https://github.com/vibeforge1111/spark-cli/pull/1055) | `codex/git-stash-approval` | Stash deletion approval boundary. |
+
+## Live Queue Rule
+
+- Do not open new PRs while this queue is waiting for review.
+- Do not comment-bump these PRs.
+- If a reviewer asks for proof, packet changes, rebase, scope split, security notes, account/team routing, or safety notes, repair that PR first.
+- If a PR body needs another packet edit, validate through the official Spark packet endpoint before editing.
+- Keep token/admin/private/local-path material out of packet text, tracker notes, screenshots, comments, and logs.
+
+## Legacy Fork Routing Rule
 
 - These are fork branches on `jumperz11/vibeship-spark-intelligence`.
 - No upstream PR is open for these branches unless reviewers ask for direct PR submission.
