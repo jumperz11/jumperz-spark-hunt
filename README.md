@@ -11,6 +11,7 @@ This repository is not an upstream patch branch. It is a clean control room for 
 - Device-holder GitHub: [`jumperz11`](https://github.com/jumperz11)
 - Current mode: focused upstream PR repair and reviewer follow-up
 - Reviewer start page: [REVIEWER_START_HERE.md](REVIEWER_START_HERE.md)
+- Review pattern audit: [REVIEW_PATTERN_AUDIT.md](REVIEW_PATTERN_AUDIT.md)
 - Main tracker: [ACTIVE_REVIEW.md](ACTIVE_REVIEW.md)
 
 ## How To Review
@@ -40,6 +41,7 @@ The current priority is quality over volume:
 
 - [ACTIVE_REVIEW.md](ACTIVE_REVIEW.md) - live PR control room
 - [REVIEWER_START_HERE.md](REVIEWER_START_HERE.md) - shortest current reviewer path
+- [REVIEW_PATTERN_AUDIT.md](REVIEW_PATTERN_AUDIT.md) - what recent reviews, merges, and adoptions show
 - [REVIEWER_BRIEF.md](REVIEWER_BRIEF.md) - older reviewer context and routing history
 - [REVIEWER_HANDOFF.md](REVIEWER_HANDOFF.md) - handoff notes
 - [JUMPERZ_SCORECARD.md](JUMPERZ_SCORECARD.md) - scorecard-style summary
