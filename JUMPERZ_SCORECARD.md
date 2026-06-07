@@ -32,6 +32,8 @@ https://github.com/vibeforge1111/Spark-Agent-Site/pull/47#issuecomment-455397364
 
 The current allowed-repo focus is conversion of existing `vibeforge1111/spark-cli` PRs on the public `fc49c16` r24-v2 baseline, not new volume.
 
+Shortest reviewer path: [REVIEWER_START_HERE.md](REVIEWER_START_HERE.md)
+
 | Metric | Current value |
 | --- | --- |
 | Open `spark-cli` PRs by `jumperz11` | 128 |
@@ -105,6 +107,7 @@ spark-cli PR #419:
 ## Proof Hub Links
 
 - Reviewer handoff: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/REVIEWER_HANDOFF.md
+- Reviewer start page: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/REVIEWER_START_HERE.md
 - Reviewer brief: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/REVIEWER_BRIEF.md
 - Mission coverage: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/MISSION_COVERAGE.md
 - Top review queue: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/TOP_REVIEW_QUEUE.md

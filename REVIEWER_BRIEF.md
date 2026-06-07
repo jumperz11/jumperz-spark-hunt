@@ -8,6 +8,7 @@ Review JUMPERZ's current allowed-repo Spark Compete queue without adding more su
 
 Last organized: 2026-06-07 12:41 UTC
 
+- Shortest reviewer path: [REVIEWER_START_HERE.md](REVIEWER_START_HERE.md)
 - Current allowed repo focus: `vibeforge1111/spark-cli`
 - Open `spark-cli` PRs authored by `jumperz11`: 128
 - Draft PRs: 0

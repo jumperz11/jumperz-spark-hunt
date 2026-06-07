@@ -23,6 +23,7 @@ Start with the live allowed-repo top queue:
 
 ## Fast Links
 
+- Reviewer start page: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/REVIEWER_START_HERE.md
 - Live hub: https://jumperz11.github.io/jumperz-spark-hunt/
 - Active review control room: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/ACTIVE_REVIEW.md
 - Reviewer scorecard: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/JUMPERZ_SCORECARD.md

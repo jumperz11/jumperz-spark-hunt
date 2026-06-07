@@ -10,11 +10,12 @@ This repository is not an upstream patch branch. It is a clean control room for 
 - Members: `JUMPERZ`, `Basjee01`, `acexqt`
 - Device-holder GitHub: [`jumperz11`](https://github.com/jumperz11)
 - Current mode: focused upstream PR repair and reviewer follow-up
+- Reviewer start page: [REVIEWER_START_HERE.md](REVIEWER_START_HERE.md)
 - Main tracker: [ACTIVE_REVIEW.md](ACTIVE_REVIEW.md)
 
 ## How To Review
 
-Start with [ACTIVE_REVIEW.md](ACTIVE_REVIEW.md). It lists each active PR, the latest reviewer state, packet status, verification commands, and the next required action.
+Start with [REVIEWER_START_HERE.md](REVIEWER_START_HERE.md). It gives the current reviewer-first top 10, what not to review first, and the real remaining gates. Use [ACTIVE_REVIEW.md](ACTIVE_REVIEW.md) only when you need the detailed timeline.
 
 The current priority is quality over volume:
 
@@ -38,6 +39,7 @@ The current priority is quality over volume:
 ## Useful Files
 
 - [ACTIVE_REVIEW.md](ACTIVE_REVIEW.md) - live PR control room
+- [REVIEWER_START_HERE.md](REVIEWER_START_HERE.md) - shortest current reviewer path
 - [REVIEWER_BRIEF.md](REVIEWER_BRIEF.md) - older reviewer context and routing history
 - [REVIEWER_HANDOFF.md](REVIEWER_HANDOFF.md) - handoff notes
 - [JUMPERZ_SCORECARD.md](JUMPERZ_SCORECARD.md) - scorecard-style summary
