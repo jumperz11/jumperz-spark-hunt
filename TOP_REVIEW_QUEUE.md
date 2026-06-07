@@ -6,34 +6,33 @@ The goal is not more volume. The goal is to make the strongest existing work eas
 
 ## Current Allowed-Repo Queue
 
-Last organized: 2026-06-07 12:34 UTC
+Last organized: 2026-06-07 12:41 UTC
 
-Use this queue before opening or routing anything new. These are already-open `vibeforge1111/spark-cli` PRs in an allowed public repo. They have validated `spark-compete-hotfix-v1` packet JSON in the PR body, no draft state, and no fresh maintainer request asking JUMPERZ for repair.
+Use this queue before opening or routing anything new. These are already-open `vibeforge1111/spark-cli` PRs in an allowed public repo. They have validated `spark-compete-hotfix-v1` packet JSON in the PR body, no draft state, no fresh maintainer request asking JUMPERZ for repair, and are based on current upstream `origin/master` `fc49c16` (`spark-cli-public-installer-2026-06-03-r24-v2`).
 
 | Order | PR | Branch | Why this first | Validator state | Reviewer action |
 | --- | --- | --- | --- | --- | --- |
-| 1 | [#503](https://github.com/vibeforge1111/spark-cli/pull/503) | `codex/telegram-runtime-relay-status` | Clean Telegram status/reporting fix; packet passes without warnings; no comments or reviews. | `pass` | Review as a low-noise Telegram reliability lane. |
-| 2 | [#752](https://github.com/vibeforge1111/spark-cli/pull/752) | `codex/telegram-voice-starter-repair-guidance` | Clean Telegram guidance fix; packet passes without warnings; no comments or reviews. | `pass` | Review as a low-risk onboarding/repair guidance lane. |
-| 3 | [#758](https://github.com/vibeforge1111/spark-cli/pull/758) | `codex/telegram-repair-route-fit` | Clean Telegram repair status fix; packet now passes after wording was made path/status-specific. | `pass` | Review as a small Telegram repair-status lane. |
-| 4 | [#1051](https://github.com/vibeforge1111/spark-cli/pull/1051) | `codex/ssh-host-port-validation` | Clean SSH validation fix; packet passes without warnings; no comments or reviews. | `pass` | Review as an input-validation lane. |
-| 5 | [#1058](https://github.com/vibeforge1111/spark-cli/pull/1058) | `codex/hosted-allowed-host-guard` | Clean hosted allowed-host validation fix; packet passes without warnings; no comments or reviews. | `pass` | Review as a public-host validation lane. |
-| 6 | [#1059](https://github.com/vibeforge1111/spark-cli/pull/1059) | `codex/ssh-doctor-path-redaction` | Clean diagnostic redaction fix; packet passes without warnings; no comments or reviews. | `pass` | Review as a safe-output diagnostic lane. |
-| 7 | [#1081](https://github.com/vibeforge1111/spark-cli/pull/1081) | `codex/system-map-path-redaction` | Clean Spark OS compile local-root redaction fix; packet passes without warnings; no comments or reviews. | `pass` | Review as a safe-output/redaction lane. |
-| 8 | [#440](https://github.com/vibeforge1111/spark-cli/pull/440) | `codex/healthcheck-summary-no-brace` | Healthcheck repair details fix; packet passes without warnings; already has owner/security comments, so do not bump. | `pass` | Review only if owner/security queue is ready; no contributor comment needed. |
-| 9 | [#1052](https://github.com/vibeforge1111/spark-cli/pull/1052) | `codex/sandbox-authorization-token-redaction` | Higher-impact sandbox redaction fix; packet validates with expected security-owner warning. | `pass_with_warnings` | Security-owner/lab review expected before merge or points. |
-| 10 | [#1086](https://github.com/vibeforge1111/spark-cli/pull/1086) | `codex/ssh-add-approval` | High-impact approval classifier lane for SSH agent mutation; packet validates with expected security-owner warning. | `pass_with_warnings` | Security-owner/lab review expected before merge or points. |
+| 1 | [#1051](https://github.com/vibeforge1111/spark-cli/pull/1051) | `codex/ssh-host-port-validation` | Clean SSH validation fix; packet passes without warnings; current-base PR with no comments or reviews. | `pass` | Review as an input-validation lane. |
+| 2 | [#1058](https://github.com/vibeforge1111/spark-cli/pull/1058) | `codex/hosted-allowed-host-guard` | Clean hosted allowed-host validation fix; packet passes without warnings; current-base PR with no comments or reviews. | `pass` | Review as a public-host validation lane. |
+| 3 | [#1059](https://github.com/vibeforge1111/spark-cli/pull/1059) | `codex/ssh-doctor-path-redaction` | Clean diagnostic redaction fix; packet passes without warnings; current-base PR with no comments or reviews. | `pass` | Review as a safe-output diagnostic lane. |
+| 4 | [#1081](https://github.com/vibeforge1111/spark-cli/pull/1081) | `codex/system-map-path-redaction` | Clean Spark OS compile local-root redaction fix; packet passes without warnings; current-base PR with no comments or reviews. | `pass` | Review as a safe-output/redaction lane. |
+| 5 | [#1069](https://github.com/vibeforge1111/spark-cli/pull/1069) | `codex/sandbox-output-local-path-redaction` | Sandbox output local-path redaction; current-base PR with expected security-owner warning. | `pass_with_warnings` | Security-owner/lab review expected before merge or points. |
+| 6 | [#1052](https://github.com/vibeforge1111/spark-cli/pull/1052) | `codex/sandbox-authorization-token-redaction` | Higher-impact sandbox authorization-header redaction; current-base PR with expected security-owner warning. | `pass_with_warnings` | Security-owner/lab review expected before merge or points. |
+| 7 | [#1086](https://github.com/vibeforge1111/spark-cli/pull/1086) | `codex/ssh-add-approval` | High-impact approval classifier lane for SSH agent mutation; current-base PR with expected security-owner warning. | `pass_with_warnings` | Security-owner/lab review expected before merge or points. |
+| 8 | [#1215](https://github.com/vibeforge1111/spark-cli/pull/1215) | `codex/ssh-keygen-approval` | Private-key generation approval boundary; current-base PR with expected security-owner warning. | `pass_with_warnings` | Security-owner/lab review expected before merge or points. |
+| 9 | [#1255](https://github.com/vibeforge1111/spark-cli/pull/1255) | `codex/ssh-tunnel-approval` | SSH tunnel/proxy approval boundary; current-base PR with expected security-owner warning. | `pass_with_warnings` | Security-owner/lab review expected before merge or points. |
+| 10 | [#1053](https://github.com/vibeforge1111/spark-cli/pull/1053) | `codex/git-approval-safety-hunt` | Destructive `git clean` approval boundary; current-base PR with expected security-owner warning. | `pass_with_warnings` | Security-owner/lab review expected before merge or points. |
 
-## Next Security-Control Batch
+## Behind But Still Packet-Clean
 
-These are strong, but they should trail the clean-pass queue because they naturally require security-owner review:
+These PRs remain useful, but GitHub reports them `BEHIND` older base `f989fd0`. Do not rebase or force-push unless reviewers ask for focused rebase/repair.
 
 | PR | Branch | Reason |
 | --- | --- | --- |
-| [#1215](https://github.com/vibeforge1111/spark-cli/pull/1215) | `codex/ssh-keygen-approval` | Private-key generation approval boundary. |
-| [#1255](https://github.com/vibeforge1111/spark-cli/pull/1255) | `codex/ssh-tunnel-approval` | SSH tunnel approval boundary. |
-| [#1053](https://github.com/vibeforge1111/spark-cli/pull/1053) | `codex/git-approval-safety-hunt` | `git clean` destructive working-tree approval boundary. |
-| [#1054](https://github.com/vibeforge1111/spark-cli/pull/1054) | `codex/git-discard-approval` | Worktree discard approval boundary. |
-| [#1055](https://github.com/vibeforge1111/spark-cli/pull/1055) | `codex/git-stash-approval` | Stash deletion approval boundary. |
+| [#503](https://github.com/vibeforge1111/spark-cli/pull/503) | `codex/telegram-runtime-relay-status` | Clean Telegram status/reporting fix; packet passes without warnings but base is behind current r24-v2 master. |
+| [#752](https://github.com/vibeforge1111/spark-cli/pull/752) | `codex/telegram-voice-starter-repair-guidance` | Clean Telegram guidance fix; packet passes without warnings but base is behind current r24-v2 master. |
+| [#758](https://github.com/vibeforge1111/spark-cli/pull/758) | `codex/telegram-repair-route-fit` | Clean Telegram repair status fix; packet passes without warnings but base is behind current r24-v2 master. |
+| [#440](https://github.com/vibeforge1111/spark-cli/pull/440) | `codex/healthcheck-summary-no-brace` | Healthcheck repair details fix; packet passes without warnings, has existing owner/security comments, and base is behind current r24-v2 master. |
 
 ## Live Queue Rule
 

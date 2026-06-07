@@ -1,6 +1,6 @@
 # JUMPERZ Spark Compete Scorecard
 
-Updated: 2026-06-07T12:34:00Z
+Updated: 2026-06-07T12:41:00Z
 
 Purpose: give Spark Compete reviewers one fast, machine-readable view of JUMPERZ work that already has reviewer-visible signal.
 
@@ -30,7 +30,7 @@ https://github.com/vibeforge1111/Spark-Agent-Site/pull/47#issuecomment-455397364
 
 ## Current Review Queue Health
 
-The current allowed-repo focus is conversion of existing `vibeforge1111/spark-cli` PRs, not new volume.
+The current allowed-repo focus is conversion of existing `vibeforge1111/spark-cli` PRs on the public `fc49c16` r24-v2 baseline, not new volume.
 
 | Metric | Current value |
 | --- | --- |
@@ -44,16 +44,16 @@ Reviewer first-pass queue:
 
 | Order | PR | Validator | Why first |
 | --- | --- | --- | --- |
-| 1 | [#503](https://github.com/vibeforge1111/spark-cli/pull/503) | `pass` | Telegram relay status; clean packet, no comments/reviews. |
-| 2 | [#752](https://github.com/vibeforge1111/spark-cli/pull/752) | `pass` | Telegram configured bundle guidance; clean packet, no comments/reviews. |
-| 3 | [#758](https://github.com/vibeforge1111/spark-cli/pull/758) | `pass` | Telegram repair path/status; clean packet after wording repair. |
-| 4 | [#1051](https://github.com/vibeforge1111/spark-cli/pull/1051) | `pass` | SSH host port validation; clean packet, no comments/reviews. |
-| 5 | [#1058](https://github.com/vibeforge1111/spark-cli/pull/1058) | `pass` | Hosted allowed-host guard; clean packet, no comments/reviews. |
-| 6 | [#1059](https://github.com/vibeforge1111/spark-cli/pull/1059) | `pass` | SSH doctor path redaction; clean packet, no comments/reviews. |
-| 7 | [#1081](https://github.com/vibeforge1111/spark-cli/pull/1081) | `pass` | Spark OS compile local-root redaction; clean packet, no comments/reviews. |
-| 8 | [#440](https://github.com/vibeforge1111/spark-cli/pull/440) | `pass` | Healthcheck repair details; existing comments mean no contributor bump unless asked. |
-| 9 | [#1052](https://github.com/vibeforge1111/spark-cli/pull/1052) | `pass_with_warnings` | Sandbox authorization-header redaction; expected security-owner review. |
-| 10 | [#1086](https://github.com/vibeforge1111/spark-cli/pull/1086) | `pass_with_warnings` | SSH agent mutation approval boundary; expected security-owner review. |
+| 1 | [#1051](https://github.com/vibeforge1111/spark-cli/pull/1051) | `pass` | SSH host port validation; current `fc49c16` r24-v2 base. |
+| 2 | [#1058](https://github.com/vibeforge1111/spark-cli/pull/1058) | `pass` | Hosted allowed-host guard; current `fc49c16` r24-v2 base. |
+| 3 | [#1059](https://github.com/vibeforge1111/spark-cli/pull/1059) | `pass` | SSH doctor path redaction; current `fc49c16` r24-v2 base. |
+| 4 | [#1081](https://github.com/vibeforge1111/spark-cli/pull/1081) | `pass` | Spark OS compile local-root redaction; current `fc49c16` r24-v2 base. |
+| 5 | [#1069](https://github.com/vibeforge1111/spark-cli/pull/1069) | `pass_with_warnings` | Sandbox output local-path redaction; current `fc49c16` r24-v2 base. |
+| 6 | [#1052](https://github.com/vibeforge1111/spark-cli/pull/1052) | `pass_with_warnings` | Sandbox authorization-header redaction; current `fc49c16` r24-v2 base. |
+| 7 | [#1086](https://github.com/vibeforge1111/spark-cli/pull/1086) | `pass_with_warnings` | SSH agent mutation approval boundary; current `fc49c16` r24-v2 base. |
+| 8 | [#1215](https://github.com/vibeforge1111/spark-cli/pull/1215) | `pass_with_warnings` | Private-key generation approval boundary; current `fc49c16` r24-v2 base. |
+| 9 | [#1255](https://github.com/vibeforge1111/spark-cli/pull/1255) | `pass_with_warnings` | SSH tunnel approval boundary; current `fc49c16` r24-v2 base. |
+| 10 | [#1053](https://github.com/vibeforge1111/spark-cli/pull/1053) | `pass_with_warnings` | `git clean` approval boundary; current `fc49c16` r24-v2 base. |
 
 ## Direct Allowed-Repo PRs
 
