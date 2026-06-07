@@ -48,4 +48,4 @@ These PRs remain useful, but GitHub reports them `BEHIND` older base `f989fd0`. 
 
 ## Historical Context
 
-Legacy fork-routing material was moved to [LEGACY_FORK_QUEUE.md](LEGACY_FORK_QUEUE.md). It is retained for audit only and is not the current reviewer-first queue.
+Legacy fork-routing material was removed from top-level reviewer docs. Historical packet drafts remain in `packets/`, but they are not the current reviewer-first queue.

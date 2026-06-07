@@ -57,11 +57,8 @@ The current priority is quality over volume:
 - [REVIEWER_START_HERE.md](REVIEWER_START_HERE.md) - shortest current reviewer path
 - [ACTIVE_REVIEW.md](ACTIVE_REVIEW.md) - live PR control room
 - [REVIEW_PATTERN_AUDIT.md](REVIEW_PATTERN_AUDIT.md) - what recent reviews, merges, and adoptions show
-- [REVIEWER_BRIEF.md](REVIEWER_BRIEF.md) - older reviewer context and routing history
-- [REVIEWER_HANDOFF.md](REVIEWER_HANDOFF.md) - handoff notes
-- [JUMPERZ_SCORECARD.md](JUMPERZ_SCORECARD.md) - scorecard-style summary
-- [MISSION_COVERAGE.md](MISSION_COVERAGE.md) - historical mission coverage notes
-- [packets/](packets/) - older packet drafts and finding notes
+- [TOP_REVIEW_QUEUE.md](TOP_REVIEW_QUEUE.md) - current top 10 and behind-but-useful queue
+- [packets/](packets/) - historical packet drafts, not the current reviewer route
 
 ## Operating Rule
 

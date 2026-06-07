@@ -10,10 +10,11 @@ The active blocker is not missing comments or missing public proof on the curate
 
 The useful path is:
 
-1. Keep the current-base top 10 first.
-2. Avoid new PR volume until those lanes move or reviewers ask for more.
-3. Reply only to actionable reviewer asks: focused rebase, proof, packet repair, security redesign, account/team routing, or safety notes.
-4. Treat `BLOCKED` on protected branches as a review/gate state unless GitHub reports `DIRTY`, `CONFLICTING`, or reviewers request a focused rebase.
+1. Send reviewers to [START_HERE.md](START_HERE.md).
+2. Keep the current-base first four `pass` lanes first.
+3. Avoid new PR volume until those lanes move or reviewers ask for more.
+4. Reply only to actionable reviewer asks: focused rebase, proof, packet repair, security redesign, account/team routing, or safety notes.
+5. Treat `BLOCKED` on protected branches as a review/gate state unless GitHub reports `DIRTY`, `CONFLICTING`, or reviewers request a focused rebase.
 
 ## What Got Reviewed Before
 
@@ -41,7 +42,7 @@ This means raw volume is not the advantage right now. Reviewer-readable triage i
 
 Keep the top of the queue quiet and easy to review:
 
-- Send reviewers to `REVIEWER_START_HERE.md`.
+- Send reviewers to `START_HERE.md`.
 - Prefer #1051, #1058, #1059, and #1081 first because they are current-base, packet-ready, and have `pass` validator status.
 - Do not rebase older useful PRs unless reviewers ask.
 - Do not open more `spark-cli` security-control lanes until the current top queue gets a review signal.
