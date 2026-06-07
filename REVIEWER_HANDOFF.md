@@ -4,25 +4,24 @@ Team **JUMPERZ** is registered on Spark Compete and visible on the public leader
 
 ## Current Review Focus
 
-Last organized: 2026-06-07 12:41 UTC
+Last organized: 2026-06-07 13:25 UTC
+
+Canonical reviewer start page: [START_HERE.md](START_HERE.md)
 
 The current goal is review conversion, not more PR volume. JUMPERZ has 128 open `vibeforge1111/spark-cli` PRs by `jumperz11`; 127 include `spark-compete-hotfix-v1` packet JSON in the PR body, and the only missing packet is non-competition PR [#756](https://github.com/vibeforge1111/spark-cli/pull/756). No fresh owner/reviewer comments requiring JUMPERZ repair were found since 2026-06-07 00:00 UTC.
 
-Start with the live allowed-repo top queue:
+Start with these four clean `pass` lanes:
 
 1. [spark-cli #1051](https://github.com/vibeforge1111/spark-cli/pull/1051) - SSH host port validation, current `fc49c16`, `pass`
 2. [spark-cli #1058](https://github.com/vibeforge1111/spark-cli/pull/1058) - hosted allowed-host guard, current `fc49c16`, `pass`
 3. [spark-cli #1059](https://github.com/vibeforge1111/spark-cli/pull/1059) - SSH doctor path redaction, current `fc49c16`, `pass`
 4. [spark-cli #1081](https://github.com/vibeforge1111/spark-cli/pull/1081) - Spark OS compile local-root redaction, current `fc49c16`, `pass`
-5. [spark-cli #1069](https://github.com/vibeforge1111/spark-cli/pull/1069) - sandbox output local-path redaction, current `fc49c16`, `pass_with_warnings`
-6. [spark-cli #1052](https://github.com/vibeforge1111/spark-cli/pull/1052) - sandbox authorization-header redaction, current `fc49c16`, `pass_with_warnings`
-7. [spark-cli #1086](https://github.com/vibeforge1111/spark-cli/pull/1086) - ssh-add approval boundary, current `fc49c16`, `pass_with_warnings`
-8. [spark-cli #1215](https://github.com/vibeforge1111/spark-cli/pull/1215) - ssh-keygen private-key approval boundary, current `fc49c16`, `pass_with_warnings`
-9. [spark-cli #1255](https://github.com/vibeforge1111/spark-cli/pull/1255) - SSH tunnel approval boundary, current `fc49c16`, `pass_with_warnings`
-10. [spark-cli #1053](https://github.com/vibeforge1111/spark-cli/pull/1053) - git clean approval boundary, current `fc49c16`, `pass_with_warnings`
+
+Use [REVIEWER_START_HERE.md](REVIEWER_START_HERE.md) for the full top 10.
 
 ## Fast Links
 
+- Canonical start page: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/START_HERE.md
 - Reviewer start page: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/REVIEWER_START_HERE.md
 - Live hub: https://jumperz11.github.io/jumperz-spark-hunt/
 - Active review control room: https://github.com/jumperz11/jumperz-spark-hunt/blob/main/ACTIVE_REVIEW.md

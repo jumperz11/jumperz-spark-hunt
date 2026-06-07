@@ -2,6 +2,19 @@
 
 Public review hub for the JUMPERZ Spark Compete work.
 
+## Reviewer Start
+
+Start here: [START_HERE.md](START_HERE.md)
+
+The fastest useful review path is four current-base `spark-cli` PRs with `pass` validator status:
+
+1. [spark-cli #1051](https://github.com/vibeforge1111/spark-cli/pull/1051)
+2. [spark-cli #1058](https://github.com/vibeforge1111/spark-cli/pull/1058)
+3. [spark-cli #1059](https://github.com/vibeforge1111/spark-cli/pull/1059)
+4. [spark-cli #1081](https://github.com/vibeforge1111/spark-cli/pull/1081)
+
+Do not start with the raw open PR list. Use the curated route above first.
+
 This repository is not an upstream patch branch. It is a clean control room for reviewer routing, packet drafts, proof notes, and PR status while fixes live in the owning `vibeforge1111/*` repositories.
 
 ## Current Status
@@ -10,13 +23,14 @@ This repository is not an upstream patch branch. It is a clean control room for 
 - Members: `JUMPERZ`, `Basjee01`, `acexqt`
 - Device-holder GitHub: [`jumperz11`](https://github.com/jumperz11)
 - Current mode: focused upstream PR repair and reviewer follow-up
+- Canonical start page: [START_HERE.md](START_HERE.md)
 - Reviewer start page: [REVIEWER_START_HERE.md](REVIEWER_START_HERE.md)
 - Review pattern audit: [REVIEW_PATTERN_AUDIT.md](REVIEW_PATTERN_AUDIT.md)
 - Main tracker: [ACTIVE_REVIEW.md](ACTIVE_REVIEW.md)
 
 ## How To Review
 
-Start with [REVIEWER_START_HERE.md](REVIEWER_START_HERE.md). It gives the current reviewer-first top 10, what not to review first, and the real remaining gates. Use [ACTIVE_REVIEW.md](ACTIVE_REVIEW.md) only when you need the detailed timeline.
+Start with [START_HERE.md](START_HERE.md). It gives the shortest current review route and the first four PRs to inspect. Use [REVIEWER_START_HERE.md](REVIEWER_START_HERE.md) for the full top 10, and [ACTIVE_REVIEW.md](ACTIVE_REVIEW.md) only when you need the detailed timeline.
 
 The current priority is quality over volume:
 
@@ -39,8 +53,9 @@ The current priority is quality over volume:
 
 ## Useful Files
 
-- [ACTIVE_REVIEW.md](ACTIVE_REVIEW.md) - live PR control room
+- [START_HERE.md](START_HERE.md) - canonical reviewer entry point
 - [REVIEWER_START_HERE.md](REVIEWER_START_HERE.md) - shortest current reviewer path
+- [ACTIVE_REVIEW.md](ACTIVE_REVIEW.md) - live PR control room
 - [REVIEW_PATTERN_AUDIT.md](REVIEW_PATTERN_AUDIT.md) - what recent reviews, merges, and adoptions show
 - [REVIEWER_BRIEF.md](REVIEWER_BRIEF.md) - older reviewer context and routing history
 - [REVIEWER_HANDOFF.md](REVIEWER_HANDOFF.md) - handoff notes

@@ -4,9 +4,13 @@ This is the JUMPERZ conversion queue: the first fixes to route for reviewer scor
 
 The goal is not more volume. The goal is to make the strongest existing work easy to review, accept, and credit.
 
+Canonical start page: [START_HERE.md](START_HERE.md)
+
+Reviewer first pass: [#1051](https://github.com/vibeforge1111/spark-cli/pull/1051), [#1058](https://github.com/vibeforge1111/spark-cli/pull/1058), [#1059](https://github.com/vibeforge1111/spark-cli/pull/1059), and [#1081](https://github.com/vibeforge1111/spark-cli/pull/1081).
+
 ## Current Allowed-Repo Queue
 
-Last organized: 2026-06-07 12:41 UTC
+Last organized: 2026-06-07 13:25 UTC
 
 Use this queue before opening or routing anything new. These are already-open `vibeforge1111/spark-cli` PRs in an allowed public repo. They have validated `spark-compete-hotfix-v1` packet JSON in the PR body, no draft state, no fresh maintainer request asking JUMPERZ for repair, and are based on current upstream `origin/master` `fc49c16` (`spark-cli-public-installer-2026-06-03-r24-v2`).
 

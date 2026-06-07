@@ -7,8 +7,9 @@ This board tracks reviewer-ready Spark Compete evidence: real findings, safe pro
 - Team: JUMPERZ
 - Site status: Registered
 - Public board status is informational only; packet validity and maintainer review are tracked on each PR.
-- Last checked: 2026-06-07 12:41 UTC
+- Last checked: 2026-06-07 13:25 UTC
 - Clean repo: https://github.com/jumperz11/jumperz-spark-hunt
+- Canonical reviewer start: [START_HERE.md](START_HERE.md)
 
 ## Current Allowed-Repo Review Focus
 
@@ -22,7 +23,7 @@ JUMPERZ should not open new PRs while this queue is waiting. The current convers
 | Missing packet | [#756](https://github.com/vibeforge1111/spark-cli/pull/756), non-competition `[codex]` PR |
 | Fresh owner/reviewer comments needing JUMPERZ action since 2026-06-07 00:00 UTC | 0 |
 
-Start reviewers with [REVIEWER_START_HERE.md](REVIEWER_START_HERE.md), then use [TOP_REVIEW_QUEUE.md](TOP_REVIEW_QUEUE.md) for details. The first-pass current-base queue is [#1051](https://github.com/vibeforge1111/spark-cli/pull/1051), [#1058](https://github.com/vibeforge1111/spark-cli/pull/1058), [#1059](https://github.com/vibeforge1111/spark-cli/pull/1059), [#1081](https://github.com/vibeforge1111/spark-cli/pull/1081), [#1069](https://github.com/vibeforge1111/spark-cli/pull/1069), [#1052](https://github.com/vibeforge1111/spark-cli/pull/1052), [#1086](https://github.com/vibeforge1111/spark-cli/pull/1086), [#1215](https://github.com/vibeforge1111/spark-cli/pull/1215), [#1255](https://github.com/vibeforge1111/spark-cli/pull/1255), and [#1053](https://github.com/vibeforge1111/spark-cli/pull/1053).
+Start reviewers with [START_HERE.md](START_HERE.md), then use [REVIEWER_START_HERE.md](REVIEWER_START_HERE.md) and [TOP_REVIEW_QUEUE.md](TOP_REVIEW_QUEUE.md) for details. The first-pass current-base queue is [#1051](https://github.com/vibeforge1111/spark-cli/pull/1051), [#1058](https://github.com/vibeforge1111/spark-cli/pull/1058), [#1059](https://github.com/vibeforge1111/spark-cli/pull/1059), and [#1081](https://github.com/vibeforge1111/spark-cli/pull/1081).
 
 ## Completed
 

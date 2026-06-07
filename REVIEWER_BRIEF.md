@@ -6,8 +6,9 @@ Review JUMPERZ's current allowed-repo Spark Compete queue without adding more su
 
 ## Current Snapshot
 
-Last organized: 2026-06-07 12:41 UTC
+Last organized: 2026-06-07 13:25 UTC
 
+- Canonical reviewer start: [START_HERE.md](START_HERE.md)
 - Shortest reviewer path: [REVIEWER_START_HERE.md](REVIEWER_START_HERE.md)
 - Current allowed repo focus: `vibeforge1111/spark-cli`
 - Open `spark-cli` PRs authored by `jumperz11`: 128
@@ -25,18 +26,14 @@ JUMPERZ has **86 documented Spark Compete findings/fix packets** produced while 
 
 ## Current Ask
 
-Please review the current top allowed-repo queue first:
+Please review these four current-base `pass` lanes first:
 
 1. [#1051](https://github.com/vibeforge1111/spark-cli/pull/1051) - SSH host port validation, current `fc49c16`, `pass`
 2. [#1058](https://github.com/vibeforge1111/spark-cli/pull/1058) - hosted allowed-host guard, current `fc49c16`, `pass`
 3. [#1059](https://github.com/vibeforge1111/spark-cli/pull/1059) - SSH doctor path redaction, current `fc49c16`, `pass`
 4. [#1081](https://github.com/vibeforge1111/spark-cli/pull/1081) - Spark OS compile local-root redaction, current `fc49c16`, `pass`
-5. [#1069](https://github.com/vibeforge1111/spark-cli/pull/1069) - sandbox output local-path redaction, current `fc49c16`, `pass_with_warnings`
-6. [#1052](https://github.com/vibeforge1111/spark-cli/pull/1052) - sandbox authorization-header redaction, current `fc49c16`, `pass_with_warnings`
-7. [#1086](https://github.com/vibeforge1111/spark-cli/pull/1086) - ssh-add approval boundary, current `fc49c16`, `pass_with_warnings`
-8. [#1215](https://github.com/vibeforge1111/spark-cli/pull/1215) - ssh-keygen private-key approval boundary, current `fc49c16`, `pass_with_warnings`
-9. [#1255](https://github.com/vibeforge1111/spark-cli/pull/1255) - SSH tunnel approval boundary, current `fc49c16`, `pass_with_warnings`
-10. [#1053](https://github.com/vibeforge1111/spark-cli/pull/1053) - git clean approval boundary, current `fc49c16`, `pass_with_warnings`
+
+Then use [REVIEWER_START_HERE.md](REVIEWER_START_HERE.md) for the full current-base top 10.
 
 The old question about whether to open upstream PRs for fork-only packets remains historical context. It should not block review of the current allowed-repo PR queue.
 

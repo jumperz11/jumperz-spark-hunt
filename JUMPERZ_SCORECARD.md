@@ -1,6 +1,6 @@
 # JUMPERZ Spark Compete Scorecard
 
-Updated: 2026-06-07T12:41:00Z
+Updated: 2026-06-07T13:25:00Z
 
 Purpose: give Spark Compete reviewers one fast, machine-readable view of JUMPERZ work that already has reviewer-visible signal.
 
@@ -31,6 +31,8 @@ https://github.com/vibeforge1111/Spark-Agent-Site/pull/47#issuecomment-455397364
 ## Current Review Queue Health
 
 The current allowed-repo focus is conversion of existing `vibeforge1111/spark-cli` PRs on the public `fc49c16` r24-v2 baseline, not new volume.
+
+Canonical reviewer start: [START_HERE.md](START_HERE.md)
 
 Shortest reviewer path: [REVIEWER_START_HERE.md](REVIEWER_START_HERE.md)
 
@@ -68,6 +70,10 @@ Reviewer first-pass queue:
 | https://github.com/vibeforge1111/spark-cli/pull/419 | spark-cli | Valid packet, but reviewer marked not merge-ready after maintainer registry adoption PR #421 | `packet_valid: true`, `pass_with_warnings`, `security_owner_review_expected` | original branch proved registry pins `ok: true`, provenance `ok: true`, full pytest -> 627 passed, 7 skipped, 104 subtests passed; current upstream `master` now verifies registry pins `ok: true` after #421 | no safe rebase claim remains unless fresh registry drift appears; account/team mapping |
 
 ## Reviewer Quotes / Outcomes
+
+Canonical start page:
+
+- https://github.com/jumperz11/jumperz-spark-hunt/blob/main/START_HERE.md
 
 Spark-Agent-Site PR #47:
 
