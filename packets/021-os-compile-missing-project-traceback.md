@@ -19,7 +19,7 @@ Related site surface: first-run proof and public-track routing.
 Read-only repro:
 
 ```console
-$ spark os compile --json --project /tmp/spark-definitely-missing-project
+$ spark os compile --json --project <missing-project>
 Traceback (most recent call last):
   File ".../.venv/bin/spark", line 10, in <module>
     sys.exit(main())
@@ -32,7 +32,7 @@ Traceback (most recent call last):
   File ".../spark/cli.py", line 192, in _repo_board_snapshot
     inside = _run_git(["rev-parse", "--is-inside-work-tree"], project_root)
 ...
-FileNotFoundError: [Errno 2] No such file or directory: '/private/tmp/spark-definitely-missing-project'
+FileNotFoundError: [Errno 2] No such file or directory: '<missing-project>'
 ```
 
 Observed result:
@@ -55,14 +55,14 @@ json_valid yes
 For a missing `--project` path, Spark should return a clean, bounded error:
 
 ```console
-$ spark os compile --json --project /tmp/spark-definitely-missing-project
-{"error":{"code":"project_not_found","message":"Project path does not exist.","path":"/tmp/spark-definitely-missing-project"}}
+$ spark os compile --json --project <missing-project>
+{"error":{"code":"project_not_found","message":"Project path does not exist.","path":"<missing-project>"}}
 ```
 
 or, for non-JSON mode:
 
 ```text
-spark: project path does not exist: /tmp/spark-definitely-missing-project
+spark: project path does not exist: <missing-project>
 ```
 
 ## Impact
@@ -86,13 +86,13 @@ Also catch `FileNotFoundError` around repo-board collection and convert it into 
 
 Prepared locally, not pushed upstream:
 
-- Worktree: `/Users/jumperz/Documents/spark-fix-os-missing-project`
+- Worktree: `<local-worktree>`
 - Branch: `codex/fix-os-compile-missing-project`
 - Fork branch: https://github.com/jumperz11/vibeship-spark-intelligence/tree/codex/fix-os-compile-missing-project
 - PR link: https://github.com/jumperz11/vibeship-spark-intelligence/pull/new/codex/fix-os-compile-missing-project
 - Commit: `0c2a743 Handle missing Spark OS project paths`
 - Verification: `pytest tests/test_cli_os.py -q` passed.
-- Behavior check: `spark os compile --json --project /tmp/spark-definitely-missing-project` now exits `1`, emits structured JSON on stdout, and emits no traceback on stderr.
+- Behavior check: `spark os compile --json --project <missing-project>` now exits `1`, emits structured JSON on stdout, and emits no traceback on stderr.
 
 ## Submission Status
 
